@@ -1,0 +1,47 @@
+package com.taotao.tool;
+
+import com.baomidou.mybatisplus.generator.FastAutoGenerator;
+import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.taotao.tool.model.BaseModel;
+
+import java.util.Collections;
+
+/**
+ * mybatis-plus 自动生成代码
+ *
+ * @author caojiantao
+ * @since 2022-08-21
+ */
+public class CodeGenerator {
+
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://127.0.0.1:3306/taotao-tools?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
+        String username = "root";
+        String password = "88888888";
+        String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
+        String tables = "pic";
+        FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
+                .globalConfig(builder -> {
+                    builder.author("taotao") // 设置作者
+                            .disableOpenDir() //禁止打开输出目录
+                            .outputDir(finalProjectPath + "/src/main/java"); // 指定输出目录
+                })
+                .packageConfig(builder -> {
+                    builder.parent("com.taotao.tools") // 设置父包名
+                            .entity("model") //设置entity包名
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper")); // 设置mapperXml生成路径
+                })
+                .strategyConfig(builder -> {
+                    builder.addInclude(tables)
+                            .entityBuilder()
+                            .enableFileOverride()
+                            .enableLombok()
+                            .disableSerialVersionUID()
+                            .addSuperEntityColumns("id", "gmt_create", "gmt_modified")
+                            .superClass(BaseModel.class)
+                            .controllerBuilder()
+                            .enableFileOverride();
+                });
+        generator.execute();
+    }
+}

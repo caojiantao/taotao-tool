@@ -1,0 +1,11 @@
+pic:
+  path: /Users/caojiantao/tmp/taotao-tools/pic
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/taotao-tools
+    username: root
+    password: 88888888
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml

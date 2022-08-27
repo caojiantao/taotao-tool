@@ -16,6 +16,12 @@ public class ApiAssertUtils {
         }
     }
 
+    public static void isNull(Object object, String message) {
+        if (Objects.nonNull(object)) {
+            throw new ApiException(EApiCode.UNKNOWN, message);
+        }
+    }
+
     public static void notNull(Object object, String message) {
         if (Objects.isNull(object)) {
             throw new ApiException(EApiCode.UNKNOWN, message);

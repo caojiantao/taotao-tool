@@ -11,9 +11,8 @@ public class FileUtils {
      * 解析文件类型
      */
     public static String parseExt(InputStream is) throws IOException {
-        try (BufferedInputStream bis = new BufferedInputStream(is)) {
-            String contentType = URLConnection.guessContentTypeFromStream(bis);
-            return contentType.substring(contentType.lastIndexOf("/") + 1);
-        }
+        BufferedInputStream bis = new BufferedInputStream(is);
+        String contentType = URLConnection.guessContentTypeFromStream(bis);
+        return contentType.substring(contentType.lastIndexOf("/") + 1);
     }
 }

@@ -30,6 +30,7 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -61,9 +62,15 @@ public class PicController {
         List<Pic> picList = Lists.newArrayList();
         for (MultipartFile file : files) {
             String filename = file.getOriginalFilename();
-            String ext;
+            String ext, md5;
             try (InputStream is = file.getInputStream()) {
                 ext = FileUtils.parseExt(is);
+                md5 = DigestUtils.md5DigestAsHex(is);
+            }
+            Pic originPic = getPicByMd5(md5);
+            if (Objects.nonNull(originPic)) {
+                log.info("act=batchUploadPic type=alreadyExist filename={}", filename);
+                continue;
             }
             String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + "." + ext;
             File newFile = new File(dir, newFilename);
@@ -71,6 +78,7 @@ public class PicController {
             log.info("act=batchUploadPic type=saveDisk filename={} newFilename={}", filename, newFilename);
             Pic pic = new Pic();
             pic.setUrl(newFilename);
+            pic.setMd5(md5);
             pic.setGmtCreate(LocalDateTime.now());
             pic.setGmtModified(LocalDateTime.now());
             picService.save(pic);
@@ -83,8 +91,16 @@ public class PicController {
     @GetMapping("/getPicPage")
     public ApiResp<BasePageResp<Pic>> getPicPage(@Validated BasePageReq req) {
         IPage<Pic> page = new Page<>(req.getPage(), req.getSize());
-        picService.page(page);
+        picService.query()
+                .orderByDesc("gmt_create")
+                .page(page);
         BasePageResp<Pic> resp = new BasePageResp<>(page.getRecords(), page.getTotal());
         return ApiResp.success(resp);
+    }
+
+    private Pic getPicByMd5(String md5) {
+        return picService.query()
+                .eq("md5", md5)
+                .one();
     }
 }

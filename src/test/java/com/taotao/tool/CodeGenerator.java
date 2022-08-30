@@ -15,11 +15,11 @@ import java.util.Collections;
 public class CodeGenerator {
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://127.0.0.1:3306/taotao-tools?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
+        String url = "jdbc:mysql://127.0.0.1:3306/taotao-tool?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
         String username = "root";
         String password = "88888888";
         String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
-        String tables = "pic";
+        String tables = "album,album_pic";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("taotao") // 设置作者
@@ -27,7 +27,7 @@ public class CodeGenerator {
                             .outputDir(finalProjectPath + "/src/main/java"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
-                    builder.parent("com.taotao.tools") // 设置父包名
+                    builder.parent("com.taotao.tool") // 设置父包名
                             .entity("model") //设置entity包名
                             .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper")); // 设置mapperXml生成路径
                 })

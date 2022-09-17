@@ -2,6 +2,7 @@ package com.taotao.tool.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.common.collect.Lists;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumPicPageReq;
 import com.taotao.tool.dto.req.BasePageReq;
@@ -17,10 +18,12 @@ import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,7 +57,7 @@ public class AlbumController {
     }
 
     @GetMapping("/getAlbumPage")
-    public ApiResp<BasePageResp<Album>> getAlbumPage(BasePageReq req) {
+    public ApiResp<BasePageResp<Album>> getAlbumPage(@Validated BasePageReq req) {
         IPage<Album> page = new Page<>(req.getPage(), req.getSize());
         albumService.query()
                 .orderByDesc("gmt_create")
@@ -71,7 +74,10 @@ public class AlbumController {
                 .orderByDesc("gmt_create")
                 .page(page);
         List<Integer> picIdList = page.getRecords().stream().map(AlbumPic::getPicId).collect(Collectors.toList());
-        List<Pic> pics = picService.listByIds(picIdList);
+        List<Pic> pics = Lists.newArrayList();
+        if (!CollectionUtils.isEmpty(picIdList)) {
+            pics = picService.listByIds(picIdList);
+        }
         BasePageResp<Pic> resp = new BasePageResp<>(pics, page.getTotal());
         return ApiResp.success(resp);
     }
@@ -87,6 +93,8 @@ public class AlbumController {
                     AlbumPic albumPic = new AlbumPic();
                     albumPic.setAlbumId(albumId);
                     albumPic.setPicId(item.getId());
+                    albumPic.setGmtCreate(LocalDateTime.now());
+                    albumPic.setGmtModified(LocalDateTime.now());
                     return albumPic;
                 })
                 .collect(Collectors.toList());

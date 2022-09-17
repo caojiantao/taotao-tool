@@ -3,9 +3,14 @@ pic:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/taotao-tools
+    url: jdbc:mysql://127.0.0.1:3306/taotao-tool
     username: root
     password: 88888888
+  mvc:
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: "file:${pic.path}"
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

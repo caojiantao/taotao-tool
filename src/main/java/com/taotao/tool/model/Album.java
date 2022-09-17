@@ -17,5 +17,5 @@ public class Album extends BaseModel {
 
     private String name;
 
-    private String desc;
+    private String description;
 }

@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter
 public class Pic extends BaseModel {
 
-    private String url;
+    private String filename;
 
     private String md5;
 }

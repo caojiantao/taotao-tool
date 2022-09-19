@@ -1,17 +1,21 @@
 package com.taotao.tool;
 
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@Slf4j
 @MapperScan("com.taotao.tool.mapper")
 @EnableConfigurationProperties
 @SpringBootApplication
 public class TaotaoToolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TaotaoToolApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(TaotaoToolApplication.class, args);
+        log.info(context.getApplicationName() + " 启动成功！！");
     }
-
 }

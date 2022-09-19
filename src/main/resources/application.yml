@@ -1,16 +1,19 @@
 pic:
-  path: /Users/caojiantao/tmp/taotao-tools/pic
+  path: D:/tmp/pic
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+  mvc:
+    pathmatch:
+      # 兼容 swagger3 空指针问题
+      matching-strategy: ant_path_matcher
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/taotao-tool
     username: root
-    password: 88888888
-  mvc:
-    static-path-pattern: /static/**
-  web:
-    resources:
-      static-locations: "file:${pic.path}"
+    password: 123456
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

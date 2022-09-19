@@ -18,7 +18,7 @@ import java.util.List;
  */
 public interface IPicService extends IService<Pic> {
 
-    List<Pic> doUpload(MultipartHttpServletRequest request) throws Exception;
+    List<Pic> doUpload(List<MultipartFile> files) throws Exception;
 
     Pic getByMd5(String md5);
 }

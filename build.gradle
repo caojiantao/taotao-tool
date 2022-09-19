@@ -36,6 +36,8 @@ dependencies {
     implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.2'
     testImplementation 'com.baomidou:mybatis-plus-generator:3.5.3'
     testImplementation 'org.apache.velocity:velocity-engine-core:2.3'
+
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
 }
 
 tasks.named('test') {

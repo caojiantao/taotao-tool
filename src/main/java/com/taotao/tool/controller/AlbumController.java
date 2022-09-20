@@ -66,7 +66,7 @@ public class AlbumController {
 
     @GetMapping("/getAlbumPage")
     public ApiResp<BasePageResp<AlbumResp>> getAlbumPage(@Validated BasePageReq req) throws JsonProcessingException {
-        IPage<Album> page = new Page<>(req.getPage(), req.getSize());
+        IPage<Album> page = new Page<>(req.getCurrent(), req.getSize());
         albumService.query()
                 .orderByDesc("gmt_create")
                 .page(page);
@@ -82,7 +82,7 @@ public class AlbumController {
 
     @GetMapping("/getAlbumPicPage")
     public ApiResp<BasePageResp<Pic>> getAlbumPicPage(@Validated AlbumPicPageReq req) {
-        IPage<AlbumPic> page = new Page<>(req.getPage(), req.getSize());
+        IPage<AlbumPic> page = new Page<>(req.getCurrent(), req.getSize());
         albumPicService.query()
                 .eq("album_id", req.getAlbumId())
                 .orderByDesc("gmt_create")

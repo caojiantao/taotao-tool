@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 public class BasePageReq {
 
     @NotNull(message = "页码不能为空")
-    private Integer page;
+    private Integer current;
     @NotNull(message = "分页大小不能为空")
     private Integer size;
 }

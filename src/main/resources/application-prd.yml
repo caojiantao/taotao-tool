@@ -1,0 +1,6 @@
+pic:
+  path: /var/www/pic
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/taotao-tool
+    username: caojiantao
+    password: 88888888

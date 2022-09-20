@@ -39,7 +39,7 @@ public class PicController {
 
     @GetMapping("/getPicPage")
     public ApiResp<BasePageResp<Pic>> getPicPage(@Validated BasePageReq req) {
-        IPage<Pic> page = new Page<>(req.getPage(), req.getSize());
+        IPage<Pic> page = new Page<>(req.getCurrent(), req.getSize());
         picService.query()
                 .orderByDesc("gmt_create")
                 .page(page);

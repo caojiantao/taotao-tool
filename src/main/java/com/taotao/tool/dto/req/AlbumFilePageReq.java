@@ -1,6 +1,5 @@
 package com.taotao.tool.dto.req;
 
-import com.taotao.tool.enums.EFileType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -9,5 +8,5 @@ import lombok.EqualsAndHashCode;
 public class AlbumFilePageReq extends BasePageReq {
 
     private Integer albumId;
-    private EFileType fileType;
+    private Integer fileType;
 }

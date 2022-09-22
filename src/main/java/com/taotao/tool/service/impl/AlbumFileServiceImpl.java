@@ -1,14 +1,14 @@
 package com.taotao.tool.service.impl;
 
-import com.taotao.tool.model.AlbumFile;
-import com.taotao.tool.mapper.AlbumFileMapper;
-import com.taotao.tool.service.IAlbumFileService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.taotao.tool.mapper.AlbumFileMapper;
+import com.taotao.tool.model.AlbumFile;
+import com.taotao.tool.service.IAlbumFileService;
 import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author taotao

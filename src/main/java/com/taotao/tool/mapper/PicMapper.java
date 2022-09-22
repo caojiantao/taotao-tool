@@ -1,11 +1,11 @@
 package com.taotao.tool.mapper;
 
-import com.taotao.tool.model.Pic;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.taotao.tool.model.Pic;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author taotao

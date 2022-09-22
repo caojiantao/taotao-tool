@@ -1,6 +1,5 @@
 package com.taotao.tool.dto.resp;
 
-import com.taotao.tool.model.Pic;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

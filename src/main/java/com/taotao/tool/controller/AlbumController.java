@@ -81,15 +81,10 @@ public class AlbumController {
             return ApiResp.success(null);
         }
         AlbumResp resp = JsonUtils.convert(album, AlbumResp.class);
-        Long picNum = albumFileService.query()
-                .eq("album_id", albumId)
-                .eq("file_type", EFileType.PICTURE.getValue())
-                .count();
+        List<AlbumFile> fileList = albumFileService.query().eq("album_id", albumId).list();
+        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.PICTURE.getValue(), item.getFileType())).count();
+        long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.VIDEO.getValue(), item.getFileType())).count();
         resp.setPicNum(picNum);
-        Long videoNum = albumFileService.query()
-                .eq("album_id", albumId)
-                .eq("file_type", EFileType.VIDEO.getValue())
-                .count();
         resp.setVideoNum(videoNum);
         return ApiResp.success(resp);
     }
@@ -97,9 +92,7 @@ public class AlbumController {
     @GetMapping("/getAlbumPage")
     public ApiResp<BasePageResp<AlbumResp>> getAlbumPage(@Validated BasePageReq req) throws JsonProcessingException {
         IPage<Album> page = new Page<>(req.getCurrent(), req.getSize());
-        albumService.query()
-                .orderByDesc("gmt_create")
-                .page(page);
+        albumService.query().orderByDesc("gmt_create").page(page);
         List<Album> records = page.getRecords();
         if (CollectionUtils.isEmpty(records)) {
             BasePageResp<AlbumResp> resp = new BasePageResp<>(Lists.newArrayList(), page.getTotal());
@@ -117,9 +110,7 @@ public class AlbumController {
     @GetMapping("/getAlbumFilePage")
     public ApiResp<BasePageResp<FileResp>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
         IPage<AlbumFile> page = new Page<>(req.getCurrent(), req.getSize());
-        QueryChainWrapper<AlbumFile> wrapper = albumFileService.query()
-                .eq("album_id", req.getAlbumId())
-                .orderByDesc("gmt_create");
+        QueryChainWrapper<AlbumFile> wrapper = albumFileService.query().eq("album_id", req.getAlbumId()).orderByDesc("gmt_create");
         if (Objects.nonNull(req.getFileType())) {
             wrapper.eq("file_type", req.getFileType());
         }
@@ -167,17 +158,15 @@ public class AlbumController {
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不合法");
         List<Pic> picList = picService.doUpload(files);
-        List<AlbumFile> albumFileList = picList.stream()
-                .map(item -> {
-                    AlbumFile albumFile = new AlbumFile();
-                    albumFile.setAlbumId(albumId);
-                    albumFile.setFileId(item.getId());
-                    albumFile.setFileType(EFileType.PICTURE.getValue());
-                    albumFile.setGmtCreate(LocalDateTime.now());
-                    albumFile.setGmtModified(LocalDateTime.now());
-                    return albumFile;
-                })
-                .collect(Collectors.toList());
+        List<AlbumFile> albumFileList = picList.stream().map(item -> {
+            AlbumFile albumFile = new AlbumFile();
+            albumFile.setAlbumId(albumId);
+            albumFile.setFileId(item.getId());
+            albumFile.setFileType(EFileType.PICTURE.getValue());
+            albumFile.setGmtCreate(LocalDateTime.now());
+            albumFile.setGmtModified(LocalDateTime.now());
+            return albumFile;
+        }).collect(Collectors.toList());
         boolean saveBatch = albumFileService.saveBatch(albumFileList);
         log.info("act=batchUploadPic picListSize={} saveBatch={}", albumFileList.size(), saveBatch);
         return ApiResp.success(null);

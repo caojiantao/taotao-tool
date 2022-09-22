@@ -1,11 +1,11 @@
 package com.taotao.tool.service;
 
-import com.taotao.tool.model.Video;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.taotao.tool.model.Video;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author taotao

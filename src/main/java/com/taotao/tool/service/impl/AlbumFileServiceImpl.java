@@ -1,8 +1,8 @@
 package com.taotao.tool.service.impl;
 
-import com.taotao.tool.model.AlbumPic;
-import com.taotao.tool.mapper.AlbumPicMapper;
-import com.taotao.tool.service.IAlbumPicService;
+import com.taotao.tool.model.AlbumFile;
+import com.taotao.tool.mapper.AlbumFileMapper;
+import com.taotao.tool.service.IAlbumFileService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-08-30
  */
 @Service
-public class AlbumPicServiceImpl extends ServiceImpl<AlbumPicMapper, AlbumPic> implements IAlbumPicService {
+public class AlbumFileServiceImpl extends ServiceImpl<AlbumFileMapper, AlbumFile> implements IAlbumFileService {
 
 }

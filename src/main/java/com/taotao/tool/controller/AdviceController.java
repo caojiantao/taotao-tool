@@ -24,4 +24,10 @@ public class AdviceController {
         String msg = e.getFieldError().getDefaultMessage();
         return new ApiResp<>(EApiCode.UNKNOWN.getNo(), null, msg);
     }
+
+    @ExceptionHandler(Exception.class)
+    public ApiResp<Void> handleException(Exception e) {
+        log.error("act=handleException", e);
+        return new ApiResp<>(EApiCode.UNKNOWN.getNo(), null, "服务异常");
+    }
 }

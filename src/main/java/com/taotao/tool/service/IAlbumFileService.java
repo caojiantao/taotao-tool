@@ -1,6 +1,6 @@
 package com.taotao.tool.service;
 
-import com.taotao.tool.model.AlbumPic;
+import com.taotao.tool.model.AlbumFile;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author taotao
  * @since 2022-08-30
  */
-public interface IAlbumPicService extends IService<AlbumPic> {
+public interface IAlbumFileService extends IService<AlbumFile> {
 
 }

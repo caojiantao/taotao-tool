@@ -1,6 +1,6 @@
 package com.taotao.tool.mapper;
 
-import com.taotao.tool.model.AlbumPic;
+import com.taotao.tool.model.AlbumFile;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author taotao
  * @since 2022-08-30
  */
-public interface AlbumPicMapper extends BaseMapper<AlbumPic> {
+public interface AlbumFileMapper extends BaseMapper<AlbumFile> {
 
 }

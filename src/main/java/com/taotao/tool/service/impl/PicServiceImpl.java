@@ -65,6 +65,7 @@ public class PicServiceImpl extends ServiceImpl<PicMapper, Pic> implements IPicS
             Pic pic = new Pic();
             pic.setFilename(newFilename);
             pic.setMd5(md5);
+            pic.setBytes(newFile.length());
             pic.setGmtCreate(LocalDateTime.now());
             pic.setGmtModified(LocalDateTime.now());
             save(pic);

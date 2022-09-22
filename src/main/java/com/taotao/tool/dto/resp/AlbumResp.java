@@ -5,8 +5,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class AlbumResp extends Album {
 
     private String coverFilename;
+    private Long picNum = 0L;
+    private Long videoNum = 0L;
 }

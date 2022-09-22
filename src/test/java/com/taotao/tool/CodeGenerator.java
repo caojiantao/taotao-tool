@@ -17,9 +17,9 @@ public class CodeGenerator {
     public static void main(String[] args) {
         String url = "jdbc:mysql://127.0.0.1:3306/taotao-tool?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
         String username = "root";
-        String password = "88888888";
-        String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
-        String tables = "album,album_pic";
+        String password = "123456";
+        String finalProjectPath = "D:/workspace/taotao-tool";
+        String tables = "video";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("taotao") // 设置作者

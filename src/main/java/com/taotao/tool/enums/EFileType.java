@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum EFileType {
 
     PICTURE(1),
-    VIDEO(1),
+    VIDEO(2),
     ;
 
     private Integer value;

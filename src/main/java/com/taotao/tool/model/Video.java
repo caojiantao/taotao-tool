@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Video extends BaseModel {
-
+    
     private String filename;
 
     private String md5;

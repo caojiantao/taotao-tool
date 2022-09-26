@@ -47,9 +47,9 @@ public class PicServiceImpl extends ServiceImpl<PicMapper, Pic> implements IPicS
         List<Pic> picList = Lists.newArrayList();
         for (MultipartFile file : files) {
             String filename = file.getOriginalFilename();
-            String ext, md5;
+            String contentType, md5;
             try (InputStream is = file.getInputStream()) {
-                ext = FileUtils.parseExt(is);
+                contentType = FileUtils.parseExt(is);
                 md5 = DigestUtils.md5DigestAsHex(is);
             }
             Pic originPic = getByMd5(md5);
@@ -58,6 +58,7 @@ public class PicServiceImpl extends ServiceImpl<PicMapper, Pic> implements IPicS
                 picList.add(originPic);
                 continue;
             }
+            String ext = contentType.substring(contentType.lastIndexOf("/") + 1);
             String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + "." + ext;
             File newFile = new File(picDiskPath, newFilename);
             file.transferTo(newFile);
@@ -66,6 +67,7 @@ public class PicServiceImpl extends ServiceImpl<PicMapper, Pic> implements IPicS
             pic.setFilename(newFilename);
             pic.setMd5(md5);
             pic.setBytes(newFile.length());
+            pic.setContentType(contentType);
             pic.setGmtCreate(LocalDateTime.now());
             pic.setGmtModified(LocalDateTime.now());
             save(pic);

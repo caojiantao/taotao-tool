@@ -7,9 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum EFileType {
 
-    PICTURE(1),
-    VIDEO(2),
+    PICTURE,
+    VIDEO,
     ;
-
-    private Integer value;
 }

@@ -8,5 +8,5 @@ import lombok.EqualsAndHashCode;
 public class AlbumFilePageReq extends BasePageReq {
 
     private Integer albumId;
-    private Integer fileType;
+    private String fileType;
 }

@@ -20,4 +20,6 @@ public class Pic extends BaseModel {
     private String md5;
 
     private Long bytes;
+
+    private String contentType;
 }

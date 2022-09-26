@@ -1,6 +1,7 @@
 package com.taotao.tool.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.taotao.tool.enums.EFileType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,5 +22,5 @@ public class AlbumFile extends BaseModel {
 
     private Integer fileId;
 
-    private Integer fileType;
+    private EFileType fileType;
 }

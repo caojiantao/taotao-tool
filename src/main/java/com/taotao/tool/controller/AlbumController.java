@@ -82,8 +82,8 @@ public class AlbumController {
         }
         AlbumResp resp = JsonUtils.convert(album, AlbumResp.class);
         List<AlbumFile> fileList = albumFileService.query().eq("album_id", albumId).list();
-        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.PICTURE.getValue(), item.getFileType())).count();
-        long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.VIDEO.getValue(), item.getFileType())).count();
+        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.PICTURE, item.getFileType())).count();
+        long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.VIDEO, item.getFileType())).count();
         resp.setPicNum(picNum);
         resp.setVideoNum(videoNum);
         return ApiResp.success(resp);
@@ -98,11 +98,24 @@ public class AlbumController {
             BasePageResp<AlbumResp> resp = new BasePageResp<>(Lists.newArrayList(), page.getTotal());
             return ApiResp.success(resp);
         }
+        List<AlbumResp> rows = JsonUtils.convert(records, AlbumResp.class);
+        Map<Integer, AlbumResp> rowsMap = rows.stream().collect(Collectors.toMap(AlbumResp::getId, Function.identity()));
+        // 封面
         List<Integer> coverIdList = records.stream().map(Album::getCoverId).collect(Collectors.toList());
         List<Pic> picList = picService.listByIds(coverIdList);
         Map<Integer, String> picMap = picList.stream().collect(Collectors.toMap(Pic::getId, Pic::getFilename));
-        List<AlbumResp> rows = JsonUtils.convert(records, AlbumResp.class);
         rows.forEach(item -> item.setCoverFilename(picMap.get(item.getCoverId())));
+        // 图片视频数量
+        List<Integer> albumIdList = records.stream().map(Album::getId).collect(Collectors.toList());
+        List<AlbumFile> fileList = albumFileService.query().in("album_id", albumIdList).list();
+        fileList.forEach(file -> {
+            AlbumResp album = rowsMap.get(file.getAlbumId());
+            if (EFileType.PICTURE.equals(file.getFileType())) {
+                album.setPicNum(album.getPicNum() + 1);
+            } else if (EFileType.VIDEO.equals(file.getFileType())) {
+                album.setVideoNum(album.getVideoNum() + 1);
+            }
+        });
         BasePageResp<AlbumResp> resp = new BasePageResp<>(rows, page.getTotal());
         return ApiResp.success(resp);
     }
@@ -120,9 +133,9 @@ public class AlbumController {
         List<Integer> picIdList = Lists.newArrayList();
         List<Integer> videoIdList = Lists.newArrayList();
         for (AlbumFile file : page.getRecords()) {
-            if (EFileType.PICTURE.getValue().equals(file.getFileType())) {
+            if (EFileType.PICTURE.equals(file.getFileType())) {
                 picIdList.add(file.getFileId());
-            } else if (EFileType.VIDEO.getValue().equals(file.getFileType())) {
+            } else if (EFileType.VIDEO.equals(file.getFileType())) {
                 videoIdList.add(file.getFileId());
             }
         }
@@ -137,10 +150,10 @@ public class AlbumController {
         List<FileResp> fileList = Lists.newArrayList();
         for (AlbumFile file : page.getRecords()) {
             FileResp fileResp = new FileResp();
-            if (EFileType.PICTURE.getValue().equals(file.getFileType())) {
+            if (EFileType.PICTURE.equals(file.getFileType())) {
                 fileResp.setFileType(EFileType.PICTURE);
                 fileResp.setPic(picMap.get(file.getFileId()));
-            } else if (EFileType.VIDEO.getValue().equals(file.getFileType())) {
+            } else if (EFileType.VIDEO.equals(file.getFileType())) {
                 fileResp.setFileType(EFileType.VIDEO);
                 fileResp.setVideo(videoMap.get(file.getFileId()));
             }
@@ -153,7 +166,7 @@ public class AlbumController {
     }
 
     @PostMapping("/batchUploadPic")
-    public ApiResp<Void> batchUploadPic(Integer albumId, Integer fileType, @RequestPart List<MultipartFile> files) throws Exception {
+    public ApiResp<Void> batchUploadPic(Integer albumId, EFileType fileType, @RequestPart List<MultipartFile> files) throws Exception {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不合法");
@@ -162,7 +175,7 @@ public class AlbumController {
             AlbumFile albumFile = new AlbumFile();
             albumFile.setAlbumId(albumId);
             albumFile.setFileId(item.getId());
-            albumFile.setFileType(EFileType.PICTURE.getValue());
+            albumFile.setFileType(EFileType.PICTURE);
             albumFile.setGmtCreate(LocalDateTime.now());
             albumFile.setGmtModified(LocalDateTime.now());
             return albumFile;

@@ -12,7 +12,6 @@ public class FileUtils {
      */
     public static String parseExt(InputStream is) throws IOException {
         BufferedInputStream bis = new BufferedInputStream(is);
-        String contentType = URLConnection.guessContentTypeFromStream(bis);
-        return contentType.substring(contentType.lastIndexOf("/") + 1);
+        return URLConnection.guessContentTypeFromStream(bis);
     }
 }

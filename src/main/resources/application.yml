@@ -1,5 +1,7 @@
 pic:
   path: D:/tmp/pic
+video:
+  path: D:/tmp/video
 
 spring:
   servlet:

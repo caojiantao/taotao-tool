@@ -13,9 +13,7 @@ import com.taotao.tool.dto.resp.AlbumResp;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
 import com.taotao.tool.dto.resp.FileResp;
-import com.taotao.tool.enums.EApiCode;
 import com.taotao.tool.enums.EFileType;
-import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.model.Album;
 import com.taotao.tool.model.AlbumFile;
 import com.taotao.tool.model.Pic;
@@ -68,8 +66,8 @@ public class AlbumController {
     @PostMapping("/addAlbum")
     public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, @RequestPart MultipartFile file) throws Exception {
         Album album = JsonUtils.convert(req, Album.class);
-        List<FileResp> fileRespList = fileFacade.doUpload(Lists.newArrayList(file));
-        album.setCoverId(fileRespList.get(0).getPic().getId());
+        List<Pic> picList = fileFacade.doUploadPic(Lists.newArrayList(file));
+        album.setCoverId(picList.get(0).getId());
         LocalDateTime now = LocalDateTime.now();
         album.setGmtCreate(now);
         album.setGmtModified(now);
@@ -171,29 +169,39 @@ public class AlbumController {
     }
 
     @PostMapping("/batchUploadFile")
-    public ApiResp<Void> batchUploadFile(Integer albumId, @RequestPart List<MultipartFile> files) throws Exception {
+    public ApiResp<Void> batchUploadFile(
+            Integer albumId,
+            @RequestPart(required = false) List<MultipartFile> files,
+            /* 视频封面由客户端解析传入 */
+            @RequestPart(required = false) List<MultipartFile> videoCoverFiles
+    ) throws Exception {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不存在");
-        List<FileResp> fileRespList = fileFacade.doUpload(files);
-        List<AlbumFile> albumFileList = fileRespList.stream().map(item -> {
-            AlbumFile albumFile = new AlbumFile();
-            albumFile.setAlbumId(albumId);
-            if (EFileType.IMAGE.equals(item.getFileType())) {
-                albumFile.setFileId(item.getPic().getId());
-                albumFile.setFileType(EFileType.IMAGE);
-            } else if (EFileType.VIDEO.equals(item.getFileType())) {
-                albumFile.setFileId(item.getVideo().getId());
-                albumFile.setFileType(EFileType.VIDEO);
-            } else {
-                throw new ApiException(EApiCode.UNKNOWN, "暂不支持的文件类型");
-            }
-            albumFile.setGmtCreate(LocalDateTime.now());
-            albumFile.setGmtModified(LocalDateTime.now());
-            return albumFile;
-        }).collect(Collectors.toList());
-        boolean saveBatch = albumFileService.saveBatch(albumFileList);
-        log.info("act=batchUploadPic picListSize={} saveBatch={}", albumFileList.size(), saveBatch);
+
+//        List<Pic> picList = fileFacade.doUploadPic(picFiles);
+//        List<Video> videoList = fileFacade.doUploadVideo(videoFiles);
+//        List<Pic> videoCoverList = fileFacade.doUploadPic(videoCoverFiles);
+//
+//        List<FileResp> fileRespList = fileFacade.doUpload(picFiles);
+//        List<AlbumFile> albumFileList = fileRespList.stream().map(item -> {
+//            AlbumFile albumFile = new AlbumFile();
+//            albumFile.setAlbumId(albumId);
+//            if (EFileType.IMAGE.equals(item.getFileType())) {
+//                albumFile.setFileId(item.getPic().getId());
+//                albumFile.setFileType(EFileType.IMAGE);
+//            } else if (EFileType.VIDEO.equals(item.getFileType())) {
+//                albumFile.setFileId(item.getVideo().getId());
+//                albumFile.setFileType(EFileType.VIDEO);
+//            } else {
+//                throw new ApiException(EApiCode.UNKNOWN, "暂不支持的文件类型");
+//            }
+//            albumFile.setGmtCreate(LocalDateTime.now());
+//            albumFile.setGmtModified(LocalDateTime.now());
+//            return albumFile;
+//        }).collect(Collectors.toList());
+//        boolean saveBatch = albumFileService.saveBatch(albumFileList);
+//        log.info("act=batchUploadPic picListSize={} saveBatch={}", albumFileList.size(), saveBatch);
         return ApiResp.success(null);
     }
 }

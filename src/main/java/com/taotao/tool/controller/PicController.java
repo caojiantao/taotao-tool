@@ -36,7 +36,7 @@ public class PicController {
 
     @PostMapping("/batchUpload")
     public ApiResp<Void> batchUpload(@RequestPart List<MultipartFile> files) throws Exception {
-        fileFacade.doUpload(files);
+        fileFacade.doUploadPic(files);
         return ApiResp.success(null);
     }
 

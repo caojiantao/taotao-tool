@@ -13,7 +13,9 @@ import com.taotao.tool.dto.resp.AlbumResp;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
 import com.taotao.tool.dto.resp.FileResp;
+import com.taotao.tool.enums.EApiCode;
 import com.taotao.tool.enums.EFileType;
+import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.model.Album;
 import com.taotao.tool.model.AlbumFile;
 import com.taotao.tool.model.Pic;
@@ -22,6 +24,7 @@ import com.taotao.tool.service.IAlbumFileService;
 import com.taotao.tool.service.IAlbumService;
 import com.taotao.tool.service.IPicService;
 import com.taotao.tool.service.IVideoService;
+import com.taotao.tool.service.facade.FileFacade;
 import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -59,12 +62,14 @@ public class AlbumController {
     private IPicService picService;
     @Autowired
     private IVideoService videoService;
+    @Autowired
+    private FileFacade fileFacade;
 
     @PostMapping("/addAlbum")
     public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, @RequestPart MultipartFile file) throws Exception {
         Album album = JsonUtils.convert(req, Album.class);
-        List<Pic> picList = picService.doUpload(Lists.newArrayList(file));
-        album.setCoverId(picList.get(0).getId());
+        List<FileResp> fileRespList = fileFacade.doUpload(Lists.newArrayList(file));
+        album.setCoverId(fileRespList.get(0).getPic().getId());
         LocalDateTime now = LocalDateTime.now();
         album.setGmtCreate(now);
         album.setGmtModified(now);
@@ -82,7 +87,7 @@ public class AlbumController {
         }
         AlbumResp resp = JsonUtils.convert(album, AlbumResp.class);
         List<AlbumFile> fileList = albumFileService.query().eq("album_id", albumId).list();
-        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.PICTURE, item.getFileType())).count();
+        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.IMAGE, item.getFileType())).count();
         long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.VIDEO, item.getFileType())).count();
         resp.setPicNum(picNum);
         resp.setVideoNum(videoNum);
@@ -110,7 +115,7 @@ public class AlbumController {
         List<AlbumFile> fileList = albumFileService.query().in("album_id", albumIdList).list();
         fileList.forEach(file -> {
             AlbumResp album = rowsMap.get(file.getAlbumId());
-            if (EFileType.PICTURE.equals(file.getFileType())) {
+            if (EFileType.IMAGE.equals(file.getFileType())) {
                 album.setPicNum(album.getPicNum() + 1);
             } else if (EFileType.VIDEO.equals(file.getFileType())) {
                 album.setVideoNum(album.getVideoNum() + 1);
@@ -133,7 +138,7 @@ public class AlbumController {
         List<Integer> picIdList = Lists.newArrayList();
         List<Integer> videoIdList = Lists.newArrayList();
         for (AlbumFile file : page.getRecords()) {
-            if (EFileType.PICTURE.equals(file.getFileType())) {
+            if (EFileType.IMAGE.equals(file.getFileType())) {
                 picIdList.add(file.getFileId());
             } else if (EFileType.VIDEO.equals(file.getFileType())) {
                 videoIdList.add(file.getFileId());
@@ -150,8 +155,8 @@ public class AlbumController {
         List<FileResp> fileList = Lists.newArrayList();
         for (AlbumFile file : page.getRecords()) {
             FileResp fileResp = new FileResp();
-            if (EFileType.PICTURE.equals(file.getFileType())) {
-                fileResp.setFileType(EFileType.PICTURE);
+            if (EFileType.IMAGE.equals(file.getFileType())) {
+                fileResp.setFileType(EFileType.IMAGE);
                 fileResp.setPic(picMap.get(file.getFileId()));
             } else if (EFileType.VIDEO.equals(file.getFileType())) {
                 fileResp.setFileType(EFileType.VIDEO);
@@ -165,17 +170,24 @@ public class AlbumController {
         return ApiResp.success(resp);
     }
 
-    @PostMapping("/batchUploadPic")
-    public ApiResp<Void> batchUploadPic(Integer albumId, EFileType fileType, @RequestPart List<MultipartFile> files) throws Exception {
+    @PostMapping("/batchUploadFile")
+    public ApiResp<Void> batchUploadFile(Integer albumId, @RequestPart List<MultipartFile> files) throws Exception {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
-        ApiAssertUtils.notNull(album, "上传相册不合法");
-        List<Pic> picList = picService.doUpload(files);
-        List<AlbumFile> albumFileList = picList.stream().map(item -> {
+        ApiAssertUtils.notNull(album, "上传相册不存在");
+        List<FileResp> fileRespList = fileFacade.doUpload(files);
+        List<AlbumFile> albumFileList = fileRespList.stream().map(item -> {
             AlbumFile albumFile = new AlbumFile();
             albumFile.setAlbumId(albumId);
-            albumFile.setFileId(item.getId());
-            albumFile.setFileType(EFileType.PICTURE);
+            if (EFileType.IMAGE.equals(item.getFileType())) {
+                albumFile.setFileId(item.getPic().getId());
+                albumFile.setFileType(EFileType.IMAGE);
+            } else if (EFileType.VIDEO.equals(item.getFileType())) {
+                albumFile.setFileId(item.getVideo().getId());
+                albumFile.setFileType(EFileType.VIDEO);
+            } else {
+                throw new ApiException(EApiCode.UNKNOWN, "暂不支持的文件类型");
+            }
             albumFile.setGmtCreate(LocalDateTime.now());
             albumFile.setGmtModified(LocalDateTime.now());
             return albumFile;

@@ -1,6 +1,7 @@
 package com.taotao.tool.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.taotao.tool.model.Pic;
 import com.taotao.tool.model.Video;
 
 /**
@@ -13,4 +14,5 @@ import com.taotao.tool.model.Video;
  */
 public interface IVideoService extends IService<Video> {
 
+    Video getByMd5(String md5);
 }

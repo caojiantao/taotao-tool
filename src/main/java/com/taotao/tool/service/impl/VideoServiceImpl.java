@@ -17,4 +17,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements IVideoService {
 
+    @Override
+    public Video getByMd5(String md5) {
+        return query()
+                .eq("md5", md5)
+                .one();
+    }
 }

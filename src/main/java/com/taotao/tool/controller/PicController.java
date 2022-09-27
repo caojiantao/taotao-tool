@@ -7,6 +7,7 @@ import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
 import com.taotao.tool.model.Pic;
 import com.taotao.tool.service.IPicService;
+import com.taotao.tool.service.facade.FileFacade;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -30,10 +31,12 @@ public class PicController {
 
     @Autowired
     private IPicService picService;
+    @Autowired
+    private FileFacade fileFacade;
 
-    @PostMapping("/batchUploadPic")
-    public ApiResp<Void> batchUploadPic(@RequestPart List<MultipartFile> files) throws Exception {
-        picService.doUpload(files);
+    @PostMapping("/batchUpload")
+    public ApiResp<Void> batchUpload(@RequestPart List<MultipartFile> files) throws Exception {
+        fileFacade.doUpload(files);
         return ApiResp.success(null);
     }
 

@@ -22,4 +22,6 @@ public class Video extends BaseModel {
     private Long seconds;
 
     private Long bytes;
+
+    private String contentType;
 }

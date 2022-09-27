@@ -56,6 +56,7 @@ CREATE TABLE `video` (
   `md5` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `seconds` bigint NOT NULL,
   `bytes` bigint NOT NULL,
+  `content_type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `gmt_create` datetime NOT NULL,
   `gmt_modified` datetime NOT NULL,
   PRIMARY KEY (`id`),

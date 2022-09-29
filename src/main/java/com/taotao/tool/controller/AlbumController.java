@@ -9,6 +9,7 @@ import com.google.common.collect.Maps;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
 import com.taotao.tool.dto.req.BasePageReq;
+import com.taotao.tool.dto.req.UploadFileReq;
 import com.taotao.tool.dto.resp.AlbumResp;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
@@ -170,10 +171,8 @@ public class AlbumController {
 
     @PostMapping("/batchUploadFile")
     public ApiResp<Void> batchUploadFile(
-            Integer albumId,
-            @RequestPart(required = false) List<MultipartFile> files,
-            /* 视频封面由客户端解析传入 */
-            @RequestPart(required = false) List<MultipartFile> videoCoverFiles
+            @RequestParam Integer albumId,
+            UploadFileReq uploadReq
     ) throws Exception {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);

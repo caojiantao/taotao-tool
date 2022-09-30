@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class AlbumResp extends Album {
+public class AlbumDetailResp extends Album {
 
     private String coverFilename;
     private Long picNum = 0L;

@@ -9,7 +9,8 @@ import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
 import com.taotao.tool.dto.req.BasePageReq;
 import com.taotao.tool.dto.req.UploadFileReq;
-import com.taotao.tool.dto.resp.AlbumResp;
+import com.taotao.tool.dto.resp.AlbumDetailResp;
+import com.taotao.tool.dto.resp.AlbumHomeResp;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
 import com.taotao.tool.enums.EFileType;
@@ -68,13 +69,22 @@ public class AlbumController {
         return ApiResp.success(album.getId());
     }
 
+    @GetMapping("/getAlbumHomeResp")
+    public ApiResp<AlbumHomeResp> getAlbumHomeResp() {
+        Long albumNum = albumService.count();
+        Long imageNum = albumFileService.query().eq("file_type", EFileType.image).count();
+        Long videoNum = albumFileService.query().eq("file_type", EFileType.video).count();
+        AlbumHomeResp resp = new AlbumHomeResp(albumNum, imageNum, videoNum);
+        return ApiResp.success(resp);
+    }
+
     @GetMapping("/getAlbumById")
-    public ApiResp<AlbumResp> getAlbumById(Integer albumId) throws Exception {
+    public ApiResp<AlbumDetailResp> getAlbumById(Integer albumId) throws Exception {
         Album album = albumService.getById(albumId);
         if (Objects.isNull(album)) {
             return ApiResp.success(null);
         }
-        AlbumResp resp = JsonUtils.convert(album, AlbumResp.class);
+        AlbumDetailResp resp = JsonUtils.convert(album, AlbumDetailResp.class);
         List<AlbumFile> fileList = albumFileService.query().eq("album_id", albumId).list();
         long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.image, item.getFileType())).count();
         long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.video, item.getFileType())).count();
@@ -84,16 +94,16 @@ public class AlbumController {
     }
 
     @GetMapping("/getAlbumPage")
-    public ApiResp<BasePageResp<AlbumResp>> getAlbumPage(@Validated BasePageReq req) throws JsonProcessingException {
+    public ApiResp<BasePageResp<AlbumDetailResp>> getAlbumPage(@Validated BasePageReq req) throws JsonProcessingException {
         IPage<Album> page = new Page<>(req.getCurrent(), req.getSize());
         albumService.query().orderByDesc("gmt_create").page(page);
         List<Album> records = page.getRecords();
         if (CollectionUtils.isEmpty(records)) {
-            BasePageResp<AlbumResp> resp = new BasePageResp<>(Lists.newArrayList(), page.getTotal());
+            BasePageResp<AlbumDetailResp> resp = new BasePageResp<>(Lists.newArrayList(), page.getTotal());
             return ApiResp.success(resp);
         }
-        List<AlbumResp> rows = JsonUtils.convert(records, AlbumResp.class);
-        Map<Integer, AlbumResp> rowsMap = rows.stream().collect(Collectors.toMap(AlbumResp::getId, Function.identity()));
+        List<AlbumDetailResp> rows = JsonUtils.convert(records, AlbumDetailResp.class);
+        Map<Integer, AlbumDetailResp> rowsMap = rows.stream().collect(Collectors.toMap(AlbumDetailResp::getId, Function.identity()));
         // 封面
         List<Integer> coverIdList = records.stream().map(Album::getCoverId).collect(Collectors.toList());
         List<File> coverFileList = fileService.listByIds(coverIdList);
@@ -103,14 +113,14 @@ public class AlbumController {
         List<Integer> albumIdList = records.stream().map(Album::getId).collect(Collectors.toList());
         List<AlbumFile> albumFileList = albumFileService.query().in("album_id", albumIdList).list();
         albumFileList.forEach(file -> {
-            AlbumResp album = rowsMap.get(file.getAlbumId());
+            AlbumDetailResp album = rowsMap.get(file.getAlbumId());
             if (EFileType.image.equals(file.getFileType())) {
                 album.setPicNum(album.getPicNum() + 1);
             } else if (EFileType.video.equals(file.getFileType())) {
                 album.setVideoNum(album.getVideoNum() + 1);
             }
         });
-        BasePageResp<AlbumResp> resp = new BasePageResp<>(rows, page.getTotal());
+        BasePageResp<AlbumDetailResp> resp = new BasePageResp<>(rows, page.getTotal());
         return ApiResp.success(resp);
     }
 
@@ -125,7 +135,8 @@ public class AlbumController {
         List<Integer> fileIdList = page.getRecords().stream().map(AlbumFile::getFileId).collect(Collectors.toList());
         List<File> files = Lists.newArrayList();
         if (!CollectionUtils.isEmpty(fileIdList)) {
-            files = fileService.listByIds(fileIdList);
+            Map<Integer, File> fileMap = fileService.listByIds(fileIdList).stream().collect(Collectors.toMap(File::getId, Function.identity()));
+            files = fileIdList.stream().map(fileMap::get).collect(Collectors.toList());
         }
         BasePageResp<File> resp = new BasePageResp<>(files, page.getTotal());
         return ApiResp.success(resp);

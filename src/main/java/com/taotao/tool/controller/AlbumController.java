@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
 import com.taotao.tool.dto.req.BasePageReq;
@@ -13,17 +12,13 @@ import com.taotao.tool.dto.req.UploadFileReq;
 import com.taotao.tool.dto.resp.AlbumResp;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
-import com.taotao.tool.dto.resp.FileResp;
 import com.taotao.tool.enums.EFileType;
 import com.taotao.tool.model.Album;
 import com.taotao.tool.model.AlbumFile;
-import com.taotao.tool.model.Pic;
-import com.taotao.tool.model.Video;
+import com.taotao.tool.model.File;
 import com.taotao.tool.service.IAlbumFileService;
 import com.taotao.tool.service.IAlbumService;
-import com.taotao.tool.service.IPicService;
-import com.taotao.tool.service.IVideoService;
-import com.taotao.tool.service.facade.FileFacade;
+import com.taotao.tool.service.IFileService;
 import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +26,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -58,17 +52,13 @@ public class AlbumController {
     @Autowired
     private IAlbumFileService albumFileService;
     @Autowired
-    private IPicService picService;
-    @Autowired
-    private IVideoService videoService;
-    @Autowired
-    private FileFacade fileFacade;
+    private IFileService fileService;
 
     @PostMapping("/addAlbum")
-    public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, @RequestPart MultipartFile file) throws Exception {
+    public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, UploadFileReq.FileItem fileItem) throws Exception {
         Album album = JsonUtils.convert(req, Album.class);
-        List<Pic> picList = fileFacade.doUploadPic(Lists.newArrayList(file));
-        album.setCoverId(picList.get(0).getId());
+        File file = fileService.doUploadFile(Lists.newArrayList(fileItem)).get(0);
+        album.setCoverId(file.getId());
         LocalDateTime now = LocalDateTime.now();
         album.setGmtCreate(now);
         album.setGmtModified(now);
@@ -86,8 +76,8 @@ public class AlbumController {
         }
         AlbumResp resp = JsonUtils.convert(album, AlbumResp.class);
         List<AlbumFile> fileList = albumFileService.query().eq("album_id", albumId).list();
-        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.IMAGE, item.getFileType())).count();
-        long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.VIDEO, item.getFileType())).count();
+        long picNum = fileList.stream().filter(item -> Objects.equals(EFileType.image, item.getFileType())).count();
+        long videoNum = fileList.stream().filter(item -> Objects.equals(EFileType.video, item.getFileType())).count();
         resp.setPicNum(picNum);
         resp.setVideoNum(videoNum);
         return ApiResp.success(resp);
@@ -106,17 +96,17 @@ public class AlbumController {
         Map<Integer, AlbumResp> rowsMap = rows.stream().collect(Collectors.toMap(AlbumResp::getId, Function.identity()));
         // 封面
         List<Integer> coverIdList = records.stream().map(Album::getCoverId).collect(Collectors.toList());
-        List<Pic> picList = picService.listByIds(coverIdList);
-        Map<Integer, String> picMap = picList.stream().collect(Collectors.toMap(Pic::getId, Pic::getFilename));
+        List<File> coverFileList = fileService.listByIds(coverIdList);
+        Map<Integer, String> picMap = coverFileList.stream().collect(Collectors.toMap(File::getId, File::getFilename));
         rows.forEach(item -> item.setCoverFilename(picMap.get(item.getCoverId())));
         // 图片视频数量
         List<Integer> albumIdList = records.stream().map(Album::getId).collect(Collectors.toList());
-        List<AlbumFile> fileList = albumFileService.query().in("album_id", albumIdList).list();
-        fileList.forEach(file -> {
+        List<AlbumFile> albumFileList = albumFileService.query().in("album_id", albumIdList).list();
+        albumFileList.forEach(file -> {
             AlbumResp album = rowsMap.get(file.getAlbumId());
-            if (EFileType.IMAGE.equals(file.getFileType())) {
+            if (EFileType.image.equals(file.getFileType())) {
                 album.setPicNum(album.getPicNum() + 1);
-            } else if (EFileType.VIDEO.equals(file.getFileType())) {
+            } else if (EFileType.video.equals(file.getFileType())) {
                 album.setVideoNum(album.getVideoNum() + 1);
             }
         });
@@ -125,47 +115,19 @@ public class AlbumController {
     }
 
     @GetMapping("/getAlbumFilePage")
-    public ApiResp<BasePageResp<FileResp>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
+    public ApiResp<BasePageResp<File>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
         IPage<AlbumFile> page = new Page<>(req.getCurrent(), req.getSize());
         QueryChainWrapper<AlbumFile> wrapper = albumFileService.query().eq("album_id", req.getAlbumId()).orderByDesc("gmt_create");
         if (Objects.nonNull(req.getFileType())) {
             wrapper.eq("file_type", req.getFileType());
         }
         wrapper.page(page);
-        Map<Integer, Pic> picMap = Maps.newHashMap();
-        Map<Integer, Video> videoMap = Maps.newHashMap();
-        List<Integer> picIdList = Lists.newArrayList();
-        List<Integer> videoIdList = Lists.newArrayList();
-        for (AlbumFile file : page.getRecords()) {
-            if (EFileType.IMAGE.equals(file.getFileType())) {
-                picIdList.add(file.getFileId());
-            } else if (EFileType.VIDEO.equals(file.getFileType())) {
-                videoIdList.add(file.getFileId());
-            }
+        List<Integer> fileIdList = page.getRecords().stream().map(AlbumFile::getFileId).collect(Collectors.toList());
+        List<File> files = Lists.newArrayList();
+        if (!CollectionUtils.isEmpty(fileIdList)) {
+            files = fileService.listByIds(fileIdList);
         }
-        if (!CollectionUtils.isEmpty(picIdList)) {
-            List<Pic> picList = picService.listByIds(picIdList);
-            picMap = picList.stream().collect(Collectors.toMap(Pic::getId, Function.identity()));
-        }
-        if (!CollectionUtils.isEmpty(videoIdList)) {
-            List<Video> videoList = videoService.listByIds(videoIdList);
-            videoMap = videoList.stream().collect(Collectors.toMap(Video::getId, Function.identity()));
-        }
-        List<FileResp> fileList = Lists.newArrayList();
-        for (AlbumFile file : page.getRecords()) {
-            FileResp fileResp = new FileResp();
-            if (EFileType.IMAGE.equals(file.getFileType())) {
-                fileResp.setFileType(EFileType.IMAGE);
-                fileResp.setPic(picMap.get(file.getFileId()));
-            } else if (EFileType.VIDEO.equals(file.getFileType())) {
-                fileResp.setFileType(EFileType.VIDEO);
-                fileResp.setVideo(videoMap.get(file.getFileId()));
-            }
-            if (Objects.nonNull(fileResp.getFileType())) {
-                fileList.add(fileResp);
-            }
-        }
-        BasePageResp<FileResp> resp = new BasePageResp<>(fileList, page.getTotal());
+        BasePageResp<File> resp = new BasePageResp<>(files, page.getTotal());
         return ApiResp.success(resp);
     }
 
@@ -178,29 +140,18 @@ public class AlbumController {
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不存在");
 
-//        List<Pic> picList = fileFacade.doUploadPic(picFiles);
-//        List<Video> videoList = fileFacade.doUploadVideo(videoFiles);
-//        List<Pic> videoCoverList = fileFacade.doUploadPic(videoCoverFiles);
-//
-//        List<FileResp> fileRespList = fileFacade.doUpload(picFiles);
-//        List<AlbumFile> albumFileList = fileRespList.stream().map(item -> {
-//            AlbumFile albumFile = new AlbumFile();
-//            albumFile.setAlbumId(albumId);
-//            if (EFileType.IMAGE.equals(item.getFileType())) {
-//                albumFile.setFileId(item.getPic().getId());
-//                albumFile.setFileType(EFileType.IMAGE);
-//            } else if (EFileType.VIDEO.equals(item.getFileType())) {
-//                albumFile.setFileId(item.getVideo().getId());
-//                albumFile.setFileType(EFileType.VIDEO);
-//            } else {
-//                throw new ApiException(EApiCode.UNKNOWN, "暂不支持的文件类型");
-//            }
-//            albumFile.setGmtCreate(LocalDateTime.now());
-//            albumFile.setGmtModified(LocalDateTime.now());
-//            return albumFile;
-//        }).collect(Collectors.toList());
-//        boolean saveBatch = albumFileService.saveBatch(albumFileList);
-//        log.info("act=batchUploadPic picListSize={} saveBatch={}", albumFileList.size(), saveBatch);
+        List<File> fileList = fileService.doUploadFile(uploadReq.getFileItems());
+        List<AlbumFile> albumFileList = fileList.stream().map(item -> {
+            AlbumFile albumFile = new AlbumFile();
+            albumFile.setAlbumId(albumId);
+            albumFile.setFileId(item.getId());
+            albumFile.setFileType(item.getFileType());
+            albumFile.setGmtCreate(LocalDateTime.now());
+            albumFile.setGmtModified(LocalDateTime.now());
+            return albumFile;
+        }).collect(Collectors.toList());
+        boolean saveBatch = albumFileService.saveBatch(albumFileList);
+        log.info("act=batchUploadFile fileListSize={} saveBatch={}", albumFileList.size(), saveBatch);
         return ApiResp.success(null);
     }
 }

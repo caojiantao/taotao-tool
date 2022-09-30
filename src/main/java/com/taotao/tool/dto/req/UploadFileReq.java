@@ -11,10 +11,14 @@ public class UploadFileReq {
     private List<FileItem> fileItems;
 
     @Data
-    private static class FileItem {
+    public static class FileItem {
         private MultipartFile file;
+        private FileItemExt fileExt;
+    }
 
-        private MultipartFile videoCover;
-        private Integer videoSeconds;
+    @Data
+    public static class FileItemExt {
+        private MultipartFile coverFile;
+        private Integer second;
     }
 }

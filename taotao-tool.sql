@@ -30,33 +30,17 @@ CREATE TABLE `album_file` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- ----------------------------
--- Table structure for pic
+-- Table structure for file
 -- ----------------------------
-DROP TABLE IF EXISTS `pic`;
-CREATE TABLE `pic` (
+DROP TABLE IF EXISTS `file`;
+CREATE TABLE `file` (
   `id` int NOT NULL AUTO_INCREMENT,
   `filename` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `md5` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `bytes` bigint NOT NULL,
-  `content_type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `gmt_create` datetime NOT NULL,
-  `gmt_modified` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `uniq_filename` (`filename`) USING BTREE,
-  UNIQUE KEY `uniq_md5` (`md5`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
--- ----------------------------
--- Table structure for video
--- ----------------------------
-DROP TABLE IF EXISTS `video`;
-CREATE TABLE `video` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `filename` varchar(100) COLLATE utf8mb4_bin NOT NULL,
-  `md5` varchar(100) COLLATE utf8mb4_bin NOT NULL,
-  `seconds` bigint NOT NULL,
-  `bytes` bigint NOT NULL,
-  `content_type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `file_type` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `file_type_detail` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `ext` varchar(500) COLLATE utf8mb4_bin DEFAULT NULL,
   `gmt_create` datetime NOT NULL,
   `gmt_modified` datetime NOT NULL,
   PRIMARY KEY (`id`),

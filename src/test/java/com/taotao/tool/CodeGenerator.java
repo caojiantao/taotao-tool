@@ -19,7 +19,7 @@ public class CodeGenerator {
         String username = "root";
         String password = "123456";
         String finalProjectPath = "D:/workspace/taotao-tool";
-        String tables = "video";
+        String tables = "file";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("taotao") // 设置作者

@@ -3,7 +3,7 @@ package com.taotao.tool.yml;
 import lombok.Data;
 
 @Data
-public class VideoYml {
+public class ImageYml {
 
     private String path;
 }

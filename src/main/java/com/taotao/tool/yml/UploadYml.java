@@ -6,8 +6,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConfigurationProperties("pic")
-public class PicYml {
+@ConfigurationProperties("upload")
+public class UploadYml {
 
-    private String path;
+    private ImageYml image;
+    private VideoYml video;
 }

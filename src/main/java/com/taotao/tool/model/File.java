@@ -1,5 +1,6 @@
 package com.taotao.tool.model;
 
+import com.taotao.tool.enums.EFileType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,19 +10,21 @@ import lombok.Setter;
  * </p>
  *
  * @author taotao
- * @since 2022-09-22
+ * @since 2022-09-30
  */
 @Getter
 @Setter
-public class Video extends BaseModel {
-    
+public class File extends BaseModel {
+
     private String filename;
 
     private String md5;
 
-    private Long seconds;
-
     private Long bytes;
 
-    private String contentType;
+    private EFileType fileType;
+
+    private String fileTypeDetail;
+
+    private String ext;
 }

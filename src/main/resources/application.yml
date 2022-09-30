@@ -1,7 +1,8 @@
-pic:
-  path: D:/tmp/pic
-video:
-  path: D:/tmp/video
+upload:
+  image:
+    path: D:/tmp/image
+  video:
+    path: D:/tmp/video
 
 spring:
   servlet:
@@ -18,7 +19,7 @@ spring:
     password: 123456
   web:
     resources:
-      static-locations: file:${pic.path}
+      static-locations: file:${upload.image.path},file:${upload.video.path},
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

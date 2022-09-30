@@ -1,5 +1,6 @@
-pic:
-  path: /home/caojiantao/pic
-video:
-  path: /home/caojiantao/video
+upload:
+  image:
+    path: /home/caojiantao/image
+  video:
+    path: /home/caojiantao/video
 

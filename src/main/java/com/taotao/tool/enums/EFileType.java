@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum EFileType {
 
-    IMAGE,
-    VIDEO,
+    image,
+    video,
     ;
 }

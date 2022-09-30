@@ -39,7 +39,7 @@ CREATE TABLE `file` (
   `md5` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `bytes` bigint NOT NULL,
   `file_type` varchar(100) COLLATE utf8mb4_bin NOT NULL,
-  `file_type_detail` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `mime_type` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `ext` varchar(500) COLLATE utf8mb4_bin DEFAULT NULL,
   `gmt_create` datetime NOT NULL,
   `gmt_modified` datetime NOT NULL,

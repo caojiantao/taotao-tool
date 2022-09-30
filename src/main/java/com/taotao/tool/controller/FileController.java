@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.taotao.tool.dto.req.FilePageReq;
-import com.taotao.tool.dto.req.UploadFileReq;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
 import com.taotao.tool.model.File;
@@ -12,13 +11,11 @@ import com.taotao.tool.service.IFileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 /**
  * <p>
@@ -37,8 +34,8 @@ public class FileController {
     private IFileService fileService;
 
     @PostMapping("/batchUpload")
-    public ApiResp<Void> batchUpload(UploadFileReq uploadReq) throws Exception {
-        fileService.doUploadFile(uploadReq.getFileItems());
+    public ApiResp<Void> batchUpload(@RequestPart List<MultipartFile> files) throws Exception {
+        fileService.doBatchUpload(files);
         return ApiResp.success(null);
     }
 

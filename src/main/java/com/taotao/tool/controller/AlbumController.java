@@ -8,7 +8,6 @@ import com.google.common.collect.Lists;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
 import com.taotao.tool.dto.req.BasePageReq;
-import com.taotao.tool.dto.req.UploadFileReq;
 import com.taotao.tool.dto.resp.AlbumDetailResp;
 import com.taotao.tool.dto.resp.AlbumHomeResp;
 import com.taotao.tool.dto.resp.ApiResp;
@@ -27,6 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -56,9 +56,9 @@ public class AlbumController {
     private IFileService fileService;
 
     @PostMapping("/addAlbum")
-    public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, UploadFileReq.FileItem fileItem) throws Exception {
+    public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, @RequestPart("file") MultipartFile multipartFile) throws Exception {
         Album album = JsonUtils.convert(req, Album.class);
-        File file = fileService.doUploadFile(Lists.newArrayList(fileItem)).get(0);
+        File file = fileService.doBatchUpload(Lists.newArrayList(multipartFile)).get(0);
         album.setCoverId(file.getId());
         LocalDateTime now = LocalDateTime.now();
         album.setGmtCreate(now);
@@ -145,13 +145,13 @@ public class AlbumController {
     @PostMapping("/batchUploadFile")
     public ApiResp<Void> batchUploadFile(
             @RequestParam Integer albumId,
-            UploadFileReq uploadReq
+            @RequestPart List<MultipartFile> files
     ) throws Exception {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不存在");
 
-        List<File> fileList = fileService.doUploadFile(uploadReq.getFileItems());
+        List<File> fileList = fileService.doBatchUpload(files);
         List<AlbumFile> albumFileList = fileList.stream().map(item -> {
             AlbumFile albumFile = new AlbumFile();
             albumFile.setAlbumId(albumId);

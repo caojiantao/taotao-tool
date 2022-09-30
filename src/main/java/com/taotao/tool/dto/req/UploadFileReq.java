@@ -19,6 +19,6 @@ public class UploadFileReq {
     @Data
     public static class FileItemExt {
         private MultipartFile coverFile;
-        private Integer second;
+        private Long second;
     }
 }

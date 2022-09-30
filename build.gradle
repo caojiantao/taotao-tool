@@ -38,6 +38,8 @@ dependencies {
     testImplementation 'org.apache.velocity:velocity-engine-core:2.3'
 
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+    implementation 'org.bytedeco:javacv-platform:1.5.7'
 }
 
 tasks.named('test') {

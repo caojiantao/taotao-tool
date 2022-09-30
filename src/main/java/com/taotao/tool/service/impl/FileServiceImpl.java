@@ -2,8 +2,8 @@ package com.taotao.tool.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.common.collect.Lists;
+import com.taotao.tool.dto.FFmpegFrameMultiPartFile;
 import com.taotao.tool.dto.FileExt;
-import com.taotao.tool.dto.req.UploadFileReq;
 import com.taotao.tool.enums.EApiCode;
 import com.taotao.tool.enums.EFileType;
 import com.taotao.tool.exception.ApiException;
@@ -12,6 +12,7 @@ import com.taotao.tool.model.File;
 import com.taotao.tool.service.IFileService;
 import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.util.DigestUtils;
+import com.taotao.tool.util.FFmpegUtils;
 import com.taotao.tool.util.JsonUtils;
 import com.taotao.tool.yml.ImageYml;
 import com.taotao.tool.yml.UploadYml;
@@ -19,6 +20,7 @@ import com.taotao.tool.yml.VideoYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -45,24 +47,26 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
     private UploadYml uploadYml;
 
     @Override
-    public List<File> doUploadFile(List<UploadFileReq.FileItem> fileItemList) throws IOException {
+    @Transactional
+    public List<File> doBatchUpload(List<MultipartFile> files) throws IOException {
         List<File> fileList = Lists.newArrayList();
-        for (UploadFileReq.FileItem fileItem : fileItemList) {
-            MultipartFile multipartFile = fileItem.getFile();
+        for (MultipartFile multipartFile : files) {
             String contentType = multipartFile.getContentType();
             ApiAssertUtils.notNull(contentType, "文件类型不能为空");
-            String md5 = DigestUtils.md5DigestAsHex(multipartFile.getInputStream());
+            String md5 = DigestUtils.md5DigestAsHex(multipartFile.getBytes());
             File originFile = getByMd5(md5);
             if (Objects.nonNull(originFile)) {
-                log.info("act=doUploadFile type=alreadyExist filename={}", originFile.getFilename());
+                log.info("act=doBatchUpload type=alreadyExist filename={}", originFile.getFilename());
                 fileList.add(originFile);
                 continue;
             }
             String[] types = contentType.split("/");
             EFileType fileType = EFileType.valueOf(types[0]);
-            String fileTypeDetail = types[1];
+            // org.springframework.boot.web.server.MimeMappings
+            String originalFilename = multipartFile.getOriginalFilename();
+            String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
             // 保存到磁盘
-            String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + "." + fileTypeDetail;
+            String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + extension;
             String diskPath = getUploadDiskPath(fileType);
             java.io.File newFile = new java.io.File(diskPath, newFilename);
             multipartFile.transferTo(newFile);
@@ -72,8 +76,8 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
             addFile.setMd5(md5);
             addFile.setBytes(newFile.length());
             addFile.setFileType(fileType);
-            addFile.setFileTypeDetail(fileTypeDetail);
-            String ext = parseFileExt(fileType, fileItem.getFileExt());
+            addFile.setMimeType(contentType);
+            String ext = parseFileExt(fileType, newFile);
             addFile.setExt(ext);
             addFile.setGmtCreate(LocalDateTime.now());
             addFile.setGmtModified(LocalDateTime.now());
@@ -82,18 +86,28 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
         List<File> addFileList = fileList.stream().filter(item -> Objects.isNull(item.getId())).collect(Collectors.toList());
         if (!CollectionUtils.isEmpty(addFileList)) {
             boolean saveResp = saveBatch(addFileList);
-            log.info("act=doUploadFile type=saveBatch saveSize={} saveResp={}", addFileList.size(), saveResp);
+            log.info("act=doBatchUpload type=saveBatch saveSize={} saveResp={}", addFileList.size(), saveResp);
         }
         return fileList;
     }
 
-    private String parseFileExt(EFileType fileType, UploadFileReq.FileItemExt fileExt) throws IOException {
-        if (Objects.equals(EFileType.video, fileType) && Objects.nonNull(fileExt)) {
-            // 先上传视频封面
-            UploadFileReq.FileItem uploadCoverFileItem = new UploadFileReq.FileItem();
-            uploadCoverFileItem.setFile(fileExt.getCoverFile());
-            File coverFile = doUploadFile(Lists.newArrayList(uploadCoverFileItem)).get(0);
-            FileExt ext = new FileExt(coverFile.getFilename(), fileExt.getSecond());
+    private String parseFileExt(EFileType fileType, java.io.File newFile) throws IOException {
+        FileExt ext = new FileExt();
+        log.info("act=doBatchUpload type=parseFileExt fileType={}", fileType);
+        if (Objects.equals(EFileType.video, fileType)) {
+            // 视频封面、时长
+            FFmpegUtils.parseVideo(newFile, grabber -> {
+                long second = grabber.getLengthInTime() / 1000000;
+                ext.setSecond(second);
+                try {
+                    FFmpegFrameMultiPartFile multiPartFile = new FFmpegFrameMultiPartFile(grabber);
+                    String newFilename = doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
+                    ext.setCoverFilename(newFilename);
+                    log.info("act=doBatchUpload type=parseFileExt fileType={} ext={}", fileType, JsonUtils.toJson(ext));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
             return JsonUtils.toJson(ext);
         }
         return null;

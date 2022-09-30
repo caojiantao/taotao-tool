@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class FileExt {
 
     private String coverFilename;
-    private Integer second;
+    private Long second;
 }

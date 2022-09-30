@@ -24,7 +24,7 @@ public class File extends BaseModel {
 
     private EFileType fileType;
 
-    private String fileTypeDetail;
+    private String mimeType;
 
     private String ext;
 }

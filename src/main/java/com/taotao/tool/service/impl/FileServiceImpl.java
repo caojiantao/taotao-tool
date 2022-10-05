@@ -6,6 +6,7 @@ import com.taotao.tool.dto.FFmpegFrameMultiPartFile;
 import com.taotao.tool.dto.FileExt;
 import com.taotao.tool.enums.EApiCode;
 import com.taotao.tool.enums.EFileType;
+import com.taotao.tool.event.upload.Event;
 import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.mapper.FileMapper;
 import com.taotao.tool.model.File;
@@ -19,6 +20,7 @@ import com.taotao.tool.yml.UploadYml;
 import com.taotao.tool.yml.VideoYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -45,6 +47,8 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
 
     @Autowired
     private UploadYml uploadYml;
+    @Autowired
+    private ApplicationEventPublisher eventPublisher;
 
     @Override
     @Transactional
@@ -77,8 +81,6 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
             addFile.setBytes(newFile.length());
             addFile.setFileType(fileType);
             addFile.setMimeType(contentType);
-            String ext = parseFileExt(fileType, newFile);
-            addFile.setExt(ext);
             addFile.setGmtCreate(LocalDateTime.now());
             addFile.setGmtModified(LocalDateTime.now());
             fileList.add(addFile);
@@ -86,16 +88,23 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
         List<File> addFileList = fileList.stream().filter(item -> Objects.isNull(item.getId())).collect(Collectors.toList());
         if (!CollectionUtils.isEmpty(addFileList)) {
             boolean saveResp = saveBatch(addFileList);
+            // 通过 event 机制，异步解析文件 ext 信息
+            addFileList.forEach(item -> eventPublisher.publishEvent(new Event(item.getId())));
             log.info("act=doBatchUpload type=saveBatch saveSize={} saveResp={}", addFileList.size(), saveResp);
         }
         return fileList;
     }
 
-    private String parseFileExt(EFileType fileType, java.io.File newFile) throws IOException {
-        FileExt ext = new FileExt();
-        log.info("act=doBatchUpload type=parseFileExt fileType={}", fileType);
+    @Override
+    public String parseFileExt(Integer fileId) throws IOException {
+        log.info("act=doBatchUpload type=parseFileExt fileId={}", fileId);
+        File file = getById(fileId);
+        EFileType fileType = file.getFileType();
+        String diskPath = getUploadDiskPath(fileType);
+        java.io.File newFile = new java.io.File(diskPath, file.getFilename());
         if (Objects.equals(EFileType.video, fileType)) {
             // 视频封面、时长
+            FileExt ext = new FileExt();
             FFmpegUtils.parseVideo(newFile, grabber -> {
                 long second = grabber.getLengthInTime() / 1000000;
                 ext.setSecond(second);

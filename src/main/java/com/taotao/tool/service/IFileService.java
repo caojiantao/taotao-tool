@@ -21,4 +21,5 @@ public interface IFileService extends IService<File> {
 
     List<File> doBatchUpload(List<MultipartFile> files) throws IOException;
 
+    String parseFileExt(Integer fileId) throws IOException;
 }

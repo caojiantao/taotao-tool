@@ -22,7 +22,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -51,7 +50,6 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
     private ApplicationEventPublisher eventPublisher;
 
     @Override
-    @Transactional
     public List<File> doBatchUpload(List<MultipartFile> files) throws IOException {
         List<File> fileList = Lists.newArrayList();
         for (MultipartFile multipartFile : files) {
@@ -97,7 +95,7 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
 
     @Override
     public String parseFileExt(Integer fileId) throws IOException {
-        log.info("act=doBatchUpload type=parseFileExt fileId={}", fileId);
+        log.info("act=parseFileExt fileId={}", fileId);
         File file = getById(fileId);
         EFileType fileType = file.getFileType();
         String diskPath = getUploadDiskPath(fileType);
@@ -112,9 +110,9 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
                     FFmpegFrameMultiPartFile multiPartFile = new FFmpegFrameMultiPartFile(grabber);
                     String newFilename = doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
                     ext.setCoverFilename(newFilename);
-                    log.info("act=doBatchUpload type=parseFileExt fileType={} ext={}", fileType, JsonUtils.toJson(ext));
+                    log.info("act=parseFileExt fileId={} ext={}", fileId, JsonUtils.toJson(ext));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    log.error("act=parseFileExt fileId={}", fileId, e);
                 }
             });
             return JsonUtils.toJson(ext);

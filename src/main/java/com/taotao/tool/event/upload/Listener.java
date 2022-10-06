@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -19,9 +20,10 @@ public class Listener implements ApplicationListener<Event> {
     @Autowired
     private IFileService fileService;
 
+    @Async
     @Override
     public void onApplicationEvent(@NotNull Event event) {
-        Integer fileId = event.getFileId();
+        Integer fileId = (Integer) event.getSource();
         log.info("act=onUploadEvent fileId={}", fileId);
         try {
             String ext = fileService.parseFileExt(fileId);

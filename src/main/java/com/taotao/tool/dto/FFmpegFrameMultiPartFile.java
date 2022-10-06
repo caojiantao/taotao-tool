@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -28,10 +27,20 @@ public class FFmpegFrameMultiPartFile implements MultipartFile {
         Java2DFrameConverter java2DFrameConverter = new Java2DFrameConverter();
         this.bufferedImage = java2DFrameConverter.getBufferedImage(frame);
         if (StringUtils.hasLength(rotate)) {
-            Graphics2D graphics = this.bufferedImage.createGraphics();
-            AffineTransform transform = new AffineTransform();
-            transform.rotate(Math.toRadians(Double.parseDouble(rotate)), this.bufferedImage.getWidth() / 2.0, this.bufferedImage.getHeight() / 2.0);
-            graphics.setTransform(transform);
+            int w = bufferedImage.getWidth(), h = bufferedImage.getHeight();
+            double r = (Double.parseDouble(rotate) % 360 + 360) % 360;
+            int dw = w, dh = h;
+            if (r == 90 || r == 270) {
+                dw = h;
+                dh = w;
+            }
+            BufferedImage rotateImage = new BufferedImage(h, w, bufferedImage.getType());
+            Graphics2D g2 = rotateImage.createGraphics();
+            g2.translate((dw - w) >> 1, (dh - h) >> 1);
+            g2.rotate(Math.toRadians(r), w >> 1, h >> 1);
+            g2.drawImage(bufferedImage, 0, 0, null);
+            g2.dispose();
+            this.bufferedImage = rotateImage;
         }
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ImageIO.write(bufferedImage, "jpeg", baos);

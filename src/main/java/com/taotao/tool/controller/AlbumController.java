@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.Lists;
+import com.taotao.tool.dto.AlbumFileDTO;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
 import com.taotao.tool.dto.req.BasePageReq;
@@ -125,7 +126,7 @@ public class AlbumController {
     }
 
     @GetMapping("/getAlbumFilePage")
-    public ApiResp<BasePageResp<File>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
+    public ApiResp<BasePageResp<AlbumFileDTO>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
         IPage<AlbumFile> page = new Page<>(req.getCurrent(), req.getSize());
         QueryChainWrapper<AlbumFile> wrapper = albumFileService.query().eq("album_id", req.getAlbumId()).orderByDesc("gmt_create");
         if (Objects.nonNull(req.getFileType())) {
@@ -133,12 +134,17 @@ public class AlbumController {
         }
         wrapper.page(page);
         List<Integer> fileIdList = page.getRecords().stream().map(AlbumFile::getFileId).collect(Collectors.toList());
-        List<File> files = Lists.newArrayList();
+        List<AlbumFileDTO> albumFiles = Lists.newArrayList();
         if (!CollectionUtils.isEmpty(fileIdList)) {
             Map<Integer, File> fileMap = fileService.listByIds(fileIdList).stream().collect(Collectors.toMap(File::getId, Function.identity()));
-            files = fileIdList.stream().map(fileMap::get).collect(Collectors.toList());
+            albumFiles = page.getRecords().stream().map(item -> {
+                File file = fileMap.get(item.getFileId());
+                AlbumFileDTO dto = JsonUtils.convert(file, AlbumFileDTO.class);
+                dto.setAlbumFileId(item.getId());
+                return dto;
+            }).collect(Collectors.toList());
         }
-        BasePageResp<File> resp = new BasePageResp<>(files, page.getTotal());
+        BasePageResp<AlbumFileDTO> resp = new BasePageResp<>(albumFiles, page.getTotal());
         return ApiResp.success(resp);
     }
 
@@ -163,6 +169,15 @@ public class AlbumController {
         }).collect(Collectors.toList());
         boolean saveBatch = albumFileService.saveBatch(albumFileList);
         log.info("act=batchUploadFile fileListSize={} saveBatch={}", albumFileList.size(), saveBatch);
+        return ApiResp.success(null);
+    }
+
+    @PostMapping("/batchRemoveFile")
+    public ApiResp<Void> batchRemoveFile(
+            @RequestParam Integer albumId,
+            @RequestBody List<Integer> albumFileIdList
+    ) {
+        albumFileService.removeBatchByIds(albumFileIdList);
         return ApiResp.success(null);
     }
 }

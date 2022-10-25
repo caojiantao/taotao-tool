@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.3'
-    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
-    id 'java'
+    id "org.springframework.boot" version "2.7.3"
+    id "io.spring.dependency-management" version "1.0.13.RELEASE"
+    id "java"
 }
 
-group = 'com.taotao'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+group = "com.taotao"
+version = "0.0.1-SNAPSHOT"
+sourceCompatibility = "1.8"
 
 configurations {
     compileOnly {
@@ -17,31 +17,41 @@ configurations {
 // 访问加速
 allprojects {
     repositories {
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         mavenCentral()
     }
 }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-validation:2.7.3'
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.3'
-    implementation 'com.google.guava:guava:31.1-jre'
-
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    runtimeOnly 'mysql:mysql-connector-java:8.0.30'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.7.3'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.3'
-
-    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.2'
-    testImplementation 'com.baomidou:mybatis-plus-generator:3.5.3'
-    testImplementation 'org.apache.velocity:velocity-engine-core:2.3'
-
-    implementation 'io.springfox:springfox-boot-starter:3.0.0'
-
-    implementation 'org.bytedeco:javacv-platform:1.5.7'
+ext {
+    springboot_version = "2.7.4"
+    javacv_version = "1.5.8-SNAPSHOT"
+    os = "macosx-x86_64"
 }
 
-tasks.named('test') {
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-validation:$springboot_version"
+    implementation "org.springframework.boot:spring-boot-starter-web:$springboot_version"
+    implementation "com.google.guava:guava:31.1-jre"
+
+    compileOnly "org.projectlombok:lombok:1.18.24"
+    runtimeOnly "mysql:mysql-connector-java:8.0.30"
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:$springboot_version"
+    annotationProcessor "org.projectlombok:lombok:1.18.24"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$springboot_version"
+
+    implementation "com.baomidou:mybatis-plus-boot-starter:3.5.2"
+    testImplementation "com.baomidou:mybatis-plus-generator:3.5.3"
+    testImplementation "org.apache.velocity:velocity-engine-core:2.3"
+
+    implementation "io.springfox:springfox-boot-starter:3.0.0"
+
+    implementation "org.bytedeco:javacv:$javacv_version"
+    implementation "org.bytedeco:javacpp:$javacv_version"
+    implementation "org.bytedeco:opencv::$os"
+    implementation "org.bytedeco:ffmpeg::$os"
+}
+
+tasks.named("test") {
     useJUnitPlatform()
 }

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import lombok.SneakyThrows;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -22,11 +23,13 @@ public class JsonUtils {
         mapper.registerModule(javaTimeModule);
     }
 
-    public static String toJson(Object obj) throws JsonProcessingException {
+    @SneakyThrows
+    public static String toJson(Object obj) {
         return mapper.writer().writeValueAsString(obj);
     }
 
-    public static <P, Q> Q convert(P obj, Class<Q> clazz) throws JsonProcessingException {
+    @SneakyThrows
+    public static <P, Q> Q convert(P obj, Class<Q> clazz) {
         String json = toJson(obj);
         return mapper.readValue(json, clazz);
     }

@@ -4,7 +4,6 @@ import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.Frame;
 import org.bytedeco.javacv.Java2DFrameConverter;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
@@ -22,22 +21,22 @@ public class FFmpegFrameMultiPartFile implements MultipartFile {
     private byte[] bytes;
 
     public FFmpegFrameMultiPartFile(FFmpegFrameGrabber grabber) throws Exception {
-        String rotate = grabber.getVideoMetadata("rotate");
+        double rotate = grabber.getDisplayRotation();
         Frame frame = grabber.grabImage();
         Java2DFrameConverter java2DFrameConverter = new Java2DFrameConverter();
         this.bufferedImage = java2DFrameConverter.getBufferedImage(frame);
-        if (StringUtils.hasLength(rotate)) {
+        if (rotate != 0D) {
             int w = bufferedImage.getWidth(), h = bufferedImage.getHeight();
-            double r = (Double.parseDouble(rotate) % 360 + 360) % 360;
+            double r = rotate % 360;
             int dw = w, dh = h;
-            if (r == 90 || r == 270) {
+            if (Math.abs(r / 90) % 2 == 1) {
                 dw = h;
                 dh = w;
             }
             BufferedImage rotateImage = new BufferedImage(h, w, bufferedImage.getType());
             Graphics2D g2 = rotateImage.createGraphics();
             g2.translate((dw - w) >> 1, (dh - h) >> 1);
-            g2.rotate(Math.toRadians(r), w >> 1, h >> 1);
+            g2.rotate(Math.toRadians(-r), w >> 1, h >> 1);
             g2.drawImage(bufferedImage, 0, 0, null);
             g2.dispose();
             this.bufferedImage = rotateImage;
@@ -54,7 +53,7 @@ public class FFmpegFrameMultiPartFile implements MultipartFile {
 
     @Override
     public String getOriginalFilename() {
-        return UUID.randomUUID().toString() + ".jpeg";
+        return UUID.randomUUID() + ".jpeg";
     }
 
     @Override

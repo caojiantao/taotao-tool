@@ -10,7 +10,7 @@ public class FFmpegUtils {
     public static void parseVideo(File file, Consumer<FFmpegFrameGrabber> consumer) throws FFmpegFrameGrabber.Exception {
         FFmpegFrameGrabber grabber = null;
         try {
-            grabber = new FFmpegFrameGrabber(file);
+            grabber = FFmpegFrameGrabber.createDefault(file);
             grabber.start();
             consumer.accept(grabber);
         } finally {

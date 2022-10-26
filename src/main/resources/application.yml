@@ -4,6 +4,11 @@ upload:
   video:
     path: D:/tmp/video
 
+login:
+  redirectUrl: https://www.baidu.com
+  passwordSalt: caojiantao
+  tokenSalt: chenlisha
+
 spring:
   servlet:
     multipart:
@@ -17,9 +22,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/taotao-tool
     username: root
     password: 123456
-  web:
-    resources:
-      static-locations: file:${upload.image.path},file:${upload.video.path},
+#  web:
+#    resources:
+#      static-locations: file:${upload.image.path},file:${upload.video.path},
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

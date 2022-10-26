@@ -3,6 +3,7 @@ package com.taotao.tool.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.taotao.tool.annotation.RequireLogin;
 import com.taotao.tool.dto.req.FilePageReq;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.dto.resp.BasePageResp;
@@ -34,6 +35,7 @@ public class FileController {
     private IFileService fileService;
 
     @PostMapping("/batchUpload")
+    @RequireLogin
     public ApiResp<Void> batchUpload(@RequestPart List<MultipartFile> files) throws Exception {
         fileService.doBatchUpload(files);
         return ApiResp.success(null);

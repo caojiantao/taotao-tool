@@ -16,6 +16,8 @@ import lombok.Setter;
 @Setter
 public class File extends BaseModel {
 
+    private Integer userId;
+
     private String filename;
 
     private String md5;

@@ -15,6 +15,8 @@ import lombok.Setter;
 @Setter
 public class Album extends BaseModel {
 
+    private Integer userId;
+
     private Integer coverId;
 
     private String name;

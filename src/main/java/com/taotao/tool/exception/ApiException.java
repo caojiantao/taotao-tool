@@ -8,6 +8,11 @@ public class ApiException extends RuntimeException {
 
     private final EApiCode code;
 
+    public ApiException(EApiCode code) {
+        super(code.getDesc());
+        this.code = code;
+    }
+
     public ApiException(EApiCode code, String message) {
         super(message);
         this.code = code;

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.Lists;
+import com.taotao.tool.annotation.RequireLogin;
 import com.taotao.tool.dto.AlbumFileDTO;
 import com.taotao.tool.dto.req.AddAlbumReq;
 import com.taotao.tool.dto.req.AlbumFilePageReq;
@@ -22,6 +23,7 @@ import com.taotao.tool.service.IAlbumService;
 import com.taotao.tool.service.IFileService;
 import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.util.JsonUtils;
+import com.taotao.tool.util.LoginUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
@@ -57,8 +59,10 @@ public class AlbumController {
     private IFileService fileService;
 
     @PostMapping("/addAlbum")
+    @RequireLogin
     public ApiResp<Integer> addAlbum(@Validated AddAlbumReq req, @RequestPart("file") MultipartFile multipartFile) throws Exception {
         Album album = JsonUtils.convert(req, Album.class);
+        album.setUserId(LoginUtils.getCurrentUser().getId());
         File file = fileService.doBatchUpload(Lists.newArrayList(multipartFile)).get(0);
         album.setCoverId(file.getId());
         LocalDateTime now = LocalDateTime.now();
@@ -149,6 +153,7 @@ public class AlbumController {
     }
 
     @PostMapping("/batchUploadFile")
+    @RequireLogin
     public ApiResp<Void> batchUploadFile(
             @RequestParam Integer albumId,
             @RequestPart List<MultipartFile> files
@@ -156,7 +161,8 @@ public class AlbumController {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不存在");
-
+        boolean isMine = Objects.equals(album.getId(), LoginUtils.getCurrentUser().getId());
+        ApiAssertUtils.isTrue(isMine, "没有权限操作");
         List<File> fileList = fileService.doBatchUpload(files);
         List<AlbumFile> albumFileList = fileList.stream().map(item -> {
             AlbumFile albumFile = new AlbumFile();
@@ -177,6 +183,11 @@ public class AlbumController {
             @RequestParam Integer albumId,
             @RequestBody List<Integer> albumFileIdList
     ) {
+        ApiAssertUtils.notNull(albumId, "未指定相册");
+        Album album = albumService.getById(albumId);
+        ApiAssertUtils.notNull(album, "上传相册不存在");
+        boolean isMine = Objects.equals(album.getId(), LoginUtils.getCurrentUser().getId());
+        ApiAssertUtils.isTrue(isMine, "没有权限操作");
         albumFileService.removeBatchByIds(albumFileIdList);
         return ApiResp.success(null);
     }

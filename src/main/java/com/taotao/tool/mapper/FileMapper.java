@@ -1,7 +1,7 @@
 package com.taotao.tool.mapper;
 
-import com.taotao.tool.model.File;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.taotao.tool.model.File;
 
 /**
  * <p>

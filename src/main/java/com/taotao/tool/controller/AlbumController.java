@@ -132,7 +132,7 @@ public class AlbumController {
     @GetMapping("/getAlbumFilePage")
     public ApiResp<BasePageResp<AlbumFileDTO>> getAlbumFilePage(@Validated AlbumFilePageReq req) {
         IPage<AlbumFile> page = new Page<>(req.getCurrent(), req.getSize());
-        QueryChainWrapper<AlbumFile> wrapper = albumFileService.query().eq("album_id", req.getAlbumId()).orderByDesc("gmt_create");
+        QueryChainWrapper<AlbumFile> wrapper = albumFileService.query().eq("album_id", req.getAlbumId()).orderByDesc("gmt_create", "id");
         if (Objects.nonNull(req.getFileType())) {
             wrapper.eq("file_type", req.getFileType());
         }
@@ -161,7 +161,7 @@ public class AlbumController {
         ApiAssertUtils.notNull(albumId, "未指定相册");
         Album album = albumService.getById(albumId);
         ApiAssertUtils.notNull(album, "上传相册不存在");
-        boolean isMine = Objects.equals(album.getId(), LoginUtils.getCurrentUser().getId());
+        boolean isMine = Objects.equals(album.getUserId(), LoginUtils.getCurrentUser().getId());
         ApiAssertUtils.isTrue(isMine, "没有权限操作");
         List<File> fileList = fileService.doBatchUpload(files);
         List<AlbumFile> albumFileList = fileList.stream().map(item -> {
@@ -179,6 +179,7 @@ public class AlbumController {
     }
 
     @PostMapping("/batchRemoveFile")
+    @RequireLogin
     public ApiResp<Void> batchRemoveFile(
             @RequestParam Integer albumId,
             @RequestBody List<Integer> albumFileIdList

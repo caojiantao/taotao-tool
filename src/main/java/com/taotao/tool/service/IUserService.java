@@ -15,7 +15,7 @@ public interface IUserService extends IService<User> {
 
     String encryptPassword(String password);
 
-    String getToken(User user);
+    String getToken(Integer userId);
 
-    User parseToken(String token);
+    User verifyToken(String token, Integer userId);
 }

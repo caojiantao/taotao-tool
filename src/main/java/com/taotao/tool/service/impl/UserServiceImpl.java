@@ -34,26 +34,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     }
 
     @Override
-    public String getToken(User user) {
-        String id = user.getId().toString();
-        String sign = sign(id, loginYml.getTokenSalt());
-        return id + ":" + sign;
+    public String getToken(Integer userId) {
+        return sign(userId.toString(), loginYml.getTokenSalt());
     }
 
     @Override
-    public User parseToken(String token) {
-        if (!StringUtils.hasLength(token)) {
+    public User verifyToken(String token, Integer userId) {
+        if (!StringUtils.hasLength(token) || Objects.isNull(userId)) {
             return null;
         }
-        String[] split = token.split(":");
-        int id = Integer.parseInt(split[0]);
-        String sign = split[1];
-        String _sign = sign(id, loginYml.getTokenSalt());
-        if (!Objects.equals(sign, _sign)) {
+        String sign = sign(userId.toString(), loginYml.getTokenSalt());
+        if (!Objects.equals(sign, token)) {
             log.error("不合法的签名");
             return null;
         }
-        return getById(id);
+        return getById(userId);
     }
 
     private String sign(Object payload, String salt) {

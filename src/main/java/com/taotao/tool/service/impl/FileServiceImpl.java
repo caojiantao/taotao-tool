@@ -10,6 +10,7 @@ import com.taotao.tool.event.upload.Event;
 import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.mapper.FileMapper;
 import com.taotao.tool.model.File;
+import com.taotao.tool.model.User;
 import com.taotao.tool.service.IFileService;
 import com.taotao.tool.util.*;
 import com.taotao.tool.yml.ImageYml;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -71,7 +73,8 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
             multipartFile.transferTo(newFile);
             // 记录至 file 表
             File addFile = new File();
-            addFile.setUserId(LoginUtils.getCurrentUser().getId());
+            Integer userId = Optional.ofNullable(LoginUtils.getCurrentUser()).map(User::getId).orElse(-1);
+            addFile.setUserId(userId);
             addFile.setFilename(newFilename);
             addFile.setMd5(md5);
             addFile.setBytes(newFile.length());

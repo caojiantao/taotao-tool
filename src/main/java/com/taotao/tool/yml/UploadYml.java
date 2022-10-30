@@ -9,6 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("upload")
 public class UploadYml {
 
-    private ImageYml image;
-    private VideoYml video;
+    private ThumbYml thumb;
 }

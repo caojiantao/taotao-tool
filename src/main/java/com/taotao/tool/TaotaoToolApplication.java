@@ -6,6 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.util.ResourceUtils;
+
+import java.io.FileNotFoundException;
 
 @Slf4j
 @MapperScan("com.taotao.tool.mapper")

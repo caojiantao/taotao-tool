@@ -50,6 +50,8 @@ dependencies {
     implementation "org.bytedeco:javacpp:$javacv_version"
     implementation "org.bytedeco:opencv::$os"
     implementation "org.bytedeco:ffmpeg::$os"
+
+    implementation 'net.coobird:thumbnailator:0.4.18'
 }
 
 tasks.named("test") {

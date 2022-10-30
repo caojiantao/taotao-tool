@@ -1,8 +1,7 @@
 upload:
-  image:
-    path: D:/tmp/image
-  video:
-    path: D:/tmp/video
+  thumb:
+    path: thumbnail
+    quality: 0.4
 
 login:
   redirectUrl: https://www.baidu.com
@@ -22,9 +21,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/taotao-tool
     username: root
     password: 123456
-  web:
-    resources:
-      static-locations: file:${upload.image.path},file:${upload.video.path},
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

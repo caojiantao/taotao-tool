@@ -4,18 +4,15 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.common.collect.Lists;
 import com.taotao.tool.dto.FFmpegFrameMultiPartFile;
 import com.taotao.tool.dto.FileExt;
-import com.taotao.tool.enums.EApiCode;
 import com.taotao.tool.enums.EFileType;
 import com.taotao.tool.event.upload.Event;
-import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.mapper.FileMapper;
 import com.taotao.tool.model.File;
 import com.taotao.tool.model.User;
 import com.taotao.tool.service.IFileService;
 import com.taotao.tool.util.*;
-import com.taotao.tool.yml.ImageYml;
+import com.taotao.tool.yml.ThumbYml;
 import com.taotao.tool.yml.UploadYml;
-import com.taotao.tool.yml.VideoYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -66,11 +63,18 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
             // org.springframework.boot.web.server.MimeMappings
             String originalFilename = multipartFile.getOriginalFilename();
             String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
-            // 保存到磁盘
             String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + extension;
-            String diskPath = getUploadDiskPath(fileType);
+            // 保存到磁盘（源文件）
+            String diskPath = getUploadDiskPath(fileType.name());
             java.io.File newFile = new java.io.File(diskPath, newFilename);
             multipartFile.transferTo(newFile);
+            // 保存到磁盘（缩略图）
+            if (EFileType.image.equals(fileType)) {
+                ThumbYml thumb = uploadYml.getThumb();
+                String thumbDir = getUploadDiskPath(thumb.getPath());
+                java.io.File thumbFile = new java.io.File(thumbDir, newFilename);
+                ThumbnailUtils.compress(newFile, thumbFile, thumb.getQuality());
+            }
             // 记录至 file 表
             File addFile = new File();
             Integer userId = Optional.ofNullable(LoginUtils.getCurrentUser()).map(User::getId).orElse(-1);
@@ -99,7 +103,7 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
         log.info("act=parseFileExt fileId={}", fileId);
         File file = getById(fileId);
         EFileType fileType = file.getFileType();
-        String diskPath = getUploadDiskPath(fileType);
+        String diskPath = getUploadDiskPath(fileType.name());
         java.io.File newFile = new java.io.File(diskPath, file.getFilename());
         if (Objects.equals(EFileType.video, fileType)) {
             // 视频封面、时长
@@ -121,17 +125,9 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
         return null;
     }
 
-    private String getUploadDiskPath(EFileType fileType) {
-        ImageYml imageYml = uploadYml.getImage();
-        VideoYml videoYml = uploadYml.getVideo();
-        switch (fileType) {
-            case image:
-                return imageYml.getPath();
-            case video:
-                return videoYml.getPath();
-            default:
-                throw new ApiException(EApiCode.UNKNOWN, "暂不支持的文件类型");
-        }
+    private String getUploadDiskPath(String path) {
+        String rootPath = System.getProperty("user.dir");
+        return rootPath + "/static/" + path;
     }
 
     @Override

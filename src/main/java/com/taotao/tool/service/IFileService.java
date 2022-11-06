@@ -19,7 +19,7 @@ public interface IFileService extends IService<File> {
 
     File getByMd5(String md5);
 
-    List<File> doBatchUpload(List<MultipartFile> files) throws IOException;
+    List<File> doBatchUpload(List<MultipartFile> files) throws Exception;
 
     String parseFileExt(Integer fileId) throws IOException;
 }

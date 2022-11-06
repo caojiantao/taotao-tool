@@ -4,18 +4,18 @@ import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.util.FileCopyUtils;
 
-import java.io.File;
+import java.io.*;
 
 @Slf4j
 public class ThumbnailUtils {
 
-    public static void compress(File source, File target, double quality) {
-        try {
-            long length = source.length() / 1024;
+    public static void compress(InputStream is, File target, double quality) {
+        try (OutputStream os = new FileOutputStream(target)) {
+            long length = is.available() / 1024;
             if (length < 1024) {
-                FileCopyUtils.copy(source, target);
+                FileCopyUtils.copy(is, os);
             } else {
-                Thumbnails.of(source)
+                Thumbnails.of(is)
                         .scale(quality)
                         .outputQuality(quality)
                         .toFile(target);

@@ -9,10 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.UUID;
 
 public class FFmpegFrameMultiPartFile implements MultipartFile {
@@ -68,7 +65,7 @@ public class FFmpegFrameMultiPartFile implements MultipartFile {
 
     @Override
     public long getSize() {
-        return 0;
+        return bytes.length;
     }
 
     @Override
@@ -78,7 +75,8 @@ public class FFmpegFrameMultiPartFile implements MultipartFile {
 
     @Override
     public InputStream getInputStream() throws IOException {
-        return null;
+        ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
+        return bais;
     }
 
     @Override

@@ -14,6 +14,7 @@ import com.taotao.tool.util.*;
 import com.taotao.tool.yml.ThumbYml;
 import com.taotao.tool.yml.UploadYml;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -22,10 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -46,8 +44,9 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
     private ApplicationEventPublisher eventPublisher;
 
     @Override
-    public List<File> doBatchUpload(List<MultipartFile> files) throws IOException {
+    public List<File> doBatchUpload(List<MultipartFile> files) throws Exception {
         List<File> fileList = Lists.newArrayList();
+        List<ThreadUtils.IVoidTask> taskList = new ArrayList<>();
         for (MultipartFile multipartFile : files) {
             String contentType = multipartFile.getContentType();
             ApiAssertUtils.notNull(contentType, "文件类型不能为空");
@@ -65,29 +64,34 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
             String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
             String newFilename = DigestUtils.md5(UUID.randomUUID().toString()) + extension;
             // 保存到磁盘（源文件）
-            String diskPath = getUploadDiskPath(fileType.name());
-            java.io.File newFile = new java.io.File(diskPath, newFilename);
-            multipartFile.transferTo(newFile);
+            taskList.add(() -> {
+                String diskPath = getUploadDiskPath(fileType.name());
+                java.io.File newFile = new java.io.File(diskPath, newFilename);
+                multipartFile.transferTo(newFile);
+            });
             // 保存到磁盘（缩略图）
-            if (EFileType.image.equals(fileType)) {
-                ThumbYml thumb = uploadYml.getThumb();
-                String thumbDir = getUploadDiskPath(thumb.getPath());
-                java.io.File thumbFile = new java.io.File(thumbDir, newFilename);
-                ThumbnailUtils.compress(newFile, thumbFile, thumb.getQuality());
-            }
+            taskList.add(() -> {
+                if (EFileType.image.equals(fileType)) {
+                    ThumbYml thumb = uploadYml.getThumb();
+                    String thumbDir = getUploadDiskPath(thumb.getPath());
+                    java.io.File thumbFile = new java.io.File(thumbDir, newFilename);
+                    ThumbnailUtils.compress(multipartFile.getInputStream(), thumbFile, thumb.getQuality());
+                }
+            });
             // 记录至 file 表
             File addFile = new File();
             Integer userId = Optional.ofNullable(LoginUtils.getCurrentUser()).map(User::getId).orElse(-1);
             addFile.setUserId(userId);
             addFile.setFilename(newFilename);
             addFile.setMd5(md5);
-            addFile.setBytes(newFile.length());
+            addFile.setBytes(multipartFile.getSize());
             addFile.setFileType(fileType);
             addFile.setMimeType(contentType);
             addFile.setGmtCreate(LocalDateTime.now());
             addFile.setGmtModified(LocalDateTime.now());
             fileList.add(addFile);
         }
+        ThreadUtils.sync(taskList);
         List<File> addFileList = fileList.stream().filter(item -> Objects.isNull(item.getId())).collect(Collectors.toList());
         if (!CollectionUtils.isEmpty(addFileList)) {
             boolean saveResp = saveBatch(addFileList);
@@ -113,7 +117,8 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
                 ext.setSecond(second);
                 try {
                     FFmpegFrameMultiPartFile multiPartFile = new FFmpegFrameMultiPartFile(grabber);
-                    String newFilename = doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
+                    IFileService fileService = (IFileService) AopContext.currentProxy();
+                    String newFilename = fileService.doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
                     ext.setCoverFilename(newFilename);
                     log.info("act=parseFileExt fileId={} ext={}", fileId, JsonUtils.toJson(ext));
                 } catch (Exception e) {

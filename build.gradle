@@ -25,13 +25,14 @@ allprojects {
 
 ext {
     springboot_version = "2.7.4"
-    javacv_version = "1.5.8-SNAPSHOT"
-    os = "macosx-x86_64"
+    javacv_version = "1.5.9-SNAPSHOT"
+    os = "linux-arm64"
 }
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation:$springboot_version"
     implementation "org.springframework.boot:spring-boot-starter-web:$springboot_version"
+    implementation "org.springframework.boot:spring-boot-starter-webflux:$springboot_version"
     implementation "com.google.guava:guava:31.1-jre"
 
     compileOnly "org.projectlombok:lombok:1.18.24"
@@ -52,6 +53,8 @@ dependencies {
     implementation "org.bytedeco:ffmpeg::$os"
 
     implementation 'net.coobird:thumbnailator:0.4.18'
+
+    implementation 'com.aliyun:alidns20150109:3.0.0'
 }
 
 tasks.named("test") {

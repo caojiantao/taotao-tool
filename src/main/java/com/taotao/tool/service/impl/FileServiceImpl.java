@@ -117,8 +117,7 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, File> implements IF
                 ext.setSecond(second);
                 try {
                     FFmpegFrameMultiPartFile multiPartFile = new FFmpegFrameMultiPartFile(grabber);
-                    IFileService fileService = (IFileService) AopContext.currentProxy();
-                    String newFilename = fileService.doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
+                    String newFilename = doBatchUpload(Lists.newArrayList(multiPartFile)).get(0).getFilename();
                     ext.setCoverFilename(newFilename);
                     log.info("act=parseFileExt fileId={} ext={}", fileId, JsonUtils.toJson(ext));
                 } catch (Exception e) {

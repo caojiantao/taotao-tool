@@ -1,7 +1,7 @@
 package com.taotao.tool.controller;
 
 import com.taotao.tool.dto.resp.ApiResp;
-import com.taotao.tool.enums.EApiCode;
+import com.taotao.tool.enums.ApiCode;
 import com.taotao.tool.exception.ApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
@@ -21,13 +21,14 @@ public class AdviceController {
     @ExceptionHandler(BindException.class)
     public ApiResp<Void> handleBindException(BindException e) {
         log.error("act=handleBindException", e);
+        assert e.getFieldError() != null;
         String msg = e.getFieldError().getDefaultMessage();
-        return new ApiResp<>(EApiCode.UNKNOWN.getNo(), null, msg);
+        return new ApiResp<>(ApiCode.UNKNOWN, null, msg);
     }
 
     @ExceptionHandler(Exception.class)
     public ApiResp<Void> handleException(Exception e) {
         log.error("act=handleException", e);
-        return new ApiResp<>(EApiCode.UNKNOWN.getNo(), null, "服务异常");
+        return new ApiResp<>(ApiCode.UNKNOWN, null, "服务异常");
     }
 }

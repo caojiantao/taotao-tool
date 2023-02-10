@@ -1,8 +1,3 @@
-upload:
-  thumb:
-    path: thumbnail
-    quality: 0.4
-
 login:
   redirectUrl: https://www.baidu.com
   passwordSalt: caojiantao

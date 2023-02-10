@@ -19,10 +19,10 @@ public class ApiResp<T> {
     }
 
     public static ApiResp<Void> fail(ApiException e) {
-        return new ApiResp<>(e.getCode().getNo(), null, e.getMessage());
+        return new ApiResp<>(e.getCode(), null, e.getMessage());
     }
 
     public static <T> ApiResp<T> fail(ApiException e, T data) {
-        return new ApiResp<>(e.getCode().getNo(), data, e.getMessage());
+        return new ApiResp<>(e.getCode(), data, e.getMessage());
     }
 }

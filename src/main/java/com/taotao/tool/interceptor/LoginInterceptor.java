@@ -2,7 +2,7 @@ package com.taotao.tool.interceptor;
 
 import com.taotao.tool.annotation.RequireLogin;
 import com.taotao.tool.dto.resp.ApiResp;
-import com.taotao.tool.enums.EApiCode;
+import com.taotao.tool.enums.ApiCode;
 import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.model.User;
 import com.taotao.tool.service.IUserService;
@@ -13,7 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.util.WebUtils;
@@ -35,28 +34,30 @@ public class LoginInterceptor implements HandlerInterceptor {
     private LoginYml loginYml;
 
     @Override
-    public boolean preHandle(@NotNull HttpServletRequest request,
-                             @NotNull HttpServletResponse response,
-                             @NotNull Object handler) throws Exception {
-        boolean isHandlerMethod = handler instanceof HandlerMethod;
-        if (!isHandlerMethod) {
+    public boolean preHandle(
+            @NotNull HttpServletRequest request,
+            @NotNull HttpServletResponse response,
+            @NotNull Object handler
+    ) throws Exception {
+        boolean flag = handler instanceof HandlerMethod;
+        if (!flag) {
             return true;
         }
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Cookie tokenCookie = WebUtils.getCookie(request, "token");
         Cookie userIdCookie = WebUtils.getCookie(request, "user_id");
         String token = Optional.ofNullable(tokenCookie).map(Cookie::getValue).orElse(null);
-        Integer userId = Optional.ofNullable(userIdCookie).map(Cookie::getValue)
-                .filter(StringUtils::hasLength)
-                .map(Integer::parseInt).orElse(null);
+        Integer userId = Optional.ofNullable(userIdCookie).map(Cookie::getValue).map(Integer::parseInt).orElse(null);
         User user = userService.verifyToken(token, userId);
         LoginUtils.setCurrentUser(user);
         RequireLogin annotation = handlerMethod.getMethod().getAnnotation(RequireLogin.class);
+        // 请求接口需要登录，且用户未登录是，重定向到指定登录页
         if (Objects.nonNull(annotation) && Objects.isNull(user)) {
-            response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
+            response.setContentType(MediaType.APPLICATION_JSON_VALUE);
             Map<String, Object> data = new HashMap<>();
             data.put("redirectUrl", loginYml.getRedirectUrl());
-            ApiResp<Map<String, Object>> resp = ApiResp.fail(new ApiException(EApiCode.NOT_LOGIN), data);
+            ApiException exception = new ApiException(ApiCode.NOT_LOGIN, "未登录");
+            ApiResp<Map<String, Object>> resp = ApiResp.fail(exception, data);
             String respJson = JsonUtils.toJson(resp);
             response.getWriter().write(respJson);
             return false;
@@ -65,7 +66,12 @@ public class LoginInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(
+            @NotNull HttpServletRequest request,
+            @NotNull HttpServletResponse response,
+            @NotNull Object handler,
+            Exception ex
+    ) throws Exception {
         LoginUtils.clearCurrentUser();
     }
 }

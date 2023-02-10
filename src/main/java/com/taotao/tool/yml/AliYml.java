@@ -11,4 +11,7 @@ public class AliYml {
 
     private String key;
     private String secret;
+
+    private String domain;
+    private String rr;
 }

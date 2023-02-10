@@ -30,12 +30,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Override
     public String encryptPassword(String password) {
-        return sign(password, loginYml.getPasswordSalt());
+        return DigestUtils.md5(password + loginYml.getPasswordSalt());
     }
 
     @Override
     public String getToken(Integer userId) {
-        return sign(userId.toString(), loginYml.getTokenSalt());
+        return DigestUtils.md5(userId.toString() + loginYml.getTokenSalt());
     }
 
     @Override
@@ -43,15 +43,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (!StringUtils.hasLength(token) || Objects.isNull(userId)) {
             return null;
         }
-        String sign = sign(userId.toString(), loginYml.getTokenSalt());
-        if (!Objects.equals(sign, token)) {
-            log.error("不合法的签名");
+        String signToken = getToken(userId);
+        if (!Objects.equals(signToken, token)) {
+            // 签名不合法
             return null;
         }
         return getById(userId);
-    }
-
-    private String sign(Object payload, String salt) {
-        return DigestUtils.md5(payload + salt);
     }
 }

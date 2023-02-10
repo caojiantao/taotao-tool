@@ -1,19 +1,13 @@
 package com.taotao.tool.exception;
 
-import com.taotao.tool.enums.EApiCode;
 import lombok.Getter;
 
 @Getter
 public class ApiException extends RuntimeException {
 
-    private final EApiCode code;
+    private final int code;
 
-    public ApiException(EApiCode code) {
-        super(code.getDesc());
-        this.code = code;
-    }
-
-    public ApiException(EApiCode code, String message) {
+    public ApiException(int code, String message) {
         super(message);
         this.code = code;
     }

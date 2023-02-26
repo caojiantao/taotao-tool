@@ -33,7 +33,7 @@ jobs:
         arguments: bootJar
         
     - name: Deploy to server
-      uses: ssh-deploy@v2
+      uses: easingthemes/ssh-deploy@v4.1.8
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "build/libs/"

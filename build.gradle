@@ -31,13 +31,15 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation:$springboot_version"
     implementation "org.springframework.boot:spring-boot-starter-web:$springboot_version"
     implementation "org.springframework.boot:spring-boot-starter-webflux:$springboot_version"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:$springboot_version"
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:$springboot_version"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$springboot_version"
+
     implementation "com.google.guava:guava:31.1-jre"
 
     compileOnly "org.projectlombok:lombok:1.18.24"
     runtimeOnly "mysql:mysql-connector-java:8.0.30"
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:$springboot_version"
     annotationProcessor "org.projectlombok:lombok:1.18.24"
-    testImplementation "org.springframework.boot:spring-boot-starter-test:$springboot_version"
 
     implementation "com.baomidou:mybatis-plus-boot-starter:3.5.2"
     testImplementation "com.baomidou:mybatis-plus-generator:3.5.3"

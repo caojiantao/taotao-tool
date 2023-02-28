@@ -3,6 +3,11 @@ login:
   passwordSalt: caojiantao
   tokenSalt: chenlisha
 
+upload:
+  image:
+    path: /var/www/image
+    quality: 0.5
+
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/taotao-tool

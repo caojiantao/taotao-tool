@@ -35,7 +35,6 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:$springboot_version"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springboot_version"
 
-    implementation "com.google.guava:guava:31.1-jre"
 
     compileOnly "org.projectlombok:lombok:1.18.24"
     runtimeOnly "mysql:mysql-connector-java:8.0.30"
@@ -46,6 +45,8 @@ dependencies {
     testImplementation "org.apache.velocity:velocity-engine-core:2.3"
 
     implementation 'com.aliyun:alidns20150109:3.0.0'
+
+    implementation 'net.coobird:thumbnailator:0.4.19'
 }
 
 tasks.named("test") {

@@ -14,11 +14,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Component
@@ -38,18 +40,20 @@ public class DnsRefreshJob implements InitializingBean {
             // 未配置阿里云秘钥
             return;
         }
-        DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord record = getDnsRecord();
+        List<DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord> recordList = getRecordList();
         String ip = getCurrentIp();
-        if (Objects.equals(ip, record.getValue())) {
-            log.info("act=domainAnalysisJob desc=公网IP暂无变化");
-            return;
+        for (DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord record : recordList) {
+            if (Objects.equals(ip, record.getValue())) {
+                log.info("act=domainAnalysisJob desc=公网IP暂无变化");
+                return;
+            }
+            UpdateDomainRecordRequest request = new UpdateDomainRecordRequest();
+            request.setRecordId(record.getRecordId());
+            request.setRR(record.getRR());
+            request.setType(record.getType());
+            request.setValue(ip);
+            updateDomainRecord(request);
         }
-        UpdateDomainRecordRequest request = new UpdateDomainRecordRequest();
-        request.setRecordId(record.getRecordId());
-        request.setRR(record.getRR());
-        request.setType(record.getType());
-        request.setValue(ip);
-        updateDomainRecord(request);
     }
 
     public com.aliyun.alidns20150109.Client createClient(String accessKeyId, String accessKeySecret) throws Exception {
@@ -77,16 +81,15 @@ public class DnsRefreshJob implements InitializingBean {
         return ip;
     }
 
-    private DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord getDnsRecord() {
+    private List<DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord> getRecordList() {
         DescribeDomainRecordsResponse response = getDomainRecords(aliYml.getDomain());
         return Optional.ofNullable(response).map(DescribeDomainRecordsResponse::getBody)
                 .map(DescribeDomainRecordsResponseBody::getDomainRecords)
                 .map(DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecords::getRecord)
                 .orElse(new ArrayList<>())
                 .stream()
-                .filter(item -> Objects.equals(aliYml.getRr(), item.getRR()))
-                .findFirst()
-                .orElseThrow(RuntimeException::new);
+                .filter(item -> aliYml.getRrList().contains(item.getRR()))
+                .collect(Collectors.toList());
     }
 
     public DescribeDomainRecordsResponse getDomainRecords(String domainName) {

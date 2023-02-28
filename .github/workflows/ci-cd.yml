@@ -46,5 +46,6 @@ jobs:
         SCRIPT_BEFORE: |
           ls
         SCRIPT_AFTER: |
-          /root/taotao-tool/service.sh restart
+          cd taotao-tool
+          ./service.sh restart
     

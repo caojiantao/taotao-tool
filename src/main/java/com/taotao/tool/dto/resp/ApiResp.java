@@ -14,6 +14,10 @@ public class ApiResp<T> {
     private T data;
     private String msg;
 
+    public static <T> ApiResp<T> success() {
+        return new ApiResp<>(0, null, null);
+    }
+
     public static <T> ApiResp<T> success(T data) {
         return new ApiResp<>(0, data, null);
     }

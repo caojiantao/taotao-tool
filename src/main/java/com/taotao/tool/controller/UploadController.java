@@ -1,7 +1,9 @@
 package com.taotao.tool.controller;
 
+import com.taotao.tool.annotation.RequireLogin;
 import com.taotao.tool.dto.resp.ApiResp;
 import com.taotao.tool.exception.ApiException;
+import com.taotao.tool.util.ApiAssertUtils;
 import com.taotao.tool.yml.UploadYml;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
@@ -24,6 +26,7 @@ public class UploadController {
     @Autowired
     private UploadYml uploadYml;
 
+    @RequireLogin
     @PostMapping("/image")
     public ApiResp<String> uploadImage(@RequestPart MultipartFile file) {
         UploadYml.Image image = uploadYml.getImage();
@@ -40,5 +43,14 @@ public class UploadController {
             throw new ApiException(-1, e.getMessage());
         }
         return ApiResp.success(filename);
+    }
+
+    @RequireLogin
+    @PostMapping("/image/delete")
+    public ApiResp<Void> deleteImage(String filename) {
+        UploadYml.Image image = uploadYml.getImage();
+        File file = new File(image.getPath(), filename);
+        ApiAssertUtils.isTrue(file.delete(), "删除失败");
+        return ApiResp.success();
     }
 }

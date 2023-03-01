@@ -26,7 +26,6 @@ public class UploadController {
     @Autowired
     private UploadYml uploadYml;
 
-    @RequireLogin
     @PostMapping("/image")
     public ApiResp<String> uploadImage(@RequestPart MultipartFile file) {
         UploadYml.Image image = uploadYml.getImage();
@@ -45,7 +44,6 @@ public class UploadController {
         return ApiResp.success(filename);
     }
 
-    @RequireLogin
     @PostMapping("/image/delete")
     public ApiResp<Void> deleteImage(String filename) {
         UploadYml.Image image = uploadYml.getImage();

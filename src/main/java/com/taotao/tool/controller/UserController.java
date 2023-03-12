@@ -50,7 +50,7 @@ public class UserController {
 
     private void addCookie(HttpServletResponse httpResp, String key, Object value) {
         Cookie cookie = new Cookie(key, value.toString());
-        int maxAge = (int) TimeUnit.DAYS.toSeconds(7);
+        int maxAge = (int) TimeUnit.DAYS.toSeconds(15);
         cookie.setMaxAge(maxAge);
         cookie.setPath("/");
         httpResp.addCookie(cookie);

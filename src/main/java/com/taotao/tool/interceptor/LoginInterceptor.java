@@ -54,10 +54,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 请求接口需要登录，且用户未登录是，重定向到指定登录页
         if (Objects.nonNull(annotation) && Objects.isNull(user)) {
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-            Map<String, Object> data = new HashMap<>();
-            data.put("redirectUrl", loginYml.getRedirectUrl());
             ApiException exception = new ApiException(ApiCode.NOT_LOGIN, "未登录");
-            ApiResp<Map<String, Object>> resp = ApiResp.fail(exception, data);
+            ApiResp<Void> resp = ApiResp.fail(exception, null);
             String respJson = JsonUtils.toJson(resp);
             response.getWriter().write(respJson);
             return false;

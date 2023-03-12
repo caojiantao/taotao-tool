@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("login")
 public class LoginYml {
 
-    private String redirectUrl;
     private String passwordSalt;
     private String tokenSalt;
+    private String domain;
 }

@@ -6,12 +6,12 @@ import com.taotao.tool.dto.resp.LoginResp;
 import com.taotao.tool.model.User;
 import com.taotao.tool.service.IUserService;
 import com.taotao.tool.util.ApiAssertUtils;
+import com.taotao.tool.yml.LoginYml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.util.WebUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -31,6 +31,9 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
+
+    @Autowired
+    private LoginYml loginYml;
 
     @PostMapping("/login")
     public ApiResp<LoginResp> login(@RequestBody LoginReq loginReq, HttpServletResponse httpResp) {
@@ -52,6 +55,7 @@ public class UserController {
     private void addCookie(HttpServletResponse httpResp, String key, Object value) {
         Cookie cookie = new Cookie(key, value.toString());
         int maxAge = (int) TimeUnit.DAYS.toSeconds(15);
+        cookie.setDomain(loginYml.getDomain());
         cookie.setMaxAge(maxAge);
         cookie.setPath("/");
         httpResp.addCookie(cookie);

@@ -1,7 +1,7 @@
 login:
   passwordSalt: caojiantao
   tokenSalt: chenlisha
-  domain: .caojiantao.site
+  domain: caojiantao.site
 
 upload:
   image:

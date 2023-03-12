@@ -1,7 +1,7 @@
 login:
-  redirectUrl: https://www.baidu.com
   passwordSalt: caojiantao
   tokenSalt: chenlisha
+  domain: .caojiantao.site
 
 upload:
   image:

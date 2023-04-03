@@ -115,9 +115,15 @@ public class DnsRefreshJob implements InitializingBean {
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
-        if (StringUtils.hasText(aliYml.getKey()) && StringUtils.hasText(aliYml.getSecret())) {
-            this.client = createClient(aliYml.getKey(), aliYml.getSecret());
+    public void afterPropertiesSet() {
+        try {
+            if (StringUtils.hasText(aliYml.getKey()) && StringUtils.hasText(aliYml.getSecret())) {
+                this.client = createClient(aliYml.getKey(), aliYml.getSecret());
+            }
+        } catch (Exception e) {
+            log.error("创建万网 client 异常", e);
+        } finally {
+            log.error("创建万网 client 结果: {}", Objects.nonNull(client));
         }
     }
 }

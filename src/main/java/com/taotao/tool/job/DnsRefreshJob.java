@@ -44,8 +44,8 @@ public class DnsRefreshJob implements InitializingBean {
         String ip = getCurrentIp();
         for (DescribeDomainRecordsResponseBody.DescribeDomainRecordsResponseBodyDomainRecordsRecord record : recordList) {
             if (Objects.equals(ip, record.getValue())) {
-                log.info("act=domainAnalysisJob desc=公网IP暂无变化");
-                return;
+                log.info("act=domainAnalysisJob rr={} desc=公网IP暂无变化", record.getRR());
+                continue;
             }
             UpdateDomainRecordRequest request = new UpdateDomainRecordRequest();
             request.setRecordId(record.getRecordId());

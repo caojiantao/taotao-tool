@@ -9,6 +9,8 @@ upload:
     quality: 0.5
 
 spring:
+  application:
+    name: taotao_tool
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/taotao-tool
     username: root

@@ -17,6 +17,6 @@ public class TaotaoToolApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(TaotaoToolApplication.class, args);
-        log.info(context.getApplicationName() + " 启动成功！！");
+        log.info(context.getId() + " 启动成功！！");
     }
 }

@@ -4,7 +4,6 @@ import com.aliyun.alidns20150109.models.*;
 import com.taotao.tool.util.JsonUtils;
 import com.taotao.tool.yml.AliYml;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -13,6 +12,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Component
-public class DnsRefreshJob implements InitializingBean {
+public class DnsRefreshJob {
 
     @Autowired
     private AliYml aliYml;
@@ -36,6 +36,8 @@ public class DnsRefreshJob implements InitializingBean {
 
     @Scheduled(fixedRate = 5, timeUnit = TimeUnit.MINUTES)
     public void dnsRefreshJob() throws Exception {
+        // 每次都尝试初始化 client，避免断电重启后由于网络因素导致 PostConstruct 失败
+        initClient();
         if (Objects.isNull(client)) {
             // 未配置阿里云秘钥
             return;
@@ -114,12 +116,16 @@ public class DnsRefreshJob implements InitializingBean {
         }
     }
 
-    @Override
-    public void afterPropertiesSet() {
+    @PostConstruct
+    public void initClient() {
+        if (!StringUtils.hasText(aliYml.getKey()) || !StringUtils.hasText(aliYml.getSecret())) {
+            return;
+        }
+        if (Objects.nonNull(this.client)) {
+            return;
+        }
         try {
-            if (StringUtils.hasText(aliYml.getKey()) && StringUtils.hasText(aliYml.getSecret())) {
-                this.client = createClient(aliYml.getKey(), aliYml.getSecret());
-            }
+            this.client = createClient(aliYml.getKey(), aliYml.getSecret());
         } catch (Exception e) {
             log.error("创建万网 client 异常", e);
         } finally {

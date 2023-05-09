@@ -44,7 +44,10 @@ dependencies {
     testImplementation "com.baomidou:mybatis-plus-generator:3.5.3"
     testImplementation "org.apache.velocity:velocity-engine-core:2.3"
 
-    implementation 'com.aliyun:alidns20150109:3.0.0'
+    implementation ('com.aliyun:alidns20150109:3.0.0') {
+        // https://www.jianshu.com/p/ef6936448aa6
+        exclude group: "pull-parser", module: "pull-parser"
+    }
 
     implementation 'net.coobird:thumbnailator:0.4.19'
 }

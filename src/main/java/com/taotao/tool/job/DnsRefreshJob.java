@@ -13,6 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +75,8 @@ public class DnsRefreshJob {
                 .method(HttpMethod.GET)
                 .uri("https://ip.chinaz.com/")
                 .retrieve()
-                .bodyToMono(String.class);
+                .bodyToMono(String.class)
+                .timeout(Duration.ofSeconds(10));
         String html = mono.block();
         assert html != null;
         Matcher m = pattern.matcher(html);

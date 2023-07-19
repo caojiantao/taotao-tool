@@ -1,5 +1,6 @@
 package com.taotao.tool.job;
 
+import com.aliyun.alidns20150109.Client;
 import com.aliyun.alidns20150109.models.*;
 import com.taotao.tool.util.JsonUtils;
 import com.taotao.tool.yml.AliYml;
@@ -60,6 +61,7 @@ public class DnsRefreshJob {
     }
 
     public com.aliyun.alidns20150109.Client createClient(String accessKeyId, String accessKeySecret) throws Exception {
+        log.info("act=createClient type=start");
         com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config()
                 // 必填，您的 AccessKey ID
                 .setAccessKeyId(accessKeyId)
@@ -67,7 +69,9 @@ public class DnsRefreshJob {
                 .setAccessKeySecret(accessKeySecret);
         // 访问的域名
         config.endpoint = "alidns.cn-hangzhou.aliyuncs.com";
-        return new com.aliyun.alidns20150109.Client(config);
+        Client client = new Client(config);
+        log.info("act=createClient type=end client={}", client);
+        return client;
     }
 
     private String getCurrentIp() {
@@ -122,9 +126,11 @@ public class DnsRefreshJob {
     public void initClient() {
         try {
             if (!StringUtils.hasText(aliYml.getKey()) || !StringUtils.hasText(aliYml.getSecret())) {
+                log.info("act=initClient type=noConfig");
                 return;
             }
             if (Objects.nonNull(this.client)) {
+                log.info("act=initClient type=hasClient");
                 return;
             }
             this.client = createClient(aliYml.getKey(), aliYml.getSecret());

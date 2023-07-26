@@ -50,6 +50,9 @@ dependencies {
     }
 
     implementation 'net.coobird:thumbnailator:0.4.19'
+
+    implementation 'io.prometheus:simpleclient_java:0.12.0'
+    implementation 'io.prometheus:simpleclient_hotspot:0.12.0'
 }
 
 tasks.named("test") {

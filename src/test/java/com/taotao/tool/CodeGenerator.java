@@ -18,8 +18,8 @@ public class CodeGenerator {
         String url = "jdbc:mysql://127.0.0.1:3306/taotao-tool?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
         String username = "root";
         String password = "123456";
-        String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
-        String tables = "user";
+        String finalProjectPath = "D:\\IdeaProjects\\taotao-tool";
+        String tables = "dictionary";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("taotao") // 设置作者
@@ -34,7 +34,7 @@ public class CodeGenerator {
                 .strategyConfig(builder -> {
                     builder.addInclude(tables)
                             .entityBuilder()
-                            .enableFileOverride()
+//                            .enableFileOverride()
                             .enableLombok()
                             .disableSerialVersionUID()
                             .addSuperEntityColumns("id", "gmt_create", "gmt_modified")

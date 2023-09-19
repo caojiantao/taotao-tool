@@ -46,7 +46,6 @@ jobs:
         SCRIPT_BEFORE: |
           echo '部署前准备'
         SCRIPT_AFTER: |
-          pwd
-          /root/taotao-tool/service.sh status
+          /root/taotao-tool/service.sh restart
           echo '部署完成'
     

@@ -9,13 +9,13 @@ import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ContextStartedListener implements ApplicationListener<ContextStartedEvent> {
+public class ContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
 
     @Autowired
     private WorkWxService workWxService;
 
     @Override
-    public void onApplicationEvent(@NotNull ContextStartedEvent event) {
+    public void onApplicationEvent(@NotNull ContextRefreshedEvent event) {
         workWxService.sendMessage("application_start_message", null);
     }
 }

@@ -1,5 +1,6 @@
 package com.taotao.tool.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -12,6 +13,7 @@ import java.util.Map;
 /**
  * 企业微信 API
  */
+@Slf4j
 public class QyApiUtils {
 
     public static void sendMessage(String webhook, String markdown) {
@@ -25,8 +27,8 @@ public class QyApiUtils {
                 .bodyValue(JsonUtils.toJson(map))
                 .retrieve()
                 .bodyToMono(String.class)
-                .timeout(Duration.ofSeconds(10));
+                .timeout(Duration.ofSeconds(2));
         String html = mono.block();
-        System.out.println(html);
+        log.info("act=QyApiUtils.sendMessage webhook={} markdown={} html={}", webhook, markdown, html);
     }
 }

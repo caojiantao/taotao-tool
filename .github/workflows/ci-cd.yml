@@ -44,7 +44,7 @@ jobs:
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
         SCRIPT_BEFORE: |
-          ls
+          echo '部署前准备'
         SCRIPT_AFTER: |
-          /root/taotao-tool/service.sh restart
+          echo '部署完成'
     

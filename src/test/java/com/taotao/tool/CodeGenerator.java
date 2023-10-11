@@ -18,8 +18,11 @@ public class CodeGenerator {
         String url = "jdbc:mysql://127.0.0.1:3306/taotao-tool?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true";
         String username = "root";
         String password = "123456";
-        String finalProjectPath = "D:\\IdeaProjects\\taotao-tool";
-        String tables = "dictionary";
+
+        String moduleName = "lovenote";
+
+        String finalProjectPath = "D:\\workspace\\taotao-tool";
+        String tables = "love_note_trend_media";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("taotao") // 设置作者
@@ -27,9 +30,9 @@ public class CodeGenerator {
                             .outputDir(finalProjectPath + "/src/main/java"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
-                    builder.parent("com.taotao.tool") // 设置父包名
+                    builder.parent("com.taotao.tool." + moduleName) // 设置父包名
                             .entity("model") //设置entity包名
-                            .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper")); // 设置mapperXml生成路径
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper/" + moduleName)); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude(tables)
@@ -37,9 +40,9 @@ public class CodeGenerator {
 //                            .enableFileOverride()
                             .enableLombok()
                             .disableSerialVersionUID()
-                            .addSuperEntityColumns("id", "gmt_create", "gmt_modified")
-                            .superClass(BaseModel.class)
-                            .controllerBuilder()
+//                            .addSuperEntityColumns("id", "gmt_create", "gmt_modified")
+//                            .superClass(BaseModel.class)
+//                            .controllerBuilder()
                             .enableFileOverride();
                 });
         generator.execute();

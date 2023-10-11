@@ -17,8 +17,8 @@ configurations {
 // 访问加速
 allprojects {
     repositories {
-//        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-//        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         mavenCentral()
     }
 }

@@ -6,8 +6,8 @@ SET NAMES utf8mb4;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `password` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `gmt_create` datetime NOT NULL,
   `gmt_modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -19,3 +19,47 @@ CREATE TABLE `user` (
 BEGIN;
 INSERT INTO `user` VALUES (1, 'caojiantao', '4f563da976e9e3cecbdc9f2ad815d57c', '2022-10-25 20:40:36', '2022-10-25 20:40:38');
 COMMIT;
+
+CREATE TABLE `love_note_user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `openid` varchar(100) DEFAULT NULL,
+  `avatar_url` varchar(100) DEFAULT NULL,
+  `nickname` varchar(200) DEFAULT NULL,
+  `gender` int(1) DEFAULT NULL,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `love_note_cp` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `inviter` varchar(100)  DEFAULT NULL,
+  `invitee` varchar(100)  DEFAULT NULL,
+  `cp_name` varchar(100)  DEFAULT NULL,
+  `cp_description` varchar(100)  DEFAULT NULL,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `love_note_trend` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cp_id` int NOT NULL,
+  `openid` varchar(100) DEFAULT NULL,
+  `content` text COLLATE utf8mb4_bin,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `love_note_trend_media` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `trend_id` int DEFAULT NULL,
+  `cp_id` int DEFAULT NULL,
+  `openid` varchar(255) DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  `content` text,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;

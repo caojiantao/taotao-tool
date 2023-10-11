@@ -9,7 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Slf4j
-@MapperScan("com.taotao.tool.mapper")
+@MapperScan("com.taotao.tool.**.mapper")
 @EnableConfigurationProperties
 @EnableScheduling
 @SpringBootApplication

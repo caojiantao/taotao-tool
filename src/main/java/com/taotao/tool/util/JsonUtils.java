@@ -39,4 +39,8 @@ public class JsonUtils {
         JavaType javaType = mapper.getTypeFactory().constructParametricType(List.class, clazz);
         return mapper.readValue(json, javaType);
     }
+
+    public static ObjectMapper getMapper() {
+        return mapper;
+    }
 }

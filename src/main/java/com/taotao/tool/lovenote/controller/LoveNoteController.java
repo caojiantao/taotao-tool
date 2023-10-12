@@ -1,12 +1,15 @@
 package com.taotao.tool.lovenote.controller;
 
 import com.taotao.tool.dto.resp.ApiResp;
+import com.taotao.tool.dto.resp.LoveNoteLoginResp;
 import com.taotao.tool.exception.ApiException;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendDto;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendQuery;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendVo;
+import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.other.LoveNoteLoginApi;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendService;
+import com.taotao.tool.lovenote.service.ILoveNoteUserService;
 import com.taotao.tool.yml.UploadYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +35,21 @@ public class LoveNoteController {
 
     @Autowired
     private ILoveNoteTrendService loveNoteTrendService;
+
+    @Autowired
+    private ILoveNoteUserService loveNoteUserService;
+
+    @PostMapping("/login")
+    public ApiResp<LoveNoteLoginResp> login(String code) {
+        LoveNoteLoginResp resp = loveNoteUserService.login(code);
+        return ApiResp.success(resp);
+    }
+
+    @PostMapping("/register")
+    public ApiResp<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
+        LoveNoteLoginResp resp = loveNoteUserService.register(user);
+        return ApiResp.success(resp);
+    }
 
     @LoveNoteLoginApi
     @PostMapping("/uploadImage")

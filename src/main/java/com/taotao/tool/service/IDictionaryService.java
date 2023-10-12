@@ -1,7 +1,7 @@
 package com.taotao.tool.service;
 
-import com.taotao.tool.model.Dictionary;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.taotao.tool.model.Dictionary;
 
 /**
  * <p>

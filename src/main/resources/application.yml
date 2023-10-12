@@ -30,3 +30,8 @@ management:
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
+
+love-note:
+  app-id:
+  app-secret:
+  tokenSalt: 

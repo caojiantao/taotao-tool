@@ -1,6 +1,5 @@
 package com.taotao.tool.model;
 
-import com.taotao.tool.model.BaseModel;
 import lombok.Getter;
 import lombok.Setter;
 

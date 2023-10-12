@@ -1,7 +1,7 @@
 package com.taotao.tool.lovenote.entity;
 
 import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;
-import com.taotao.tool.util.JsonUtils;
+import com.taotao.tool.common.util.JsonUtils;
 import lombok.Data;
 
 @Data

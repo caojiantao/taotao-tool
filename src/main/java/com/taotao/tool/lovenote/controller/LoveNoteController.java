@@ -1,8 +1,8 @@
 package com.taotao.tool.lovenote.controller;
 
-import com.taotao.tool.dto.resp.ApiResp;
-import com.taotao.tool.dto.resp.LoveNoteLoginResp;
-import com.taotao.tool.exception.ApiException;
+import com.taotao.tool.common.dto.ApiResult;
+import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.common.exception.ApiException;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendDto;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendQuery;
 import com.taotao.tool.lovenote.entity.LoveNoteTrendVo;
@@ -10,7 +10,7 @@ import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.other.LoveNoteLoginApi;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendService;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
-import com.taotao.tool.yml.UploadYml;
+import com.taotao.tool.spring.yml.UploadYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StreamUtils;
@@ -40,20 +40,20 @@ public class LoveNoteController {
     private ILoveNoteUserService loveNoteUserService;
 
     @PostMapping("/login")
-    public ApiResp<LoveNoteLoginResp> login(String code) {
+    public ApiResult<LoveNoteLoginResp> login(String code) {
         LoveNoteLoginResp resp = loveNoteUserService.login(code);
-        return ApiResp.success(resp);
+        return ApiResult.success(resp);
     }
 
     @PostMapping("/register")
-    public ApiResp<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
+    public ApiResult<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
         LoveNoteLoginResp resp = loveNoteUserService.register(user);
-        return ApiResp.success(resp);
+        return ApiResult.success(resp);
     }
 
     @LoveNoteLoginApi
     @PostMapping("/uploadImage")
-    public ApiResp<String> uploadImage(@RequestPart MultipartFile file) {
+    public ApiResult<String> uploadImage(@RequestPart MultipartFile file) {
         String fname = file.getOriginalFilename();
         String suffix = StringUtils.hasText(fname) ? fname.substring(fname.lastIndexOf(".")) : ".jpg";
         UploadYml.Image image = uploadYml.getImage();
@@ -66,19 +66,19 @@ public class LoveNoteController {
             log.error("上传图片异常", e);
             throw new ApiException(-1, e.getMessage());
         }
-        return ApiResp.success(filename);
+        return ApiResult.success(filename);
     }
 
     @LoveNoteLoginApi
     @PostMapping("/addTrend")
-    public ApiResp<Void> addTrend(@RequestBody LoveNoteTrendDto trendDto) {
+    public ApiResult<Void> addTrend(@RequestBody LoveNoteTrendDto trendDto) {
         loveNoteTrendService.addTrend(trendDto);
-        return ApiResp.success();
+        return ApiResult.success();
     }
 
     @PostMapping("/getTrendList")
-    public ApiResp<List<LoveNoteTrendVo>> getTrendList(LoveNoteTrendQuery query) {
+    public ApiResult<List<LoveNoteTrendVo>> getTrendList(LoveNoteTrendQuery query) {
         List<LoveNoteTrendVo> list = loveNoteTrendService.getLoveNoteTrendList(query);
-        return ApiResp.success(list);
+        return ApiResult.success(list);
     }
 }

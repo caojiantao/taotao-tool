@@ -16,7 +16,7 @@ import com.taotao.tool.lovenote.service.ILoveNoteCpService;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendMediaService;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendService;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
-import com.taotao.tool.util.JsonUtils;
+import com.taotao.tool.common.util.JsonUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

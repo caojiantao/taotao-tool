@@ -2,7 +2,6 @@ package com.taotao.tool;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
-import com.taotao.tool.model.BaseModel;
 
 import java.util.Collections;
 

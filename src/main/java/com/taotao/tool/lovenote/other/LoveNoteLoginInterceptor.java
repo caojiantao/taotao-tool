@@ -35,7 +35,6 @@ public class LoveNoteLoginInterceptor implements HandlerInterceptor {
 //        if (Objects.nonNull(annotation) && Objects.isNull(user)) {
 //            response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 //            ApiException exception = new ApiException(ApiCode.NOT_LOGIN, "未登录");
-//            ApiResp<Void> resp = ApiResp.fail(exception, null);
 //            String respJson = JsonUtils.toJson(resp);
 //            response.getWriter().write(respJson);
 //            return false;

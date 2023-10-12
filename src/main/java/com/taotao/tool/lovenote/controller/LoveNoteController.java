@@ -39,6 +39,7 @@ public class LoveNoteController {
     @Autowired
     private ILoveNoteUserService loveNoteUserService;
 
+    @LoveNoteLoginApi
     @PostMapping("/login")
     public ApiResult<LoveNoteLoginResp> login(String code) {
         LoveNoteLoginResp resp = loveNoteUserService.login(code);

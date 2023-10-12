@@ -1,5 +1,7 @@
 package com.taotao.tool.common.dto;
 
+import com.taotao.tool.common.constants.EApiCode;
+import com.taotao.tool.common.constants.IApiCode;
 import com.taotao.tool.common.exception.ApiException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,8 +24,24 @@ public class ApiResult<T> {
         return new ApiResult<>(0, data, null);
     }
 
+    public static ApiResult<Void> fail() {
+        return new ApiResult<>(EApiCode.UNKNOWN.getCode(), null, EApiCode.UNKNOWN.getMessage());
+    }
+
     public static ApiResult<Void> fail(ApiException e) {
         return new ApiResult<>(e.getCode(), null, e.getMessage());
+    }
+
+    public static ApiResult<Void> fail(String message) {
+        return new ApiResult<>(EApiCode.UNKNOWN.getCode(), null, message);
+    }
+
+    public static ApiResult<Void> build(IApiCode e) {
+        return build(e, null);
+    }
+
+    public static <T> ApiResult<T> build(IApiCode e, T data) {
+        return new ApiResult<>(e.getCode(), data, e.getMessage());
     }
 
     public static <T> ApiResult<T> fail(ApiException e, T data) {

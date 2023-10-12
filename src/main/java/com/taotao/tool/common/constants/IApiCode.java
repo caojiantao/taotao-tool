@@ -1,13 +1,13 @@
 package com.taotao.tool.common.constants;
 
-public interface ApiCode {
+public interface IApiCode {
 
-    /**
-     * 未知错误
-     */
-    int UNKNOWN = -1;
     /**
      * 未登录
      */
     int NOT_LOGIN = -2;
+
+    Integer getCode();
+
+    String getMessage();
 }

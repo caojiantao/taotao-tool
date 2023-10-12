@@ -1,11 +1,10 @@
 package com.taotao.tool.admin.interceptor;
 
 import com.taotao.tool.admin.annotation.RequireLogin;
-import com.taotao.tool.common.dto.ApiResult;
-import com.taotao.tool.common.constants.ApiCode;
-import com.taotao.tool.common.exception.ApiException;
 import com.taotao.tool.admin.model.User;
 import com.taotao.tool.admin.service.IUserService;
+import com.taotao.tool.common.constants.EApiCode;
+import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.common.util.LoginUtils;
 import com.taotao.tool.spring.yml.LoginYml;
@@ -52,8 +51,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 请求接口需要登录，且用户未登录是，重定向到指定登录页
         if (Objects.nonNull(annotation) && Objects.isNull(user)) {
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-            ApiException exception = new ApiException(ApiCode.NOT_LOGIN, "未登录");
-            ApiResult<Void> resp = ApiResult.fail(exception, null);
+            ApiResult<Void> resp = ApiResult.build(EApiCode.NOT_LOGIN);
             String respJson = JsonUtils.toJson(resp);
             response.getWriter().write(respJson);
             return false;

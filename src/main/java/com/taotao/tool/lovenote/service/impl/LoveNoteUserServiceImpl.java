@@ -3,6 +3,7 @@ package com.taotao.tool.lovenote.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.admin.service.WorkWxService;
 import com.taotao.tool.lovenote.mapper.LoveNoteUserMapper;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
@@ -20,6 +21,7 @@ import reactor.core.publisher.Mono;
 import java.text.MessageFormat;
 import java.time.Duration;
 import java.util.Objects;
+import java.util.Properties;
 
 /**
  * <p>
@@ -32,6 +34,8 @@ import java.util.Objects;
 @Service
 public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, LoveNoteUser> implements ILoveNoteUserService {
 
+    @Autowired
+    private WorkWxService workWxService;
 
     @Autowired
     private LoveNoteYml loveNoteYml;
@@ -61,7 +65,17 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         resp.setUser(user);
         String token = getToken(user.getOpenid());
         resp.setToken(token);
+        sendWxNotice(user);
         return resp;
+    }
+
+    private void sendWxNotice(LoveNoteUser user) {
+        Properties properties = new Properties();
+        properties.setProperty("openid", user.getOpenid());
+        properties.setProperty("avatarUrl", user.getAvatarUrl());
+        properties.setProperty("nickname", user.getNickname());
+        properties.setProperty("gender", user.getGender().toString());
+        workWxService.sendMessage("love_note_register", properties);
     }
 
     @Override

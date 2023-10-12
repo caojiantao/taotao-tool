@@ -25,6 +25,8 @@ public class LoveNoteUser {
 
     private String openid;
 
+    private String avatarUrl;
+
     private String nickname;
 
     private Integer gender;

@@ -2,6 +2,7 @@ package com.taotao.tool.lovenote.service;
 
 import com.taotao.tool.lovenote.model.LoveNoteCp;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.taotao.tool.lovenote.model.LoveNoteUser;
 
 /**
  * <p>
@@ -15,5 +16,5 @@ public interface ILoveNoteCpService extends IService<LoveNoteCp> {
 
     LoveNoteCp getCpByOpenid(String openid);
 
-    void addCp(String inviter, String invitee);
+    void addCp(LoveNoteUser inviter, LoveNoteUser invitee);
 }

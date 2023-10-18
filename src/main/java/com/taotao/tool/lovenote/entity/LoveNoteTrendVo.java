@@ -14,9 +14,7 @@ public class LoveNoteTrendVo {
 
     private String content;
 
-    private LocalDateTime createTime;
-
-    private LocalDateTime updateTime;
+    private String timeFmt;
 
     private List<LoveNoteTrendMediaVo> mediaList;
 

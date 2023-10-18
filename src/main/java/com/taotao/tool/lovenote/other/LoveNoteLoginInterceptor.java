@@ -1,9 +1,11 @@
 package com.taotao.tool.lovenote.other;
 
+import com.taotao.tool.common.constants.EApiCode;
 import com.taotao.tool.common.constants.IApiCode;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.exception.ApiException;
 import com.taotao.tool.common.util.JsonUtils;
+import com.taotao.tool.common.util.LoginUtils;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
 import org.jetbrains.annotations.NotNull;
@@ -44,12 +46,24 @@ public class LoveNoteLoginInterceptor implements HandlerInterceptor {
         // 请求接口需要登录，且用户未登录需要拦截
         if (Objects.isNull(user)) {
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-            ApiException exception = new ApiException(IApiCode.NOT_LOGIN, "未登录");
-            ApiResult<Void> resp = ApiResult.fail(exception);
+            ApiResult<Void> resp = ApiResult.build(EApiCode.NOT_LOGIN);
             String respJson = JsonUtils.toJson(resp);
             response.getWriter().write(respJson);
             return false;
         }
+        LoveNoteLoginUtils.setCurrentUser(user);
         return true;
+    }
+
+
+
+    @Override
+    public void afterCompletion(
+            @NotNull HttpServletRequest request,
+            @NotNull HttpServletResponse response,
+            @NotNull Object handler,
+            Exception ex
+    ) throws Exception {
+        LoveNoteLoginUtils.clearCurrentUser();
     }
 }

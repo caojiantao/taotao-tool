@@ -1,19 +1,11 @@
 package com.taotao.tool.lovenote.entity;
 
-import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;
 import com.taotao.tool.common.util.JsonUtils;
+import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;
 import lombok.Data;
 
 @Data
 public class LoveNoteTrendMediaDto {
-
-    private Integer id;
-
-    private Integer trendId;
-
-    private Integer cpId;
-
-    private String openid;
 
     private ELoveNoteTrendMediaType type;
 

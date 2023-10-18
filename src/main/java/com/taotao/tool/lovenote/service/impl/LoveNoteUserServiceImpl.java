@@ -75,7 +75,7 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         properties.setProperty("avatarUrl", user.getAvatarUrl());
         properties.setProperty("nickname", user.getNickname());
         properties.setProperty("gender", user.getGender().toString());
-        workWxService.sendMessage("love_note_register", properties);
+        workWxService.sendMessage("love_note_notice_register", properties);
     }
 
     @Override

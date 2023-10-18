@@ -40,6 +40,11 @@ public class JsonUtils {
         return mapper.readValue(json, javaType);
     }
 
+    @SneakyThrows
+    public static <T> T parse(String json, Class<T> clazz) {
+        return mapper.readValue(json, clazz);
+    }
+
     public static ObjectMapper getMapper() {
         return mapper;
     }

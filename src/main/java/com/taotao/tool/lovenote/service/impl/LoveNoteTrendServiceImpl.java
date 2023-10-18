@@ -3,31 +3,30 @@ package com.taotao.tool.lovenote.service.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.taotao.tool.lovenote.entity.LoveNoteTrendQuery;
-import com.taotao.tool.lovenote.entity.LoveNoteTrendDto;
-import com.taotao.tool.lovenote.entity.LoveNoteTrendMediaDto;
-import com.taotao.tool.lovenote.entity.LoveNoteTrendVo;
+import com.taotao.tool.admin.service.IDictionaryService;
+import com.taotao.tool.admin.service.WorkWxService;
+import com.taotao.tool.common.util.JsonUtils;
+import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;
+import com.taotao.tool.lovenote.entity.*;
 import com.taotao.tool.lovenote.mapper.LoveNoteTrendMapper;
 import com.taotao.tool.lovenote.model.LoveNoteCp;
 import com.taotao.tool.lovenote.model.LoveNoteTrend;
 import com.taotao.tool.lovenote.model.LoveNoteTrendMedia;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
+import com.taotao.tool.lovenote.other.LoveNoteLoginUtils;
 import com.taotao.tool.lovenote.service.ILoveNoteCpService;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendMediaService;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendService;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
-import com.taotao.tool.common.util.JsonUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.function.Function;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -47,13 +46,20 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
     private ILoveNoteCpService cpService;
     @Autowired
     private ILoveNoteTrendMediaService mediaService;
+    @Autowired
+    private WorkWxService workWxService;
+    @Autowired
+    private IDictionaryService dictionaryService;
 
     @Override
     @Transactional
     public void addTrend(LoveNoteTrendDto trendDto) {
-        LoveNoteCp cp = cpService.getCpByOpenid(trendDto.getOpenid());
-        LoveNoteTrend trend = JsonUtils.convert(trendDto, LoveNoteTrend.class);
+        String openid = LoveNoteLoginUtils.getCurrentUser().getOpenid();
+        LoveNoteCp cp = cpService.getCpByOpenid(openid);
+        LoveNoteTrend trend = new LoveNoteTrend();
         trend.setCpId(cp.getId());
+        trend.setOpenid(openid);
+        trend.setContent(trendDto.getContent());
         save(trend);
         if (CollectionUtils.isEmpty(trendDto.getMediaList())) {
             return;
@@ -62,13 +68,14 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         for (LoveNoteTrendMediaDto mediaDto : trendDto.getMediaList()) {
             LoveNoteTrendMedia media = new LoveNoteTrendMedia();
             media.setTrendId(trend.getId());
-            media.setCpId(cp.getId());
+            media.setCpId(trend.getId());
             media.setOpenid(trend.getOpenid());
             media.setType(mediaDto.getType().name());
             media.setContent(mediaDto.toContent());
             mediaList.add(media);
         }
         mediaService.saveBatch(mediaList);
+        sendWxNotice(trendDto, cp);
     }
 
     @Override
@@ -90,8 +97,8 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
             return new ArrayList<>();
         }
         List<Integer> trendIdList = records.stream().map(LoveNoteTrend::getId).collect(Collectors.toList());
-        Map<Integer, LoveNoteTrendMedia> mediaMap = mediaService.query().in("trend_id", trendIdList).list()
-                .stream().collect(Collectors.toMap(LoveNoteTrendMedia::getTrendId, Function.identity()));
+        Map<Integer, List<LoveNoteTrendMedia>> mediaMap = mediaService.query().in("trend_id", trendIdList).list()
+                .stream().collect(Collectors.groupingBy(LoveNoteTrendMedia::getTrendId));
         List<LoveNoteTrendVo> list = new ArrayList<>();
         for (LoveNoteTrend record : records) {
             LoveNoteTrendVo dto = buildLoveNoteTrendDto(record, mediaMap.get(record.getId()));
@@ -100,9 +107,11 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         return list;
     }
 
-    private LoveNoteTrendVo buildLoveNoteTrendDto(LoveNoteTrend record, LoveNoteTrendMedia loveNoteTrendMedia) {
+    private LoveNoteTrendVo buildLoveNoteTrendDto(LoveNoteTrend record, List<LoveNoteTrendMedia> mediaList) {
         LoveNoteTrendVo vo = new LoveNoteTrendVo();
         BeanUtils.copyProperties(record, vo);
+        String timeFmt = timeFmt(record.getCreateTime());
+        vo.setTimeFmt(timeFmt);
         LoveNoteCp cp = cpService.getCpByOpenid(record.getOpenid());
         vo.setCp(cp);
         LoveNoteUser user = userService.getUserByOpenid(record.getOpenid());
@@ -110,6 +119,49 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         String partnerOpenid = Objects.equals(cp.getInviter(), record.getOpenid()) ? cp.getInvitee() : cp.getInviter();
         LoveNoteUser partner = userService.getUserByOpenid(partnerOpenid);
         vo.setPartner(partner);
+
+        List<LoveNoteTrendMediaVo> mediaVoList = new ArrayList<>();
+        vo.setMediaList(mediaVoList);
+        for (LoveNoteTrendMedia media : mediaList) {
+            LoveNoteTrendMediaVo mediaVo = new LoveNoteTrendMediaVo();
+            mediaVo.setId(media.getId());
+            mediaVo.setType(ELoveNoteTrendMediaType.valueOf(media.getType()));
+            if (ELoveNoteTrendMediaType.IMAGE.equals(mediaVo.getType())) {
+                LoveNoteTrendMediaVo.Image image = JsonUtils.parse(media.getContent(), LoveNoteTrendMediaVo.Image.class);
+                mediaVo.setImage(image);
+            }
+            mediaVoList.add(mediaVo);
+        }
         return vo;
+    }
+
+    private String timeFmt(LocalDateTime createTime) {
+        LocalDateTime now = LocalDateTime.now();
+        Duration duration = Duration.between(createTime, now);
+        if (duration.toDays() > 0) {
+            return duration.toDays() + "天前";
+        } else if (duration.toHours() > 0) {
+            return duration.toHours() + "小时前";
+        } else if (duration.toMinutes() > 0) {
+            return duration.toMinutes() + "分钟前";
+        } else {
+            return "刚刚";
+        }
+    }
+
+    private void sendWxNotice(LoveNoteTrendDto trendDto, LoveNoteCp cp) {
+        Properties properties = new Properties();
+        LoveNoteUser currentUser = LoveNoteLoginUtils.getCurrentUser();
+        properties.setProperty("nickname", currentUser.getNickname());
+        properties.setProperty("cpName", cp.getCpName());
+        properties.setProperty("content", trendDto.getContent());
+        String imageDomain = dictionaryService.getValueByKey("image_domain", String.class);
+        String mediaList = trendDto.getMediaList().stream()
+                .map(LoveNoteTrendMediaDto::getImage)
+                .map(LoveNoteTrendMediaDto.Image::getUrl)
+                .map(url -> "[图片](" + imageDomain + "/love-note/" + url + ")")
+                .collect(Collectors.joining(","));
+        properties.setProperty("mediaList", mediaList);
+        workWxService.sendMessage("love_note_notice_addtrend", properties);
     }
 }

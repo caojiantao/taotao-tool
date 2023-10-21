@@ -101,7 +101,7 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
                 .stream().collect(Collectors.groupingBy(LoveNoteTrendMedia::getTrendId));
         List<LoveNoteTrendVo> list = new ArrayList<>();
         for (LoveNoteTrend record : records) {
-            LoveNoteTrendVo dto = buildLoveNoteTrendDto(record, mediaMap.get(record.getId()));
+            LoveNoteTrendVo dto = buildLoveNoteTrendDto(record, mediaMap.getOrDefault(record.getId(), new ArrayList<>()));
             list.add(dto);
         }
         return list;

@@ -12,6 +12,7 @@ import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
 import com.taotao.tool.spring.yml.LoveNoteYml;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,7 @@ import java.util.Properties;
  * @author taotao
  * @since 2023-10-11
  */
+@Slf4j
 @Service
 public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, LoveNoteUser> implements ILoveNoteUserService {
 
@@ -52,6 +54,7 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         String openid = getOpenidByCode(code);
         resp.setOpenid(openid);
         LoveNoteUser user = getUserByOpenid(openid);
+        log.info("act=LoveNoteUserServiceImpl.login openid={} user={}", openid, JsonUtils.toJson(user));
         if (Objects.isNull(user)) {
             // 用户未注册
             return resp;
@@ -66,6 +69,7 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
     public LoveNoteLoginResp register(LoveNoteUser user) {
         LoveNoteUser currentUser = getUserByOpenid(user.getOpenid());
         ApiAssertUtils.isNull(currentUser, "该 openid 已注册");
+        log.info("act=LoveNoteUserServiceImpl.register user={}", JsonUtils.toJson(user));
         save(user);
         LoveNoteLoginResp resp = new LoveNoteLoginResp();
         resp.setOpenid(user.getOpenid());

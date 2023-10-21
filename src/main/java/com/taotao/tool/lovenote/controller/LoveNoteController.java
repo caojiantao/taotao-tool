@@ -67,7 +67,6 @@ public class LoveNoteController {
         return ApiResult.success();
     }
 
-    @LoveNoteLoginApi
     @PostMapping("/uploadImage")
     public ApiResult<String> uploadImage(@RequestPart MultipartFile file) {
         String fname = file.getOriginalFilename();

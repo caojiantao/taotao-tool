@@ -53,9 +53,9 @@ public class LoveNoteController {
         return ApiResult.success(resp);
     }
 
-    @PostMapping("/register")
-    public ApiResult<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
-        LoveNoteLoginResp resp = loveNoteUserService.register(user);
+    @PostMapping("/saveUser")
+    public ApiResult<LoveNoteLoginResp> saveUser(@RequestBody LoveNoteUser user) {
+        LoveNoteLoginResp resp = loveNoteUserService.saveUser(user);
         return ApiResult.success(resp);
     }
 

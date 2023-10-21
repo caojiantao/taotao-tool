@@ -11,6 +11,7 @@ import com.taotao.tool.common.util.DigestUtils;
 import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.spring.yml.LoveNoteYml;
 import lombok.SneakyThrows;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -57,15 +58,31 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         return resp;
     }
 
-    @Override
-    public LoveNoteLoginResp register(LoveNoteUser user) {
-        save(user);
+    public LoveNoteLoginResp loginByOpenid(String openid) {
+        String token = getToken(openid);
+        LoveNoteUser user = getUserByOpenid(openid);
         LoveNoteLoginResp resp = new LoveNoteLoginResp();
-        resp.setOpenid(user.getOpenid());
+        resp.setOpenid(openid);
         resp.setUser(user);
-        String token = getToken(user.getOpenid());
         resp.setToken(token);
-        sendWxNotice(user);
+        return resp;
+    }
+
+    @Override
+    public LoveNoteLoginResp saveUser(LoveNoteUser user) {
+        LoveNoteLoginResp resp = loginByOpenid(user.getOpenid());
+        LoveNoteUser currentUser = resp.getUser();
+        if (Objects.isNull(currentUser)) {
+            // 没有记录，则进行注册
+            save(user);
+            resp.setOpenid(user.getOpenid());
+            resp.setUser(user);
+            sendWxNotice(user);
+        } else {
+            // 已经注册过，更新就行
+            BeanUtils.copyProperties(user, currentUser);
+            updateById(currentUser);
+        }
         return resp;
     }
 

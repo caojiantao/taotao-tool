@@ -13,6 +13,12 @@ public class ApiAssertUtils {
         }
     }
 
+    public static void notTrue(boolean expression, String message) {
+        if (expression) {
+            throw new ApiException(EApiCode.UNKNOWN.getCode(), message);
+        }
+    }
+
     public static void isNull(Object object, String message) {
         if (Objects.nonNull(object)) {
             throw new ApiException(EApiCode.UNKNOWN.getCode(), message);

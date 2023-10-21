@@ -115,10 +115,16 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         LoveNoteCp cp = cpService.getCpByOpenid(record.getOpenid());
         vo.setCp(cp);
         LoveNoteUser user = userService.getUserByOpenid(record.getOpenid());
-        vo.setUser(user);
+        LoveNoteTrendVo.UserVo userVo = new LoveNoteTrendVo.UserVo();
+        userVo.setNickname(user.getNickname());
+        userVo.setAvatarUrl(mediaService.getMediaUrl(user.getAvatarUrl()));
+        vo.setUser(userVo);
         String partnerOpenid = Objects.equals(cp.getInviter(), record.getOpenid()) ? cp.getInvitee() : cp.getInviter();
         LoveNoteUser partner = userService.getUserByOpenid(partnerOpenid);
-        vo.setPartner(partner);
+        LoveNoteTrendVo.UserVo partnerVo = new LoveNoteTrendVo.UserVo();
+        partnerVo.setNickname(partner.getNickname());
+        partnerVo.setAvatarUrl(mediaService.getMediaUrl(partner.getAvatarUrl()));
+        vo.setPartner(partnerVo);
 
         List<LoveNoteTrendMediaVo> mediaVoList = new ArrayList<>();
         vo.setMediaList(mediaVoList);
@@ -128,6 +134,7 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
             mediaVo.setType(ELoveNoteTrendMediaType.valueOf(media.getType()));
             if (ELoveNoteTrendMediaType.IMAGE.equals(mediaVo.getType())) {
                 LoveNoteTrendMediaVo.Image image = JsonUtils.parse(media.getContent(), LoveNoteTrendMediaVo.Image.class);
+                image.setUrl(mediaService.getMediaUrl(image.getUrl()));
                 mediaVo.setImage(image);
             }
             mediaVoList.add(mediaVo);
@@ -155,11 +162,10 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         properties.setProperty("nickname", currentUser.getNickname());
         properties.setProperty("cpName", cp.getCpName());
         properties.setProperty("content", trendDto.getContent());
-        String imageDomain = dictionaryService.getValueByKey("image_domain", String.class);
         String mediaList = trendDto.getMediaList().stream()
                 .map(LoveNoteTrendMediaDto::getImage)
                 .map(LoveNoteTrendMediaDto.Image::getUrl)
-                .map(url -> "[图片](" + imageDomain + "/love-note/" + url + ")")
+                .map(url -> "[图片](" + mediaService.getMediaUrl(url) + ")")
                 .collect(Collectors.joining(","));
         properties.setProperty("mediaList", mediaList);
         workWxService.sendMessage("love_note_notice_addtrend", properties);

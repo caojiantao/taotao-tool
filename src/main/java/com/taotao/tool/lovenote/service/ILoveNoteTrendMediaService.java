@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ILoveNoteTrendMediaService extends IService<LoveNoteTrendMedia> {
 
+    String getMediaUrl(String fileName);
 }

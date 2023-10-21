@@ -3,12 +3,14 @@ package com.taotao.tool.lovenote.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.admin.service.IDictionaryService;
 import com.taotao.tool.admin.service.WorkWxService;
 import com.taotao.tool.common.util.ApiAssertUtils;
 import com.taotao.tool.common.util.DigestUtils;
 import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.lovenote.mapper.LoveNoteUserMapper;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
+import com.taotao.tool.lovenote.service.ILoveNoteTrendMediaService;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
 import com.taotao.tool.spring.yml.LoveNoteYml;
 import lombok.SneakyThrows;
@@ -42,6 +44,9 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
 
     @Autowired
     private LoveNoteYml loveNoteYml;
+
+    @Autowired
+    private ILoveNoteTrendMediaService mediaService;
 
     @Override
     public LoveNoteUser getUserByOpenid(String openid) {
@@ -83,7 +88,7 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
     private void sendWxNotice(LoveNoteUser user) {
         Properties properties = new Properties();
         properties.setProperty("openid", user.getOpenid());
-        properties.setProperty("avatarUrl", user.getAvatarUrl());
+        properties.setProperty("avatarUrl", mediaService.getMediaUrl(user.getAvatarUrl()));
         properties.setProperty("nickname", user.getNickname());
         properties.setProperty("gender", user.getGender().toString());
         workWxService.sendMessage("love_note_notice_register", properties);

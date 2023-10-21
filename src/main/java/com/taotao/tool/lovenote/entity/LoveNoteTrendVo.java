@@ -19,6 +19,12 @@ public class LoveNoteTrendVo {
     private List<LoveNoteTrendMediaVo> mediaList;
 
     private LoveNoteCp cp;
-    private LoveNoteUser user;
-    private LoveNoteUser partner;
+    private UserVo user;
+    private UserVo partner;
+
+    @Data
+    public static class UserVo {
+        private String nickname;
+        private String avatarUrl;
+    }
 }

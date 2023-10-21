@@ -42,6 +42,7 @@ public class LoveNoteCpServiceImpl extends ServiceImpl<LoveNoteCpMapper, LoveNot
 
     @Override
     public void addCp(LoveNoteUser inviter, LoveNoteUser invitee) {
+        ApiAssertUtils.notTrue(Objects.equals(inviter.getOpenid(), invitee.getOpenid()), "自己不能和自己组CP");
         LoveNoteCp cp1 = getCpByOpenid(inviter.getOpenid());
         LoveNoteCp cp2 = getCpByOpenid(invitee.getOpenid());
         ApiAssertUtils.isTrue(Objects.isNull(cp1) && Objects.isNull(cp2), "你或TA已经有组过CP");

@@ -4,14 +4,14 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
 import com.taotao.tool.admin.service.WorkWxService;
+import com.taotao.tool.common.util.ApiAssertUtils;
+import com.taotao.tool.common.util.DigestUtils;
+import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.lovenote.mapper.LoveNoteUserMapper;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
-import com.taotao.tool.common.util.DigestUtils;
-import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.spring.yml.LoveNoteYml;
 import lombok.SneakyThrows;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,7 @@ import java.util.Properties;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author taotao
@@ -48,41 +48,31 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
 
     @Override
     public LoveNoteLoginResp login(String code) {
+        LoveNoteLoginResp resp = new LoveNoteLoginResp();
         String openid = getOpenidByCode(code);
-        String token = getToken(openid);
-        LoveNoteUser user = getUserByOpenid(openid);
-        LoveNoteLoginResp resp = new LoveNoteLoginResp();
         resp.setOpenid(openid);
-        resp.setUser(user);
-        resp.setToken(token);
-        return resp;
-    }
-
-    public LoveNoteLoginResp loginByOpenid(String openid) {
-        String token = getToken(openid);
         LoveNoteUser user = getUserByOpenid(openid);
-        LoveNoteLoginResp resp = new LoveNoteLoginResp();
-        resp.setOpenid(openid);
+        if (Objects.isNull(user)) {
+            // 用户未注册
+            return resp;
+        }
+        String token = getToken(openid);
         resp.setUser(user);
         resp.setToken(token);
         return resp;
     }
 
     @Override
-    public LoveNoteLoginResp saveUser(LoveNoteUser user) {
-        LoveNoteLoginResp resp = loginByOpenid(user.getOpenid());
-        LoveNoteUser currentUser = resp.getUser();
-        if (Objects.isNull(currentUser)) {
-            // 没有记录，则进行注册
-            save(user);
-            resp.setOpenid(user.getOpenid());
-            resp.setUser(user);
-            sendWxNotice(user);
-        } else {
-            // 已经注册过，更新就行
-            BeanUtils.copyProperties(user, currentUser);
-            updateById(currentUser);
-        }
+    public LoveNoteLoginResp register(LoveNoteUser user) {
+        LoveNoteUser currentUser = getUserByOpenid(user.getOpenid());
+        ApiAssertUtils.isNull(currentUser, "该 openid 已注册");
+        save(user);
+        LoveNoteLoginResp resp = new LoveNoteLoginResp();
+        resp.setOpenid(user.getOpenid());
+        resp.setUser(user);
+        String token = getToken(user.getOpenid());
+        resp.setToken(token);
+        sendWxNotice(user);
         return resp;
     }
 

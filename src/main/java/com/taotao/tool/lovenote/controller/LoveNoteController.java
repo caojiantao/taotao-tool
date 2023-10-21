@@ -53,10 +53,18 @@ public class LoveNoteController {
         return ApiResult.success(resp);
     }
 
-    @PostMapping("/saveUser")
-    public ApiResult<LoveNoteLoginResp> saveUser(@RequestBody LoveNoteUser user) {
-        LoveNoteLoginResp resp = loveNoteUserService.saveUser(user);
+    @PostMapping("/register")
+    public ApiResult<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
+        LoveNoteLoginResp resp = loveNoteUserService.register(user);
         return ApiResult.success(resp);
+    }
+
+    @LoveNoteLoginApi
+    @PostMapping("/saveUser")
+    public ApiResult<Void> saveUser(@RequestBody LoveNoteUser user) {
+        String openid = LoveNoteLoginUtils.getCurrentUser().getOpenid();
+        loveNoteUserService.update().eq("openid", openid).update(user);
+        return ApiResult.success();
     }
 
     @LoveNoteLoginApi

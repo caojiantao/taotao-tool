@@ -18,7 +18,7 @@ public interface ILoveNoteUserService extends IService<LoveNoteUser> {
 
     LoveNoteLoginResp login(String code);
 
-    LoveNoteLoginResp saveUser(LoveNoteUser user);
+    LoveNoteLoginResp register(LoveNoteUser user);
 
     String getToken(String openid);
 

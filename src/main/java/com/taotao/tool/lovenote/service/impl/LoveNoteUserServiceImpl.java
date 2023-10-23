@@ -62,7 +62,7 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         log.info("act=LoveNoteUserServiceImpl.login openid={} user={}", openid, JsonUtils.toJson(user));
         if (Objects.isNull(user)) {
             // 用户未注册
-            return resp;
+            return null;
         }
         String token = getToken(openid);
         resp.setUser(user);

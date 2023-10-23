@@ -50,7 +50,12 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
 
     @Override
     public LoveNoteUser getUserByOpenid(String openid) {
-        return query().eq("openid", openid).one();
+        LoveNoteUser user = query().eq("openid", openid).one();
+        if (Objects.nonNull(user)) {
+            String mediaUrl = mediaService.getMediaUrl(user.getAvatarUrl());
+            user.setAvatarUrl(mediaUrl);
+        }
+        return user;
     }
 
     @Override

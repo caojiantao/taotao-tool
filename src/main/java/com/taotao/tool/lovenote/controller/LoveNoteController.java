@@ -11,6 +11,7 @@ import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.other.LoveNoteLoginApi;
 import com.taotao.tool.lovenote.other.LoveNoteLoginUtils;
 import com.taotao.tool.lovenote.service.ILoveNoteCpService;
+import com.taotao.tool.lovenote.service.ILoveNoteTrendMediaService;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendService;
 import com.taotao.tool.lovenote.service.ILoveNoteUserService;
 import com.taotao.tool.spring.yml.UploadYml;
@@ -49,6 +50,9 @@ public class LoveNoteController {
 
     @Autowired
     private ILoveNoteCpService loveNoteCpService;
+
+    @Autowired
+    private ILoveNoteTrendMediaService loveNoteTrendMediaService;
 
     @PostMapping("/login")
     public ApiResult<LoveNoteLoginResp> login(@NotEmpty String code) {
@@ -117,13 +121,13 @@ public class LoveNoteController {
         LoveNoteUser user = loveNoteUserService.getUserByOpenid(openid);
         userDto.setUser(user);
         LoveNoteCp userCp = loveNoteCpService.getCpByOpenid(openid);
-        userDto.setUserCp(userCp);
         if (Objects.nonNull(userCp)) {
             String partnerOpenid = Objects.equals(openid, userCp.getInviter())
                     ? userCp.getInvitee() : userCp.getInviter();
             LoveNoteUser userPartner = loveNoteUserService.getUserByOpenid(partnerOpenid);
             userDto.setUserPartner(userPartner);
         }
+        userDto.setUserCp(userCp);
         return ApiResult.success(userDto);
     }
 }

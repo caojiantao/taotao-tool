@@ -3,11 +3,11 @@ package com.taotao.tool.lovenote.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
-import com.taotao.tool.admin.service.IDictionaryService;
 import com.taotao.tool.admin.service.WorkWxService;
 import com.taotao.tool.common.util.ApiAssertUtils;
 import com.taotao.tool.common.util.DigestUtils;
 import com.taotao.tool.common.util.JsonUtils;
+import com.taotao.tool.lovenote.entity.LoveNoteUserRegisterRequest;
 import com.taotao.tool.lovenote.mapper.LoveNoteUserMapper;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.service.ILoveNoteTrendMediaService;
@@ -65,20 +65,24 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
             return null;
         }
         String token = getToken(openid);
-        resp.setUser(user);
         resp.setToken(token);
         return resp;
     }
 
     @Override
-    public LoveNoteLoginResp register(LoveNoteUser user) {
-        LoveNoteUser currentUser = getUserByOpenid(user.getOpenid());
+    public LoveNoteLoginResp register(LoveNoteUserRegisterRequest request) {
+        String openid = getOpenidByCode(request.getCode());
+        LoveNoteUser currentUser = getUserByOpenid(openid);
         ApiAssertUtils.isNull(currentUser, "该 openid 已注册");
-        log.info("act=LoveNoteUserServiceImpl.register user={}", JsonUtils.toJson(user));
+        log.info("act=LoveNoteUserServiceImpl.register request={}", JsonUtils.toJson(request));
+        LoveNoteUser user = new LoveNoteUser();
+        user.setOpenid(openid);
+        user.setAvatarUrl(request.getAvatarUrl());
+        user.setNickname(request.getNickname());
+        user.setGender(request.getGender());
         save(user);
         LoveNoteLoginResp resp = new LoveNoteLoginResp();
         resp.setOpenid(user.getOpenid());
-        resp.setUser(user);
         String token = getToken(user.getOpenid());
         resp.setToken(token);
         sendWxNotice(user);

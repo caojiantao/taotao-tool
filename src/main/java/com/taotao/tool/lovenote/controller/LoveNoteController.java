@@ -18,9 +18,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.NotEmpty;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -31,6 +33,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Validated
 @RestController
 @RequestMapping("/love-note")
 public class LoveNoteController {
@@ -48,14 +51,14 @@ public class LoveNoteController {
     private ILoveNoteCpService loveNoteCpService;
 
     @PostMapping("/login")
-    public ApiResult<LoveNoteLoginResp> login(String code) {
+    public ApiResult<LoveNoteLoginResp> login(@NotEmpty String code) {
         LoveNoteLoginResp resp = loveNoteUserService.login(code);
         return ApiResult.success(resp);
     }
 
     @PostMapping("/register")
-    public ApiResult<LoveNoteLoginResp> register(@RequestBody LoveNoteUser user) {
-        LoveNoteLoginResp resp = loveNoteUserService.register(user);
+    public ApiResult<LoveNoteLoginResp> register(@RequestBody @Validated LoveNoteUserRegisterRequest request) {
+        LoveNoteLoginResp resp = loveNoteUserService.register(request);
         return ApiResult.success(resp);
     }
 

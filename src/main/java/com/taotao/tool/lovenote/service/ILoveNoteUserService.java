@@ -2,6 +2,7 @@ package com.taotao.tool.lovenote.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.lovenote.entity.LoveNoteUserRegisterRequest;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 
 /**
@@ -18,7 +19,7 @@ public interface ILoveNoteUserService extends IService<LoveNoteUser> {
 
     LoveNoteLoginResp login(String code);
 
-    LoveNoteLoginResp register(LoveNoteUser user);
+    LoveNoteLoginResp register(LoveNoteUserRegisterRequest request);
 
     String getToken(String openid);
 

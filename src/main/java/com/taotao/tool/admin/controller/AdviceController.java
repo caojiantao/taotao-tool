@@ -7,6 +7,8 @@ import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.validation.ValidationException;
+
 @Slf4j
 @RestControllerAdvice
 public class AdviceController {
@@ -17,12 +19,18 @@ public class AdviceController {
         return ApiResult.fail(e);
     }
 
-    @ExceptionHandler(BindException.class)
+    @ExceptionHandler({BindException.class})
     public ApiResult<Void> handleBindException(BindException e) {
         log.error("act=handleBindException", e);
         assert e.getFieldError() != null;
         String msg = e.getFieldError().getDefaultMessage();
         return ApiResult.fail(msg);
+    }
+
+    @ExceptionHandler({ValidationException.class})
+    public ApiResult<Void> handleValidException(ValidationException e) {
+        log.error("act=handleValidException", e);
+        return ApiResult.fail(e.getMessage());
     }
 
     @ExceptionHandler(Exception.class)

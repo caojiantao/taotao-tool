@@ -117,7 +117,7 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         LoveNoteUser user = userService.getUserByOpenid(record.getOpenid());
         LoveNoteTrendVo.UserVo userVo = new LoveNoteTrendVo.UserVo();
         userVo.setNickname(user.getNickname());
-        userVo.setAvatarUrl(mediaService.getMediaUrl(user.getAvatarUrl()));
+        userVo.setAvatarUrl(user.getAvatarUrl());
         vo.setUser(userVo);
         String partnerOpenid = Objects.equals(cp.getInviter(), record.getOpenid()) ? cp.getInvitee() : cp.getInviter();
         LoveNoteUser partner = userService.getUserByOpenid(partnerOpenid);

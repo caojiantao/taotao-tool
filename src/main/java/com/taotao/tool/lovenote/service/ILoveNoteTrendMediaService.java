@@ -1,11 +1,13 @@
 package com.taotao.tool.lovenote.service;
 
-import com.taotao.tool.lovenote.model.LoveNoteTrendMedia;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.taotao.tool.lovenote.entity.LoveNoteTrendMediaDto;
+import com.taotao.tool.lovenote.model.LoveNoteTrend;
+import com.taotao.tool.lovenote.model.LoveNoteTrendMedia;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author taotao
@@ -14,4 +16,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface ILoveNoteTrendMediaService extends IService<LoveNoteTrendMedia> {
 
     String getMediaUrl(String fileName);
+
+    String getMediaFileName(String mediaUrl);
+
+    LoveNoteTrendMedia covertMediaDtoToMedia(LoveNoteTrend trend, LoveNoteTrendMediaDto mediaDto);
+
+    LoveNoteTrendMediaDto covertMediaModelToMediaDto(LoveNoteTrendMedia media);
 }

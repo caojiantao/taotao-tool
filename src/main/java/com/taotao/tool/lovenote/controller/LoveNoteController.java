@@ -88,7 +88,8 @@ public class LoveNoteController {
             log.error("上传图片异常", e);
             throw new ApiException(-1, e.getMessage());
         }
-        return ApiResult.success(filename);
+        String mediaUrl = loveNoteTrendMediaService.getMediaUrl(filename);
+        return ApiResult.success(mediaUrl);
     }
 
     @LoveNoteLoginApi

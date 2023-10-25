@@ -82,7 +82,8 @@ public class LoveNoteUserServiceImpl extends ServiceImpl<LoveNoteUserMapper, Lov
         log.info("act=LoveNoteUserServiceImpl.register request={}", JsonUtils.toJson(request));
         LoveNoteUser user = new LoveNoteUser();
         user.setOpenid(openid);
-        user.setAvatarUrl(request.getAvatarUrl());
+        String mediaFileName = mediaService.getMediaFileName(request.getAvatarUrl());
+        user.setAvatarUrl(mediaFileName);
         user.setNickname(request.getNickname());
         user.setGender(request.getGender());
         save(user);

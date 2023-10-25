@@ -5,9 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.taotao.tool.admin.service.IDictionaryService;
 import com.taotao.tool.admin.service.WorkWxService;
-import com.taotao.tool.common.util.JsonUtils;
-import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;
-import com.taotao.tool.lovenote.entity.*;
+import com.taotao.tool.lovenote.entity.LoveNoteTrendDto;
+import com.taotao.tool.lovenote.entity.LoveNoteTrendMediaDto;
+import com.taotao.tool.lovenote.entity.LoveNoteTrendQuery;
+import com.taotao.tool.lovenote.entity.LoveNoteTrendVo;
 import com.taotao.tool.lovenote.mapper.LoveNoteTrendMapper;
 import com.taotao.tool.lovenote.model.LoveNoteCp;
 import com.taotao.tool.lovenote.model.LoveNoteTrend;
@@ -66,12 +67,7 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         }
         List<LoveNoteTrendMedia> mediaList = new ArrayList<>();
         for (LoveNoteTrendMediaDto mediaDto : trendDto.getMediaList()) {
-            LoveNoteTrendMedia media = new LoveNoteTrendMedia();
-            media.setTrendId(trend.getId());
-            media.setCpId(trend.getId());
-            media.setOpenid(trend.getOpenid());
-            media.setType(mediaDto.getType().name());
-            media.setContent(mediaDto.toContent());
+            LoveNoteTrendMedia media = mediaService.covertMediaDtoToMedia(trend, mediaDto);
             mediaList.add(media);
         }
         mediaService.saveBatch(mediaList);
@@ -126,18 +122,11 @@ public class LoveNoteTrendServiceImpl extends ServiceImpl<LoveNoteTrendMapper, L
         partnerVo.setAvatarUrl(mediaService.getMediaUrl(partner.getAvatarUrl()));
         vo.setPartner(partnerVo);
 
-        List<LoveNoteTrendMediaVo> mediaVoList = new ArrayList<>();
-        vo.setMediaList(mediaVoList);
+        List<LoveNoteTrendMediaDto> mediaDtoList = new ArrayList<>();
+        vo.setMediaList(mediaDtoList);
         for (LoveNoteTrendMedia media : mediaList) {
-            LoveNoteTrendMediaVo mediaVo = new LoveNoteTrendMediaVo();
-            mediaVo.setId(media.getId());
-            mediaVo.setType(ELoveNoteTrendMediaType.valueOf(media.getType()));
-            if (ELoveNoteTrendMediaType.IMAGE.equals(mediaVo.getType())) {
-                LoveNoteTrendMediaVo.Image image = JsonUtils.parse(media.getContent(), LoveNoteTrendMediaVo.Image.class);
-                image.setUrl(mediaService.getMediaUrl(image.getUrl()));
-                mediaVo.setImage(image);
-            }
-            mediaVoList.add(mediaVo);
+            LoveNoteTrendMediaDto mediaDto = mediaService.covertMediaModelToMediaDto(media);
+            mediaDtoList.add(mediaDto);
         }
         return vo;
     }

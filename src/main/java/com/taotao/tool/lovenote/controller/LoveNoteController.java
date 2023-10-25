@@ -70,6 +70,8 @@ public class LoveNoteController {
     @PostMapping("/saveUser")
     public ApiResult<Void> saveUser(@RequestBody LoveNoteUser user) {
         String openid = LoveNoteLoginUtils.getCurrentUser().getOpenid();
+        String mediaFileName = loveNoteTrendMediaService.getMediaFileName(user.getAvatarUrl());
+        user.setAvatarUrl(mediaFileName);
         loveNoteUserService.update().eq("openid", openid).update(user);
         return ApiResult.success();
     }

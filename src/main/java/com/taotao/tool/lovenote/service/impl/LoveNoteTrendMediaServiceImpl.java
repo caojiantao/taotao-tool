@@ -37,7 +37,7 @@ public class LoveNoteTrendMediaServiceImpl extends ServiceImpl<LoveNoteTrendMedi
     public String getMediaFileName(String mediaUrl) {
         String imageDomain = dictionaryService.getValueByKey("image_domain", String.class);
         ApiAssertUtils.isTrue(mediaUrl.startsWith(imageDomain), "资源路径不合法");
-        return mediaUrl.substring(mediaUrl.lastIndexOf("/"));
+        return mediaUrl.substring(mediaUrl.lastIndexOf("/") + 1);
     }
 
     @Override

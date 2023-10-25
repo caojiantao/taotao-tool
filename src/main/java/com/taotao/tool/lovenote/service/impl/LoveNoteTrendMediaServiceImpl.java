@@ -70,6 +70,6 @@ public class LoveNoteTrendMediaServiceImpl extends ServiceImpl<LoveNoteTrendMedi
             image.setUrl(mediaUrl);
             mediaDto.setImage(image);
         }
-        return null;
+        return mediaDto;
     }
 }

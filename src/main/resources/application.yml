@@ -34,4 +34,9 @@ mybatis-plus:
 love-note:
   app-id:
   app-secret:
-  tokenSalt: 
+  tokenSalt:
+
+carpool:
+  app-id:
+  app-secret:
+  tokenSalt:

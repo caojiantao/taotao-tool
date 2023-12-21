@@ -18,13 +18,13 @@ public class CodeGenerator {
         String username = "root";
         String password = "123456";
 
-        String moduleName = "lovenote";
+        String moduleName = "carpool";
 
-        String finalProjectPath = "D:\\workspace\\taotao-tool";
-        String tables = "love_note_trend_media";
+        String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
+        String tables = "carpool_driver,carpool_line,carpool_line_point,carpool_media,carpool_user";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
-                    builder.author("taotao") // 设置作者
+                    builder.author("caojiantao") // 设置作者
                             .disableOpenDir() //禁止打开输出目录
                             .outputDir(finalProjectPath + "/src/main/java"); // 指定输出目录
                 })

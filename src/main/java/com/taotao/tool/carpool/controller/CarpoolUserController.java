@@ -17,10 +17,7 @@ import com.taotao.tool.lovenote.other.LoveNoteLoginUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
@@ -33,7 +30,8 @@ import java.util.Objects;
  * @author caojiantao
  * @since 2023-12-21
  */
-@Controller
+@Validated
+@RestController
 @RequestMapping("/carpool/user")
 public class CarpoolUserController {
 

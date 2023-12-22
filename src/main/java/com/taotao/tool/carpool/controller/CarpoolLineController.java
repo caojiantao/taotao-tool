@@ -16,11 +16,11 @@ import com.taotao.tool.carpool.service.ICarpoolUserService;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -35,7 +35,8 @@ import java.util.stream.Collectors;
  * @author caojiantao
  * @since 2023-12-21
  */
-@Controller
+@Validated
+@RestController
 @RequestMapping("/carpool/line")
 public class CarpoolLineController {
 
@@ -73,11 +74,11 @@ public class CarpoolLineController {
             if (Objects.isNull(user) || Objects.isNull(driver)) {
                 continue;
             }
+            CarpoolLineListItem.Driver itemDriver = new CarpoolLineListItem.Driver(user.getOpenid(), user.getAvatar());
             PositionDTO homePosition = JsonUtils.parse(line.getHomePosition(), PositionDTO.class);
             PositionDTO workPosition = JsonUtils.parse(line.getWorkPosition(), PositionDTO.class);
             if (Objects.nonNull(line.getWorkTime())) {
                 // 上班
-                CarpoolLineListItem.Driver itemDriver = new CarpoolLineListItem.Driver(user.getAvatar());
                 CarpoolLineListItem.Line itemLine = new CarpoolLineListItem.Line(homePosition.getName(), workPosition.getName(), line.getWorkTime().toString());
                 CarpoolLineListItem.Seat itemSeat = new CarpoolLineListItem.Seat(line.getPrice(), line.getRemark());
                 CarpoolLineListItem item = CarpoolLineListItem.builder()
@@ -90,7 +91,6 @@ public class CarpoolLineController {
             }
             if (Objects.nonNull(line.getHomeTime())) {
                 // 回家
-                CarpoolLineListItem.Driver itemDriver = new CarpoolLineListItem.Driver(user.getAvatar());
                 CarpoolLineListItem.Line itemLine = new CarpoolLineListItem.Line(workPosition.getName(), homePosition.getName(), line.getHomeTime().toString());
                 CarpoolLineListItem.Seat itemSeat = new CarpoolLineListItem.Seat(line.getPrice(), line.getRemark());
                 CarpoolLineListItem item = CarpoolLineListItem.builder()

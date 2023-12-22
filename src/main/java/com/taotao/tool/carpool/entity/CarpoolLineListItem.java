@@ -24,6 +24,7 @@ public class CarpoolLineListItem {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Driver {
+        private String openid;
         private String avatar;
     }
 

@@ -14,4 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface ICarpoolLineService extends IService<CarpoolLine> {
 
     CarpoolLine getLineByOpenid(String openid);
+
+    void updateLineByOpenid(CarpoolLine line);
 }

@@ -1,6 +1,7 @@
 package com.taotao.tool.common.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -43,6 +44,12 @@ public class JsonUtils {
     @SneakyThrows
     public static <T> T parse(String json, Class<T> clazz) {
         return mapper.readValue(json, clazz);
+    }
+
+    @SneakyThrows
+    public static <T> List<T> parseList(String json, Class<T> clazz) {
+        return mapper.readValue(json, new TypeReference<List<T>>() {
+        });
     }
 
     public static ObjectMapper getMapper() {

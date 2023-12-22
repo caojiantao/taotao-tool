@@ -1,7 +1,8 @@
 package com.taotao.tool.carpool.constant;
 
-public enum ECarpoolMediaType {
+public enum ECarpoolLineType {
 
-    IMAGE,
+    WORK,
+    HOME,
     ;
 }

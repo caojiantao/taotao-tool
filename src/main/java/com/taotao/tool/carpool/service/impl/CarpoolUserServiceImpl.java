@@ -1,14 +1,14 @@
 package com.taotao.tool.carpool.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.taotao.tool.admin.service.WorkWxService;
 import com.taotao.tool.carpool.entity.CarpoolLoginResp;
-import com.taotao.tool.carpool.entity.CarpoolUserRegisterRequest;
-import com.taotao.tool.carpool.model.CarpoolUser;
+import com.taotao.tool.carpool.entity.CarpoolUserRegisterReq;
 import com.taotao.tool.carpool.mapper.CarpoolUserMapper;
+import com.taotao.tool.carpool.model.CarpoolUser;
 import com.taotao.tool.carpool.service.ICarpoolMediaService;
 import com.taotao.tool.carpool.service.ICarpoolUserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.taotao.tool.common.util.ApiAssertUtils;
 import com.taotao.tool.common.util.DigestUtils;
 import com.taotao.tool.common.util.JsonUtils;
@@ -18,18 +18,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.text.MessageFormat;
 import java.time.Duration;
-import java.util.Objects;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author caojiantao
@@ -59,6 +59,21 @@ public class CarpoolUserServiceImpl extends ServiceImpl<CarpoolUserMapper, Carpo
     }
 
     @Override
+    public Map<String, CarpoolUser> getUserMapByOpenidList(List<String> openidList) {
+        Map<String, CarpoolUser> map = new HashMap<>();
+        if (CollectionUtils.isEmpty(openidList)) {
+            return map;
+        }
+        List<CarpoolUser> list = query().in("openid", openidList).list();
+        for (CarpoolUser item : list) {
+            String mediaUrl = mediaService.getMediaUrl(item.getAvatar());
+            item.setAvatar(mediaUrl);
+            map.put(item.getOpenid(), item);
+        }
+        return map;
+    }
+
+    @Override
     public CarpoolLoginResp login(String code) {
         CarpoolLoginResp resp = new CarpoolLoginResp();
         String openid = getOpenidByCode(code);
@@ -75,7 +90,7 @@ public class CarpoolUserServiceImpl extends ServiceImpl<CarpoolUserMapper, Carpo
     }
 
     @Override
-    public CarpoolLoginResp register(CarpoolUserRegisterRequest request) {
+    public CarpoolLoginResp register(CarpoolUserRegisterReq request) {
         String openid = getOpenidByCode(request.getCode());
         CarpoolUser currentUser = getUserByOpenid(openid);
         ApiAssertUtils.isNull(currentUser, "该 openid 已注册");

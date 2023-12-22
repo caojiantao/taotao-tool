@@ -1,14 +1,14 @@
 package com.taotao.tool.carpool.service.impl;
 
-import com.taotao.tool.carpool.model.CarpoolLine;
-import com.taotao.tool.carpool.mapper.CarpoolLineMapper;
-import com.taotao.tool.carpool.service.ICarpoolLineService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.taotao.tool.carpool.mapper.CarpoolLineMapper;
+import com.taotao.tool.carpool.model.CarpoolLine;
+import com.taotao.tool.carpool.service.ICarpoolLineService;
 import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author caojiantao
@@ -20,5 +20,10 @@ public class CarpoolLineServiceImpl extends ServiceImpl<CarpoolLineMapper, Carpo
     @Override
     public CarpoolLine getLineByOpenid(String openid) {
         return query().eq("openid", openid).one();
+    }
+
+    @Override
+    public void updateLineByOpenid(CarpoolLine line) {
+        update().eq("openid", line.getOpenid()).update(line);
     }
 }

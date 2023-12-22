@@ -2,7 +2,7 @@ package com.taotao.tool.carpool.controller;
 
 import com.taotao.tool.carpool.entity.CarpoolLoginResp;
 import com.taotao.tool.carpool.entity.CarpoolUserDto;
-import com.taotao.tool.carpool.entity.CarpoolUserRegisterRequest;
+import com.taotao.tool.carpool.entity.CarpoolUserRegisterReq;
 import com.taotao.tool.carpool.model.CarpoolDriver;
 import com.taotao.tool.carpool.model.CarpoolLine;
 import com.taotao.tool.carpool.model.CarpoolUser;
@@ -12,9 +12,6 @@ import com.taotao.tool.carpool.service.ICarpoolMediaService;
 import com.taotao.tool.carpool.service.ICarpoolUserService;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.util.JsonUtils;
-import com.taotao.tool.lovenote.entity.LoveNoteUserDto;
-import com.taotao.tool.lovenote.model.LoveNoteCp;
-import com.taotao.tool.lovenote.model.LoveNoteUser;
 import com.taotao.tool.lovenote.other.LoveNoteLoginApi;
 import com.taotao.tool.lovenote.other.LoveNoteLoginUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +53,7 @@ public class CarpoolUserController {
     }
 
     @PostMapping("/register")
-    public ApiResult<CarpoolLoginResp> register(@RequestBody @Validated CarpoolUserRegisterRequest request) {
+    public ApiResult<CarpoolLoginResp> register(@RequestBody @Validated CarpoolUserRegisterReq request) {
         CarpoolLoginResp resp = carpoolUserService.register(request);
         return ApiResult.success(resp);
     }

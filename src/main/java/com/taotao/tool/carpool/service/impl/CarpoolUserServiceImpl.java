@@ -2,7 +2,7 @@ package com.taotao.tool.carpool.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.taotao.tool.admin.service.WorkWxService;
+import com.taotao.tool.system.service.WorkWxService;
 import com.taotao.tool.carpool.entity.CarpoolLoginResp;
 import com.taotao.tool.carpool.entity.CarpoolUserRegisterReq;
 import com.taotao.tool.carpool.mapper.CarpoolUserMapper;

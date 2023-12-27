@@ -1,6 +1,6 @@
 package com.taotao.tool.lovenote.controller;
 
-import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.system.dto.resp.LoveNoteLoginResp;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.exception.ApiException;
 import com.taotao.tool.common.util.ApiAssertUtils;

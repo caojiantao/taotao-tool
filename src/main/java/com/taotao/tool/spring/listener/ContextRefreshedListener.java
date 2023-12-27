@@ -1,6 +1,6 @@
 package com.taotao.tool.spring.listener;
 
-import com.taotao.tool.admin.service.WorkWxService;
+import com.taotao.tool.system.service.WorkWxService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

@@ -18,10 +18,10 @@ public class CodeGenerator {
         String username = "root";
         String password = "123456";
 
-        String moduleName = "carpool";
+        String moduleName = "system";
 
         String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
-        String tables = "carpool_driver,carpool_line,carpool_line_point,carpool_media,carpool_user";
+        String tables = "system_media";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("caojiantao") // 设置作者

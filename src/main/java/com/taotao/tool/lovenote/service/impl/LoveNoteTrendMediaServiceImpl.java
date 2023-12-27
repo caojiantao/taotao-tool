@@ -1,7 +1,7 @@
 package com.taotao.tool.lovenote.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.taotao.tool.admin.service.IDictionaryService;
+import com.taotao.tool.system.service.IDictionaryService;
 import com.taotao.tool.common.util.ApiAssertUtils;
 import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.lovenote.constant.ELoveNoteTrendMediaType;

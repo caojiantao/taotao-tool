@@ -1,6 +1,6 @@
 package com.taotao.tool.carpool.service.impl;
 
-import com.taotao.tool.admin.service.IDictionaryService;
+import com.taotao.tool.system.service.IDictionaryService;
 import com.taotao.tool.carpool.model.CarpoolMedia;
 import com.taotao.tool.carpool.mapper.CarpoolMediaMapper;
 import com.taotao.tool.carpool.service.ICarpoolMediaService;

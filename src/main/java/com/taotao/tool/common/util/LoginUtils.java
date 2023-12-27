@@ -1,6 +1,6 @@
 package com.taotao.tool.common.util;
 
-import com.taotao.tool.admin.model.User;
+import com.taotao.tool.system.model.User;
 
 public class LoginUtils {
 

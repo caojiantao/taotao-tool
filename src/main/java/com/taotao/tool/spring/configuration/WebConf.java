@@ -1,6 +1,6 @@
 package com.taotao.tool.spring.configuration;
 
-import com.taotao.tool.admin.interceptor.LoginInterceptor;
+import com.taotao.tool.system.interceptor.LoginInterceptor;
 import com.taotao.tool.lovenote.other.LoveNoteLoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
 package com.taotao.tool.lovenote.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.taotao.tool.admin.dto.resp.LoveNoteLoginResp;
+import com.taotao.tool.system.dto.resp.LoveNoteLoginResp;
 import com.taotao.tool.lovenote.entity.LoveNoteUserRegisterRequest;
 import com.taotao.tool.lovenote.model.LoveNoteUser;
 

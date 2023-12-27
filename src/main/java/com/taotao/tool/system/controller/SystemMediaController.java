@@ -1,5 +1,8 @@
 package com.taotao.tool.system.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.taotao.tool.common.constants.EMediaType;
@@ -79,7 +82,8 @@ public class SystemMediaController {
     @GetMapping("/list")
     public ApiResult<List<SystemMedia>> list(@Valid SystemMediaListReq req) {
         Page<SystemMedia> page = new Page<>(req.getCurrent(), req.getSize());
-        QueryChainWrapper<SystemMedia> wrapper = systemMediaService.query().orderByAsc("id");
+        LambdaQueryWrapper<SystemMedia> wrapper = Wrappers.lambdaQuery();
+        wrapper.orderByDesc(SystemMedia::getId);
         systemMediaService.page(page, wrapper);
         return ApiResult.success(page.getRecords());
     }

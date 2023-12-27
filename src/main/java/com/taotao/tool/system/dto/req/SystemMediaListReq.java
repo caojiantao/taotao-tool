@@ -5,4 +5,6 @@ import lombok.Data;
 @Data
 public class SystemMediaListReq extends BasePageReq {
 
+    private String bucket;
+    private String filename;
 }

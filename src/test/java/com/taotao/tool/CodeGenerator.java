@@ -20,7 +20,7 @@ public class CodeGenerator {
 
         String moduleName = "system";
 
-        String finalProjectPath = "/Users/caojiantao/IdeaProjects/taotao-tools";
+        String finalProjectPath = "D:\\IdeaProjects\\taotao-tool";
         String tables = "system_media";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {

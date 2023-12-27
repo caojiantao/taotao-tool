@@ -32,11 +32,11 @@ mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
 
 love-note:
-  app-id: wx781e612a7639f187
-  app-secret: 9677d9c7750b5182241f1675dca82484
-  tokenSalt: chenlisha
+  app-id:
+  app-secret:
+  tokenSalt:
 
 carpool:
-  app-id: wx094fc2b087c9eb74
-  app-secret: bf877de64a57f317a0528fcbcb78d974
-  tokenSalt: caojiantao
+  app-id:
+  app-secret:
+  tokenSalt:

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StreamUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -82,7 +83,7 @@ public class SystemMediaController {
         Page<SystemMedia> page = new Page<>(req.getCurrent(), req.getSize());
         LambdaQueryWrapper<SystemMedia> wrapper = Wrappers.lambdaQuery();
         wrapper.eq(Objects.nonNull(req.getBucket()), SystemMedia::getBucket, req.getBucket())
-                .eq(Objects.nonNull(req.getFilename()), SystemMedia::getFilename, req.getFilename())
+                .eq(StringUtils.hasText(req.getFilename()), SystemMedia::getFilename, req.getFilename())
                 .orderByDesc(SystemMedia::getId);
         systemMediaService.page(page, wrapper);
         return ApiResult.success(page.getRecords());

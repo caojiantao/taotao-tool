@@ -5,7 +5,7 @@ import com.taotao.tool.system.mapper.UserMapper;
 import com.taotao.tool.system.model.User;
 import com.taotao.tool.system.service.IUserService;
 import com.taotao.tool.common.util.DigestUtils;
-import com.taotao.tool.spring.yml.LoginYml;
+import com.taotao.tool.system.yml.LoginYml;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

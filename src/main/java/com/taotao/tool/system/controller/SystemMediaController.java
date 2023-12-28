@@ -3,7 +3,7 @@ package com.taotao.tool.system.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.taotao.tool.common.constants.EMediaType;
+import com.taotao.tool.system.constant.EMediaType;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.exception.ApiException;
 import com.taotao.tool.system.dto.req.SystemMediaListReq;

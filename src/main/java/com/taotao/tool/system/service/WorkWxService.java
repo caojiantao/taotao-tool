@@ -1,7 +1,7 @@
 package com.taotao.tool.system.service;
 
 import com.taotao.tool.common.util.PlaceHolderUtils;
-import com.taotao.tool.common.util.QyApiUtils;
+import com.taotao.tool.system.util.QyApiUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

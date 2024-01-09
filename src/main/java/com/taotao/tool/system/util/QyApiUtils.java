@@ -18,20 +18,24 @@ import java.util.Map;
 public class QyApiUtils {
 
     public static void sendMessage(String webhook, String content) {
-        Map<String, Object> map = new HashMap<>();
-        Map<String, String> markdown = new HashMap<>();
-        map.put("msgtype", "markdown");
-        map.put("markdown", markdown);
-        markdown.put("content", content);
-        Mono<String> mono = WebClient.create()
-                .method(HttpMethod.POST)
-                .uri(webhook)
-                .contentType(MediaType.APPLICATION_JSON)
-                .bodyValue(JsonUtils.toJson(map))
-                .retrieve()
-                .bodyToMono(String.class)
-                .timeout(Duration.ofSeconds(10));
-        String html = mono.block();
-        log.info("act=QyApiUtils.sendMessage webhook={} content={} html={}", webhook, markdown, html);
+        try {
+            Map<String, Object> map = new HashMap<>();
+            Map<String, String> markdown = new HashMap<>();
+            map.put("msgtype", "markdown");
+            map.put("markdown", markdown);
+            markdown.put("content", content);
+            Mono<String> mono = WebClient.create()
+                    .method(HttpMethod.POST)
+                    .uri(webhook)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .bodyValue(JsonUtils.toJson(map))
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .timeout(Duration.ofSeconds(10));
+            String html = mono.block();
+            log.info("act=QyApiUtils.sendMessage webhook={} content={} html={}", webhook, markdown, html);
+        } catch (Exception e) {
+            log.error("act=QyApiUtils.sendMessage", e);
+        }
     }
 }

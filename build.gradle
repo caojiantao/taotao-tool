@@ -51,7 +51,10 @@ dependencies {
 
     implementation 'net.coobird:thumbnailator:0.4.19'
 
-    implementation 'io.micrometer:micrometer-registry-prometheus:1.11.0'
+    // https://6tail.cn/tyme.html
+    implementation 'cn.6tail:tyme4j:1.0.1'
+
+
 }
 
 tasks.named("test") {

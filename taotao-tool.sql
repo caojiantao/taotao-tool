@@ -38,3 +38,12 @@ CREATE TABLE `system_media`  (
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB;
+
+CREATE TABLE `anniv` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `anniv_type` varchar(32) NOT NULL,
+  `anniv_date` date NOT NULL,
+  `lunar` tinyint(1) NOT NULL DEFAULT '0',
+  `remark` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;

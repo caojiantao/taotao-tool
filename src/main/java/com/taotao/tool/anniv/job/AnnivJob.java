@@ -33,8 +33,8 @@ public class AnnivJob {
             log.info("今天是TA的纪念日 {}", JsonUtils.toJson(anniv));
             Properties properties = new Properties();
             properties.put("type", anniv.getAnnivType());
-            properties.put("date", anniv.getAnnivDate());
-            properties.put("lunar", anniv.getLunar());
+            properties.put("date", String.valueOf(anniv.getAnnivDate()));
+            properties.put("lunar", String.valueOf(anniv.getLunar()));
             properties.put("remark", anniv.getRemark());
             workWxService.sendMessage("anniv_notice_message", properties);
         }

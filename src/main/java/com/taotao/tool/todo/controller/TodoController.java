@@ -33,13 +33,7 @@ public class TodoController {
 
     @PostMapping("/saveTodo")
     public ApiResult<Void> saveTodo(@RequestBody Todo todo) {
-        todoService.save(todo);
-        return ApiResult.success();
-    }
-
-    @PostMapping("/updateTodo")
-    public ApiResult<Void> updateTodo(@RequestBody Todo todo) {
-        todoService.updateById(todo);
+        todoService.saveOrUpdate(todo);
         return ApiResult.success();
     }
 

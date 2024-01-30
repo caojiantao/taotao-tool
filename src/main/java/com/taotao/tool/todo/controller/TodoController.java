@@ -38,11 +38,8 @@ public class TodoController {
     }
 
     @PostMapping("/updateTodo")
-    public ApiResult<Void> updateTodo(Integer id, Integer newState) {
-        todoService.update()
-                .eq("id", id)
-                .set("state", newState)
-                .update();
+    public ApiResult<Void> updateTodo(@RequestBody Todo todo) {
+        todoService.updateById(todo);
         return ApiResult.success();
     }
 

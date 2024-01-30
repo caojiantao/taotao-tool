@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>
@@ -25,6 +26,13 @@ public class TodoController {
 
     @GetMapping("/listTodo")
     public ApiResult<List<Todo>> listTodo(Integer groupId) {
+        if (Objects.equals(groupId, 11)) {
+            // 已完成
+            List<Todo> list = todoService.query()
+                    .eq("state", 1)
+                    .list();
+            return ApiResult.success(list);
+        }
         List<Todo> list = todoService.query()
                 .eq("group_id", groupId)
                 .list();

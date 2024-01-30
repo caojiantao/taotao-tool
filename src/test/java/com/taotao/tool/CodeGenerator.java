@@ -18,10 +18,10 @@ public class CodeGenerator {
         String username = "root";
         String password = "123456";
 
-        String moduleName = "anniv";
+        String moduleName = "todo";
 
         String finalProjectPath = "D:\\IdeaProjects\\taotao-tool";
-        String tables = "anniv";
+        String tables = "todo";
         FastAutoGenerator generator = FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("caojiantao") // 设置作者

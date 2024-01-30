@@ -12,7 +12,7 @@ CREATE TABLE `user`
     `gmt_create`   datetime    NOT NULL,
     `gmt_modified` datetime    NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB;
 
 -- ----------------------------
 -- Records of user
@@ -35,7 +35,7 @@ CREATE TABLE `system_media`  (
   `content_length` bigint(0) NOT NULL,
   `content_json` text NULL,
   `create_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
+  `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB;
 
@@ -45,5 +45,16 @@ CREATE TABLE `anniv` (
   `anniv_date` date NOT NULL,
   `lunar` tinyint(1) NOT NULL DEFAULT '0',
   `remark` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `todo` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `group_id` int NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` text,
+  `state` int NOT NULL DEFAULT '0',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;

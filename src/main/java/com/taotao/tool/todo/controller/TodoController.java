@@ -33,7 +33,17 @@ public class TodoController {
     @GetMapping("/listTodo")
     public ApiResult<List<TodoDayGroupDTO>> listTodo(Integer groupId) {
         List<TodoDayGroupDTO> list = new ArrayList<>();
-        if (Objects.equals(groupId, 11)) {
+        if (Objects.equals(groupId, 10)) {
+            // 今日待办，需要查询所有组下的未完成的，和今日已完成的
+            List<Todo> todoList = todoService.query()
+                    .orderByDesc("update_time")
+                    .list();
+            LocalDate now = LocalDate.now();
+            todoList.removeIf(item -> !Objects.equals(now, item.getUpdateTime().toLocalDate()) && Objects.equals(1, item.getState()));
+            TodoDayGroupDTO dto = new TodoDayGroupDTO(null, JsonUtils.convert(todoList, TodoDayGroupDTO.Item.class));
+            list.add(dto);
+            return ApiResult.success(list);
+        } else if (Objects.equals(groupId, 11)) {
             // 已完成，需要按日期进行分组返回
             Map<LocalDate, List<TodoDayGroupDTO.Item>> map = todoService.query()
                     .eq("state", 1)
@@ -49,7 +59,7 @@ public class TodoController {
             }
             return ApiResult.success(list);
         } else {
-            // 非已完成的，正常就一个组，但是需要过滤掉非今天完成的
+            // 其他组，正常查未完成的和今日完成的
             List<Todo> todoList = todoService.query()
                     .eq("group_id", groupId)
                     .orderByDesc("update_time")

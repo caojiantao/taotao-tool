@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class JsonUtils {
 
+    @Getter
     private final static ObjectMapper mapper = new ObjectMapper();
 
     static {
@@ -35,7 +37,8 @@ public class JsonUtils {
         return mapper.readValue(json, clazz);
     }
 
-    public static <P, Q> List<Q> convert(List<P> obj, Class<Q> clazz) throws JsonProcessingException {
+    @SneakyThrows
+    public static <P, Q> List<Q> convert(List<P> obj, Class<Q> clazz) {
         String json = toJson(obj);
         JavaType javaType = mapper.getTypeFactory().constructParametricType(List.class, clazz);
         return mapper.readValue(json, javaType);
@@ -52,7 +55,4 @@ public class JsonUtils {
         });
     }
 
-    public static ObjectMapper getMapper() {
-        return mapper;
-    }
 }

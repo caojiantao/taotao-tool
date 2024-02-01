@@ -9,11 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import java.util.*;
 
 /**
  * <p>
@@ -36,7 +32,6 @@ public class TodoController {
         if (Objects.equals(groupId, 10)) {
             // 今日待办，需要查询所有组下的未完成的，和今日已完成的
             List<Todo> todoList = todoService.query()
-                    .orderByDesc("update_time")
                     .list();
             LocalDate now = LocalDate.now();
             todoList.removeIf(item -> !Objects.equals(now, item.getUpdateTime().toLocalDate()) && Objects.equals(1, item.getState()));
@@ -44,25 +39,27 @@ public class TodoController {
             list.add(dto);
             return ApiResult.success(list);
         } else if (Objects.equals(groupId, 11)) {
-            // 已完成，需要按日期进行分组返回
-            Map<LocalDate, List<TodoDayGroupDTO.Item>> map = todoService.query()
+            // 已完成，需要按日期倒序进行分组返回
+            List<Todo> todoList = todoService.query()
                     .eq("state", 1)
                     .orderByDesc("update_time")
-                    .list()
-                    .stream()
-                    .map(item -> JsonUtils.convert(item, TodoDayGroupDTO.Item.class))
-                    .collect(Collectors.groupingBy(item -> item.getUpdateTime().toLocalDate()));
-            List<LocalDate> dayList = map.keySet().stream().sorted().collect(Collectors.toList());
-            for (LocalDate localDate : dayList) {
-                TodoDayGroupDTO dto = new TodoDayGroupDTO(localDate.toString(), map.get(localDate));
-                list.add(dto);
+                    .list();
+            Map<LocalDate, TodoDayGroupDTO> groupMap = new HashMap<>();
+            for (Todo todo : todoList) {
+                LocalDate localDate = todo.getUpdateTime().toLocalDate();
+                if (!groupMap.containsKey(localDate)) {
+                    TodoDayGroupDTO groupDTO = new TodoDayGroupDTO(localDate.toString(), new ArrayList<>());
+                    groupMap.put(localDate, groupDTO);
+                    list.add(groupDTO);
+                }
+                TodoDayGroupDTO groupDTO = groupMap.get(localDate);
+                groupDTO.getItemList().add(JsonUtils.convert(todo, TodoDayGroupDTO.Item.class));
             }
             return ApiResult.success(list);
         } else {
             // 其他组，正常查未完成的和今日完成的
             List<Todo> todoList = todoService.query()
                     .eq("group_id", groupId)
-                    .orderByDesc("update_time")
                     .list();
             LocalDate now = LocalDate.now();
             todoList.removeIf(item -> !Objects.equals(now, item.getUpdateTime().toLocalDate()) && Objects.equals(1, item.getState()));

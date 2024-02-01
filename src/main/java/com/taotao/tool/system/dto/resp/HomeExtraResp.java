@@ -12,6 +12,7 @@ public class HomeExtraResp {
     @Data
     public static class UserInfo {
         private String nickname;
+        private String avatar;
     }
 
     @Data

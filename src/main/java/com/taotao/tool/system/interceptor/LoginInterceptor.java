@@ -1,11 +1,11 @@
 package com.taotao.tool.system.interceptor;
 
-import com.taotao.tool.system.annotation.RequireLogin;
-import com.taotao.tool.system.model.User;
-import com.taotao.tool.system.service.IUserService;
 import com.taotao.tool.common.constants.EApiCode;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.util.JsonUtils;
+import com.taotao.tool.system.annotation.RequireLogin;
+import com.taotao.tool.system.model.SystemUser;
+import com.taotao.tool.system.service.ISystemUserService;
 import com.taotao.tool.system.util.LoginUtils;
 import com.taotao.tool.system.yml.LoginYml;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +26,7 @@ import java.util.Optional;
 public class LoginInterceptor implements HandlerInterceptor {
 
     @Autowired
-    private IUserService userService;
+    private ISystemUserService userService;
     @Autowired
     private LoginYml loginYml;
 
@@ -45,7 +45,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         Cookie userIdCookie = WebUtils.getCookie(request, "user_id");
         String token = Optional.ofNullable(tokenCookie).map(Cookie::getValue).orElse(null);
         Integer userId = Optional.ofNullable(userIdCookie).map(Cookie::getValue).map(Integer::parseInt).orElse(null);
-        User user = userService.verifyToken(token, userId);
+        SystemUser user = userService.verifyToken(token, userId);
         LoginUtils.setCurrentUser(user);
         RequireLogin annotation = handlerMethod.getMethod().getAnnotation(RequireLogin.class);
         // 请求接口需要登录，且用户未登录是，重定向到指定登录页

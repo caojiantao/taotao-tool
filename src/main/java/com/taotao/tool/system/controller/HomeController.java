@@ -4,7 +4,7 @@ import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.system.annotation.RequireLogin;
 import com.taotao.tool.system.dto.amap.WeatherInfoResp;
 import com.taotao.tool.system.dto.resp.HomeExtraResp;
-import com.taotao.tool.system.model.User;
+import com.taotao.tool.system.model.SystemUser;
 import com.taotao.tool.system.service.AmapService;
 import com.taotao.tool.system.util.LoginUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +23,10 @@ public class HomeController {
     @GetMapping("/getHomeExtraResp")
     public ApiResult<HomeExtraResp> getHomeExtraResp() {
         HomeExtraResp resp = new HomeExtraResp();
-        User currentUser = LoginUtils.getCurrentUser();
+        SystemUser currentUser = LoginUtils.getCurrentUser();
         HomeExtraResp.UserInfo userInfo = new HomeExtraResp.UserInfo();
         userInfo.setNickname(currentUser.getUsername());
+        userInfo.setAvatar(currentUser.getAvatar());
         resp.setUserInfo(userInfo);
         WeatherInfoResp all = amapService.getWeatherInfoByCity("110000");
         HomeExtraResp.WeatherInfo weatherInfo = new HomeExtraResp.WeatherInfo();

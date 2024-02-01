@@ -1,17 +1,17 @@
 package com.taotao.tool.system.controller;
 
-import com.taotao.tool.system.dto.req.LoginReq;
 import com.taotao.tool.common.dto.ApiResult;
-import com.taotao.tool.system.dto.resp.LoginResp;
-import com.taotao.tool.system.model.User;
-import com.taotao.tool.system.service.IUserService;
 import com.taotao.tool.common.util.ApiAssertUtils;
+import com.taotao.tool.system.dto.req.LoginReq;
+import com.taotao.tool.system.dto.resp.LoginResp;
+import com.taotao.tool.system.model.SystemUser;
+import com.taotao.tool.system.service.ISystemUserService;
 import com.taotao.tool.system.yml.LoginYml;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -19,18 +19,18 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
- * @author taotao
- * @since 2022-10-25
+ * @author caojiantao
+ * @since 2024-02-01
  */
-@RestController
+@Controller
 @RequestMapping("/user")
-public class UserController {
+public class SystemUserController {
 
     @Autowired
-    private IUserService userService;
+    private ISystemUserService userService;
 
     @Autowired
     private LoginYml loginYml;
@@ -39,7 +39,7 @@ public class UserController {
     public ApiResult<LoginResp> login(@RequestBody LoginReq loginReq, HttpServletResponse httpResp) {
         String username = loginReq.getUsername();
         String password = userService.encryptPassword(loginReq.getPassword());
-        User user = userService.query().eq("username", username)
+        SystemUser user = userService.query().eq("username", username)
                 .eq("password", password).one();
         ApiAssertUtils.notNull(user, "用户名或密码错误");
         LoginResp resp = new LoginResp();

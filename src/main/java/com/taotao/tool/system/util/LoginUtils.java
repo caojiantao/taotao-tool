@@ -1,16 +1,16 @@
 package com.taotao.tool.system.util;
 
-import com.taotao.tool.system.model.User;
+import com.taotao.tool.system.model.SystemUser;
 
 public class LoginUtils {
 
-    private static ThreadLocal<User> userLocal = new ThreadLocal<>();
+    private static final ThreadLocal<SystemUser> userLocal = new ThreadLocal<>();
 
-    public static void setCurrentUser(User user) {
+    public static void setCurrentUser(SystemUser user) {
         userLocal.set(user);
     }
 
-    public static User getCurrentUser() {
+    public static SystemUser getCurrentUser() {
         return userLocal.get();
     }
 

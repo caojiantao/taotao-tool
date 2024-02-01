@@ -1,12 +1,11 @@
 package com.taotao.tool.system.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.taotao.tool.system.mapper.UserMapper;
-import com.taotao.tool.system.model.User;
-import com.taotao.tool.system.service.IUserService;
 import com.taotao.tool.common.util.DigestUtils;
+import com.taotao.tool.system.mapper.SystemUserMapper;
+import com.taotao.tool.system.model.SystemUser;
+import com.taotao.tool.system.service.ISystemUserService;
 import com.taotao.tool.system.yml.LoginYml;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -15,15 +14,14 @@ import java.util.Objects;
 
 /**
  * <p>
- * 服务实现类
+ *  服务实现类
  * </p>
  *
- * @author taotao
- * @since 2022-10-25
+ * @author caojiantao
+ * @since 2024-02-01
  */
-@Slf4j
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class SystemUserServiceImpl extends ServiceImpl<SystemUserMapper, SystemUser> implements ISystemUserService {
 
     @Autowired
     private LoginYml loginYml;
@@ -39,7 +37,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     }
 
     @Override
-    public User verifyToken(String token, Integer userId) {
+    public SystemUser verifyToken(String token, Integer userId) {
         if (!StringUtils.hasLength(token) || Objects.isNull(userId)) {
             return null;
         }

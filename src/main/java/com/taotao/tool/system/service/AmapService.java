@@ -3,7 +3,6 @@ package com.taotao.tool.system.service;
 import com.taotao.tool.common.util.JsonUtils;
 import com.taotao.tool.system.dto.amap.WeatherInfoReq;
 import com.taotao.tool.system.dto.amap.WeatherInfoResp;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -25,8 +24,7 @@ public class AmapService {
      */
     private final Map<String, WeatherInfoResp> weatherCache = new ConcurrentHashMap<>();
 
-    @SneakyThrows
-    public WeatherInfoResp weatherInfo(WeatherInfoReq req) {
+    public void weatherInfo(WeatherInfoReq req) {
         String uriString = UriComponentsBuilder.fromUriString("https://restapi.amap.com/v3/weather/weatherInfo")
                 .queryParam("key", req.getKey())
                 .queryParam("city", req.getCity())
@@ -38,13 +36,17 @@ public class AmapService {
                 .retrieve()
                 .bodyToMono(String.class)
                 .timeout(Duration.ofSeconds(10));
-        String json = mono.block();
-        log.info("act=AmapService.weatherInfo req={} resp={}", JsonUtils.toJson(req), json);
-        WeatherInfoResp resp = JsonUtils.parse(json, WeatherInfoResp.class);
-        if (Objects.nonNull(resp)) {
+        String json = null;
+        try {
+            json = mono.block();
+            log.info("act=AmapService.weatherInfo req={} resp={}", JsonUtils.toJson(req), json);
+        } catch (Exception e) {
+            log.info("act=AmapService.weatherInfo req={}", JsonUtils.toJson(req), e);
+        }
+        if (Objects.nonNull(json)) {
+            WeatherInfoResp resp = JsonUtils.parse(json, WeatherInfoResp.class);
             weatherCache.put(req.getCity(), resp);
         }
-        return resp;
     }
 
     public WeatherInfoResp getWeatherInfoByCity(String city) {

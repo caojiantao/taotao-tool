@@ -18,7 +18,7 @@ public class WeatherInitJob implements InitializingBean {
     @Autowired
     private AmapService amapService;
 
-    @Scheduled(cron = "0 0 6 * * ?")
+    @Scheduled(cron = "0 0 0/1 * * ?")
     public void initWeatherAll() throws Exception {
         // 暂时只写入北京的天气数据
         String city = "110000";

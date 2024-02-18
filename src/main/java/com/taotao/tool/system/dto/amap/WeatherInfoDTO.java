@@ -25,6 +25,8 @@ public class WeatherInfoDTO {
         private String windpower;
         private String humidity;
         private String reporttime;
+        private String temperature_float;
+        private String humidity_float;
     }
 
     @Data

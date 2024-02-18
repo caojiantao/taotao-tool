@@ -3,11 +3,6 @@ login:
   tokenSalt: chenlisha
   domain: caojiantao.site
 
-upload:
-  image:
-    path: /var/www/image
-    quality: 0.5
-
 spring:
   application:
     name: taotao_tool
@@ -30,3 +25,6 @@ management:
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
+
+amap:
+  key: "98c954d1e8d0f4a5bf13aa014d197699"

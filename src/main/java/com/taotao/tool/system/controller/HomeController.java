@@ -39,14 +39,14 @@ public class HomeController {
                 .extensions("base")
                 .build();
         WeatherInfoDTO all = amapService.weatherInfo(req);
-        resp.setWeatherInfo(all.getLives());
+        resp.setWeatherInfo(all.getLives().get(0));
         return ApiResult.success(resp);
     }
 
 
     @RequireLogin
     @GetMapping("/getWeatherForecasts")
-    public ApiResult<WeatherInfoDTO.Forecasts> getWeatherForecasts() {
+    public ApiResult<WeatherInfoDTO.Forecast> getWeatherForecasts() {
         HomeExtraResp resp = new HomeExtraResp();
         SystemUser currentUser = LoginUtils.getCurrentUser();
         HomeExtraResp.UserInfo userInfo = new HomeExtraResp.UserInfo();

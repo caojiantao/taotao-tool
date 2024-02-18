@@ -11,11 +11,11 @@ public class WeatherInfoDTO {
     private String count;
     private String info;
     private String infocode;
-    private Lives lives;
-    private List<Forecasts> forecasts;
+    private List<Live> lives;
+    private List<Forecast> forecasts;
 
     @Data
-    public static class Lives {
+    public static class Live {
         private String province;
         private String city;
         private String adcode;
@@ -28,7 +28,7 @@ public class WeatherInfoDTO {
     }
 
     @Data
-    public static class Forecasts {
+    public static class Forecast {
 
         private String city;
         private String adcode;

@@ -7,7 +7,7 @@ import lombok.Data;
 public class HomeExtraResp {
 
     private UserInfo userInfo;
-    private WeatherInfoDTO.Lives weatherInfo;
+    private WeatherInfoDTO.Live weatherInfo;
 
     @Data
     public static class UserInfo {

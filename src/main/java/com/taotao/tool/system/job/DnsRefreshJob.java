@@ -9,11 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,9 +38,6 @@ public class DnsRefreshJob {
     private AliYml aliYml;
 
     private com.aliyun.alidns20150109.Client client = null;
-
-    private static final Pattern pattern = Pattern.compile("<dd class=\"fz24\">(.*?)</dd>");
-
 
     @Scheduled(fixedRate = 5, timeUnit = TimeUnit.MINUTES)
     public void dnsRefreshJob() throws Exception {
@@ -77,14 +80,13 @@ public class DnsRefreshJob {
     private String getCurrentIp() {
         Mono<String> mono = WebClient.create()
                 .method(HttpMethod.GET)
-                .uri("https://ip.chinaz.com/")
+                .uri("http://checkip.amazonaws.com/")
                 .retrieve()
                 .bodyToMono(String.class)
                 .timeout(Duration.ofSeconds(10));
-        String html = mono.block();
-        assert html != null;
-        Matcher m = pattern.matcher(html);
-        String ip = m.find() ? m.group(1) : null;
+        String result = mono.block();
+        assert result != null;
+        String ip = result.trim();
         log.info("act=getIp ip={}", ip);
         return ip;
     }

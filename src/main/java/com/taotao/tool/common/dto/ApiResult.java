@@ -2,7 +2,7 @@ package com.taotao.tool.common.dto;
 
 import com.taotao.tool.common.constants.EApiCode;
 import com.taotao.tool.common.constants.IApiCode;
-import com.taotao.tool.common.exception.ApiException;
+import com.taotao.tool.common.exception.TTException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,7 +28,7 @@ public class ApiResult<T> {
         return new ApiResult<>(EApiCode.UNKNOWN.getCode(), null, EApiCode.UNKNOWN.getMessage());
     }
 
-    public static ApiResult<Void> fail(ApiException e) {
+    public static ApiResult<Void> fail(TTException e) {
         return new ApiResult<>(e.getCode(), null, e.getMessage());
     }
 
@@ -44,7 +44,7 @@ public class ApiResult<T> {
         return new ApiResult<>(e.getCode(), data, e.getMessage());
     }
 
-    public static <T> ApiResult<T> fail(ApiException e, T data) {
+    public static <T> ApiResult<T> fail(TTException e, T data) {
         return new ApiResult<>(e.getCode(), data, e.getMessage());
     }
 }

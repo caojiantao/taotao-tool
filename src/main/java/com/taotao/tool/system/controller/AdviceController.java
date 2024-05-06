@@ -1,7 +1,7 @@
 package com.taotao.tool.system.controller;
 
 import com.taotao.tool.common.dto.ApiResult;
-import com.taotao.tool.common.exception.ApiException;
+import com.taotao.tool.common.exception.TTException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,8 +13,8 @@ import javax.validation.ValidationException;
 @RestControllerAdvice
 public class AdviceController {
 
-    @ExceptionHandler(ApiException.class)
-    public ApiResult<Void> handleApiException(ApiException e) {
+    @ExceptionHandler(TTException.class)
+    public ApiResult<Void> handleApiException(TTException e) {
         log.error("act=handleApiException", e);
         return ApiResult.fail(e);
     }

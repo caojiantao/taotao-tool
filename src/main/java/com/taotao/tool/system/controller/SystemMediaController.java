@@ -3,9 +3,10 @@ package com.taotao.tool.system.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.taotao.tool.system.constant.EMediaType;
 import com.taotao.tool.common.dto.ApiResult;
-import com.taotao.tool.common.exception.ApiException;
+import com.taotao.tool.common.exception.TTException;
+import com.taotao.tool.common.util.TTAssertUtils;
+import com.taotao.tool.system.constant.EMediaType;
 import com.taotao.tool.system.dto.req.SystemMediaListReq;
 import com.taotao.tool.system.model.SystemMedia;
 import com.taotao.tool.system.service.ISystemMediaService;
@@ -48,11 +49,13 @@ public class SystemMediaController {
 
     @Transactional
     @PostMapping("/upload")
-    public ApiResult<SystemMedia> upload(@RequestPart MultipartFile file, @NotEmpty String bucket) {
-        // 是否保持
-        assert file.getOriginalFilename() != null;
-        String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-        String filename = UUID.randomUUID() + suffix;
+    public ApiResult<SystemMedia> upload(@RequestPart MultipartFile file, @NotEmpty String bucket, @RequestParam(required = false) boolean keepName) {
+        String filename = file.getOriginalFilename();
+        // 是否保持原文件名
+        if (!keepName) {
+            String suffix = filename.substring(file.getOriginalFilename().lastIndexOf("."));
+            filename = UUID.randomUUID() + suffix;
+        }
         File outFile = new File("/var/www/media/" + bucket, filename);
         try (
                 InputStream is = file.getInputStream();
@@ -74,7 +77,7 @@ public class SystemMediaController {
             return ApiResult.success(media);
         } catch (Exception e) {
             log.error("act=uploadImage", e);
-            throw new ApiException(-1, e.getMessage());
+            throw new TTException(-1, e.getMessage());
         }
     }
 

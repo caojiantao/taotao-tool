@@ -1,7 +1,7 @@
 package com.taotao.tool.system.controller;
 
 import com.taotao.tool.common.dto.ApiResult;
-import com.taotao.tool.common.util.ApiAssertUtils;
+import com.taotao.tool.common.util.TTAssertUtils;
 import com.taotao.tool.system.dto.req.LoginReq;
 import com.taotao.tool.system.dto.resp.LoginResp;
 import com.taotao.tool.system.model.SystemUser;
@@ -41,7 +41,7 @@ public class SystemUserController {
         String password = userService.encryptPassword(loginReq.getPassword());
         SystemUser user = userService.query().eq("username", username)
                 .eq("password", password).one();
-        ApiAssertUtils.notNull(user, "用户名或密码错误");
+        TTAssertUtils.notNull(user, "用户名或密码错误");
         LoginResp resp = new LoginResp();
         String token = userService.getToken(user.getId());
         resp.setId(user.getId());

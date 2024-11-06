@@ -27,18 +27,16 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '8'
-        distribution: 'adopt'
-        cache: 'gradle'
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2.4.0
-      with:
-        arguments: bootJar
-        
+        distribution: 'oracle'
+        cache: 'maven'
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+
     - name: Deploy to server
       uses: easingthemes/ssh-deploy@v4.1.8
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "build/libs/"
+        SOURCE: "target/taotao-tool-1.0-SNAPSHOT.jar"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}

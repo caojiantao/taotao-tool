@@ -36,14 +36,18 @@ jobs:
       uses: easingthemes/ssh-deploy@v4.1.8
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "target/taotao-tool-1.0-SNAPSHOT.jar"
+        SOURCE: "target/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
         SCRIPT_BEFORE: |
-          echo '部署前准备'
+          echo '开始部署'
+          whoami
+          ls -al
         SCRIPT_AFTER: |
+          whoami
+          ls -al
           cd taotao-tool
           ./service.sh restart
           echo '部署完成'

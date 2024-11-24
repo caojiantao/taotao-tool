@@ -24,6 +24,12 @@ public class DictionaryController {
         return ApiResult.success(list);
     }
 
+    @GetMapping("/getDictionaryByItemKey")
+    public ApiResult<Dictionary> getDictionaryByItemKey(String itemKey) {
+        Dictionary dictionary = dictionaryService.query().eq("item_key", itemKey).one();
+        return ApiResult.success(dictionary);
+    }
+
     @RequireLogin
     @PostMapping("/saveDictionary")
     public ApiResult<Void> saveDictionary(@RequestBody Dictionary dictionary) {

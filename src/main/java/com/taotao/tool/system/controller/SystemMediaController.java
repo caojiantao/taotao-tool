@@ -5,9 +5,9 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.taotao.tool.common.dto.ApiResult;
 import com.taotao.tool.common.exception.TTException;
-import com.taotao.tool.common.util.TTAssertUtils;
 import com.taotao.tool.system.constant.EMediaType;
 import com.taotao.tool.system.dto.req.SystemMediaListReq;
+import com.taotao.tool.system.dto.resp.BasePageResp;
 import com.taotao.tool.system.model.SystemMedia;
 import com.taotao.tool.system.service.ISystemMediaService;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,6 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
-import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -81,15 +80,16 @@ public class SystemMediaController {
         }
     }
 
-    @GetMapping("/list")
-    public ApiResult<List<SystemMedia>> list(@Valid SystemMediaListReq req) {
+    @GetMapping("/page")
+    public ApiResult<BasePageResp<SystemMedia>> page(@Valid SystemMediaListReq req) {
         Page<SystemMedia> page = new Page<>(req.getCurrent(), req.getSize());
         LambdaQueryWrapper<SystemMedia> wrapper = Wrappers.lambdaQuery();
         wrapper.eq(Objects.nonNull(req.getBucket()), SystemMedia::getBucket, req.getBucket())
                 .eq(StringUtils.hasText(req.getFilename()), SystemMedia::getFilename, req.getFilename())
                 .orderByDesc(SystemMedia::getId);
         systemMediaService.page(page, wrapper);
-        return ApiResult.success(page.getRecords());
+        BasePageResp<SystemMedia> resp = new BasePageResp<>(page.getRecords(), page.getTotal());
+        return ApiResult.success(resp);
     }
 
     @Transactional

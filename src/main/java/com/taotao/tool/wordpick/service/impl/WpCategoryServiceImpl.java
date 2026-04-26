@@ -57,9 +57,13 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
                         .orderByAsc(WpChapter::getSort));
         List<WpChapterResp> result = new ArrayList<>();
         for (WpChapter c : list) {
+            // 统计该章节词汇量
+            Long count = wordMapper.selectCount(
+                    new LambdaQueryWrapper<WpWord>().eq(WpWord::getChapterId, c.getId()));
             WpChapterResp resp = new WpChapterResp();
             resp.setId(c.getId());
             resp.setName(c.getName());
+            resp.setWordCount(count.intValue());
             result.add(resp);
         }
         return result;

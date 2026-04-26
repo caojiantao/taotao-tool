@@ -58,3 +58,16 @@ CREATE TABLE `wp_word_example` (
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 );
+
+-- 用户单词标记（记录用户对每个单词的掌握状态）
+CREATE TABLE `wp_user_word_mark` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL COMMENT '用户 ID',
+  `word_id` int NOT NULL COMMENT '单词 ID',
+  `category_id` int NOT NULL COMMENT '所属类别 ID（冗余，加速生词本查询）',
+  `state` tinyint NOT NULL COMMENT '掌握状态：1=不认识 2=认识',
+  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_word` (`user_id`, `word_id`)
+);

@@ -6,6 +6,7 @@ import com.taotao.tool.system.util.LoginUtils;
 import com.taotao.tool.wordpick.dto.req.WpSaveMarkReq;
 import com.taotao.tool.wordpick.dto.resp.WpWordResp;
 import com.taotao.tool.wordpick.service.IWpWordMarkService;
+import com.taotao.tool.wordpick.service.IWpCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,14 @@ public class WpWordController {
 
     @Autowired
     private IWpWordMarkService wordMarkService;
+
+    @Autowired
+    private IWpCategoryService categoryService;
+
+    @GetMapping("/listWords")
+    public ApiResult<List<WpWordResp>> listWords(@RequestParam Integer chapterId) {
+        return ApiResult.success(categoryService.listWords(chapterId));
+    }
 
     @RequireLogin
     @PostMapping("/saveMark")

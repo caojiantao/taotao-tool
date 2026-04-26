@@ -60,7 +60,6 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
             WpChapterResp resp = new WpChapterResp();
             resp.setId(c.getId());
             resp.setName(c.getName());
-            resp.setSort(c.getSort());
             result.add(resp);
         }
         return result;

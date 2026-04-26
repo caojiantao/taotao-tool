@@ -71,3 +71,15 @@ CREATE TABLE `wp_user_word_mark` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_user_word` (`user_id`, `word_id`)
 );
+
+-- 用户章节学习进度
+CREATE TABLE `wp_user_chapter_progress` (
+  `id`           bigint NOT NULL AUTO_INCREMENT,
+  `user_id`      int NOT NULL COMMENT '用户 ID',
+  `chapter_id`   int NOT NULL COMMENT '章节 ID',
+  `state`        tinyint NOT NULL DEFAULT 1 COMMENT '状态：1=学习中 2=已掌握',
+  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_chapter` (`user_id`, `chapter_id`)
+);

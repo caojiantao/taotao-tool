@@ -14,7 +14,7 @@ INSERT INTO wp_chapter (id, category_id, name, sort) VALUES
 ( 5, 1, '（五）食物与饮料',  5),
 ( 6, 1, '（六）水果与蔬菜',  6),
 ( 7, 1, '（七）家庭成员',  7),
-( 8, 1, '（八）家的房间与家具',  8),
+( 8, 1, '（八）家与家具',  8),
 ( 9, 1, '（九）方位与位置',  9),
 (10, 1, '（十）学校场所', 10),
 (11, 1, '（十一）时间与作息', 11),
@@ -39,12 +39,12 @@ INSERT INTO wp_chapter (id, category_id, name, sort) VALUES
 (30, 1, '（三十）常用形容词与副词', 30),
 (31, 1, '（三十一）基础动词', 31),
 (32, 1, '（三十二）疑问词', 32),
-(33, 1, '（三十三）核心动词（续）', 33),
-(34, 1, '（三十四）基础形容词（续）', 34),
-(35, 1, '（三十五）时间词（续）', 35),
+(33, 1, '（三十三）高频核心动词', 33),
+(34, 1, '（三十四）进阶形容词', 34),
+(35, 1, '（三十五）时间与频率词', 35),
 (36, 1, '（三十六）日用品', 36),
-(37, 1, '（三十七）更多食物', 37),
-(38, 1, '（三十八）更多动物', 38);
+(37, 1, '（三十七）零食与小吃', 37),
+(38, 1, '（三十八）昆虫与其他动物', 38);
 
 -- ------------------------------------------------------------
 -- 第1章：学习文具与教室
@@ -530,7 +530,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 (141, 141, 'His wife is a teacher.', '他的妻子是一名教师。', 1);
 
 -- ------------------------------------------------------------
--- 第8章：家的房间与家具
+-- 第8章：家与家具
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (162,  8, 'living room', '/ˈlɪvɪŋ ruːm/', '/ˈlɪvɪŋ ruːm/',  1),
@@ -1881,11 +1881,11 @@ INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUE
 (567, 29, 'people', '/ˈpiːpl/', '/ˈpiːpl/',  9),
 (568, 29, 'student', '/ˈstuːdnt/', '/ˈstjuːdnt/', 10),
 (569, 29, 'age', '/eɪdʒ/', '/eɪdʒ/', 11),
-(570, 29, 'year', '/jɪr/', '/jɪə/', 12),
-(571, 29, 'home', '/hoʊm/', '/həʊm/', 13),
-(572, 29, 'word', '/wɜːrd/', '/wɜːd/', 14),
-(573, 29, 'story', '/ˈstɔːri/', '/ˈstɔːri/', 15),
-(574, 29, 'everyone', '/ˈevriwʌn/', '/ˈevriwʌn/', 16);
+(570, 35, 'year', '/jɪr/', '/jɪə/', 14),
+(571,  8, 'home', '/hoʊm/', '/həʊm/', 21),
+(572,  1, 'word', '/wɜːrd/', '/wɜːd/', 26),
+(573,  1, 'story', '/ˈstɔːri/', '/ˈstɔːri/', 27),
+(574, 29, 'everyone', '/ˈevriwʌn/', '/ˈevriwʌn/', 12);
 
 INSERT INTO wp_word_sense (id, word_id, pos, meaning, sort) VALUES
 (559, 559, 'n.', '男孩', 1),
@@ -2080,7 +2080,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 
 
 -- ------------------------------------------------------------
--- 第33章：核心动词（续）
+-- 第33章：高频核心动词
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (617, 33, 'have', '/hæv/', '/hæv/',  1),
@@ -2147,7 +2147,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 
 
 -- ------------------------------------------------------------
--- 第34章：基础形容词（续）
+-- 第34章：进阶形容词
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (636, 34, 'heavy', '/ˈhevi/', '/ˈhevi/',  1),
@@ -2199,7 +2199,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 
 
 -- ------------------------------------------------------------
--- 第35章：时间词（续）
+-- 第35章：时间与频率词
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (650, 35, 'yesterday', '/ˈjestərdeɪ/', '/ˈjestədeɪ/',  1),
@@ -2300,7 +2300,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 
 
 -- ------------------------------------------------------------
--- 第37章：更多食物
+-- 第37章：零食与小吃
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (677, 37, 'candy', '/ˈkændi/', '/ˈkændi/',  1),
@@ -2337,7 +2337,7 @@ INSERT INTO wp_word_example (id, word_id, sentence, translation, sort) VALUES
 
 
 -- ------------------------------------------------------------
--- 第38章：更多动物
+-- 第38章：昆虫与其他动物
 -- ------------------------------------------------------------
 INSERT INTO wp_word (id, chapter_id, word, phonetic_us, phonetic_uk, sort) VALUES
 (687, 38, 'bee', '/biː/', '/biː/',  1),

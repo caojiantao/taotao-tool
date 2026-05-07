@@ -5,158 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>登录 | 涛涛小站</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/vant@4/lib/index.css">
   <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    body {
+      margin: 0;
+      background: var(--van-background);
     }
-    .btn-gradient {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    #app {
+      min-height: 100vh;
     }
-    .btn-gradient:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    .login-page {
+      min-height: 100vh;
+      padding: 24px 16px;
+      box-sizing: border-box;
     }
-    .loading {
-      animation: spin 1s linear infinite;
+    .login-title {
+      padding: 48px 0 24px;
+      text-align: center;
     }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    .login-form {
+      margin-top: 16px;
+    }
+    .login-action {
+      margin: 24px 16px 0;
+    }
+    .login-footer {
+      margin-top: 32px;
+      color: var(--van-text-color-3);
+      font-size: var(--van-font-size-sm);
+      text-align: center;
     }
   </style>
 </head>
-<body class="gradient-bg min-h-screen flex items-center justify-center p-8">
-  <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-md relative">
-    <!-- 顶部装饰条 -->
-    <div class="absolute top-0 left-0 right-0 h-1 btn-gradient rounded-t-2xl"></div>
-    
-    <!-- 标题 -->
-    <div class="text-center mb-8">
-      <h1 class="text-3xl font-semibold text-gray-800 mb-2">欢迎回来</h1>
-      <p class="text-gray-600 text-sm">请登录您的账户</p>
-    </div>
-    
-    <!-- 错误提示 -->
-    <div id="errorMessage" class="hidden bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm"></div>
-    
-    <!-- 登录表单 -->
-    <form id="loginForm" class="space-y-6">
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">用户名</label>
-        <input 
-          type="text" 
-          id="username" 
-          class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-all"
-          placeholder="请输入用户名"
-          required
-        >
+<body>
+  <div id="app">
+    <div class="login-page">
+      <div class="login-title">
+        <van-icon name="manager-o" size="44"></van-icon>
+        <h2>欢迎回来</h2>
+        <p>请登录您的账户</p>
       </div>
-      
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">密码</label>
-        <input 
-          type="password" 
-          id="password" 
-          class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-all"
-          placeholder="请输入密码"
-          required
-        >
-      </div>
-      
-      <button type="submit" id="loginBtn" class="w-full btn-gradient text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
-        <span id="btnText">登 录</span>
-        <span id="loading" class="hidden inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full loading ml-2"></span>
-      </button>
-    </form>
-    
-    <!-- 底部版权 -->
-    <div class="text-center mt-8 text-gray-500 text-xs">
-      © 2024 涛涛小站 - 安全登录
+
+      <van-form class="login-form" @submit="handleLogin">
+        <van-cell-group inset>
+          <van-field
+            v-model="username"
+            name="username"
+            label="用户名"
+            placeholder="请输入用户名"
+            autocomplete="username"
+            :rules="[{ required: true, message: '请输入用户名' }]"
+          ></van-field>
+          <van-field
+            v-model="password"
+            type="password"
+            name="password"
+            label="密码"
+            placeholder="请输入密码"
+            autocomplete="current-password"
+            :rules="[{ required: true, message: '请输入密码' }]"
+          ></van-field>
+        </van-cell-group>
+
+        <div class="login-action">
+          <van-button
+            round
+            block
+            type="primary"
+            native-type="submit"
+            :loading="loading"
+            loading-text="登录中"
+          >
+            登 录
+          </van-button>
+        </div>
+      </van-form>
+
+      <div class="login-footer">© 2024-2026 涛涛小站 - 安全登录</div>
     </div>
   </div>
 
+  <script src="https://fastly.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/vant@4/lib/vant.min.js"></script>
   <script>
-    // 获取URL参数
-    function getUrlParam(name) {
-      return new URLSearchParams(window.location.search).get(name);
-    }
+    const { createApp, ref, onMounted } = Vue;
 
-    // 显示错误信息
-    function showError(message) {
-      const errorEl = document.getElementById('errorMessage');
-      errorEl.textContent = message;
-      errorEl.classList.remove('hidden');
-      setTimeout(() => errorEl.classList.add('hidden'), 5000);
-    }
+    createApp({
+      setup() {
+        const username = ref('');
+        const password = ref('');
+        const loading = ref(false);
 
-    // 设置加载状态
-    function setLoading(loading) {
-      const btn = document.getElementById('loginBtn');
-      const btnText = document.getElementById('btnText');
-      const loadingEl = document.getElementById('loading');
-      
-      if (loading) {
-        btn.disabled = true;
-        btnText.textContent = '登录中';
-        loadingEl.classList.remove('hidden');
-      } else {
-        btn.disabled = false;
-        btnText.textContent = '登 录';
-        loadingEl.classList.add('hidden');
-      }
-    }
-
-    // 登录处理
-    async function handleLogin(username, password) {
-      try {
-        setLoading(true);
-        const response = await fetch('/user/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password })
-        });
-        const data = await response.json();
-        
-        if (data.code === -1) {
-          showError(data.msg || '登录失败，请检查用户名和密码');
-        } else {
-          window.location.href = getUrlParam('redirectUrl') || '/';
+        function getUrlParam(name) {
+          return new URLSearchParams(window.location.search).get(name);
         }
-      } catch (error) {
-        showError('网络错误，请稍后重试');
-      } finally {
-        setLoading(false);
-      }
-    }
 
-    // 表单提交
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
-      
-      if (!username) {
-        showError('请输入用户名');
-        document.getElementById('username').focus();
-        return;
-      }
-      if (!password) {
-        showError('请输入密码');
-        document.getElementById('password').focus();
-        return;
-      }
-      handleLogin(username, password);
-    });
+        async function handleLogin() {
+          if (loading.value) {
+            return;
+          }
 
-    // 回车键登录
-    document.getElementById('password').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        document.getElementById('loginForm').dispatchEvent(new Event('submit'));
-      }
-    });
+          try {
+            loading.value = true;
+            const response = await fetch('/user/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                username: username.value.trim(),
+                password: password.value
+              })
+            });
+            const data = await response.json();
 
-    // 页面加载后聚焦用户名
-    window.addEventListener('load', () => document.getElementById('username').focus());
+            if (data.code === -1) {
+              vant.showFailToast(data.msg || '登录失败，请检查用户名和密码');
+            } else {
+              window.location.replace(getUrlParam('redirectUrl') || '/');
+            }
+          } catch (error) {
+            vant.showFailToast('网络错误，请稍后重试');
+          } finally {
+            loading.value = false;
+          }
+        }
+
+        onMounted(function () {
+          var input = document.querySelector('input[name="username"]');
+          if (input) {
+            input.focus();
+          }
+        });
+
+        return {
+          username,
+          password,
+          loading,
+          handleLogin
+        };
+      }
+    }).use(vant).mount('#app');
   </script>
 </body>
 </html>

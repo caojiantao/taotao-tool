@@ -1,6 +1,7 @@
 package com.taotao.tool.wordpick.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.taotao.tool.wordpick.dto.resp.WpWordResp;
 import com.taotao.tool.wordpick.mapper.WpWordExampleMapper;
 import com.taotao.tool.wordpick.mapper.WpWordMapper;
@@ -19,10 +20,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-public class WpWordServiceImpl implements IWpWordService {
-
-    @Autowired
-    private WpWordMapper wordMapper;
+public class WpWordServiceImpl extends ServiceImpl<WpWordMapper, WpWord> implements IWpWordService {
 
     @Autowired
     private WpWordSenseMapper senseMapper;
@@ -36,7 +34,7 @@ public class WpWordServiceImpl implements IWpWordService {
             return Collections.emptyList();
         }
 
-        List<WpWord> words = wordMapper.selectList(
+        List<WpWord> words = list(
                 new LambdaQueryWrapper<WpWord>().in(WpWord::getId, wordIds).orderByAsc(WpWord::getSort));
 
         List<WpWordSense> senses = senseMapper.selectList(

@@ -72,14 +72,32 @@ CREATE TABLE `wp_user_word_mark` (
   UNIQUE KEY `uk_user_word` (`user_id`, `word_id`)
 );
 
--- 用户章节学习进度
-CREATE TABLE `wp_user_chapter_progress` (
-  `id`           bigint NOT NULL AUTO_INCREMENT,
-  `user_id`      int NOT NULL COMMENT '用户 ID',
-  `chapter_id`   int NOT NULL COMMENT '章节 ID',
-  `state`        tinyint NOT NULL DEFAULT 1 COMMENT '状态：1=学习中 2=已掌握',
-  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+-- 用户单词行为流水（事件溯源原表，用户章节学习摘要等上层数据由此推导）
+CREATE TABLE `wp_word_action` (
+  `id`         bigint   NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id`    int      NOT NULL                COMMENT '用户ID',
+  `learn_session_id` bigint DEFAULT NULL         COMMENT '学习会话ID',
+  `word_id`    int      NOT NULL                COMMENT '单词ID（wp_word.id）',
+  `action`     smallint NOT NULL                COMMENT '行为类型，分段编码：1x=判断类（11=认识 12=不认识）',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '行为时间',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_user_chapter` (`user_id`, `chapter_id`)
+  KEY `idx_learn_session` (`learn_session_id`),
+  KEY `idx_user_word`    (`user_id`, `word_id`),
+  KEY `idx_user_created` (`user_id`, `created_at`)
+);
+
+-- 用户学习会话（一次学习流的开始、结束与稳定汇总）
+CREATE TABLE `wp_learn_session` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id` int NOT NULL COMMENT '用户ID',
+  `started_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '开始时间',
+  `finished_at` datetime DEFAULT NULL COMMENT '结束时间',
+  `duration_seconds` int DEFAULT NULL COMMENT '本次学习时长（秒）',
+  `known_action_count` int NOT NULL DEFAULT 0 COMMENT '本次认识次数（总）',
+  `known_word_count` int NOT NULL DEFAULT 0 COMMENT '本次认识词数（去重）',
+  `unknown_action_count` int NOT NULL DEFAULT 0 COMMENT '本次不认识次数（总）',
+  `unknown_word_count` int NOT NULL DEFAULT 0 COMMENT '本次不认识词数（去重）',
+  `state` tinyint NOT NULL DEFAULT 1 COMMENT '状态：1=进行中 2=已完成',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_started` (`user_id`, `started_at`)
 );

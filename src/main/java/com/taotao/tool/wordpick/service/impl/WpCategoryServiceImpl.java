@@ -2,7 +2,13 @@ package com.taotao.tool.wordpick.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.taotao.tool.common.util.DateTimeUtils;
+import com.taotao.tool.common.util.TTAssertUtils;
+import com.taotao.tool.wordpick.cache.ChapterLearnSummaryCache;
+import com.taotao.tool.wordpick.cache.ChapterLearnSummaryCache.ChapterLearnSummary;
 import com.taotao.tool.wordpick.dto.resp.WpCategoryResp;
+import com.taotao.tool.wordpick.dto.resp.WpChapterDetailResp;
+import com.taotao.tool.wordpick.dto.resp.WpChapterLearnSummaryResp;
 import com.taotao.tool.wordpick.dto.resp.WpChapterResp;
 import com.taotao.tool.wordpick.dto.resp.WpWordResp;
 import com.taotao.tool.wordpick.mapper.WpCategoryMapper;
@@ -34,6 +40,9 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
     @Autowired
     private IWpWordService wordService;
 
+    @Autowired
+    private ChapterLearnSummaryCache learnSummaryCache;
+
     @Override
     public List<WpCategoryResp> listCategories() {
         List<WpCategory> list = list(new LambdaQueryWrapper<WpCategory>().orderByAsc(WpCategory::getSort));
@@ -57,16 +66,26 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
                         .orderByAsc(WpChapter::getSort));
         List<WpChapterResp> result = new ArrayList<>();
         for (WpChapter c : list) {
-            // 统计该章节词汇量
-            Long count = wordMapper.selectCount(
-                    new LambdaQueryWrapper<WpWord>().eq(WpWord::getChapterId, c.getId()));
             WpChapterResp resp = new WpChapterResp();
             resp.setId(c.getId());
             resp.setName(c.getName());
-            resp.setWordCount(count.intValue());
             result.add(resp);
         }
         return result;
+    }
+
+    @Override
+    public WpChapterDetailResp getChapterDetail(Integer userId, Integer chapterId) {
+        WpChapter chapter = chapterMapper.selectById(chapterId);
+        TTAssertUtils.notNull(chapter, "章节不存在");
+        Integer wordCount = countWords(chapterId);
+        ChapterLearnSummary summary = learnSummaryCache.get(userId, chapterId);
+        return WpChapterDetailResp.builder()
+                .chapterId(chapterId)
+                .chapterName(chapter.getName())
+                .wordCount(wordCount)
+                .learnSummary(toLearnSummary(summary))
+                .build();
     }
 
     @Override
@@ -82,5 +101,22 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
 
         List<Integer> wordIds = words.stream().map(WpWord::getId).collect(Collectors.toList());
         return wordService.listWordRespByIds(wordIds);
+    }
+
+    private Integer countWords(Integer chapterId) {
+        Long count = wordMapper.selectCount(
+                new LambdaQueryWrapper<WpWord>().eq(WpWord::getChapterId, chapterId));
+        return count == null ? 0 : count.intValue();
+    }
+
+    private WpChapterLearnSummaryResp toLearnSummary(ChapterLearnSummary summary) {
+        if (summary == null) {
+            return null;
+        }
+        return WpChapterLearnSummaryResp.builder()
+                .knownActionCount(summary.getKnownActionCount())
+                .unknownActionCount(summary.getUnknownActionCount())
+                .lastLearnTime(DateTimeUtils.formatRelative(summary.getLastLearnTime()))
+                .build();
     }
 }

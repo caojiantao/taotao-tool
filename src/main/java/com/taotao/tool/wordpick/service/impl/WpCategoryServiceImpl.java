@@ -59,7 +59,7 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
     }
 
     @Override
-    public List<WpChapterResp> listChapters(Integer categoryId) {
+    public List<WpChapterResp> listChapters(Integer userId, Integer categoryId) {
         List<WpChapter> list = chapterMapper.selectList(
                 new LambdaQueryWrapper<WpChapter>()
                         .eq(WpChapter::getCategoryId, categoryId)
@@ -69,6 +69,7 @@ public class WpCategoryServiceImpl extends ServiceImpl<WpCategoryMapper, WpCateg
             WpChapterResp resp = new WpChapterResp();
             resp.setId(c.getId());
             resp.setName(c.getName());
+            resp.setLearned(learnSummaryCache.get(userId, c.getId()) != null);
             result.add(resp);
         }
         return result;

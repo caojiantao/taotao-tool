@@ -23,9 +23,11 @@ public class WpChapterController {
     @Autowired
     private IWpCategoryService categoryService;
 
+    @RequireLogin
     @GetMapping("/listChapters")
     public ApiResult<List<WpChapterResp>> listChapters(@RequestParam Integer categoryId) {
-        return ApiResult.success(categoryService.listChapters(categoryId));
+        Integer userId = LoginUtils.getCurrentUser().getId();
+        return ApiResult.success(categoryService.listChapters(userId, categoryId));
     }
 
     @RequireLogin

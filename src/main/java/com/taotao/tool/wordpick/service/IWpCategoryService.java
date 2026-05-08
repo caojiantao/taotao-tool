@@ -13,7 +13,7 @@ public interface IWpCategoryService extends IService<WpCategory> {
 
     List<WpCategoryResp> listCategories();
 
-    List<WpChapterResp> listChapters(Integer categoryId);
+    List<WpChapterResp> listChapters(Integer userId, Integer categoryId);
 
     WpChapterDetailResp getChapterDetail(Integer userId, Integer chapterId);
 

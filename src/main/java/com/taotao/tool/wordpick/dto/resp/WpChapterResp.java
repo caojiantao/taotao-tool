@@ -13,4 +13,5 @@ public class WpChapterResp {
 
     private Integer id;
     private String name;
+    private Boolean learned;
 }

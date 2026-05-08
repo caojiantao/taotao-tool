@@ -50,4 +50,32 @@ public final class DateTimeUtils {
 
         return format(time);
     }
+
+    public static String formatDuration(int seconds) {
+        if (seconds <= 0) {
+            return "0分";
+        }
+        if (seconds < 60) {
+            return seconds + "秒";
+        }
+
+        int minutes = seconds / 60;
+        if (minutes < 60) {
+            return minutes + "分";
+        }
+
+        int hours = minutes / 60;
+        int remainingMinutes = minutes % 60;
+        if (hours < 24) {
+            return remainingMinutes == 0
+                    ? hours + "时"
+                    : hours + "时" + remainingMinutes + "分";
+        }
+
+        int days = hours / 24;
+        int remainingHours = hours % 24;
+        return remainingHours == 0
+                ? days + "天"
+                : days + "天" + remainingHours + "时";
+    }
 }

@@ -1,0 +1,243 @@
+{
+  "name": "（三十四）进阶形容词",
+  "words": [
+    {
+      "word": "heavy",
+      "phoneticUs": "/ˈhevi/",
+      "phoneticUk": "/ˈhevi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "重的；沉的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This box is very heavy.",
+          "translation": "这个箱子很重。"
+        }
+      ]
+    },
+    {
+      "word": "hard",
+      "phoneticUs": "/hɑːrd/",
+      "phoneticUk": "/hɑːd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "硬的；困难的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The rock is hard.",
+          "translation": "这块石头很硬。"
+        }
+      ]
+    },
+    {
+      "word": "soft",
+      "phoneticUs": "/sɔːft/",
+      "phoneticUk": "/sɒft/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "软的；轻柔的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The pillow is very soft.",
+          "translation": "这个枕头很软。"
+        }
+      ]
+    },
+    {
+      "word": "dirty",
+      "phoneticUs": "/ˈdɜːrti/",
+      "phoneticUk": "/ˈdɜːti/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "脏的；肮脏的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wash your dirty hands.",
+          "translation": "洗洗你那双脏手。"
+        }
+      ]
+    },
+    {
+      "word": "wrong",
+      "phoneticUs": "/rɒŋ/",
+      "phoneticUk": "/rɒŋ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "错误的；不对的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sorry, I got the wrong answer.",
+          "translation": "对不起，我答错了。"
+        }
+      ]
+    },
+    {
+      "word": "full",
+      "phoneticUs": "/fʊl/",
+      "phoneticUk": "/fʊl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "满的；饱的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The glass is full of water.",
+          "translation": "杯子里装满了水。"
+        }
+      ]
+    },
+    {
+      "word": "different",
+      "phoneticUs": "/ˈdɪfrənt/",
+      "phoneticUk": "/ˈdɪfrənt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "不同的；有区别的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have different hobbies.",
+          "translation": "我们有不同的爱好。"
+        }
+      ]
+    },
+    {
+      "word": "other",
+      "phoneticUs": "/ˈʌðər/",
+      "phoneticUk": "/ˈʌðə/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "其他的；另外的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please help the other students.",
+          "translation": "请帮助其他同学。"
+        }
+      ]
+    },
+    {
+      "word": "special",
+      "phoneticUs": "/ˈspeʃl/",
+      "phoneticUk": "/ˈspeʃl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "特别的；特殊的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Today is a special day.",
+          "translation": "今天是特别的一天。"
+        }
+      ]
+    },
+    {
+      "word": "free",
+      "phoneticUs": "/friː/",
+      "phoneticUk": "/friː/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "自由的；空闲的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Are you free this afternoon?",
+          "translation": "你今天下午有空吗？"
+        }
+      ]
+    },
+    {
+      "word": "ready",
+      "phoneticUs": "/ˈredi/",
+      "phoneticUk": "/ˈredi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "准备好的；就绪的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Are you ready? Let us go!",
+          "translation": "准备好了吗？我们走吧！"
+        }
+      ]
+    },
+    {
+      "word": "wet",
+      "phoneticUs": "/wet/",
+      "phoneticUk": "/wet/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "湿的；潮湿的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My jacket is wet from the rain.",
+          "translation": "我的夹克被雨淋湿了。"
+        }
+      ]
+    },
+    {
+      "word": "dry",
+      "phoneticUs": "/draɪ/",
+      "phoneticUk": "/draɪ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "干的；干燥的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Use a towel to dry your hands.",
+          "translation": "用毛巾擦干你的手。"
+        }
+      ]
+    },
+    {
+      "word": "dark",
+      "phoneticUs": "/dɑːrk/",
+      "phoneticUk": "/dɑːk/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "黑暗的；深色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is dark outside at night.",
+          "translation": "晚上外面很黑。"
+        }
+      ]
+    }
+  ]
+}

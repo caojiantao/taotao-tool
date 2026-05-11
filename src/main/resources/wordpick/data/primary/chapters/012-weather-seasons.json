@@ -1,0 +1,345 @@
+{
+  "name": "（十二）天气与季节",
+  "words": [
+    {
+      "word": "sunny",
+      "phoneticUs": "/ˈsʌni/",
+      "phoneticUk": "/ˈsʌni/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "晴朗的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is a sunny day today.",
+          "translation": "今天是个晴天。"
+        }
+      ]
+    },
+    {
+      "word": "warm",
+      "phoneticUs": "/wɔːrm/",
+      "phoneticUk": "/wɔːm/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "温暖的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Spring is warm and beautiful.",
+          "translation": "春天温暖而美丽。"
+        }
+      ]
+    },
+    {
+      "word": "hot",
+      "phoneticUs": "/hɑːt/",
+      "phoneticUk": "/hɒt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "热的；炎热的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Summer is very hot.",
+          "translation": "夏天非常炎热。"
+        }
+      ]
+    },
+    {
+      "word": "cool",
+      "phoneticUs": "/kuːl/",
+      "phoneticUk": "/kuːl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "凉爽的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Autumn is cool and comfortable.",
+          "translation": "秋天凉爽舒适。"
+        }
+      ]
+    },
+    {
+      "word": "cold",
+      "phoneticUs": "/koʊld/",
+      "phoneticUk": "/kəʊld/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "寒冷的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is very cold in winter.",
+          "translation": "冬天非常寒冷。"
+        }
+      ]
+    },
+    {
+      "word": "snowy",
+      "phoneticUs": "/ˈsnoʊi/",
+      "phoneticUk": "/ˈsnəʊi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "下雪的；多雪的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is snowy outside today.",
+          "translation": "今天外面在下雪。"
+        }
+      ]
+    },
+    {
+      "word": "windy",
+      "phoneticUs": "/ˈwɪndi/",
+      "phoneticUk": "/ˈwɪndi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有风的；刮风的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is windy today, so wear a coat.",
+          "translation": "今天有风，所以穿上外套。"
+        }
+      ]
+    },
+    {
+      "word": "rainy",
+      "phoneticUs": "/ˈreɪni/",
+      "phoneticUk": "/ˈreɪni/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "下雨的；多雨的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Take an umbrella on rainy days.",
+          "translation": "下雨天要带伞。"
+        }
+      ]
+    },
+    {
+      "word": "cloudy",
+      "phoneticUs": "/ˈklaʊdi/",
+      "phoneticUk": "/ˈklaʊdi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "阴天的；多云的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is cloudy today.",
+          "translation": "今天是阴天。"
+        }
+      ]
+    },
+    {
+      "word": "weather",
+      "phoneticUs": "/ˈweðər/",
+      "phoneticUk": "/ˈweðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "天气"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is the weather like today?",
+          "translation": "今天天气怎么样？"
+        }
+      ]
+    },
+    {
+      "word": "spring",
+      "phoneticUs": "/sprɪŋ/",
+      "phoneticUk": "/sprɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "春天；春季"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Flowers bloom in spring.",
+          "translation": "春天花儿盛开。"
+        }
+      ]
+    },
+    {
+      "word": "summer",
+      "phoneticUs": "/ˈsʌmər/",
+      "phoneticUk": "/ˈsʌmə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "夏天；夏季"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like to swim in summer.",
+          "translation": "我喜欢在夏天游泳。"
+        }
+      ]
+    },
+    {
+      "word": "autumn",
+      "phoneticUs": "/ˈɔːtəm/",
+      "phoneticUk": "/ˈɔːtəm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "秋天；秋季"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Leaves turn red in autumn.",
+          "translation": "秋天树叶变红。"
+        }
+      ]
+    },
+    {
+      "word": "winter",
+      "phoneticUs": "/ˈwɪntər/",
+      "phoneticUk": "/ˈwɪntə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "冬天；冬季"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We can skate in winter.",
+          "translation": "冬天我们可以溜冰。"
+        }
+      ]
+    },
+    {
+      "word": "season",
+      "phoneticUs": "/ˈsiːzn/",
+      "phoneticUk": "/ˈsiːzn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "季节"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are four seasons in a year.",
+          "translation": "一年有四个季节。"
+        }
+      ]
+    },
+    {
+      "word": "temperature",
+      "phoneticUs": "/ˈtemprətʃər/",
+      "phoneticUk": "/ˈtemprətʃə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "温度；气温"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The temperature is low today.",
+          "translation": "今天气温很低。"
+        }
+      ]
+    },
+    {
+      "word": "storm",
+      "phoneticUs": "/stɔːrm/",
+      "phoneticUk": "/stɔːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "暴风雨"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a big storm tonight.",
+          "translation": "今晚有一场大暴风雨。"
+        }
+      ]
+    },
+    {
+      "word": "fog",
+      "phoneticUs": "/fɑːɡ/",
+      "phoneticUk": "/fɒɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "雾"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is thick fog in the morning.",
+          "translation": "早晨有大雾。"
+        }
+      ]
+    },
+    {
+      "word": "rainbow",
+      "phoneticUs": "/ˈreɪnboʊ/",
+      "phoneticUk": "/ˈreɪnbəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "彩虹"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can see a rainbow after the rain.",
+          "translation": "雨后我能看到彩虹。"
+        }
+      ]
+    },
+    {
+      "word": "thunder",
+      "phoneticUs": "/ˈθʌndər/",
+      "phoneticUk": "/ˈθʌndə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "雷；雷声"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am scared of thunder.",
+          "translation": "我害怕打雷。"
+        }
+      ]
+    }
+  ]
+}

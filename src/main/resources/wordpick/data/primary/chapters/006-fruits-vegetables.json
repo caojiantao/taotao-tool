@@ -1,0 +1,311 @@
+{
+  "name": "（六）水果与蔬菜",
+  "words": [
+    {
+      "word": "apple",
+      "phoneticUs": "/ˈæpəl/",
+      "phoneticUk": "/ˈæpəl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "苹果"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "An apple a day keeps the doctor away.",
+          "translation": "每天一个苹果，医生远离我。"
+        }
+      ]
+    },
+    {
+      "word": "pear",
+      "phoneticUs": "/pɛr/",
+      "phoneticUk": "/pɛə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "梨"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The pear is sweet and juicy.",
+          "translation": "这个梨甜而多汁。"
+        }
+      ]
+    },
+    {
+      "word": "orange",
+      "phoneticUs": "/ˈɔrɪndʒ/",
+      "phoneticUk": "/ˈɒrɪndʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "橙子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I peel the orange and eat it.",
+          "translation": "我剥橙子吃。"
+        }
+      ]
+    },
+    {
+      "word": "banana",
+      "phoneticUs": "/bəˈnænə/",
+      "phoneticUk": "/bəˈnɑːnə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "香蕉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Monkeys love to eat bananas.",
+          "translation": "猴子喜欢吃香蕉。"
+        }
+      ]
+    },
+    {
+      "word": "grape",
+      "phoneticUs": "/ɡreɪp/",
+      "phoneticUk": "/ɡreɪp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "葡萄"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like to eat grapes.",
+          "translation": "我喜欢吃葡萄。"
+        }
+      ]
+    },
+    {
+      "word": "watermelon",
+      "phoneticUs": "/ˈwɔtərˌmɛlən/",
+      "phoneticUk": "/ˈwɔːtəˌmɛlən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "西瓜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Watermelon is red inside.",
+          "translation": "西瓜里面是红色的。"
+        }
+      ]
+    },
+    {
+      "word": "mango",
+      "phoneticUs": "/ˈmæŋɡoʊ/",
+      "phoneticUk": "/ˈmæŋɡəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "芒果"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mango is my favourite fruit.",
+          "translation": "芒果是我最喜欢的水果。"
+        }
+      ]
+    },
+    {
+      "word": "strawberry",
+      "phoneticUs": "/ˈstrɔˌbɛri/",
+      "phoneticUk": "/ˈstrɔːbəri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "草莓"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Strawberries are red and sweet.",
+          "translation": "草莓是红色的，味道甜。"
+        }
+      ]
+    },
+    {
+      "word": "peach",
+      "phoneticUs": "/piːtʃ/",
+      "phoneticUk": "/piːtʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "桃子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The peach is soft and sweet.",
+          "translation": "桃子又软又甜。"
+        }
+      ]
+    },
+    {
+      "word": "lemon",
+      "phoneticUs": "/ˈlɛmən/",
+      "phoneticUk": "/ˈlɛmən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "柠檬"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Lemons taste very sour.",
+          "translation": "柠檬尝起来非常酸。"
+        }
+      ]
+    },
+    {
+      "word": "potato",
+      "phoneticUs": "/pəˈteɪtoʊ/",
+      "phoneticUk": "/pəˈteɪtəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "土豆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like mashed potato.",
+          "translation": "我喜欢土豆泥。"
+        }
+      ]
+    },
+    {
+      "word": "tomato",
+      "phoneticUs": "/təˈmeɪtoʊ/",
+      "phoneticUk": "/təˈmɑːtəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "西红柿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The tomato is red and round.",
+          "translation": "西红柿是红色圆形的。"
+        }
+      ]
+    },
+    {
+      "word": "corn",
+      "phoneticUs": "/kɔrn/",
+      "phoneticUk": "/kɔːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "玉米"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I love eating corn.",
+          "translation": "我喜欢吃玉米。"
+        }
+      ]
+    },
+    {
+      "word": "carrot",
+      "phoneticUs": "/ˈkærət/",
+      "phoneticUk": "/ˈkærət/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "胡萝卜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Rabbits like to eat carrots.",
+          "translation": "兔子喜欢吃胡萝卜。"
+        }
+      ]
+    },
+    {
+      "word": "onion",
+      "phoneticUs": "/ˈʌnjən/",
+      "phoneticUk": "/ˈʌnjən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "洋葱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Onions can make your eyes water.",
+          "translation": "洋葱会让你的眼睛流泪。"
+        }
+      ]
+    },
+    {
+      "word": "cucumber",
+      "phoneticUs": "/ˈkjuːˌkʌmbər/",
+      "phoneticUk": "/ˈkjuːˌkʌmbə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "黄瓜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cucumber is green and cool.",
+          "translation": "黄瓜是绿色的，清爽可口。"
+        }
+      ]
+    },
+    {
+      "word": "cabbage",
+      "phoneticUs": "/ˈkæbɪdʒ/",
+      "phoneticUk": "/ˈkæbɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "卷心菜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We eat cabbage in soup.",
+          "translation": "我们把卷心菜放在汤里吃。"
+        }
+      ]
+    },
+    {
+      "word": "peas",
+      "phoneticUs": "/piːz/",
+      "phoneticUk": "/piːz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "豌豆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Peas are small and green.",
+          "translation": "豌豆小小的，绿绿的。"
+        }
+      ]
+    }
+  ]
+}

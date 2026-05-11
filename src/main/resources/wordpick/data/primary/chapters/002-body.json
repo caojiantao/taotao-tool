@@ -1,0 +1,345 @@
+{
+  "name": "（二）身体部位",
+  "words": [
+    {
+      "word": "head",
+      "phoneticUs": "/hɛd/",
+      "phoneticUk": "/hɛd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "头"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a big head.",
+          "translation": "我有一个大脑袋。"
+        }
+      ]
+    },
+    {
+      "word": "face",
+      "phoneticUs": "/feɪs/",
+      "phoneticUk": "/feɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "脸"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has a round face.",
+          "translation": "她有一张圆脸。"
+        }
+      ]
+    },
+    {
+      "word": "nose",
+      "phoneticUs": "/noʊz/",
+      "phoneticUk": "/nəʊz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鼻子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My nose is small.",
+          "translation": "我的鼻子很小。"
+        }
+      ]
+    },
+    {
+      "word": "mouth",
+      "phoneticUs": "/maʊθ/",
+      "phoneticUk": "/maʊθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "嘴"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Open your mouth, please.",
+          "translation": "请张开你的嘴。"
+        }
+      ]
+    },
+    {
+      "word": "eye",
+      "phoneticUs": "/aɪ/",
+      "phoneticUk": "/aɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "眼睛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have two eyes.",
+          "translation": "我有两只眼睛。"
+        }
+      ]
+    },
+    {
+      "word": "ear",
+      "phoneticUs": "/ɪr/",
+      "phoneticUk": "/ɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "耳朵"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The rabbit has long ears.",
+          "translation": "兔子有长耳朵。"
+        }
+      ]
+    },
+    {
+      "word": "arm",
+      "phoneticUs": "/ɑrm/",
+      "phoneticUk": "/ɑːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "手臂"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Raise your right arm.",
+          "translation": "举起你的右臂。"
+        }
+      ]
+    },
+    {
+      "word": "finger",
+      "phoneticUs": "/ˈfɪŋɡər/",
+      "phoneticUk": "/ˈfɪŋɡə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "手指"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have ten fingers.",
+          "translation": "我有十根手指。"
+        }
+      ]
+    },
+    {
+      "word": "leg",
+      "phoneticUs": "/lɛɡ/",
+      "phoneticUk": "/lɛɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "腿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My leg hurts.",
+          "translation": "我的腿疼。"
+        }
+      ]
+    },
+    {
+      "word": "foot",
+      "phoneticUs": "/fʊt/",
+      "phoneticUk": "/fʊt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "脚"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My left foot is big.",
+          "translation": "我的左脚很大。"
+        }
+      ]
+    },
+    {
+      "word": "body",
+      "phoneticUs": "/ˈbɑdi/",
+      "phoneticUk": "/ˈbɒdi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "身体"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Touch your body.",
+          "translation": "摸摸你的身体。"
+        }
+      ]
+    },
+    {
+      "word": "hand",
+      "phoneticUs": "/hænd/",
+      "phoneticUk": "/hænd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "手"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wash your hands before eating.",
+          "translation": "吃饭前洗手。"
+        }
+      ]
+    },
+    {
+      "word": "tooth",
+      "phoneticUs": "/tuːθ/",
+      "phoneticUk": "/tuːθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牙齿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Brush your teeth every day.",
+          "translation": "每天刷牙。"
+        }
+      ]
+    },
+    {
+      "word": "hair",
+      "phoneticUs": "/hɛr/",
+      "phoneticUk": "/hɛə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "头发"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has long black hair.",
+          "translation": "她有一头乌黑的长发。"
+        }
+      ]
+    },
+    {
+      "word": "neck",
+      "phoneticUs": "/nɛk/",
+      "phoneticUk": "/nɛk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "脖子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My neck is sore.",
+          "translation": "我的脖子酸痛。"
+        }
+      ]
+    },
+    {
+      "word": "shoulder",
+      "phoneticUs": "/ˈʃoʊldər/",
+      "phoneticUk": "/ˈʃəʊldə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "肩膀"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He pats me on the shoulder.",
+          "translation": "他拍拍我的肩膀。"
+        }
+      ]
+    },
+    {
+      "word": "knee",
+      "phoneticUs": "/niː/",
+      "phoneticUk": "/niː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "膝盖"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Bend your knees.",
+          "translation": "弯曲你的膝盖。"
+        }
+      ]
+    },
+    {
+      "word": "back",
+      "phoneticUs": "/bæk/",
+      "phoneticUk": "/bæk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "背部"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a pain in my back.",
+          "translation": "我背部疼痛。"
+        }
+      ]
+    },
+    {
+      "word": "toe",
+      "phoneticUs": "/toʊ/",
+      "phoneticUk": "/təʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "脚趾"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have five toes on each foot.",
+          "translation": "我每只脚有五个脚趾。"
+        }
+      ]
+    },
+    {
+      "word": "stomach",
+      "phoneticUs": "/ˈstʌmək/",
+      "phoneticUk": "/ˈstʌmək/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "肚子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My stomach is full.",
+          "translation": "我的肚子饱了。"
+        }
+      ]
+    }
+  ]
+}

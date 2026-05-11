@@ -1,0 +1,260 @@
+{
+  "name": "（二十三）情绪与感受",
+  "words": [
+    {
+      "word": "happy",
+      "phoneticUs": "/ˈhæpi/",
+      "phoneticUk": "/ˈhæpi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "快乐的；高兴的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am happy today.",
+          "translation": "我今天很开心。"
+        }
+      ]
+    },
+    {
+      "word": "sad",
+      "phoneticUs": "/sæd/",
+      "phoneticUk": "/sæd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "难过的；悲伤的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She looks sad today.",
+          "translation": "她今天看起来很难过。"
+        }
+      ]
+    },
+    {
+      "word": "angry",
+      "phoneticUs": "/ˈæŋɡri/",
+      "phoneticUk": "/ˈæŋɡri/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "生气的；愤怒的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do not be angry with me.",
+          "translation": "别对我生气。"
+        }
+      ]
+    },
+    {
+      "word": "tired",
+      "phoneticUs": "/ˈtaɪərd/",
+      "phoneticUk": "/ˈtaɪəd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "疲倦的；累的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am tired after PE class.",
+          "translation": "体育课后我很累。"
+        }
+      ]
+    },
+    {
+      "word": "hungry",
+      "phoneticUs": "/ˈhʌŋɡri/",
+      "phoneticUk": "/ˈhʌŋɡri/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "饥饿的；饿的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am hungry. Let us eat.",
+          "translation": "我饿了，我们去吃饭吧。"
+        }
+      ]
+    },
+    {
+      "word": "thirsty",
+      "phoneticUs": "/ˈθɜːrsti/",
+      "phoneticUk": "/ˈθɜːsti/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "口渴的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am thirsty. Can I have some water?",
+          "translation": "我口渴了，我能喝点水吗？"
+        }
+      ]
+    },
+    {
+      "word": "sick",
+      "phoneticUs": "/sɪk/",
+      "phoneticUk": "/sɪk/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "生病的；不舒服的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is sick and stays at home.",
+          "translation": "她生病了，待在家里。"
+        }
+      ]
+    },
+    {
+      "word": "excited",
+      "phoneticUs": "/ɪkˈsaɪtɪd/",
+      "phoneticUk": "/ɪkˈsaɪtɪd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "兴奋的；激动的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am so excited about the trip.",
+          "translation": "我对这次旅行感到非常兴奋。"
+        }
+      ]
+    },
+    {
+      "word": "bored",
+      "phoneticUs": "/bɔːrd/",
+      "phoneticUk": "/bɔːd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "无聊的；厌倦的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He looks bored in class.",
+          "translation": "他在课堂上看起来很无聊。"
+        }
+      ]
+    },
+    {
+      "word": "scared",
+      "phoneticUs": "/skerd/",
+      "phoneticUk": "/skeəd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "害怕的；恐惧的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is scared of the dark.",
+          "translation": "她害怕黑暗。"
+        }
+      ]
+    },
+    {
+      "word": "surprised",
+      "phoneticUs": "/sərˈpraɪzd/",
+      "phoneticUk": "/səˈpraɪzd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "惊讶的；吃惊的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I was surprised by the gift.",
+          "translation": "我被这份礼物惊到了。"
+        }
+      ]
+    },
+    {
+      "word": "worried",
+      "phoneticUs": "/ˈwɜːrid/",
+      "phoneticUk": "/ˈwʌrid/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "担心的；忧虑的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mum is worried about me.",
+          "translation": "妈妈担心我。"
+        }
+      ]
+    },
+    {
+      "word": "nervous",
+      "phoneticUs": "/ˈnɜːrvəs/",
+      "phoneticUk": "/ˈnɜːvəs/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "紧张的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am nervous before the test.",
+          "translation": "考试前我很紧张。"
+        }
+      ]
+    },
+    {
+      "word": "fine",
+      "phoneticUs": "/faɪn/",
+      "phoneticUk": "/faɪn/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "好的；健康的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "How are you? I am fine.",
+          "translation": "你好吗？我很好。"
+        }
+      ]
+    },
+    {
+      "word": "great",
+      "phoneticUs": "/ɡreɪt/",
+      "phoneticUk": "/ɡreɪt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "很好的；极好的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "That sounds great!",
+          "translation": "听起来很棒！"
+        }
+      ]
+    }
+  ]
+}

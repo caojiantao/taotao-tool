@@ -1,0 +1,345 @@
+{
+  "name": "（十七）自然景物",
+  "words": [
+    {
+      "word": "forest",
+      "phoneticUs": "/ˈfɔːrɪst/",
+      "phoneticUk": "/ˈfɒrɪst/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "森林"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are many animals in the forest.",
+          "translation": "森林里有很多动物。"
+        }
+      ]
+    },
+    {
+      "word": "river",
+      "phoneticUs": "/ˈrɪvər/",
+      "phoneticUk": "/ˈrɪvə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "河流"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The river is long and wide.",
+          "translation": "这条河又长又宽。"
+        }
+      ]
+    },
+    {
+      "word": "lake",
+      "phoneticUs": "/leɪk/",
+      "phoneticUk": "/leɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "湖"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We can swim in the lake.",
+          "translation": "我们可以在湖里游泳。"
+        }
+      ]
+    },
+    {
+      "word": "mountain",
+      "phoneticUs": "/ˈmaʊntən/",
+      "phoneticUk": "/ˈmaʊntɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "山；山脉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The mountain is very high.",
+          "translation": "这座山非常高。"
+        }
+      ]
+    },
+    {
+      "word": "sky",
+      "phoneticUs": "/skaɪ/",
+      "phoneticUk": "/skaɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "天空"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sky is blue and clear today.",
+          "translation": "今天天空蔚蓝清澈。"
+        }
+      ]
+    },
+    {
+      "word": "grass",
+      "phoneticUs": "/ɡræs/",
+      "phoneticUk": "/ɡrɑːs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "草"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cow eats grass every day.",
+          "translation": "奶牛每天吃草。"
+        }
+      ]
+    },
+    {
+      "word": "flower",
+      "phoneticUs": "/ˈflaʊər/",
+      "phoneticUk": "/ˈflaʊə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "花"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like to pick flowers in the park.",
+          "translation": "我喜欢在公园里摘花。"
+        }
+      ]
+    },
+    {
+      "word": "tree",
+      "phoneticUs": "/triː/",
+      "phoneticUk": "/triː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "树"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a big tree in our yard.",
+          "translation": "我们院子里有一棵大树。"
+        }
+      ]
+    },
+    {
+      "word": "cloud",
+      "phoneticUs": "/klaʊd/",
+      "phoneticUk": "/klaʊd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "云"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I see white clouds in the sky.",
+          "translation": "我看到天空中有白云。"
+        }
+      ]
+    },
+    {
+      "word": "sun",
+      "phoneticUs": "/sʌn/",
+      "phoneticUk": "/sʌn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "太阳"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sun rises in the east.",
+          "translation": "太阳从东方升起。"
+        }
+      ]
+    },
+    {
+      "word": "moon",
+      "phoneticUs": "/muːn/",
+      "phoneticUk": "/muːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "月亮"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The moon is bright tonight.",
+          "translation": "今晚月亮很亮。"
+        }
+      ]
+    },
+    {
+      "word": "star",
+      "phoneticUs": "/stɑːr/",
+      "phoneticUk": "/stɑː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星星"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can see many stars at night.",
+          "translation": "晚上我能看到很多星星。"
+        }
+      ]
+    },
+    {
+      "word": "sea",
+      "phoneticUs": "/siː/",
+      "phoneticUk": "/siː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "大海"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sea is very deep.",
+          "translation": "大海非常深。"
+        }
+      ]
+    },
+    {
+      "word": "beach",
+      "phoneticUs": "/biːtʃ/",
+      "phoneticUk": "/biːtʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "海滩"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We played on the beach.",
+          "translation": "我们在海滩上玩耍。"
+        }
+      ]
+    },
+    {
+      "word": "island",
+      "phoneticUs": "/ˈaɪlənd/",
+      "phoneticUk": "/ˈaɪlənd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "岛屿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a small island in the lake.",
+          "translation": "湖中有一个小岛。"
+        }
+      ]
+    },
+    {
+      "word": "hill",
+      "phoneticUs": "/hɪl/",
+      "phoneticUk": "/hɪl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小山；丘陵"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We climbed up the hill.",
+          "translation": "我们爬上了小山。"
+        }
+      ]
+    },
+    {
+      "word": "field",
+      "phoneticUs": "/fiːld/",
+      "phoneticUk": "/fiːld/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "田野"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Cows are eating grass in the field.",
+          "translation": "奶牛在田野里吃草。"
+        }
+      ]
+    },
+    {
+      "word": "rock",
+      "phoneticUs": "/rɑːk/",
+      "phoneticUk": "/rɒk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "岩石"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He sat on a big rock.",
+          "translation": "他坐在一块大岩石上。"
+        }
+      ]
+    },
+    {
+      "word": "path",
+      "phoneticUs": "/pæθ/",
+      "phoneticUk": "/pɑːθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小路"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a path through the forest.",
+          "translation": "森林里有一条小路。"
+        }
+      ]
+    },
+    {
+      "word": "bridge",
+      "phoneticUs": "/brɪdʒ/",
+      "phoneticUk": "/brɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "桥"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We crossed the bridge to the other side.",
+          "translation": "我们过桥到了对岸。"
+        }
+      ]
+    }
+  ]
+}

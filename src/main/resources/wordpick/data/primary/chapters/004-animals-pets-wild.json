@@ -1,0 +1,345 @@
+{
+  "name": "（四）动物（宠物与野生）",
+  "words": [
+    {
+      "word": "cat",
+      "phoneticUs": "/kæt/",
+      "phoneticUk": "/kæt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cat is on the sofa.",
+          "translation": "猫在沙发上。"
+        }
+      ]
+    },
+    {
+      "word": "dog",
+      "phoneticUs": "/dɔɡ/",
+      "phoneticUk": "/dɒɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "狗"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a pet dog.",
+          "translation": "我有一只宠物狗。"
+        }
+      ]
+    },
+    {
+      "word": "monkey",
+      "phoneticUs": "/ˈmʌŋki/",
+      "phoneticUk": "/ˈmʌŋki/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猴子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The monkey likes bananas.",
+          "translation": "猴子喜欢香蕉。"
+        }
+      ]
+    },
+    {
+      "word": "panda",
+      "phoneticUs": "/ˈpændə/",
+      "phoneticUk": "/ˈpændə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "熊猫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The panda is from China.",
+          "translation": "熊猫来自中国。"
+        }
+      ]
+    },
+    {
+      "word": "rabbit",
+      "phoneticUs": "/ˈræbɪt/",
+      "phoneticUk": "/ˈræbɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "兔子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The rabbit has white fur.",
+          "translation": "兔子有白色的毛。"
+        }
+      ]
+    },
+    {
+      "word": "duck",
+      "phoneticUs": "/dʌk/",
+      "phoneticUk": "/dʌk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸭子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The duck swims in the pond.",
+          "translation": "鸭子在池塘里游泳。"
+        }
+      ]
+    },
+    {
+      "word": "pig",
+      "phoneticUs": "/pɪɡ/",
+      "phoneticUk": "/pɪɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猪"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The pig is fat and pink.",
+          "translation": "猪又胖又粉。"
+        }
+      ]
+    },
+    {
+      "word": "bird",
+      "phoneticUs": "/bɜrd/",
+      "phoneticUk": "/bɜːd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "A bird is singing in the tree.",
+          "translation": "一只鸟在树上唱歌。"
+        }
+      ]
+    },
+    {
+      "word": "bear",
+      "phoneticUs": "/bɛr/",
+      "phoneticUk": "/bɛə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "熊"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The bear likes honey.",
+          "translation": "熊喜欢蜂蜜。"
+        }
+      ]
+    },
+    {
+      "word": "elephant",
+      "phoneticUs": "/ˈɛləfənt/",
+      "phoneticUk": "/ˈɛlɪfənt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "大象"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The elephant has a long nose.",
+          "translation": "大象有一个长鼻子。"
+        }
+      ]
+    },
+    {
+      "word": "mouse",
+      "phoneticUs": "/maʊs/",
+      "phoneticUk": "/maʊs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "老鼠"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The mouse is very small.",
+          "translation": "老鼠非常小。"
+        }
+      ]
+    },
+    {
+      "word": "fish",
+      "phoneticUs": "/fɪʃ/",
+      "phoneticUk": "/fɪʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鱼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can see fish in the water.",
+          "translation": "我能看到水里的鱼。"
+        }
+      ]
+    },
+    {
+      "word": "tiger",
+      "phoneticUs": "/ˈtaɪɡər/",
+      "phoneticUk": "/ˈtaɪɡə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "老虎"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The tiger is a big cat.",
+          "translation": "老虎是一种大型猫科动物。"
+        }
+      ]
+    },
+    {
+      "word": "lion",
+      "phoneticUs": "/ˈlaɪən/",
+      "phoneticUk": "/ˈlaɪən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "狮子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The lion is the king of animals.",
+          "translation": "狮子是动物之王。"
+        }
+      ]
+    },
+    {
+      "word": "giraffe",
+      "phoneticUs": "/dʒəˈræf/",
+      "phoneticUk": "/dʒɪˈrɑːf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "长颈鹿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The giraffe has a very long neck.",
+          "translation": "长颈鹿有一条非常长的脖子。"
+        }
+      ]
+    },
+    {
+      "word": "horse",
+      "phoneticUs": "/hɔrs/",
+      "phoneticUk": "/hɔːs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "马"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The horse runs very fast.",
+          "translation": "马跑得很快。"
+        }
+      ]
+    },
+    {
+      "word": "cow",
+      "phoneticUs": "/kaʊ/",
+      "phoneticUk": "/kaʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "奶牛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cow gives us milk.",
+          "translation": "奶牛给我们提供牛奶。"
+        }
+      ]
+    },
+    {
+      "word": "hen",
+      "phoneticUs": "/hɛn/",
+      "phoneticUk": "/hɛn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "母鸡"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The hen lays eggs every day.",
+          "translation": "母鸡每天下蛋。"
+        }
+      ]
+    },
+    {
+      "word": "sheep",
+      "phoneticUs": "/ʃiːp/",
+      "phoneticUk": "/ʃiːp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "绵羊"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sheep has soft white wool.",
+          "translation": "绵羊有柔软的白色羊毛。"
+        }
+      ]
+    },
+    {
+      "word": "frog",
+      "phoneticUs": "/frɔɡ/",
+      "phoneticUk": "/frɒɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "青蛙"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The frog jumps into the pond.",
+          "translation": "青蛙跳进了池塘。"
+        }
+      ]
+    }
+  ]
+}

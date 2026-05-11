@@ -1,0 +1,260 @@
+{
+  "name": "（二十五）健康与疾病",
+  "words": [
+    {
+      "word": "headache",
+      "phoneticUs": "/ˈhedeɪk/",
+      "phoneticUk": "/ˈhedeɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "头痛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a headache today.",
+          "translation": "我今天头痛。"
+        }
+      ]
+    },
+    {
+      "word": "stomachache",
+      "phoneticUs": "/ˈstʌməkeɪk/",
+      "phoneticUk": "/ˈstʌməkeɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "胃痛；肚子痛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has a stomachache after lunch.",
+          "translation": "她午饭后胃痛。"
+        }
+      ]
+    },
+    {
+      "word": "toothache",
+      "phoneticUs": "/ˈtuːθeɪk/",
+      "phoneticUk": "/ˈtuːθeɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牙痛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He has a toothache and sees a dentist.",
+          "translation": "他牙痛，去看牙医。"
+        }
+      ]
+    },
+    {
+      "word": "cold",
+      "phoneticUs": "/koʊld/",
+      "phoneticUk": "/kəʊld/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "感冒"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a cold and stay at home.",
+          "translation": "我感冒了，待在家里。"
+        }
+      ]
+    },
+    {
+      "word": "fever",
+      "phoneticUs": "/ˈfiːvər/",
+      "phoneticUk": "/ˈfiːvə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "发烧；高烧"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has a high fever.",
+          "translation": "她发高烧了。"
+        }
+      ]
+    },
+    {
+      "word": "cough",
+      "phoneticUs": "/kɒf/",
+      "phoneticUk": "/kɒf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "咳嗽"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He has a bad cough.",
+          "translation": "他咳嗽得很厉害。"
+        }
+      ]
+    },
+    {
+      "word": "medicine",
+      "phoneticUs": "/ˈmedɪsn/",
+      "phoneticUk": "/ˈmedɪsn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "药；药物"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Take the medicine three times a day.",
+          "translation": "每天服药三次。"
+        }
+      ]
+    },
+    {
+      "word": "hospital",
+      "phoneticUs": "/ˈhɒspɪtl/",
+      "phoneticUk": "/ˈhɒspɪtl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "医院"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My grandma is in the hospital.",
+          "translation": "我奶奶在医院。"
+        }
+      ]
+    },
+    {
+      "word": "healthy",
+      "phoneticUs": "/ˈhelθi/",
+      "phoneticUk": "/ˈhelθi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "健康的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Eating vegetables keeps you healthy.",
+          "translation": "吃蔬菜让你保持健康。"
+        }
+      ]
+    },
+    {
+      "word": "health",
+      "phoneticUs": "/helθ/",
+      "phoneticUk": "/helθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "健康"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Health is more important than money.",
+          "translation": "健康比金钱更重要。"
+        }
+      ]
+    },
+    {
+      "word": "rest",
+      "phoneticUs": "/rest/",
+      "phoneticUk": "/rest/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "休息"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "You should rest when you are sick.",
+          "translation": "生病时你应该休息。"
+        }
+      ]
+    },
+    {
+      "word": "hurt",
+      "phoneticUs": "/hɜːrt/",
+      "phoneticUk": "/hɜːt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "受伤；疼痛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My leg hurts after running.",
+          "translation": "跑步后我的腿疼。"
+        }
+      ]
+    },
+    {
+      "word": "better",
+      "phoneticUs": "/ˈbetər/",
+      "phoneticUk": "/ˈbetə/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "好转的；更好的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I feel better after taking medicine.",
+          "translation": "吃了药后我感觉好多了。"
+        }
+      ]
+    },
+    {
+      "word": "ill",
+      "phoneticUs": "/ɪl/",
+      "phoneticUk": "/ɪl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "生病的；不舒服的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The boy is ill and cannot go to school.",
+          "translation": "这个男孩生病了，不能上学。"
+        }
+      ]
+    },
+    {
+      "word": "diet",
+      "phoneticUs": "/ˈdaɪət/",
+      "phoneticUk": "/ˈdaɪət/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "饮食；日常食物"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "A good diet keeps you healthy.",
+          "translation": "良好的饮食让你保持健康。"
+        }
+      ]
+    }
+  ]
+}

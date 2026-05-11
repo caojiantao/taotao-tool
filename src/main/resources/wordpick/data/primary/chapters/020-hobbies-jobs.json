@@ -1,0 +1,345 @@
+{
+  "name": "（二十）兴趣爱好与职业",
+  "words": [
+    {
+      "word": "hobby",
+      "phoneticUs": "/ˈhɑːbi/",
+      "phoneticUk": "/ˈhɒbi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "爱好"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My hobby is reading books.",
+          "translation": "我的爱好是读书。"
+        }
+      ]
+    },
+    {
+      "word": "music",
+      "phoneticUs": "/ˈmjuːzɪk/",
+      "phoneticUk": "/ˈmjuːzɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "音乐"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I love listening to music.",
+          "translation": "我喜欢听音乐。"
+        }
+      ]
+    },
+    {
+      "word": "sport",
+      "phoneticUs": "/spɔːrt/",
+      "phoneticUk": "/spɔːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "运动"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My favourite sport is football.",
+          "translation": "我最喜欢的运动是足球。"
+        }
+      ]
+    },
+    {
+      "word": "reading",
+      "phoneticUs": "/ˈriːdɪŋ/",
+      "phoneticUk": "/ˈriːdɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "阅读"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Reading is a great hobby.",
+          "translation": "阅读是一个很好的爱好。"
+        }
+      ]
+    },
+    {
+      "word": "painting",
+      "phoneticUs": "/ˈpeɪntɪŋ/",
+      "phoneticUk": "/ˈpeɪntɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "绘画"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is good at painting.",
+          "translation": "她擅长绘画。"
+        }
+      ]
+    },
+    {
+      "word": "cooking",
+      "phoneticUs": "/ˈkʊkɪŋ/",
+      "phoneticUk": "/ˈkʊkɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "烹饪"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He enjoys cooking with his mum.",
+          "translation": "他喜欢和妈妈一起做饭。"
+        }
+      ]
+    },
+    {
+      "word": "fishing",
+      "phoneticUs": "/ˈfɪʃɪŋ/",
+      "phoneticUk": "/ˈfɪʃɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钓鱼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We go fishing on weekends.",
+          "translation": "我们周末去钓鱼。"
+        }
+      ]
+    },
+    {
+      "word": "hiking",
+      "phoneticUs": "/ˈhaɪkɪŋ/",
+      "phoneticUk": "/ˈhaɪkɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "远足"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hiking in the mountains is fun.",
+          "translation": "在山里远足很有趣。"
+        }
+      ]
+    },
+    {
+      "word": "doctor",
+      "phoneticUs": "/ˈdɑːktər/",
+      "phoneticUk": "/ˈdɒktə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "医生"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The doctor helps sick people.",
+          "translation": "医生帮助病人。"
+        }
+      ]
+    },
+    {
+      "word": "teacher",
+      "phoneticUs": "/ˈtiːtʃər/",
+      "phoneticUk": "/ˈtiːtʃə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "老师"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My teacher is very patient.",
+          "translation": "我的老师非常耐心。"
+        }
+      ]
+    },
+    {
+      "word": "nurse",
+      "phoneticUs": "/nɜːrs/",
+      "phoneticUk": "/nɜːs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "护士"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The nurse takes care of the patients.",
+          "translation": "护士照顾病人。"
+        }
+      ]
+    },
+    {
+      "word": "driver",
+      "phoneticUs": "/ˈdraɪvər/",
+      "phoneticUk": "/ˈdraɪvə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "司机"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The bus driver is very friendly.",
+          "translation": "公共汽车司机非常友好。"
+        }
+      ]
+    },
+    {
+      "word": "farmer",
+      "phoneticUs": "/ˈfɑːrmər/",
+      "phoneticUk": "/ˈfɑːmə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "农民"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The farmer grows rice and wheat.",
+          "translation": "农民种植水稻和小麦。"
+        }
+      ]
+    },
+    {
+      "word": "cook",
+      "phoneticUs": "/kʊk/",
+      "phoneticUk": "/kʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "厨师"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cook made a delicious meal.",
+          "translation": "厨师做了一顿美味的饭。"
+        }
+      ]
+    },
+    {
+      "word": "singer",
+      "phoneticUs": "/ˈsɪŋər/",
+      "phoneticUk": "/ˈsɪŋə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "歌手"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wants to be a singer.",
+          "translation": "她想成为一名歌手。"
+        }
+      ]
+    },
+    {
+      "word": "dancer",
+      "phoneticUs": "/ˈdænsər/",
+      "phoneticUk": "/ˈdɑːnsə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "舞蹈演员"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The dancer moved beautifully.",
+          "translation": "舞蹈演员舞姿优美。"
+        }
+      ]
+    },
+    {
+      "word": "artist",
+      "phoneticUs": "/ˈɑːrtɪst/",
+      "phoneticUk": "/ˈɑːtɪst/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "艺术家"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The artist painted a lovely picture.",
+          "translation": "艺术家画了一幅可爱的画。"
+        }
+      ]
+    },
+    {
+      "word": "pilot",
+      "phoneticUs": "/ˈpaɪlət/",
+      "phoneticUk": "/ˈpaɪlət/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "飞行员"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The pilot flies the plane safely.",
+          "translation": "飞行员安全地驾驶飞机。"
+        }
+      ]
+    },
+    {
+      "word": "police",
+      "phoneticUs": "/pəˈliːs/",
+      "phoneticUk": "/pəˈliːs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "警察"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The police help keep us safe.",
+          "translation": "警察帮助我们保持安全。"
+        }
+      ]
+    },
+    {
+      "word": "engineer",
+      "phoneticUs": "/ˌendʒɪˈnɪr/",
+      "phoneticUk": "/ˌendʒɪˈnɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "工程师"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He wants to be an engineer.",
+          "translation": "他想成为一名工程师。"
+        }
+      ]
+    }
+  ]
+}

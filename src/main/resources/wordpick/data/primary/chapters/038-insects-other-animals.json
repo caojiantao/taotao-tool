@@ -1,0 +1,209 @@
+{
+  "name": "（三十八）昆虫与其他动物",
+  "words": [
+    {
+      "word": "bee",
+      "phoneticUs": "/biː/",
+      "phoneticUk": "/biː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蜜蜂"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "A bee is flying near the flower.",
+          "translation": "一只蜜蜂在花朵附近飞翔。"
+        }
+      ]
+    },
+    {
+      "word": "butterfly",
+      "phoneticUs": "/ˈbʌtərflaɪ/",
+      "phoneticUk": "/ˈbʌtəflaɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蝴蝶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "A butterfly landed on the flower.",
+          "translation": "一只蝴蝶落在花上。"
+        }
+      ]
+    },
+    {
+      "word": "ant",
+      "phoneticUs": "/ænt/",
+      "phoneticUk": "/ænt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蚂蚁"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Ants work very hard every day.",
+          "translation": "蚂蚁每天都很努力工作。"
+        }
+      ]
+    },
+    {
+      "word": "snake",
+      "phoneticUs": "/sneɪk/",
+      "phoneticUk": "/sneɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蛇"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The snake is in the grass.",
+          "translation": "蛇在草丛里。"
+        }
+      ]
+    },
+    {
+      "word": "penguin",
+      "phoneticUs": "/ˈpeŋɡwɪn/",
+      "phoneticUk": "/ˈpeŋɡwɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "企鹅"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Penguins live in cold places.",
+          "translation": "企鹅生活在寒冷的地方。"
+        }
+      ]
+    },
+    {
+      "word": "goldfish",
+      "phoneticUs": "/ˈɡoʊldfɪʃ/",
+      "phoneticUk": "/ˈɡəʊldfɪʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "金鱼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have two goldfish at home.",
+          "translation": "我家有两条金鱼。"
+        }
+      ]
+    },
+    {
+      "word": "parrot",
+      "phoneticUs": "/ˈpærət/",
+      "phoneticUk": "/ˈpærət/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鹦鹉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The parrot can say hello.",
+          "translation": "这只鹦鹉会说你好。"
+        }
+      ]
+    },
+    {
+      "word": "squirrel",
+      "phoneticUs": "/ˈskwɪrəl/",
+      "phoneticUk": "/ˈskwɪrəl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "松鼠"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The squirrel eats nuts in autumn.",
+          "translation": "松鼠在秋天吃坚果。"
+        }
+      ]
+    },
+    {
+      "word": "turtle",
+      "phoneticUs": "/ˈtɜːrtl/",
+      "phoneticUk": "/ˈtɜːtl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "海龟；龟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The turtle swims slowly in the sea.",
+          "translation": "海龟在海中慢慢游动。"
+        }
+      ]
+    },
+    {
+      "word": "fox",
+      "phoneticUs": "/fɒks/",
+      "phoneticUk": "/fɒks/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "狐狸"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The fox is clever and quick.",
+          "translation": "狐狸聪明而敏捷。"
+        }
+      ]
+    },
+    {
+      "word": "deer",
+      "phoneticUs": "/dɪr/",
+      "phoneticUk": "/dɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鹿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "A deer is eating grass in the forest.",
+          "translation": "一头鹿在森林里吃草。"
+        }
+      ]
+    },
+    {
+      "word": "owl",
+      "phoneticUs": "/aʊl/",
+      "phoneticUk": "/aʊl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猫头鹰"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The owl sleeps during the day.",
+          "translation": "猫头鹰白天睡觉。"
+        }
+      ]
+    }
+  ]
+}

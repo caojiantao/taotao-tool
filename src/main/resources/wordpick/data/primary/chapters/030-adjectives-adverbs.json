@@ -1,0 +1,260 @@
+{
+  "name": "（三十）常用形容词与副词",
+  "words": [
+    {
+      "word": "good",
+      "phoneticUs": "/ɡʊd/",
+      "phoneticUk": "/ɡʊd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "好的；优秀的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is a good student.",
+          "translation": "她是个好学生。"
+        }
+      ]
+    },
+    {
+      "word": "nice",
+      "phoneticUs": "/naɪs/",
+      "phoneticUk": "/naɪs/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "好的；令人愉快的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What a nice day!",
+          "translation": "多好的天气啊！"
+        }
+      ]
+    },
+    {
+      "word": "big",
+      "phoneticUs": "/bɪɡ/",
+      "phoneticUk": "/bɪɡ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "大的；重要的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We live in a big house.",
+          "translation": "我们住在一栋大房子里。"
+        }
+      ]
+    },
+    {
+      "word": "small",
+      "phoneticUs": "/smɔːl/",
+      "phoneticUk": "/smɔːl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "小的；少的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My cat has small ears.",
+          "translation": "我的猫有小耳朵。"
+        }
+      ]
+    },
+    {
+      "word": "fast",
+      "phoneticUs": "/fæst/",
+      "phoneticUk": "/fɑːst/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "快的；迅速的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He runs very fast.",
+          "translation": "他跑得很快。"
+        }
+      ]
+    },
+    {
+      "word": "slow",
+      "phoneticUs": "/sloʊ/",
+      "phoneticUk": "/sləʊ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "慢的；迟缓的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The turtle is very slow.",
+          "translation": "乌龟非常慢。"
+        }
+      ]
+    },
+    {
+      "word": "fun",
+      "phoneticUs": "/fʌn/",
+      "phoneticUk": "/fʌn/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有趣的；好玩的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The game is so fun!",
+          "translation": "这个游戏太好玩了！"
+        }
+      ]
+    },
+    {
+      "word": "same",
+      "phoneticUs": "/seɪm/",
+      "phoneticUk": "/seɪm/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "相同的；一样的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We are in the same class.",
+          "translation": "我们在同一个班。"
+        }
+      ]
+    },
+    {
+      "word": "true",
+      "phoneticUs": "/truː/",
+      "phoneticUk": "/truː/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "真实的；正确的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Is that true?",
+          "translation": "那是真的吗？"
+        }
+      ]
+    },
+    {
+      "word": "always",
+      "phoneticUs": "/ˈɔːlweɪz/",
+      "phoneticUk": "/ˈɔːlweɪz/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "总是；一直"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She always comes to school early.",
+          "translation": "她总是早到学校。"
+        }
+      ]
+    },
+    {
+      "word": "often",
+      "phoneticUs": "/ˈɔːfn/",
+      "phoneticUk": "/ˈɒfn/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "经常；常常"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I often go to the park.",
+          "translation": "我经常去公园。"
+        }
+      ]
+    },
+    {
+      "word": "sometimes",
+      "phoneticUs": "/ˈsʌmtaɪmz/",
+      "phoneticUk": "/ˈsʌmtaɪmz/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "有时；偶尔"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sometimes I feel tired.",
+          "translation": "有时我感到很累。"
+        }
+      ]
+    },
+    {
+      "word": "never",
+      "phoneticUs": "/ˈnevər/",
+      "phoneticUk": "/ˈnevə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "从不；绝不"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I never eat junk food.",
+          "translation": "我从不吃垃圾食品。"
+        }
+      ]
+    },
+    {
+      "word": "usually",
+      "phoneticUs": "/ˈjuːʒuəli/",
+      "phoneticUk": "/ˈjuːʒuəli/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "通常；一般"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I usually get up at seven.",
+          "translation": "我通常七点起床。"
+        }
+      ]
+    },
+    {
+      "word": "together",
+      "phoneticUs": "/təˈɡeðər/",
+      "phoneticUk": "/təˈɡeðə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "一起；共同"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Let us play together.",
+          "translation": "让我们一起玩吧。"
+        }
+      ]
+    }
+  ]
+}

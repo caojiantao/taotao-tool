@@ -1,0 +1,362 @@
+{
+  "name": "（八）家与家具",
+  "words": [
+    {
+      "word": "living room",
+      "phoneticUs": "/ˈlɪvɪŋ ruːm/",
+      "phoneticUk": "/ˈlɪvɪŋ ruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "客厅"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We watch TV in the living room.",
+          "translation": "我们在客厅里看电视。"
+        }
+      ]
+    },
+    {
+      "word": "bedroom",
+      "phoneticUs": "/ˈbedruːm/",
+      "phoneticUk": "/ˈbedruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "卧室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My bedroom is very tidy.",
+          "translation": "我的卧室非常整洁。"
+        }
+      ]
+    },
+    {
+      "word": "bathroom",
+      "phoneticUs": "/ˈbæθruːm/",
+      "phoneticUk": "/ˈbɑːθruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "浴室；卫生间"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please wash your hands in the bathroom.",
+          "translation": "请在浴室洗手。"
+        }
+      ]
+    },
+    {
+      "word": "kitchen",
+      "phoneticUs": "/ˈkɪtʃɪn/",
+      "phoneticUk": "/ˈkɪtʃɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "厨房"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My mum cooks in the kitchen.",
+          "translation": "我妈妈在厨房做饭。"
+        }
+      ]
+    },
+    {
+      "word": "study",
+      "phoneticUs": "/ˈstʌdi/",
+      "phoneticUk": "/ˈstʌdi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书房"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My dad reads books in the study.",
+          "translation": "我爸爸在书房看书。"
+        }
+      ]
+    },
+    {
+      "word": "sofa",
+      "phoneticUs": "/ˈsoʊfə/",
+      "phoneticUk": "/ˈsəʊfə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "沙发"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cat is on the sofa.",
+          "translation": "猫在沙发上。"
+        }
+      ]
+    },
+    {
+      "word": "shelf",
+      "phoneticUs": "/ʃelf/",
+      "phoneticUk": "/ʃelf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "架子；搁板"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My books are on the shelf.",
+          "translation": "我的书在架子上。"
+        }
+      ]
+    },
+    {
+      "word": "fridge",
+      "phoneticUs": "/frɪdʒ/",
+      "phoneticUk": "/frɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "冰箱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is some milk in the fridge.",
+          "translation": "冰箱里有一些牛奶。"
+        }
+      ]
+    },
+    {
+      "word": "table",
+      "phoneticUs": "/ˈteɪbl/",
+      "phoneticUk": "/ˈteɪbl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "桌子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We eat dinner at the table.",
+          "translation": "我们在桌子旁吃晚饭。"
+        }
+      ]
+    },
+    {
+      "word": "phone",
+      "phoneticUs": "/foʊn/",
+      "phoneticUk": "/fəʊn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电话"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The phone is on the desk.",
+          "translation": "电话在桌子上。"
+        }
+      ]
+    },
+    {
+      "word": "curtain",
+      "phoneticUs": "/ˈkɜːrtn/",
+      "phoneticUk": "/ˈkɜːtn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "窗帘"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please close the curtain at night.",
+          "translation": "晚上请拉上窗帘。"
+        }
+      ]
+    },
+    {
+      "word": "bed",
+      "phoneticUs": "/bed/",
+      "phoneticUk": "/bed/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "床"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I sleep in my bed every night.",
+          "translation": "我每晚在床上睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "mirror",
+      "phoneticUs": "/ˈmɪrər/",
+      "phoneticUk": "/ˈmɪrə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "镜子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I look at myself in the mirror.",
+          "translation": "我在镜子里看自己。"
+        }
+      ]
+    },
+    {
+      "word": "closet",
+      "phoneticUs": "/ˈklɑːzɪt/",
+      "phoneticUk": "/ˈklɒzɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "壁橱；衣橱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My clothes are in the closet.",
+          "translation": "我的衣服在衣橱里。"
+        }
+      ]
+    },
+    {
+      "word": "air-conditioner",
+      "phoneticUs": "/ˈer kənˌdɪʃənər/",
+      "phoneticUk": "/ˈeə kənˌdɪʃənə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "空调"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We turn on the air-conditioner in summer.",
+          "translation": "夏天我们开空调。"
+        }
+      ]
+    },
+    {
+      "word": "trash bin",
+      "phoneticUs": "/træʃ bɪn/",
+      "phoneticUk": "/træʃ bɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "垃圾桶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please put the rubbish in the trash bin.",
+          "translation": "请把垃圾放进垃圾桶。"
+        }
+      ]
+    },
+    {
+      "word": "lamp",
+      "phoneticUs": "/læmp/",
+      "phoneticUk": "/læmp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "台灯；灯"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I read by the lamp at night.",
+          "translation": "晚上我在台灯下读书。"
+        }
+      ]
+    },
+    {
+      "word": "clock",
+      "phoneticUs": "/klɑːk/",
+      "phoneticUk": "/klɒk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "时钟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The clock on the wall shows eight o'clock.",
+          "translation": "墙上的时钟显示八点钟。"
+        }
+      ]
+    },
+    {
+      "word": "TV",
+      "phoneticUs": "/ˌtiːˈviː/",
+      "phoneticUk": "/ˌtiːˈviː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电视；电视机"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We watch TV after dinner.",
+          "translation": "我们晚饭后看电视。"
+        }
+      ]
+    },
+    {
+      "word": "washing machine",
+      "phoneticUs": "/ˈwɑːʃɪŋ məˌʃiːn/",
+      "phoneticUk": "/ˈwɒʃɪŋ məˌʃiːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "洗衣机"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mum puts the clothes in the washing machine.",
+          "translation": "妈妈把衣服放进洗衣机。"
+        }
+      ]
+    },
+    {
+      "word": "home",
+      "phoneticUs": "/hoʊm/",
+      "phoneticUk": "/həʊm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "家；住所"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go home after school.",
+          "translation": "放学后我回家。"
+        }
+      ]
+    }
+  ]
+}

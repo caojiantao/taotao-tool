@@ -1,0 +1,260 @@
+{
+  "name": "（十）学校场所",
+  "words": [
+    {
+      "word": "library",
+      "phoneticUs": "/ˈlaɪbreri/",
+      "phoneticUk": "/ˈlaɪbrəri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "图书馆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I borrow books from the library.",
+          "translation": "我从图书馆借书。"
+        }
+      ]
+    },
+    {
+      "word": "gym",
+      "phoneticUs": "/dʒɪm/",
+      "phoneticUk": "/dʒɪm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "体育馆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We play basketball in the gym.",
+          "translation": "我们在体育馆打篮球。"
+        }
+      ]
+    },
+    {
+      "word": "canteen",
+      "phoneticUs": "/kænˈtiːn/",
+      "phoneticUk": "/kænˈtiːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "食堂；餐厅"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have lunch in the canteen.",
+          "translation": "我们在食堂吃午饭。"
+        }
+      ]
+    },
+    {
+      "word": "art room",
+      "phoneticUs": "/ɑːrt ruːm/",
+      "phoneticUk": "/ɑːt ruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "美术教室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We draw pictures in the art room.",
+          "translation": "我们在美术教室里画画。"
+        }
+      ]
+    },
+    {
+      "word": "computer room",
+      "phoneticUs": "/kəmˈpjuːtər ruːm/",
+      "phoneticUk": "/kəmˈpjuːtə ruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "计算机教室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We learn how to use computers in the computer room.",
+          "translation": "我们在计算机教室学习使用电脑。"
+        }
+      ]
+    },
+    {
+      "word": "music room",
+      "phoneticUs": "/ˈmjuːzɪk ruːm/",
+      "phoneticUk": "/ˈmjuːzɪk ruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "音乐教室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We sing songs in the music room.",
+          "translation": "我们在音乐教室唱歌。"
+        }
+      ]
+    },
+    {
+      "word": "playground",
+      "phoneticUs": "/ˈpleɪɡraʊnd/",
+      "phoneticUk": "/ˈpleɪɡraʊnd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "操场；游乐场"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We run on the playground after class.",
+          "translation": "课后我们在操场上跑步。"
+        }
+      ]
+    },
+    {
+      "word": "first floor",
+      "phoneticUs": "/fɜːrst flɔːr/",
+      "phoneticUk": "/fɜːst flɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "一楼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The canteen is on the first floor.",
+          "translation": "食堂在一楼。"
+        }
+      ]
+    },
+    {
+      "word": "second floor",
+      "phoneticUs": "/ˈsekənd flɔːr/",
+      "phoneticUk": "/ˈsekənd flɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "二楼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Our classroom is on the second floor.",
+          "translation": "我们的教室在二楼。"
+        }
+      ]
+    },
+    {
+      "word": "third floor",
+      "phoneticUs": "/θɜːrd flɔːr/",
+      "phoneticUk": "/θɜːd flɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "三楼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The library is on the third floor.",
+          "translation": "图书馆在三楼。"
+        }
+      ]
+    },
+    {
+      "word": "office",
+      "phoneticUs": "/ˈɑːfɪs/",
+      "phoneticUk": "/ˈɒfɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "办公室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The teacher is in the office.",
+          "translation": "老师在办公室里。"
+        }
+      ]
+    },
+    {
+      "word": "toilet",
+      "phoneticUs": "/ˈtɔɪlɪt/",
+      "phoneticUk": "/ˈtɔɪlɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "厕所；卫生间"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Where is the toilet, please?",
+          "translation": "请问厕所在哪里？"
+        }
+      ]
+    },
+    {
+      "word": "garden",
+      "phoneticUs": "/ˈɡɑːrdn/",
+      "phoneticUk": "/ˈɡɑːdn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "花园"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are many flowers in the garden.",
+          "translation": "花园里有很多花。"
+        }
+      ]
+    },
+    {
+      "word": "gate",
+      "phoneticUs": "/ɡeɪt/",
+      "phoneticUk": "/ɡeɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "大门"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Meet me at the school gate.",
+          "translation": "在学校大门口等我。"
+        }
+      ]
+    },
+    {
+      "word": "hall",
+      "phoneticUs": "/hɔːl/",
+      "phoneticUk": "/hɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "大厅；礼堂"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a meeting in the hall.",
+          "translation": "我们在礼堂开会。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "（三十七）零食与小吃",
+  "words": [
+    {
+      "word": "candy",
+      "phoneticUs": "/ˈkændi/",
+      "phoneticUk": "/ˈkændi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "糖果"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do not eat too much candy.",
+          "translation": "不要吃太多糖果。"
+        }
+      ]
+    },
+    {
+      "word": "ice cream",
+      "phoneticUs": "/ˈaɪs kriːm/",
+      "phoneticUk": "/ˈaɪs kriːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "冰激凌"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like chocolate ice cream.",
+          "translation": "我喜欢巧克力冰激凌。"
+        }
+      ]
+    },
+    {
+      "word": "chocolate",
+      "phoneticUs": "/ˈtʃɒklət/",
+      "phoneticUk": "/ˈtʃɒklət/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "巧克力"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She gives me a chocolate bar.",
+          "translation": "她给了我一块巧克力。"
+        }
+      ]
+    },
+    {
+      "word": "cookie",
+      "phoneticUs": "/ˈkʊki/",
+      "phoneticUk": "/ˈkʊki/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "饼干；曲奇"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mum bakes cookies for us.",
+          "translation": "妈妈为我们烤饼干。"
+        }
+      ]
+    },
+    {
+      "word": "pizza",
+      "phoneticUs": "/ˈpiːtsə/",
+      "phoneticUk": "/ˈpiːtsə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "比萨饼"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We eat pizza on Fridays.",
+          "translation": "我们周五吃比萨。"
+        }
+      ]
+    },
+    {
+      "word": "sandwich",
+      "phoneticUs": "/ˈsænwɪtʃ/",
+      "phoneticUk": "/ˈsænwɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "三明治"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a sandwich for lunch.",
+          "translation": "我午餐吃三明治。"
+        }
+      ]
+    },
+    {
+      "word": "dumpling",
+      "phoneticUs": "/ˈdʌmplɪŋ/",
+      "phoneticUk": "/ˈdʌmplɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "饺子；汤圆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We make dumplings for the New Year.",
+          "translation": "我们在新年包饺子。"
+        }
+      ]
+    },
+    {
+      "word": "salad",
+      "phoneticUs": "/ˈsæləd/",
+      "phoneticUk": "/ˈsæləd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "沙拉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Eat more salad to stay healthy.",
+          "translation": "多吃沙拉保持健康。"
+        }
+      ]
+    },
+    {
+      "word": "sugar",
+      "phoneticUs": "/ˈʃʊɡər/",
+      "phoneticUk": "/ˈʃʊɡə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "糖；糖分"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do not add too much sugar.",
+          "translation": "不要加太多糖。"
+        }
+      ]
+    }
+  ]
+}

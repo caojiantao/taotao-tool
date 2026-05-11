@@ -1,0 +1,277 @@
+{
+  "name": "（二十六）问候与日常用语",
+  "words": [
+    {
+      "word": "hello",
+      "phoneticUs": "/həˈloʊ/",
+      "phoneticUk": "/həˈləʊ/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "你好；喂"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hello! My name is Tom.",
+          "translation": "你好！我叫汤姆。"
+        }
+      ]
+    },
+    {
+      "word": "hi",
+      "phoneticUs": "/haɪ/",
+      "phoneticUk": "/haɪ/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "嗨；你好"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hi! How are you?",
+          "translation": "嗨！你好吗？"
+        }
+      ]
+    },
+    {
+      "word": "goodbye",
+      "phoneticUs": "/ˌɡʊdˈbaɪ/",
+      "phoneticUk": "/ˌɡʊdˈbaɪ/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "再见"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Goodbye! See you tomorrow.",
+          "translation": "再见！明天见。"
+        }
+      ]
+    },
+    {
+      "word": "good morning",
+      "phoneticUs": "/ˌɡʊd ˈmɔːrnɪŋ/",
+      "phoneticUk": "/ˌɡʊd ˈmɔːnɪŋ/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "早上好"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good morning, Miss Li!",
+          "translation": "李老师，早上好！"
+        }
+      ]
+    },
+    {
+      "word": "good afternoon",
+      "phoneticUs": "/ˌɡʊd ˌæftərˈnuːn/",
+      "phoneticUk": "/ˌɡʊd ˌɑːftəˈnuːn/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "下午好"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good afternoon, everyone.",
+          "translation": "大家下午好。"
+        }
+      ]
+    },
+    {
+      "word": "good evening",
+      "phoneticUs": "/ˌɡʊd ˈiːvnɪŋ/",
+      "phoneticUk": "/ˌɡʊd ˈiːvnɪŋ/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "晚上好"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good evening! Come in, please.",
+          "translation": "晚上好！请进。"
+        }
+      ]
+    },
+    {
+      "word": "good night",
+      "phoneticUs": "/ˌɡʊd naɪt/",
+      "phoneticUk": "/ˌɡʊd naɪt/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "晚安"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good night! Sleep well.",
+          "translation": "晚安！好好睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "thank you",
+      "phoneticUs": "/ˈθæŋk juː/",
+      "phoneticUk": "/ˈθæŋk juː/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "谢谢你"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Thank you for your help.",
+          "translation": "谢谢你的帮助。"
+        }
+      ]
+    },
+    {
+      "word": "sorry",
+      "phoneticUs": "/ˈsɒri/",
+      "phoneticUk": "/ˈsɒri/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "对不起；抱歉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sorry, I am late.",
+          "translation": "对不起，我迟到了。"
+        }
+      ]
+    },
+    {
+      "word": "excuse me",
+      "phoneticUs": "/ɪkˈskjuːz miː/",
+      "phoneticUk": "/ɪkˈskjuːz miː/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "打扰了；劳驾"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Excuse me, where is the library?",
+          "translation": "打扰了，图书馆在哪里？"
+        }
+      ]
+    },
+    {
+      "word": "please",
+      "phoneticUs": "/pliːz/",
+      "phoneticUk": "/pliːz/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "请"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sit down, please.",
+          "translation": "请坐下。"
+        }
+      ]
+    },
+    {
+      "word": "welcome",
+      "phoneticUs": "/ˈwelkəm/",
+      "phoneticUk": "/ˈwelkəm/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "欢迎；不客气"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Welcome to our school!",
+          "translation": "欢迎来到我们学校！"
+        }
+      ]
+    },
+    {
+      "word": "yes",
+      "phoneticUs": "/jes/",
+      "phoneticUk": "/jes/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "是的；对"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Yes, I like apples.",
+          "translation": "是的，我喜欢苹果。"
+        }
+      ]
+    },
+    {
+      "word": "no",
+      "phoneticUs": "/noʊ/",
+      "phoneticUk": "/nəʊ/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "不；不是"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "No, I do not have a pet.",
+          "translation": "不，我没有宠物。"
+        }
+      ]
+    },
+    {
+      "word": "OK",
+      "phoneticUs": "/ˌoʊˈkeɪ/",
+      "phoneticUk": "/ˌəʊˈkeɪ/",
+      "senses": [
+        {
+          "pos": "int.",
+          "meaning": "好的；可以"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Is that OK with you?",
+          "translation": "你觉得可以吗？"
+        }
+      ]
+    },
+    {
+      "word": "nice to meet you",
+      "phoneticUs": "/naɪs tə miːt juː/",
+      "phoneticUk": "/naɪs tə miːt juː/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "很高兴认识你"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Nice to meet you, I am Amy.",
+          "translation": "很高兴认识你，我叫艾米。"
+        }
+      ]
+    }
+  ]
+}

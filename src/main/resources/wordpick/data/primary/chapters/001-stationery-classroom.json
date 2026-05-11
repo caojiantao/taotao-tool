@@ -1,0 +1,464 @@
+{
+  "name": "（一）学习文具与教室",
+  "words": [
+    {
+      "word": "pen",
+      "phoneticUs": "/pɛn/",
+      "phoneticUk": "/pɛn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钢笔"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This is my pen.",
+          "translation": "这是我的钢笔。"
+        }
+      ]
+    },
+    {
+      "word": "pencil",
+      "phoneticUs": "/ˈpɛnsəl/",
+      "phoneticUk": "/ˈpɛnsɪl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "铅笔"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have a pencil in my hand.",
+          "translation": "我手里有一支铅笔。"
+        }
+      ]
+    },
+    {
+      "word": "pencil-case",
+      "phoneticUs": "/ˈpɛnsəl keɪs/",
+      "phoneticUk": "/ˈpɛnsɪl keɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "铅笔盒"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My pencil-case is blue.",
+          "translation": "我的铅笔盒是蓝色的。"
+        }
+      ]
+    },
+    {
+      "word": "ruler",
+      "phoneticUs": "/ˈruːlər/",
+      "phoneticUk": "/ˈruːlə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "尺子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can I use your ruler?",
+          "translation": "我可以用一下你的尺子吗？"
+        }
+      ]
+    },
+    {
+      "word": "eraser",
+      "phoneticUs": "/ɪˈreɪzər/",
+      "phoneticUk": "/ɪˈreɪzə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "橡皮擦"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I need an eraser.",
+          "translation": "我需要一块橡皮。"
+        }
+      ]
+    },
+    {
+      "word": "crayon",
+      "phoneticUs": "/ˈkreɪɑːn/",
+      "phoneticUk": "/ˈkreɪən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蜡笔"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is drawing with a crayon.",
+          "translation": "她正在用蜡笔画画。"
+        }
+      ]
+    },
+    {
+      "word": "book",
+      "phoneticUs": "/bʊk/",
+      "phoneticUk": "/bʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please open your book.",
+          "translation": "请打开你的书。"
+        }
+      ]
+    },
+    {
+      "word": "bag",
+      "phoneticUs": "/bæɡ/",
+      "phoneticUk": "/bæɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书包"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My bag is heavy today.",
+          "translation": "我今天的书包很重。"
+        }
+      ]
+    },
+    {
+      "word": "sharpener",
+      "phoneticUs": "/ˈʃɑːrpənər/",
+      "phoneticUk": "/ˈʃɑːpənə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "卷笔刀"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Where is my sharpener?",
+          "translation": "我的卷笔刀在哪里？"
+        }
+      ]
+    },
+    {
+      "word": "school",
+      "phoneticUs": "/skuːl/",
+      "phoneticUk": "/skuːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "学校"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go to school every day.",
+          "translation": "我每天去上学。"
+        }
+      ]
+    },
+    {
+      "word": "window",
+      "phoneticUs": "/ˈwɪndoʊ/",
+      "phoneticUk": "/ˈwɪndəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "窗户"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please open the window.",
+          "translation": "请把窗户打开。"
+        }
+      ]
+    },
+    {
+      "word": "blackboard",
+      "phoneticUs": "/ˈblækbɔːrd/",
+      "phoneticUk": "/ˈblækbɔːd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "黑板"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Look at the blackboard, please.",
+          "translation": "请看黑板。"
+        }
+      ]
+    },
+    {
+      "word": "light",
+      "phoneticUs": "/laɪt/",
+      "phoneticUk": "/laɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "灯"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please turn on the light.",
+          "translation": "请把灯打开。"
+        }
+      ]
+    },
+    {
+      "word": "picture",
+      "phoneticUs": "/ˈpɪktʃər/",
+      "phoneticUk": "/ˈpɪktʃə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "图画；图片"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a picture on the wall.",
+          "translation": "墙上有一幅图画。"
+        }
+      ]
+    },
+    {
+      "word": "door",
+      "phoneticUs": "/dɔːr/",
+      "phoneticUk": "/dɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "门"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Close the door, please.",
+          "translation": "请关上门。"
+        }
+      ]
+    },
+    {
+      "word": "floor",
+      "phoneticUs": "/flɔːr/",
+      "phoneticUk": "/flɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "地板"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The floor is clean.",
+          "translation": "地板很干净。"
+        }
+      ]
+    },
+    {
+      "word": "classroom",
+      "phoneticUs": "/ˈklæsruːm/",
+      "phoneticUk": "/ˈklɑːsruːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "教室"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This is our classroom.",
+          "translation": "这是我们的教室。"
+        }
+      ]
+    },
+    {
+      "word": "computer",
+      "phoneticUs": "/kəmˈpjuːtər/",
+      "phoneticUk": "/kəmˈpjuːtə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电脑"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a computer in our classroom.",
+          "translation": "我们教室里有一台电脑。"
+        }
+      ]
+    },
+    {
+      "word": "desk",
+      "phoneticUs": "/dɛsk/",
+      "phoneticUk": "/dɛsk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "课桌"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Put your book on the desk.",
+          "translation": "把书放在课桌上。"
+        }
+      ]
+    },
+    {
+      "word": "chair",
+      "phoneticUs": "/tʃɛr/",
+      "phoneticUk": "/tʃɛə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "椅子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please sit on the chair.",
+          "translation": "请坐在椅子上。"
+        }
+      ]
+    },
+    {
+      "word": "wall",
+      "phoneticUs": "/wɔːl/",
+      "phoneticUk": "/wɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "墙"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The map is on the wall.",
+          "translation": "地图在墙上。"
+        }
+      ]
+    },
+    {
+      "word": "fan",
+      "phoneticUs": "/fæn/",
+      "phoneticUk": "/fæn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电扇"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Turn on the fan, please.",
+          "translation": "请把电扇打开。"
+        }
+      ]
+    },
+    {
+      "word": "notebook",
+      "phoneticUs": "/ˈnoʊtbʊk/",
+      "phoneticUk": "/ˈnəʊtbʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "笔记本"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I write notes in my notebook.",
+          "translation": "我在笔记本上记笔记。"
+        }
+      ]
+    },
+    {
+      "word": "Chinese book",
+      "phoneticUs": "/ˈtʃaɪniːz bʊk/",
+      "phoneticUk": "/ˈtʃaɪniːz bʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "语文书"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I left my Chinese book at home.",
+          "translation": "我把语文书忘在家里了。"
+        }
+      ]
+    },
+    {
+      "word": "English book",
+      "phoneticUs": "/ˈɪŋɡlɪʃ bʊk/",
+      "phoneticUk": "/ˈɪŋɡlɪʃ bʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "英语书"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do you have your English book?",
+          "translation": "你带英语书了吗？"
+        }
+      ]
+    },
+    {
+      "word": "word",
+      "phoneticUs": "/wɜːrd/",
+      "phoneticUk": "/wɜːd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "单词；词语"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I learn ten new words every day.",
+          "translation": "我每天学十个新单词。"
+        }
+      ]
+    },
+    {
+      "word": "story",
+      "phoneticUs": "/ˈstɔːri/",
+      "phoneticUk": "/ˈstɔːri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "故事"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mum tells me a story at night.",
+          "translation": "妈妈晚上给我讲故事。"
+        }
+      ]
+    }
+  ]
+}

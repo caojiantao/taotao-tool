@@ -22,6 +22,8 @@ CREATE TABLE `system_user`
 BEGIN;
 INSERT INTO `system_user`
 VALUES (1, 'caojiantao', '4f563da976e9e3cecbdc9f2ad815d57c', '涛涛', '98bdc67b-6caa-4b18-abef-c55be2434db4.jpg', '2022-10-25 20:40:36', '2022-10-25 20:40:38');
+INSERT INTO `system_user`
+VALUES (2, 'chenlisha', 'ea7fb8a44f9f017fdb96d10f279b960f', '沙沙', '98bdc67b-6caa-4b18-abef-c55be2434db4.jpg', '2026-05-07 20:15:16', '2026-05-07 20:15:16');
 COMMIT;
 
 -- ----------------------------

@@ -1,0 +1,328 @@
+{
+  "name": "（二十二）运动与体育",
+  "words": [
+    {
+      "word": "football",
+      "phoneticUs": "/ˈfʊtbɔːl/",
+      "phoneticUk": "/ˈfʊtbɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "足球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He plays football every Saturday.",
+          "translation": "他每个周六踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "basketball",
+      "phoneticUs": "/ˈbæskɪtbɔːl/",
+      "phoneticUk": "/ˈbɑːskɪtbɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "篮球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Our team won the basketball match.",
+          "translation": "我们队赢得了篮球比赛。"
+        }
+      ]
+    },
+    {
+      "word": "volleyball",
+      "phoneticUs": "/ˈvɑːlibɔːl/",
+      "phoneticUk": "/ˈvɒlibɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "排球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is good at volleyball.",
+          "translation": "她擅长打排球。"
+        }
+      ]
+    },
+    {
+      "word": "ping-pong",
+      "phoneticUs": "/ˈpɪŋ pɒŋ/",
+      "phoneticUk": "/ˈpɪŋ pɒŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "乒乓球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Ping-pong is very popular in China.",
+          "translation": "乒乓球在中国非常流行。"
+        }
+      ]
+    },
+    {
+      "word": "tennis",
+      "phoneticUs": "/ˈtenɪs/",
+      "phoneticUk": "/ˈtenɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "网球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My sister likes to play tennis.",
+          "translation": "我姐姐喜欢打网球。"
+        }
+      ]
+    },
+    {
+      "word": "badminton",
+      "phoneticUs": "/ˈbædmɪntən/",
+      "phoneticUk": "/ˈbædmɪntən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "羽毛球"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Let us play badminton after school.",
+          "translation": "放学后我们去打羽毛球吧。"
+        }
+      ]
+    },
+    {
+      "word": "exercise",
+      "phoneticUs": "/ˈeksərsaɪz/",
+      "phoneticUk": "/ˈeksəsaɪz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "锻炼；运动"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Exercise is good for your health.",
+          "translation": "锻炼对你的健康有好处。"
+        }
+      ]
+    },
+    {
+      "word": "team",
+      "phoneticUs": "/tiːm/",
+      "phoneticUk": "/tiːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "队；团队"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We are in the same team.",
+          "translation": "我们在同一个队。"
+        }
+      ]
+    },
+    {
+      "word": "match",
+      "phoneticUs": "/mætʃ/",
+      "phoneticUk": "/mætʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "比赛；竞赛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The football match starts at three.",
+          "translation": "足球比赛三点开始。"
+        }
+      ]
+    },
+    {
+      "word": "player",
+      "phoneticUs": "/ˈpleɪər/",
+      "phoneticUk": "/ˈpleɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "运动员；选手"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He is a great football player.",
+          "translation": "他是一名出色的足球运动员。"
+        }
+      ]
+    },
+    {
+      "word": "score",
+      "phoneticUs": "/skɔːr/",
+      "phoneticUk": "/skɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "得分；比分"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The score is two to one.",
+          "translation": "比分是二比一。"
+        }
+      ]
+    },
+    {
+      "word": "skate",
+      "phoneticUs": "/skeɪt/",
+      "phoneticUk": "/skeɪt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "溜冰；滑冰"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you skate on ice?",
+          "translation": "你会在冰上溜冰吗？"
+        }
+      ]
+    },
+    {
+      "word": "ski",
+      "phoneticUs": "/skiː/",
+      "phoneticUk": "/skiː/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "滑雪"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I want to learn to ski.",
+          "translation": "我想学习滑雪。"
+        }
+      ]
+    },
+    {
+      "word": "win",
+      "phoneticUs": "/wɪn/",
+      "phoneticUk": "/wɪn/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "赢；获胜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Our team will win!",
+          "translation": "我们队会赢的！"
+        }
+      ]
+    },
+    {
+      "word": "lose",
+      "phoneticUs": "/luːz/",
+      "phoneticUk": "/luːz/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "输；失败"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do not be sad if you lose.",
+          "translation": "如果输了不要难过。"
+        }
+      ]
+    },
+    {
+      "word": "throw",
+      "phoneticUs": "/θroʊ/",
+      "phoneticUk": "/θrəʊ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "扔；投掷"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Throw the ball to me.",
+          "translation": "把球扔给我。"
+        }
+      ]
+    },
+    {
+      "word": "catch",
+      "phoneticUs": "/kætʃ/",
+      "phoneticUk": "/kætʃ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "接；抓住"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you catch the ball?",
+          "translation": "你能接住球吗？"
+        }
+      ]
+    },
+    {
+      "word": "kick",
+      "phoneticUs": "/kɪk/",
+      "phoneticUk": "/kɪk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "踢"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He can kick the ball very far.",
+          "translation": "他能把球踢得很远。"
+        }
+      ]
+    },
+    {
+      "word": "race",
+      "phoneticUs": "/reɪs/",
+      "phoneticUk": "/reɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "赛跑；竞赛"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She won the running race.",
+          "translation": "她赢得了赛跑。"
+        }
+      ]
+    }
+  ]
+}

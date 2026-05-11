@@ -1,0 +1,243 @@
+{
+  "name": "（三十五）时间与频率词",
+  "words": [
+    {
+      "word": "yesterday",
+      "phoneticUs": "/ˈjestərdeɪ/",
+      "phoneticUk": "/ˈjestədeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "昨天"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I went to the park yesterday.",
+          "translation": "我昨天去了公园。"
+        }
+      ]
+    },
+    {
+      "word": "day",
+      "phoneticUs": "/deɪ/",
+      "phoneticUk": "/deɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "一天；白天"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is a fine day today.",
+          "translation": "今天天气很好。"
+        }
+      ]
+    },
+    {
+      "word": "week",
+      "phoneticUs": "/wiːk/",
+      "phoneticUk": "/wiːk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期；周"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are seven days in a week.",
+          "translation": "一周有七天。"
+        }
+      ]
+    },
+    {
+      "word": "month",
+      "phoneticUs": "/mʌnθ/",
+      "phoneticUk": "/mʌnθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "月；月份"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My birthday is next month.",
+          "translation": "我的生日在下个月。"
+        }
+      ]
+    },
+    {
+      "word": "now",
+      "phoneticUs": "/naʊ/",
+      "phoneticUk": "/naʊ/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "现在；此刻"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What are you doing now?",
+          "translation": "你现在在做什么？"
+        }
+      ]
+    },
+    {
+      "word": "then",
+      "phoneticUs": "/ðen/",
+      "phoneticUk": "/ðen/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "那时；然后"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wash your hands and then eat.",
+          "translation": "先洗手，然后再吃饭。"
+        }
+      ]
+    },
+    {
+      "word": "before",
+      "phoneticUs": "/bɪˈfɔːr/",
+      "phoneticUk": "/bɪˈfɔː/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "在……之前"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Brush your teeth before bed.",
+          "translation": "睡觉前刷牙。"
+        }
+      ]
+    },
+    {
+      "word": "after",
+      "phoneticUs": "/ˈæftər/",
+      "phoneticUk": "/ˈɑːftə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "在……之后"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We play after school.",
+          "translation": "放学后我们去玩。"
+        }
+      ]
+    },
+    {
+      "word": "still",
+      "phoneticUs": "/stɪl/",
+      "phoneticUk": "/stɪl/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "仍然；还是"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is still raining outside.",
+          "translation": "外面还在下雨。"
+        }
+      ]
+    },
+    {
+      "word": "soon",
+      "phoneticUs": "/suːn/",
+      "phoneticUk": "/suːn/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "不久；很快"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Dinner will be ready soon.",
+          "translation": "晚饭很快就好了。"
+        }
+      ]
+    },
+    {
+      "word": "again",
+      "phoneticUs": "/əˈɡen/",
+      "phoneticUk": "/əˈɡeɪn/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "再次；又"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please say that again.",
+          "translation": "请再说一遍。"
+        }
+      ]
+    },
+    {
+      "word": "last",
+      "phoneticUs": "/læst/",
+      "phoneticUk": "/lɑːst/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "上一个的；最后的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I saw him last week.",
+          "translation": "我上周见过他。"
+        }
+      ]
+    },
+    {
+      "word": "next",
+      "phoneticUs": "/nekst/",
+      "phoneticUk": "/nekst/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "下一个的；紧接的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "See you next Monday!",
+          "translation": "下周一见！"
+        }
+      ]
+    },
+    {
+      "word": "year",
+      "phoneticUs": "/jɪr/",
+      "phoneticUk": "/jɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "年；岁"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is nine years old.",
+          "translation": "她九岁了。"
+        }
+      ]
+    }
+  ]
+}

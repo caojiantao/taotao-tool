@@ -1,0 +1,311 @@
+{
+  "name": "（十四）购物与价格",
+  "words": [
+    {
+      "word": "buy",
+      "phoneticUs": "/baɪ/",
+      "phoneticUk": "/baɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "买；购买"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I want to buy a new book.",
+          "translation": "我想买一本新书。"
+        }
+      ]
+    },
+    {
+      "word": "sell",
+      "phoneticUs": "/sel/",
+      "phoneticUk": "/sel/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "卖；出售"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This shop sells fruit.",
+          "translation": "这家商店卖水果。"
+        }
+      ]
+    },
+    {
+      "word": "shop",
+      "phoneticUs": "/ʃɑːp/",
+      "phoneticUk": "/ʃɒp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "商店"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a food shop near my home.",
+          "translation": "我家附近有一家食品商店。"
+        }
+      ]
+    },
+    {
+      "word": "store",
+      "phoneticUs": "/stɔːr/",
+      "phoneticUk": "/stɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "商店；百货店"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We go to the store every weekend.",
+          "translation": "我们每个周末去商店。"
+        }
+      ]
+    },
+    {
+      "word": "price",
+      "phoneticUs": "/praɪs/",
+      "phoneticUk": "/praɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "价格；价钱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is the price of this bag?",
+          "translation": "这个包多少钱？"
+        }
+      ]
+    },
+    {
+      "word": "cheap",
+      "phoneticUs": "/tʃiːp/",
+      "phoneticUk": "/tʃiːp/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "便宜的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This pen is very cheap.",
+          "translation": "这支钢笔很便宜。"
+        }
+      ]
+    },
+    {
+      "word": "expensive",
+      "phoneticUs": "/ɪkˈspensɪv/",
+      "phoneticUk": "/ɪkˈspensɪv/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "贵的；昂贵的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This coat is too expensive for me.",
+          "translation": "这件外套对我来说太贵了。"
+        }
+      ]
+    },
+    {
+      "word": "yuan",
+      "phoneticUs": "/juːˈɑːn/",
+      "phoneticUk": "/juːˈæn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "元（人民币单位）"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This apple costs two yuan.",
+          "translation": "这个苹果两元钱。"
+        }
+      ]
+    },
+    {
+      "word": "how much",
+      "phoneticUs": "/haʊ mʌtʃ/",
+      "phoneticUk": "/haʊ mʌtʃ/",
+      "senses": [
+        {
+          "pos": "phr.",
+          "meaning": "多少钱；多少"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "How much is this T-shirt?",
+          "translation": "这件T恤衫多少钱？"
+        }
+      ]
+    },
+    {
+      "word": "money",
+      "phoneticUs": "/ˈmʌni/",
+      "phoneticUk": "/ˈmʌni/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钱；金钱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I save my money to buy a bike.",
+          "translation": "我存钱买一辆自行车。"
+        }
+      ]
+    },
+    {
+      "word": "pay",
+      "phoneticUs": "/peɪ/",
+      "phoneticUk": "/peɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "付款；支付"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please pay at the counter.",
+          "translation": "请在收银台付款。"
+        }
+      ]
+    },
+    {
+      "word": "change",
+      "phoneticUs": "/tʃeɪndʒ/",
+      "phoneticUk": "/tʃeɪndʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "找零；零钱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Here is your change.",
+          "translation": "这是找给你的零钱。"
+        }
+      ]
+    },
+    {
+      "word": "box",
+      "phoneticUs": "/bɑːks/",
+      "phoneticUk": "/bɒks/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "盒子；箱子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The shoes come in a big box.",
+          "translation": "鞋子装在一个大盒子里。"
+        }
+      ]
+    },
+    {
+      "word": "size",
+      "phoneticUs": "/saɪz/",
+      "phoneticUk": "/saɪz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "尺寸；大小"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What size do you wear?",
+          "translation": "你穿多大号？"
+        }
+      ]
+    },
+    {
+      "word": "colour",
+      "phoneticUs": "/ˈkʌlər/",
+      "phoneticUk": "/ˈkʌlə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "颜色"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What colour do you like?",
+          "translation": "你喜欢什么颜色？"
+        }
+      ]
+    },
+    {
+      "word": "new",
+      "phoneticUs": "/njuː/",
+      "phoneticUk": "/njuː/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "新的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I want to buy a new pencil case.",
+          "translation": "我想买一个新文具盒。"
+        }
+      ]
+    },
+    {
+      "word": "old",
+      "phoneticUs": "/oʊld/",
+      "phoneticUk": "/əʊld/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "旧的；老的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My old shoes are broken.",
+          "translation": "我的旧鞋子破了。"
+        }
+      ]
+    },
+    {
+      "word": "sale",
+      "phoneticUs": "/seɪl/",
+      "phoneticUk": "/seɪl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "促销；降价出售"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The shoes are on sale today.",
+          "translation": "鞋子今天正在促销。"
+        }
+      ]
+    }
+  ]
+}

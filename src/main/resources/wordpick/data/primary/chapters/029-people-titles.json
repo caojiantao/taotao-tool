@@ -1,0 +1,209 @@
+{
+  "name": "（二十九）人物与称谓",
+  "words": [
+    {
+      "word": "boy",
+      "phoneticUs": "/bɔɪ/",
+      "phoneticUk": "/bɔɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "男孩"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The boy is playing football.",
+          "translation": "这个男孩在踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "girl",
+      "phoneticUs": "/ɡɜːrl/",
+      "phoneticUk": "/ɡɜːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "女孩"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The girl has long hair.",
+          "translation": "这个女孩有一头长发。"
+        }
+      ]
+    },
+    {
+      "word": "friend",
+      "phoneticUs": "/frend/",
+      "phoneticUk": "/frend/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "朋友"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is my best friend.",
+          "translation": "她是我最好的朋友。"
+        }
+      ]
+    },
+    {
+      "word": "name",
+      "phoneticUs": "/neɪm/",
+      "phoneticUk": "/neɪm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "名字；姓名"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My name is Li Ming.",
+          "translation": "我的名字叫李明。"
+        }
+      ]
+    },
+    {
+      "word": "person",
+      "phoneticUs": "/ˈpɜːrsn/",
+      "phoneticUk": "/ˈpɜːsn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "人；个人"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is a nice person.",
+          "translation": "她是个好人。"
+        }
+      ]
+    },
+    {
+      "word": "man",
+      "phoneticUs": "/mæn/",
+      "phoneticUk": "/mæn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "男人；男性"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The man is a teacher.",
+          "translation": "那个男人是老师。"
+        }
+      ]
+    },
+    {
+      "word": "woman",
+      "phoneticUs": "/ˈwʊmən/",
+      "phoneticUk": "/ˈwʊmən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "女人；女性"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The woman is a doctor.",
+          "translation": "那个女人是医生。"
+        }
+      ]
+    },
+    {
+      "word": "child",
+      "phoneticUs": "/tʃaɪld/",
+      "phoneticUk": "/tʃaɪld/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "孩子（复数 children）"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Every child likes playing.",
+          "translation": "每个孩子都喜欢玩耍。"
+        }
+      ]
+    },
+    {
+      "word": "people",
+      "phoneticUs": "/ˈpiːpl/",
+      "phoneticUk": "/ˈpiːpl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "人们；人"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Many people live in the city.",
+          "translation": "很多人住在城市里。"
+        }
+      ]
+    },
+    {
+      "word": "student",
+      "phoneticUs": "/ˈstuːdnt/",
+      "phoneticUk": "/ˈstjuːdnt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "学生"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am a student in Grade 4.",
+          "translation": "我是四年级的学生。"
+        }
+      ]
+    },
+    {
+      "word": "age",
+      "phoneticUs": "/eɪdʒ/",
+      "phoneticUk": "/eɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "年龄；岁数"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is your age?",
+          "translation": "你多少岁了？"
+        }
+      ]
+    },
+    {
+      "word": "everyone",
+      "phoneticUs": "/ˈevriwʌn/",
+      "phoneticUk": "/ˈevriwʌn/",
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "每个人；人人"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Everyone is happy today.",
+          "translation": "今天每个人都很开心。"
+        }
+      ]
+    }
+  ]
+}

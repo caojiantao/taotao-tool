@@ -1,0 +1,311 @@
+{
+  "name": "（二十七）数字扩展（十三至一百）",
+  "words": [
+    {
+      "word": "thirteen",
+      "phoneticUs": "/ˌθɜːrˈtiːn/",
+      "phoneticUk": "/ˌθɜːˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十三"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is thirteen years old.",
+          "translation": "她十三岁了。"
+        }
+      ]
+    },
+    {
+      "word": "fourteen",
+      "phoneticUs": "/ˌfɔːrˈtiːn/",
+      "phoneticUk": "/ˌfɔːˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十四"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He has fourteen books.",
+          "translation": "他有十四本书。"
+        }
+      ]
+    },
+    {
+      "word": "fifteen",
+      "phoneticUs": "/ˌfɪfˈtiːn/",
+      "phoneticUk": "/ˌfɪfˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十五"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are fifteen students in our group.",
+          "translation": "我们小组有十五名学生。"
+        }
+      ]
+    },
+    {
+      "word": "sixteen",
+      "phoneticUs": "/ˌsɪkˈstiːn/",
+      "phoneticUk": "/ˌsɪkˈstiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十六"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have sixteen pencils.",
+          "translation": "我有十六支铅笔。"
+        }
+      ]
+    },
+    {
+      "word": "seventeen",
+      "phoneticUs": "/ˌsevnˈtiːn/",
+      "phoneticUk": "/ˌsevnˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十七"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My cousin is seventeen.",
+          "translation": "我的表弟十七岁。"
+        }
+      ]
+    },
+    {
+      "word": "eighteen",
+      "phoneticUs": "/ˌeɪˈtiːn/",
+      "phoneticUk": "/ˌeɪˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十八"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are eighteen birds on the tree.",
+          "translation": "树上有十八只鸟。"
+        }
+      ]
+    },
+    {
+      "word": "nineteen",
+      "phoneticUs": "/ˌnaɪnˈtiːn/",
+      "phoneticUk": "/ˌnaɪnˈtiːn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十九"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She scored nineteen points.",
+          "translation": "她得了十九分。"
+        }
+      ]
+    },
+    {
+      "word": "twenty",
+      "phoneticUs": "/ˈtwenti/",
+      "phoneticUk": "/ˈtwenti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "二十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have twenty yuan.",
+          "translation": "我有二十元钱。"
+        }
+      ]
+    },
+    {
+      "word": "thirty",
+      "phoneticUs": "/ˈθɜːrti/",
+      "phoneticUk": "/ˈθɜːti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "三十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are thirty days in a month.",
+          "translation": "一个月有三十天。"
+        }
+      ]
+    },
+    {
+      "word": "forty",
+      "phoneticUs": "/ˈfɔːrti/",
+      "phoneticUk": "/ˈfɔːti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "四十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My dad is forty years old.",
+          "translation": "我爸爸四十岁了。"
+        }
+      ]
+    },
+    {
+      "word": "fifty",
+      "phoneticUs": "/ˈfɪfti/",
+      "phoneticUk": "/ˈfɪfti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "五十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The book costs fifty yuan.",
+          "translation": "这本书五十元。"
+        }
+      ]
+    },
+    {
+      "word": "sixty",
+      "phoneticUs": "/ˈsɪksti/",
+      "phoneticUk": "/ˈsɪksti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "六十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Grandpa is sixty years old.",
+          "translation": "爷爷六十岁了。"
+        }
+      ]
+    },
+    {
+      "word": "seventy",
+      "phoneticUs": "/ˈsevnti/",
+      "phoneticUk": "/ˈsevnti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "七十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Grandma walks seventy steps each morning.",
+          "translation": "奶奶每天早上走七十步。"
+        }
+      ]
+    },
+    {
+      "word": "eighty",
+      "phoneticUs": "/ˈeɪti/",
+      "phoneticUk": "/ˈeɪti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "八十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My great-grandmother is eighty.",
+          "translation": "我的曾祖母八十岁了。"
+        }
+      ]
+    },
+    {
+      "word": "ninety",
+      "phoneticUs": "/ˈnaɪnti/",
+      "phoneticUk": "/ˈnaɪnti/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "九十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She scored ninety on the test.",
+          "translation": "她考试得了九十分。"
+        }
+      ]
+    },
+    {
+      "word": "hundred",
+      "phoneticUs": "/ˈhʌndrəd/",
+      "phoneticUk": "/ˈhʌndrəd/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "百；一百"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are one hundred students.",
+          "translation": "有一百名学生。"
+        }
+      ]
+    },
+    {
+      "word": "thousand",
+      "phoneticUs": "/ˈθaʊznd/",
+      "phoneticUk": "/ˈθaʊznd/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "千；一千"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This coat costs one thousand yuan.",
+          "translation": "这件外套一千元。"
+        }
+      ]
+    },
+    {
+      "word": "number",
+      "phoneticUs": "/ˈnʌmbər/",
+      "phoneticUk": "/ˈnʌmbə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "数字；号码"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is your phone number?",
+          "translation": "你的电话号码是多少？"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "name": "（九）方位与位置",
+  "words": [
+    {
+      "word": "in",
+      "phoneticUs": "/ɪn/",
+      "phoneticUk": "/ɪn/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……里面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The pencil is in the box.",
+          "translation": "铅笔在盒子里。"
+        }
+      ]
+    },
+    {
+      "word": "on",
+      "phoneticUs": "/ɑːn/",
+      "phoneticUk": "/ɒn/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……上面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The book is on the desk.",
+          "translation": "书在桌子上。"
+        }
+      ]
+    },
+    {
+      "word": "under",
+      "phoneticUs": "/ˈʌndər/",
+      "phoneticUk": "/ˈʌndə/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……下面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cat is under the chair.",
+          "translation": "猫在椅子下面。"
+        }
+      ]
+    },
+    {
+      "word": "behind",
+      "phoneticUs": "/bɪˈhaɪnd/",
+      "phoneticUk": "/bɪˈhaɪnd/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……后面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The ball is behind the door.",
+          "translation": "球在门后面。"
+        }
+      ]
+    },
+    {
+      "word": "in front of",
+      "phoneticUs": "/ɪn frʌnt əv/",
+      "phoneticUk": "/ɪn frʌnt əv/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……前面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a garden in front of the school.",
+          "translation": "学校前面有一个花园。"
+        }
+      ]
+    },
+    {
+      "word": "next to",
+      "phoneticUs": "/nekst tuː/",
+      "phoneticUk": "/nekst tuː/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "紧挨着；在……旁边"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The post office is next to the bank.",
+          "translation": "邮局紧挨着银行。"
+        }
+      ]
+    },
+    {
+      "word": "near",
+      "phoneticUs": "/nɪr/",
+      "phoneticUk": "/nɪə/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……附近"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a park near my home.",
+          "translation": "我家附近有一个公园。"
+        }
+      ]
+    },
+    {
+      "word": "beside",
+      "phoneticUs": "/bɪˈsaɪd/",
+      "phoneticUk": "/bɪˈsaɪd/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……旁边"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She sits beside me in class.",
+          "translation": "她在课堂上坐在我旁边。"
+        }
+      ]
+    },
+    {
+      "word": "left",
+      "phoneticUs": "/left/",
+      "phoneticUk": "/left/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "左边"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Turn left at the traffic light.",
+          "translation": "在红绿灯处向左转。"
+        }
+      ]
+    },
+    {
+      "word": "right",
+      "phoneticUs": "/raɪt/",
+      "phoneticUk": "/raɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "右边"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The shop is on the right.",
+          "translation": "商店在右边。"
+        }
+      ]
+    },
+    {
+      "word": "up",
+      "phoneticUs": "/ʌp/",
+      "phoneticUk": "/ʌp/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "向上"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Look up at the sky.",
+          "translation": "向上看天空。"
+        }
+      ]
+    },
+    {
+      "word": "down",
+      "phoneticUs": "/daʊn/",
+      "phoneticUk": "/daʊn/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "向下"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The bird flew down from the tree.",
+          "translation": "鸟从树上飞了下来。"
+        }
+      ]
+    },
+    {
+      "word": "inside",
+      "phoneticUs": "/ˈɪnsaɪd/",
+      "phoneticUk": "/ˈɪnsaɪd/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……里面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Stay inside when it rains.",
+          "translation": "下雨时待在里面。"
+        }
+      ]
+    },
+    {
+      "word": "outside",
+      "phoneticUs": "/ˈaʊtsaɪd/",
+      "phoneticUk": "/ˈaʊtsaɪd/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……外面"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The children play outside in the afternoon.",
+          "translation": "孩子们下午在外面玩。"
+        }
+      ]
+    },
+    {
+      "word": "between",
+      "phoneticUs": "/bɪˈtwiːn/",
+      "phoneticUk": "/bɪˈtwiːn/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……之间"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The library is between the gym and the office.",
+          "translation": "图书馆在体育馆和办公室之间。"
+        }
+      ]
+    },
+    {
+      "word": "above",
+      "phoneticUs": "/əˈbʌv/",
+      "phoneticUk": "/əˈbʌv/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……上方"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The lamp is above the desk.",
+          "translation": "台灯在桌子上方。"
+        }
+      ]
+    },
+    {
+      "word": "below",
+      "phoneticUs": "/bɪˈloʊ/",
+      "phoneticUk": "/bɪˈləʊ/",
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……下方"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The shoes are below the bed.",
+          "translation": "鞋子在床下方。"
+        }
+      ]
+    },
+    {
+      "word": "here",
+      "phoneticUs": "/hɪr/",
+      "phoneticUk": "/hɪə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "这里；在这里"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Come here, please.",
+          "translation": "请过来这里。"
+        }
+      ]
+    },
+    {
+      "word": "there",
+      "phoneticUs": "/ðer/",
+      "phoneticUk": "/ðeə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "那里；在那里"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My school is over there.",
+          "translation": "我的学校在那边。"
+        }
+      ]
+    },
+    {
+      "word": "where",
+      "phoneticUs": "/wer/",
+      "phoneticUk": "/weə/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "在哪里"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Where is my bag?",
+          "translation": "我的书包在哪里？"
+        }
+      ]
+    }
+  ]
+}

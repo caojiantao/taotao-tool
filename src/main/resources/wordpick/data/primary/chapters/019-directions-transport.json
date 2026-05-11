@@ -1,0 +1,345 @@
+{
+  "name": "（十九）问路、交通与方向",
+  "words": [
+    {
+      "word": "bus",
+      "phoneticUs": "/bʌs/",
+      "phoneticUk": "/bʌs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "公共汽车"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go to school by bus.",
+          "translation": "我乘公共汽车上学。"
+        }
+      ]
+    },
+    {
+      "word": "car",
+      "phoneticUs": "/kɑːr/",
+      "phoneticUk": "/kɑː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小汽车"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My dad drives a red car.",
+          "translation": "我爸爸开一辆红色小汽车。"
+        }
+      ]
+    },
+    {
+      "word": "bike",
+      "phoneticUs": "/baɪk/",
+      "phoneticUk": "/baɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "自行车"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She rides her bike to school.",
+          "translation": "她骑自行车上学。"
+        }
+      ]
+    },
+    {
+      "word": "taxi",
+      "phoneticUs": "/ˈtæksi/",
+      "phoneticUk": "/ˈtæksi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "出租车"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We took a taxi to the airport.",
+          "translation": "我们乘出租车去机场。"
+        }
+      ]
+    },
+    {
+      "word": "train",
+      "phoneticUs": "/treɪn/",
+      "phoneticUk": "/treɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "火车"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We traveled by train.",
+          "translation": "我们乘火车旅行。"
+        }
+      ]
+    },
+    {
+      "word": "plane",
+      "phoneticUs": "/pleɪn/",
+      "phoneticUk": "/pleɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "飞机"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The plane flies very fast.",
+          "translation": "飞机飞得非常快。"
+        }
+      ]
+    },
+    {
+      "word": "ship",
+      "phoneticUs": "/ʃɪp/",
+      "phoneticUk": "/ʃɪp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "船"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We took a ship to the island.",
+          "translation": "我们乘船去那个岛屿。"
+        }
+      ]
+    },
+    {
+      "word": "turn",
+      "phoneticUs": "/tɜːrn/",
+      "phoneticUk": "/tɜːn/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "转弯"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Turn left at the next corner.",
+          "translation": "在下一个路口向左转。"
+        }
+      ]
+    },
+    {
+      "word": "straight",
+      "phoneticUs": "/streɪt/",
+      "phoneticUk": "/streɪt/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "直走"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Go straight and turn left.",
+          "translation": "直走然后左转。"
+        }
+      ]
+    },
+    {
+      "word": "stop",
+      "phoneticUs": "/stɑːp/",
+      "phoneticUk": "/stɒp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "停止"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Stop at the red light.",
+          "translation": "在红灯处停车。"
+        }
+      ]
+    },
+    {
+      "word": "go",
+      "phoneticUs": "/ɡoʊ/",
+      "phoneticUk": "/ɡəʊ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "走；去"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Go straight for two blocks.",
+          "translation": "直走两个街区。"
+        }
+      ]
+    },
+    {
+      "word": "cross",
+      "phoneticUs": "/krɔːs/",
+      "phoneticUk": "/krɒs/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "穿越；横过"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Cross the street at the zebra crossing.",
+          "translation": "在斑马线处过马路。"
+        }
+      ]
+    },
+    {
+      "word": "street",
+      "phoneticUs": "/striːt/",
+      "phoneticUk": "/striːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "街道"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are many shops on this street.",
+          "translation": "这条街上有很多商店。"
+        }
+      ]
+    },
+    {
+      "word": "road",
+      "phoneticUs": "/roʊd/",
+      "phoneticUk": "/rəʊd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "公路；道路"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This road leads to the school.",
+          "translation": "这条路通向学校。"
+        }
+      ]
+    },
+    {
+      "word": "traffic",
+      "phoneticUs": "/ˈtræfɪk/",
+      "phoneticUk": "/ˈtræfɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "交通"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is heavy traffic in the morning.",
+          "translation": "早上交通很拥挤。"
+        }
+      ]
+    },
+    {
+      "word": "far",
+      "phoneticUs": "/fɑːr/",
+      "phoneticUk": "/fɑː/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "远的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Is the park far from here?",
+          "translation": "公园离这里远吗？"
+        }
+      ]
+    },
+    {
+      "word": "walk",
+      "phoneticUs": "/wɔːk/",
+      "phoneticUk": "/wɔːk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "步行"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I walk to school every day.",
+          "translation": "我每天步行上学。"
+        }
+      ]
+    },
+    {
+      "word": "drive",
+      "phoneticUs": "/draɪv/",
+      "phoneticUk": "/draɪv/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "驾驶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My mum can drive a car.",
+          "translation": "我妈妈会开车。"
+        }
+      ]
+    },
+    {
+      "word": "map",
+      "phoneticUs": "/mæp/",
+      "phoneticUk": "/mæp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "地图"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you read a map?",
+          "translation": "你会看地图吗？"
+        }
+      ]
+    },
+    {
+      "word": "station",
+      "phoneticUs": "/ˈsteɪʃn/",
+      "phoneticUk": "/ˈsteɪʃn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "车站"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The train station is very big.",
+          "translation": "火车站非常大。"
+        }
+      ]
+    }
+  ]
+}

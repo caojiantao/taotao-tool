@@ -1,0 +1,124 @@
+{
+  "name": "（三十二）疑问词",
+  "words": [
+    {
+      "word": "who",
+      "phoneticUs": "/huː/",
+      "phoneticUk": "/huː/",
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "谁"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Who is your teacher?",
+          "translation": "谁是你的老师？"
+        }
+      ]
+    },
+    {
+      "word": "what",
+      "phoneticUs": "/wɒt/",
+      "phoneticUk": "/wɒt/",
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "什么；多么"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is your name?",
+          "translation": "你叫什么名字？"
+        }
+      ]
+    },
+    {
+      "word": "when",
+      "phoneticUs": "/wen/",
+      "phoneticUk": "/wen/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "什么时候"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "When is your birthday?",
+          "translation": "你的生日是什么时候？"
+        }
+      ]
+    },
+    {
+      "word": "why",
+      "phoneticUs": "/waɪ/",
+      "phoneticUk": "/waɪ/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "为什么"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Why are you late?",
+          "translation": "你为什么迟到了？"
+        }
+      ]
+    },
+    {
+      "word": "how",
+      "phoneticUs": "/haʊ/",
+      "phoneticUk": "/haʊ/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "怎样；如何"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "How do you go to school?",
+          "translation": "你怎么去学校？"
+        }
+      ]
+    },
+    {
+      "word": "which",
+      "phoneticUs": "/wɪtʃ/",
+      "phoneticUk": "/wɪtʃ/",
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "哪个；哪些"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Which bag is yours?",
+          "translation": "哪个书包是你的？"
+        }
+      ]
+    },
+    {
+      "word": "whose",
+      "phoneticUs": "/huːz/",
+      "phoneticUk": "/huːz/",
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "谁的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Whose pen is this?",
+          "translation": "这是谁的钢笔？"
+        }
+      ]
+    }
+  ]
+}

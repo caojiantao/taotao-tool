@@ -1,0 +1,328 @@
+{
+  "name": "（三十三）高频核心动词",
+  "words": [
+    {
+      "word": "have",
+      "phoneticUs": "/hæv/",
+      "phoneticUk": "/hæv/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "有；拥有"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have two cats at home.",
+          "translation": "我家有两只猫。"
+        }
+      ]
+    },
+    {
+      "word": "get",
+      "phoneticUs": "/ɡet/",
+      "phoneticUk": "/ɡet/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "得到；获得"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I get a gift from Mum.",
+          "translation": "我从妈妈那里得到一份礼物。"
+        }
+      ]
+    },
+    {
+      "word": "give",
+      "phoneticUs": "/ɡɪv/",
+      "phoneticUk": "/ɡɪv/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "给；赠送"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Give me your hand, please.",
+          "translation": "请把你的手给我。"
+        }
+      ]
+    },
+    {
+      "word": "take",
+      "phoneticUs": "/teɪk/",
+      "phoneticUk": "/teɪk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "拿；取；带"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Take an umbrella. It may rain.",
+          "translation": "带把伞，可能会下雨。"
+        }
+      ]
+    },
+    {
+      "word": "put",
+      "phoneticUs": "/pʊt/",
+      "phoneticUk": "/pʊt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "放；放置"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Put your bag on the desk.",
+          "translation": "把书包放在桌上。"
+        }
+      ]
+    },
+    {
+      "word": "find",
+      "phoneticUs": "/faɪnd/",
+      "phoneticUk": "/faɪnd/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "找到；发现"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can not find my ruler.",
+          "translation": "我找不到我的尺子了。"
+        }
+      ]
+    },
+    {
+      "word": "hear",
+      "phoneticUs": "/hɪr/",
+      "phoneticUk": "/hɪə/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "听见；听到"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can hear music outside.",
+          "translation": "我能听到外面的音乐。"
+        }
+      ]
+    },
+    {
+      "word": "learn",
+      "phoneticUs": "/lɜːrn/",
+      "phoneticUk": "/lɜːn/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "学习；学会"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I learn English every day.",
+          "translation": "我每天学英语。"
+        }
+      ]
+    },
+    {
+      "word": "sleep",
+      "phoneticUs": "/sliːp/",
+      "phoneticUk": "/sliːp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "睡觉；入睡"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Go to sleep early tonight.",
+          "translation": "今晚早点睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "speak",
+      "phoneticUs": "/spiːk/",
+      "phoneticUk": "/spiːk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "说话；讲"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you speak English?",
+          "translation": "你会说英语吗？"
+        }
+      ]
+    },
+    {
+      "word": "write",
+      "phoneticUs": "/raɪt/",
+      "phoneticUk": "/raɪt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "写；写作"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Write your name on the paper.",
+          "translation": "在纸上写下你的名字。"
+        }
+      ]
+    },
+    {
+      "word": "need",
+      "phoneticUs": "/niːd/",
+      "phoneticUk": "/niːd/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "需要"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do you need any help?",
+          "translation": "你需要帮忙吗？"
+        }
+      ]
+    },
+    {
+      "word": "know",
+      "phoneticUs": "/noʊ/",
+      "phoneticUk": "/nəʊ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "知道；了解"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Do you know the answer?",
+          "translation": "你知道答案吗？"
+        }
+      ]
+    },
+    {
+      "word": "feel",
+      "phoneticUs": "/fiːl/",
+      "phoneticUk": "/fiːl/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "感觉；觉得"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "How do you feel today?",
+          "translation": "你今天感觉怎么样？"
+        }
+      ]
+    },
+    {
+      "word": "stand",
+      "phoneticUs": "/stænd/",
+      "phoneticUk": "/stænd/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "站；站立"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please stand up and read.",
+          "translation": "请起立朗读。"
+        }
+      ]
+    },
+    {
+      "word": "meet",
+      "phoneticUs": "/miːt/",
+      "phoneticUk": "/miːt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "见面；遇见"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Nice to meet you.",
+          "translation": "很高兴见到你。"
+        }
+      ]
+    },
+    {
+      "word": "bring",
+      "phoneticUs": "/brɪŋ/",
+      "phoneticUk": "/brɪŋ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "带来；取来"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Bring a notebook to class.",
+          "translation": "上课时带一个笔记本。"
+        }
+      ]
+    },
+    {
+      "word": "talk",
+      "phoneticUs": "/tɔːk/",
+      "phoneticUk": "/tɔːk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "谈话；讲话"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Let us talk about your holiday.",
+          "translation": "我们聊聊你的假期吧。"
+        }
+      ]
+    },
+    {
+      "word": "keep",
+      "phoneticUs": "/kiːp/",
+      "phoneticUk": "/kiːp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "保持；保留"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Keep your desk clean.",
+          "translation": "保持桌面整洁。"
+        }
+      ]
+    }
+  ]
+}

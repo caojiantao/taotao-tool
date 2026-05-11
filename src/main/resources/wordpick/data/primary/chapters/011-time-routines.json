@@ -1,0 +1,345 @@
+{
+  "name": "（十一）时间与作息",
+  "words": [
+    {
+      "word": "get up",
+      "phoneticUs": "/ɡet ʌp/",
+      "phoneticUk": "/ɡet ʌp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "起床"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I get up at seven o'clock every day.",
+          "translation": "我每天七点钟起床。"
+        }
+      ]
+    },
+    {
+      "word": "eat breakfast",
+      "phoneticUs": "/iːt ˈbrekfəst/",
+      "phoneticUk": "/iːt ˈbrekfəst/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "吃早饭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I eat breakfast before going to school.",
+          "translation": "我上学前吃早饭。"
+        }
+      ]
+    },
+    {
+      "word": "go to school",
+      "phoneticUs": "/ɡoʊ tə skuːl/",
+      "phoneticUk": "/ɡəʊ tə skuːl/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "去上学"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go to school at eight o'clock.",
+          "translation": "我八点钟去上学。"
+        }
+      ]
+    },
+    {
+      "word": "have lunch",
+      "phoneticUs": "/hæv lʌntʃ/",
+      "phoneticUk": "/hæv lʌntʃ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "吃午饭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have lunch at twelve o'clock.",
+          "translation": "我们十二点吃午饭。"
+        }
+      ]
+    },
+    {
+      "word": "go home",
+      "phoneticUs": "/ɡoʊ hoʊm/",
+      "phoneticUk": "/ɡəʊ həʊm/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "回家"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go home after school.",
+          "translation": "放学后我回家。"
+        }
+      ]
+    },
+    {
+      "word": "eat dinner",
+      "phoneticUs": "/iːt ˈdɪnər/",
+      "phoneticUk": "/iːt ˈdɪnə/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "吃晚饭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My family eats dinner together at six.",
+          "translation": "我们全家六点一起吃晚饭。"
+        }
+      ]
+    },
+    {
+      "word": "go to bed",
+      "phoneticUs": "/ɡoʊ tə bed/",
+      "phoneticUk": "/ɡəʊ tə bed/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "上床睡觉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I go to bed at nine o'clock.",
+          "translation": "我九点钟上床睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "morning",
+      "phoneticUs": "/ˈmɔːrnɪŋ/",
+      "phoneticUk": "/ˈmɔːnɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "早晨；上午"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good morning, everyone!",
+          "translation": "大家早上好！"
+        }
+      ]
+    },
+    {
+      "word": "afternoon",
+      "phoneticUs": "/ˌæftərˈnuːn/",
+      "phoneticUk": "/ˌɑːftəˈnuːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "下午"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have PE class in the afternoon.",
+          "translation": "我们下午有体育课。"
+        }
+      ]
+    },
+    {
+      "word": "evening",
+      "phoneticUs": "/ˈiːvnɪŋ/",
+      "phoneticUk": "/ˈiːvnɪŋ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "傍晚；晚上"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I do my homework in the evening.",
+          "translation": "我在晚上做作业。"
+        }
+      ]
+    },
+    {
+      "word": "night",
+      "phoneticUs": "/naɪt/",
+      "phoneticUk": "/naɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "夜晚"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Good night, Mum.",
+          "translation": "晚安，妈妈。"
+        }
+      ]
+    },
+    {
+      "word": "o'clock",
+      "phoneticUs": "/əˈklɑːk/",
+      "phoneticUk": "/əˈklɒk/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "……点钟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is three o'clock now.",
+          "translation": "现在是三点钟。"
+        }
+      ]
+    },
+    {
+      "word": "time",
+      "phoneticUs": "/taɪm/",
+      "phoneticUk": "/taɪm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "时间；时刻"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What time is it?",
+          "translation": "现在几点了？"
+        }
+      ]
+    },
+    {
+      "word": "early",
+      "phoneticUs": "/ˈɜːrli/",
+      "phoneticUk": "/ˈɜːli/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "早；提前"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I get up early every morning.",
+          "translation": "我每天早晨很早起床。"
+        }
+      ]
+    },
+    {
+      "word": "late",
+      "phoneticUs": "/leɪt/",
+      "phoneticUk": "/leɪt/",
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "迟；晚"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Don't be late for school.",
+          "translation": "上学不要迟到。"
+        }
+      ]
+    },
+    {
+      "word": "half",
+      "phoneticUs": "/hæf/",
+      "phoneticUk": "/hɑːf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "半；三十分钟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is half past eight.",
+          "translation": "现在是八点半。"
+        }
+      ]
+    },
+    {
+      "word": "minute",
+      "phoneticUs": "/ˈmɪnɪt/",
+      "phoneticUk": "/ˈmɪnɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "分钟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wait a minute, please.",
+          "translation": "请等一分钟。"
+        }
+      ]
+    },
+    {
+      "word": "hour",
+      "phoneticUs": "/ˈaʊər/",
+      "phoneticUk": "/ˈaʊə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小时"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I study for one hour after dinner.",
+          "translation": "晚饭后我学习一个小时。"
+        }
+      ]
+    },
+    {
+      "word": "today",
+      "phoneticUs": "/təˈdeɪ/",
+      "phoneticUk": "/təˈdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "今天"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Today is Monday.",
+          "translation": "今天是星期一。"
+        }
+      ]
+    },
+    {
+      "word": "tomorrow",
+      "phoneticUs": "/təˈmɑːroʊ/",
+      "phoneticUk": "/təˈmɒrəʊ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "明天"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a test tomorrow.",
+          "translation": "我们明天有一次考试。"
+        }
+      ]
+    }
+  ]
+}

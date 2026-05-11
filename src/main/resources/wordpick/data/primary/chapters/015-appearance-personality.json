@@ -1,0 +1,345 @@
+{
+  "name": "（十五）描述外貌与性格",
+  "words": [
+    {
+      "word": "tall",
+      "phoneticUs": "/tɔːl/",
+      "phoneticUk": "/tɔːl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "高的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My father is very tall.",
+          "translation": "我爸爸非常高。"
+        }
+      ]
+    },
+    {
+      "word": "short",
+      "phoneticUs": "/ʃɔːrt/",
+      "phoneticUk": "/ʃɔːt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "矮的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is shorter than her sister.",
+          "translation": "她比她姐姐矮。"
+        }
+      ]
+    },
+    {
+      "word": "thin",
+      "phoneticUs": "/θɪn/",
+      "phoneticUk": "/θɪn/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "瘦的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The cat is very thin.",
+          "translation": "这只猫非常瘦。"
+        }
+      ]
+    },
+    {
+      "word": "fat",
+      "phoneticUs": "/fæt/",
+      "phoneticUk": "/fæt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "胖的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The panda is fat and cute.",
+          "translation": "这只熊猫又胖又可爱。"
+        }
+      ]
+    },
+    {
+      "word": "long",
+      "phoneticUs": "/lɔːŋ/",
+      "phoneticUk": "/lɒŋ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "长的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has long hair.",
+          "translation": "她有一头长发。"
+        }
+      ]
+    },
+    {
+      "word": "strong",
+      "phoneticUs": "/strɔːŋ/",
+      "phoneticUk": "/strɒŋ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "强壮的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He is strong and tall.",
+          "translation": "他既强壮又高大。"
+        }
+      ]
+    },
+    {
+      "word": "young",
+      "phoneticUs": "/jʌŋ/",
+      "phoneticUk": "/jʌŋ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "年轻的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My teacher is young and kind.",
+          "translation": "我的老师年轻又友善。"
+        }
+      ]
+    },
+    {
+      "word": "old",
+      "phoneticUs": "/oʊld/",
+      "phoneticUk": "/əʊld/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "年老的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My grandpa is old but healthy.",
+          "translation": "我爷爷年老但健康。"
+        }
+      ]
+    },
+    {
+      "word": "funny",
+      "phoneticUs": "/ˈfʌni/",
+      "phoneticUk": "/ˈfʌni/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有趣的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He tells funny stories.",
+          "translation": "他讲有趣的故事。"
+        }
+      ]
+    },
+    {
+      "word": "kind",
+      "phoneticUs": "/kaɪnd/",
+      "phoneticUk": "/kaɪnd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "友善的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is very kind to everyone.",
+          "translation": "她对每个人都很友善。"
+        }
+      ]
+    },
+    {
+      "word": "quiet",
+      "phoneticUs": "/ˈkwaɪət/",
+      "phoneticUk": "/ˈkwaɪət/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "安静的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please be quiet in the library.",
+          "translation": "在图书馆请保持安静。"
+        }
+      ]
+    },
+    {
+      "word": "friendly",
+      "phoneticUs": "/ˈfrendli/",
+      "phoneticUk": "/ˈfrendli/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "友好的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Our new classmate is very friendly.",
+          "translation": "我们的新同学非常友好。"
+        }
+      ]
+    },
+    {
+      "word": "smart",
+      "phoneticUs": "/smɑːrt/",
+      "phoneticUk": "/smɑːt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "聪明的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Tom is a smart boy.",
+          "translation": "汤姆是个聪明的男孩。"
+        }
+      ]
+    },
+    {
+      "word": "cute",
+      "phoneticUs": "/kjuːt/",
+      "phoneticUk": "/kjuːt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "可爱的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The puppy is so cute.",
+          "translation": "这只小狗太可爱了。"
+        }
+      ]
+    },
+    {
+      "word": "beautiful",
+      "phoneticUs": "/ˈbjuːtɪfl/",
+      "phoneticUk": "/ˈbjuːtɪfl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "美丽的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The flowers are beautiful.",
+          "translation": "这些花很美丽。"
+        }
+      ]
+    },
+    {
+      "word": "handsome",
+      "phoneticUs": "/ˈhænsəm/",
+      "phoneticUk": "/ˈhænsəm/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "英俊的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He is a handsome young man.",
+          "translation": "他是一个英俊的年轻人。"
+        }
+      ]
+    },
+    {
+      "word": "glasses",
+      "phoneticUs": "/ˈɡlæsɪz/",
+      "phoneticUk": "/ˈɡlɑːsɪz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "眼镜"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He wears glasses every day.",
+          "translation": "他每天都戴眼镜。"
+        }
+      ]
+    },
+    {
+      "word": "curly",
+      "phoneticUs": "/ˈkɜːrli/",
+      "phoneticUk": "/ˈkɜːli/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "卷曲的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has curly hair.",
+          "translation": "她有卷发。"
+        }
+      ]
+    },
+    {
+      "word": "straight",
+      "phoneticUs": "/streɪt/",
+      "phoneticUk": "/streɪt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "直的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He has short straight hair.",
+          "translation": "他有一头短直发。"
+        }
+      ]
+    },
+    {
+      "word": "blonde",
+      "phoneticUs": "/blɑːnd/",
+      "phoneticUk": "/blɒnd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "金色的（头发）"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has long blonde hair.",
+          "translation": "她有一头金色长发。"
+        }
+      ]
+    }
+  ]
+}

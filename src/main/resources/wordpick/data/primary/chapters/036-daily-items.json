@@ -1,0 +1,243 @@
+{
+  "name": "（三十六）日用品",
+  "words": [
+    {
+      "word": "toothbrush",
+      "phoneticUs": "/ˈtuːθbrʌʃ/",
+      "phoneticUk": "/ˈtuːθbrʌʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牙刷"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Brush your teeth with a toothbrush.",
+          "translation": "用牙刷刷牙。"
+        }
+      ]
+    },
+    {
+      "word": "toothpaste",
+      "phoneticUs": "/ˈtuːθpeɪst/",
+      "phoneticUk": "/ˈtuːθpeɪst/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牙膏"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Use toothpaste to clean your teeth.",
+          "translation": "用牙膏清洁牙齿。"
+        }
+      ]
+    },
+    {
+      "word": "towel",
+      "phoneticUs": "/ˈtaʊəl/",
+      "phoneticUk": "/ˈtaʊəl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "毛巾；浴巾"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Dry your face with a towel.",
+          "translation": "用毛巾擦干脸。"
+        }
+      ]
+    },
+    {
+      "word": "soap",
+      "phoneticUs": "/soʊp/",
+      "phoneticUk": "/səʊp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "肥皂"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wash hands with soap and water.",
+          "translation": "用肥皂和水洗手。"
+        }
+      ]
+    },
+    {
+      "word": "bowl",
+      "phoneticUs": "/boʊl/",
+      "phoneticUk": "/bəʊl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "碗"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is rice in the bowl.",
+          "translation": "碗里有米饭。"
+        }
+      ]
+    },
+    {
+      "word": "chopsticks",
+      "phoneticUs": "/ˈtʃɒpstɪks/",
+      "phoneticUk": "/ˈtʃɒpstɪks/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "筷子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Chinese people eat with chopsticks.",
+          "translation": "中国人用筷子吃饭。"
+        }
+      ]
+    },
+    {
+      "word": "spoon",
+      "phoneticUs": "/spuːn/",
+      "phoneticUk": "/spuːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "勺子；汤匙"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Use a spoon to eat the soup.",
+          "translation": "用勺子喝汤。"
+        }
+      ]
+    },
+    {
+      "word": "fork",
+      "phoneticUs": "/fɔːrk/",
+      "phoneticUk": "/fɔːk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "叉子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She eats salad with a fork.",
+          "translation": "她用叉子吃沙拉。"
+        }
+      ]
+    },
+    {
+      "word": "cup",
+      "phoneticUs": "/kʌp/",
+      "phoneticUk": "/kʌp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "杯子；茶杯"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I drink tea from this cup.",
+          "translation": "我用这个杯子喝茶。"
+        }
+      ]
+    },
+    {
+      "word": "umbrella",
+      "phoneticUs": "/ʌmˈbrelə/",
+      "phoneticUk": "/ʌmˈbrelə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "雨伞"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Take your umbrella. It may rain.",
+          "translation": "带上雨伞，可能会下雨。"
+        }
+      ]
+    },
+    {
+      "word": "key",
+      "phoneticUs": "/kiː/",
+      "phoneticUk": "/kiː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钥匙"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can not find the door key.",
+          "translation": "我找不到门钥匙。"
+        }
+      ]
+    },
+    {
+      "word": "comb",
+      "phoneticUs": "/koʊm/",
+      "phoneticUk": "/kəʊm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "梳子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Use a comb to tidy your hair.",
+          "translation": "用梳子整理头发。"
+        }
+      ]
+    },
+    {
+      "word": "bottle",
+      "phoneticUs": "/ˈbɒtl/",
+      "phoneticUk": "/ˈbɒtl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "瓶子；瓶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Fill the bottle with water.",
+          "translation": "把瓶子装满水。"
+        }
+      ]
+    },
+    {
+      "word": "plate",
+      "phoneticUs": "/pleɪt/",
+      "phoneticUk": "/pleɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "盘子；碟子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Put the fruit on the plate.",
+          "translation": "把水果放在盘子里。"
+        }
+      ]
+    }
+  ]
+}

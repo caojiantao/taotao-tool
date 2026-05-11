@@ -1,0 +1,243 @@
+{
+  "name": "（二十一）学科与课程",
+  "words": [
+    {
+      "word": "Chinese",
+      "phoneticUs": "/ˈtʃaɪniːz/",
+      "phoneticUk": "/ˈtʃaɪniːz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "语文；中文"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I love Chinese class.",
+          "translation": "我喜欢语文课。"
+        }
+      ]
+    },
+    {
+      "word": "math",
+      "phoneticUs": "/mæθ/",
+      "phoneticUk": "/mæθ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "数学"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Math is my favourite subject.",
+          "translation": "数学是我最喜欢的科目。"
+        }
+      ]
+    },
+    {
+      "word": "English",
+      "phoneticUs": "/ˈɪŋɡlɪʃ/",
+      "phoneticUk": "/ˈɪŋɡlɪʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "英语"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have English every day.",
+          "translation": "我们每天都有英语课。"
+        }
+      ]
+    },
+    {
+      "word": "science",
+      "phoneticUs": "/ˈsaɪəns/",
+      "phoneticUk": "/ˈsaɪəns/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "科学"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We do experiments in science class.",
+          "translation": "我们在科学课上做实验。"
+        }
+      ]
+    },
+    {
+      "word": "art",
+      "phoneticUs": "/ɑːrt/",
+      "phoneticUk": "/ɑːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "美术；艺术"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I draw pictures in art class.",
+          "translation": "我在美术课上画画。"
+        }
+      ]
+    },
+    {
+      "word": "PE",
+      "phoneticUs": "/ˌpiː ˈiː/",
+      "phoneticUk": "/ˌpiː ˈiː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "体育（Physical Education的缩写）"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We run and jump in PE class.",
+          "translation": "我们在体育课上跑步和跳跃。"
+        }
+      ]
+    },
+    {
+      "word": "subject",
+      "phoneticUs": "/ˈsʌbdʒɪkt/",
+      "phoneticUk": "/ˈsʌbdʒɪkt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "科目；学科"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "English is my favourite subject.",
+          "translation": "英语是我最喜欢的科目。"
+        }
+      ]
+    },
+    {
+      "word": "favourite",
+      "phoneticUs": "/ˈfeɪvərɪt/",
+      "phoneticUk": "/ˈfeɪvərɪt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "最喜欢的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What is your favourite food?",
+          "translation": "你最喜欢的食物是什么？"
+        }
+      ]
+    },
+    {
+      "word": "difficult",
+      "phoneticUs": "/ˈdɪfɪkəlt/",
+      "phoneticUk": "/ˈdɪfɪkəlt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "难的；困难的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Maths can be difficult at first.",
+          "translation": "数学一开始可能很难。"
+        }
+      ]
+    },
+    {
+      "word": "easy",
+      "phoneticUs": "/ˈiːzi/",
+      "phoneticUk": "/ˈiːzi/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "容易的；简单的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "This question is easy.",
+          "translation": "这道题很容易。"
+        }
+      ]
+    },
+    {
+      "word": "interesting",
+      "phoneticUs": "/ˈɪntrəstɪŋ/",
+      "phoneticUk": "/ˈɪntrəstɪŋ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有趣的；吸引人的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Science is very interesting.",
+          "translation": "科学非常有趣。"
+        }
+      ]
+    },
+    {
+      "word": "lesson",
+      "phoneticUs": "/ˈlesn/",
+      "phoneticUk": "/ˈlesn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "课；课时"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have four lessons in the morning.",
+          "translation": "我们上午有四节课。"
+        }
+      ]
+    },
+    {
+      "word": "homework",
+      "phoneticUs": "/ˈhoʊmwɜːrk/",
+      "phoneticUk": "/ˈhəʊmwɜːk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "家庭作业"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I do my homework after school.",
+          "translation": "我放学后做家庭作业。"
+        }
+      ]
+    },
+    {
+      "word": "test",
+      "phoneticUs": "/test/",
+      "phoneticUk": "/test/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "测验；考试"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a maths test tomorrow.",
+          "translation": "我们明天有数学测验。"
+        }
+      ]
+    }
+  ]
+}

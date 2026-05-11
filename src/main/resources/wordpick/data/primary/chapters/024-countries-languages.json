@@ -1,0 +1,243 @@
+{
+  "name": "（二十四）国家与语言",
+  "words": [
+    {
+      "word": "China",
+      "phoneticUs": "/ˈtʃaɪnə/",
+      "phoneticUk": "/ˈtʃaɪnə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "中国"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "China is a big country.",
+          "translation": "中国是一个大国。"
+        }
+      ]
+    },
+    {
+      "word": "America",
+      "phoneticUs": "/əˈmerɪkə/",
+      "phoneticUk": "/əˈmerɪkə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "美国；美洲"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "America is far from China.",
+          "translation": "美国离中国很远。"
+        }
+      ]
+    },
+    {
+      "word": "England",
+      "phoneticUs": "/ˈɪŋɡlənd/",
+      "phoneticUk": "/ˈɪŋɡlənd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "英国；英格兰"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "English comes from England.",
+          "translation": "英语来自英格兰。"
+        }
+      ]
+    },
+    {
+      "word": "Canada",
+      "phoneticUs": "/ˈkænədə/",
+      "phoneticUk": "/ˈkænədə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "加拿大"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Canada is next to America.",
+          "translation": "加拿大紧邻美国。"
+        }
+      ]
+    },
+    {
+      "word": "Australia",
+      "phoneticUs": "/ɒˈstreɪliə/",
+      "phoneticUk": "/ɒˈstreɪliə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "澳大利亚"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Australia is a big island country.",
+          "translation": "澳大利亚是一个大岛国。"
+        }
+      ]
+    },
+    {
+      "word": "France",
+      "phoneticUs": "/fræns/",
+      "phoneticUk": "/frɑːns/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "法国"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The Eiffel Tower is in France.",
+          "translation": "埃菲尔铁塔在法国。"
+        }
+      ]
+    },
+    {
+      "word": "Japan",
+      "phoneticUs": "/dʒəˈpæn/",
+      "phoneticUk": "/dʒəˈpæn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "日本"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Japan is near China.",
+          "translation": "日本靠近中国。"
+        }
+      ]
+    },
+    {
+      "word": "country",
+      "phoneticUs": "/ˈkʌntri/",
+      "phoneticUk": "/ˈkʌntri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "国家"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "China is my country.",
+          "translation": "中国是我的国家。"
+        }
+      ]
+    },
+    {
+      "word": "city",
+      "phoneticUs": "/ˈsɪti/",
+      "phoneticUk": "/ˈsɪti/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "城市"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Beijing is the capital city of China.",
+          "translation": "北京是中国的首都城市。"
+        }
+      ]
+    },
+    {
+      "word": "capital",
+      "phoneticUs": "/ˈkæpɪtl/",
+      "phoneticUk": "/ˈkæpɪtl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "首都"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "London is the capital of England.",
+          "translation": "伦敦是英格兰的首都。"
+        }
+      ]
+    },
+    {
+      "word": "language",
+      "phoneticUs": "/ˈlæŋɡwɪdʒ/",
+      "phoneticUk": "/ˈlæŋɡwɪdʒ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "语言"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "English is a world language.",
+          "translation": "英语是一门世界语言。"
+        }
+      ]
+    },
+    {
+      "word": "world",
+      "phoneticUs": "/wɜːrld/",
+      "phoneticUk": "/wɜːld/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "世界"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are many countries in the world.",
+          "translation": "世界上有很多国家。"
+        }
+      ]
+    },
+    {
+      "word": "French",
+      "phoneticUs": "/frentʃ/",
+      "phoneticUk": "/frentʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "法语；法国人"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is learning French.",
+          "translation": "她在学法语。"
+        }
+      ]
+    },
+    {
+      "word": "Japanese",
+      "phoneticUs": "/ˌdʒæpəˈniːz/",
+      "phoneticUk": "/ˌdʒæpəˈniːz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "日语；日本人"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He can speak Japanese.",
+          "translation": "他会说日语。"
+        }
+      ]
+    }
+  ]
+}

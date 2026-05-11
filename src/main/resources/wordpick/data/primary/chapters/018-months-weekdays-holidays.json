@@ -1,0 +1,396 @@
+{
+  "name": "（十八）月份、星期与节假日",
+  "words": [
+    {
+      "word": "Monday",
+      "phoneticUs": "/ˈmʌndeɪ/",
+      "phoneticUk": "/ˈmʌndeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期一"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have PE class on Monday.",
+          "translation": "我周一有体育课。"
+        }
+      ]
+    },
+    {
+      "word": "Tuesday",
+      "phoneticUs": "/ˈtuːzdeɪ/",
+      "phoneticUk": "/ˈtjuːzdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期二"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have math on Tuesday.",
+          "translation": "我们周二有数学课。"
+        }
+      ]
+    },
+    {
+      "word": "Wednesday",
+      "phoneticUs": "/ˈwenzdeɪ/",
+      "phoneticUk": "/ˈwenzdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期三"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wednesday is the middle of the week.",
+          "translation": "周三是一周的中间。"
+        }
+      ]
+    },
+    {
+      "word": "Thursday",
+      "phoneticUs": "/ˈθɜːrzdeɪ/",
+      "phoneticUk": "/ˈθɜːzdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期四"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have English class on Thursday.",
+          "translation": "我们周四有英语课。"
+        }
+      ]
+    },
+    {
+      "word": "Friday",
+      "phoneticUs": "/ˈfraɪdeɪ/",
+      "phoneticUk": "/ˈfraɪdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期五"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Friday is the last school day of the week.",
+          "translation": "周五是一周最后一个上学日。"
+        }
+      ]
+    },
+    {
+      "word": "Saturday",
+      "phoneticUs": "/ˈsætərdeɪ/",
+      "phoneticUk": "/ˈsætədeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期六"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I play football on Saturday.",
+          "translation": "我周六踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "Sunday",
+      "phoneticUs": "/ˈsʌndeɪ/",
+      "phoneticUk": "/ˈsʌndeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星期日"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a family meal on Sunday.",
+          "translation": "我们周日全家聚餐。"
+        }
+      ]
+    },
+    {
+      "word": "January",
+      "phoneticUs": "/ˈdʒænjueri/",
+      "phoneticUk": "/ˈdʒænjuəri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "一月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "January is the first month of the year.",
+          "translation": "一月是一年中的第一个月。"
+        }
+      ]
+    },
+    {
+      "word": "February",
+      "phoneticUs": "/ˈfebrueri/",
+      "phoneticUk": "/ˈfebruəri/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "二月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "February has twenty-eight days.",
+          "translation": "二月有二十八天。"
+        }
+      ]
+    },
+    {
+      "word": "March",
+      "phoneticUs": "/mɑːrtʃ/",
+      "phoneticUk": "/mɑːtʃ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "三月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Spring begins in March.",
+          "translation": "春天在三月开始。"
+        }
+      ]
+    },
+    {
+      "word": "April",
+      "phoneticUs": "/ˈeɪprəl/",
+      "phoneticUk": "/ˈeɪprəl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "四月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "April is warm and sunny.",
+          "translation": "四月温暖晴朗。"
+        }
+      ]
+    },
+    {
+      "word": "May",
+      "phoneticUs": "/meɪ/",
+      "phoneticUk": "/meɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "五月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Children's Day is in May.",
+          "translation": "儿童节在五月。"
+        }
+      ]
+    },
+    {
+      "word": "June",
+      "phoneticUs": "/dʒuːn/",
+      "phoneticUk": "/dʒuːn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "六月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "School ends in June.",
+          "translation": "学校在六月结束课程。"
+        }
+      ]
+    },
+    {
+      "word": "July",
+      "phoneticUs": "/dʒuˈlaɪ/",
+      "phoneticUk": "/dʒuˈlaɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "七月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "It is very hot in July.",
+          "translation": "七月非常热。"
+        }
+      ]
+    },
+    {
+      "word": "August",
+      "phoneticUs": "/ˈɔːɡəst/",
+      "phoneticUk": "/ˈɔːɡəst/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "八月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We go to the beach in August.",
+          "translation": "我们八月去海滩。"
+        }
+      ]
+    },
+    {
+      "word": "September",
+      "phoneticUs": "/sepˈtembər/",
+      "phoneticUk": "/sepˈtembə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "九月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "School starts again in September.",
+          "translation": "九月学校重新开学。"
+        }
+      ]
+    },
+    {
+      "word": "October",
+      "phoneticUs": "/ɑːkˈtoʊbər/",
+      "phoneticUk": "/ɒkˈtəʊbə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "十月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "National Day is in October.",
+          "translation": "国庆节在十月。"
+        }
+      ]
+    },
+    {
+      "word": "November",
+      "phoneticUs": "/noʊˈvembər/",
+      "phoneticUk": "/nəˈvembə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "十一月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "November is cold in the north.",
+          "translation": "北方十一月很冷。"
+        }
+      ]
+    },
+    {
+      "word": "December",
+      "phoneticUs": "/dɪˈsembər/",
+      "phoneticUk": "/dɪˈsembə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "十二月"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Christmas is in December.",
+          "translation": "圣诞节在十二月。"
+        }
+      ]
+    },
+    {
+      "word": "holiday",
+      "phoneticUs": "/ˈhɑːlədeɪ/",
+      "phoneticUk": "/ˈhɒlədeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "假日；节日"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have a long holiday in summer.",
+          "translation": "我们夏天有一个长假。"
+        }
+      ]
+    },
+    {
+      "word": "birthday",
+      "phoneticUs": "/ˈbɜːrθdeɪ/",
+      "phoneticUk": "/ˈbɜːθdeɪ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "生日"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Today is my birthday.",
+          "translation": "今天是我的生日。"
+        }
+      ]
+    },
+    {
+      "word": "Christmas",
+      "phoneticUs": "/ˈkrɪsməs/",
+      "phoneticUk": "/ˈkrɪsməs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "圣诞节"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We sing songs at Christmas.",
+          "translation": "我们在圣诞节唱歌。"
+        }
+      ]
+    },
+    {
+      "word": "New Year",
+      "phoneticUs": "/nuː jɪr/",
+      "phoneticUk": "/njuː jɪə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "新年"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Happy New Year to everyone!",
+          "translation": "祝大家新年快乐！"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "name": "（十三）服装",
+  "words": [
+    {
+      "word": "T-shirt",
+      "phoneticUs": "/ˈtiː ʃɜːrt/",
+      "phoneticUk": "/ˈtiː ʃɜːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "T恤衫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He is wearing a red T-shirt.",
+          "translation": "他穿着一件红色T恤衫。"
+        }
+      ]
+    },
+    {
+      "word": "shirt",
+      "phoneticUs": "/ʃɜːrt/",
+      "phoneticUk": "/ʃɜːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "衬衫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My dad wears a white shirt to work.",
+          "translation": "我爸爸穿白衬衫去上班。"
+        }
+      ]
+    },
+    {
+      "word": "jacket",
+      "phoneticUs": "/ˈdʒækɪt/",
+      "phoneticUk": "/ˈdʒækɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "夹克；短外套"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Put on your jacket, it is cold outside.",
+          "translation": "穿上你的夹克，外面很冷。"
+        }
+      ]
+    },
+    {
+      "word": "sweater",
+      "phoneticUs": "/ˈswetər/",
+      "phoneticUk": "/ˈswetə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "毛衣；套头衫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I wear a sweater in autumn.",
+          "translation": "秋天我穿毛衣。"
+        }
+      ]
+    },
+    {
+      "word": "jeans",
+      "phoneticUs": "/dʒiːnz/",
+      "phoneticUk": "/dʒiːnz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牛仔裤"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She likes to wear jeans.",
+          "translation": "她喜欢穿牛仔裤。"
+        }
+      ]
+    },
+    {
+      "word": "pants",
+      "phoneticUs": "/pænts/",
+      "phoneticUk": "/pænts/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "裤子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He is wearing blue pants.",
+          "translation": "他穿着蓝色裤子。"
+        }
+      ]
+    },
+    {
+      "word": "socks",
+      "phoneticUs": "/sɑːks/",
+      "phoneticUk": "/sɒks/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "袜子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I put on my socks before my shoes.",
+          "translation": "穿鞋之前我先穿袜子。"
+        }
+      ]
+    },
+    {
+      "word": "shoes",
+      "phoneticUs": "/ʃuːz/",
+      "phoneticUk": "/ʃuːz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鞋子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "These shoes are too big for me.",
+          "translation": "这双鞋对我来说太大了。"
+        }
+      ]
+    },
+    {
+      "word": "dress",
+      "phoneticUs": "/dres/",
+      "phoneticUk": "/dres/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "连衣裙"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wears a pink dress today.",
+          "translation": "她今天穿一条粉色连衣裙。"
+        }
+      ]
+    },
+    {
+      "word": "skirt",
+      "phoneticUs": "/skɜːrt/",
+      "phoneticUk": "/skɜːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "裙子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My sister has a new skirt.",
+          "translation": "我妹妹有一条新裙子。"
+        }
+      ]
+    },
+    {
+      "word": "coat",
+      "phoneticUs": "/koʊt/",
+      "phoneticUk": "/kəʊt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "外套；大衣"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Wear your coat when it is cold.",
+          "translation": "天冷时要穿外套。"
+        }
+      ]
+    },
+    {
+      "word": "hat",
+      "phoneticUs": "/hæt/",
+      "phoneticUk": "/hæt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "（有边沿的）帽子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wears a big sun hat in summer.",
+          "translation": "夏天她戴一顶大太阳帽。"
+        }
+      ]
+    },
+    {
+      "word": "cap",
+      "phoneticUs": "/kæp/",
+      "phoneticUk": "/kæp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "（无边的）帽子；鸭舌帽"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He always wears a blue cap.",
+          "translation": "他总是戴一顶蓝色鸭舌帽。"
+        }
+      ]
+    },
+    {
+      "word": "scarf",
+      "phoneticUs": "/skɑːrf/",
+      "phoneticUk": "/skɑːf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "围巾"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wears a red scarf in winter.",
+          "translation": "冬天她戴红色围巾。"
+        }
+      ]
+    },
+    {
+      "word": "gloves",
+      "phoneticUs": "/ɡlʌvz/",
+      "phoneticUk": "/ɡlʌvz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "手套"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My hands are warm with gloves on.",
+          "translation": "戴上手套我的手很暖和。"
+        }
+      ]
+    },
+    {
+      "word": "boots",
+      "phoneticUs": "/buːts/",
+      "phoneticUk": "/buːts/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "靴子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I wear boots when it snows.",
+          "translation": "下雪时我穿靴子。"
+        }
+      ]
+    },
+    {
+      "word": "uniform",
+      "phoneticUs": "/ˈjuːnɪfɔːrm/",
+      "phoneticUk": "/ˈjuːnɪfɔːm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "校服；制服"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We wear a uniform to school.",
+          "translation": "我们穿校服上学。"
+        }
+      ]
+    },
+    {
+      "word": "shorts",
+      "phoneticUs": "/ʃɔːrts/",
+      "phoneticUk": "/ʃɔːts/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "短裤"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He wears shorts in summer.",
+          "translation": "他夏天穿短裤。"
+        }
+      ]
+    },
+    {
+      "word": "belt",
+      "phoneticUs": "/belt/",
+      "phoneticUk": "/belt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "腰带；皮带"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He wears a brown belt.",
+          "translation": "他系着一条棕色腰带。"
+        }
+      ]
+    },
+    {
+      "word": "pocket",
+      "phoneticUs": "/ˈpɑːkɪt/",
+      "phoneticUk": "/ˈpɒkɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "口袋"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I put my keys in my pocket.",
+          "translation": "我把钥匙放进口袋里。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "name": "（十六）能力与家务",
+  "words": [
+    {
+      "word": "cook",
+      "phoneticUs": "/kʊk/",
+      "phoneticUk": "/kʊk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "做饭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My mum can cook delicious food.",
+          "translation": "我妈妈能做美味的食物。"
+        }
+      ]
+    },
+    {
+      "word": "wash",
+      "phoneticUs": "/wɑːʃ/",
+      "phoneticUk": "/wɒʃ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "洗"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I wash my hands before meals.",
+          "translation": "我在饭前洗手。"
+        }
+      ]
+    },
+    {
+      "word": "clean",
+      "phoneticUs": "/kliːn/",
+      "phoneticUk": "/kliːn/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "打扫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We clean the classroom every day.",
+          "translation": "我们每天打扫教室。"
+        }
+      ]
+    },
+    {
+      "word": "sweep",
+      "phoneticUs": "/swiːp/",
+      "phoneticUk": "/swiːp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "扫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you sweep the floor?",
+          "translation": "你能扫地吗？"
+        }
+      ]
+    },
+    {
+      "word": "water",
+      "phoneticUs": "/ˈwɔːtər/",
+      "phoneticUk": "/ˈwɔːtə/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "浇水"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I water the plants every morning.",
+          "translation": "我每天早上给植物浇水。"
+        }
+      ]
+    },
+    {
+      "word": "make",
+      "phoneticUs": "/meɪk/",
+      "phoneticUk": "/meɪk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "做；制作"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Let's make a birthday card.",
+          "translation": "我们来做一张生日贺卡吧。"
+        }
+      ]
+    },
+    {
+      "word": "help",
+      "phoneticUs": "/help/",
+      "phoneticUk": "/help/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "帮助"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I often help my mum at home.",
+          "translation": "我经常在家帮妈妈。"
+        }
+      ]
+    },
+    {
+      "word": "carry",
+      "phoneticUs": "/ˈkæri/",
+      "phoneticUk": "/ˈkæri/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "搬运；提"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you carry this box for me?",
+          "translation": "你能帮我搬这个箱子吗？"
+        }
+      ]
+    },
+    {
+      "word": "read",
+      "phoneticUs": "/riːd/",
+      "phoneticUk": "/riːd/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "阅读"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like to read books after school.",
+          "translation": "我喜欢放学后读书。"
+        }
+      ]
+    },
+    {
+      "word": "draw",
+      "phoneticUs": "/drɔː/",
+      "phoneticUk": "/drɔː/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "画画"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She can draw beautiful pictures.",
+          "translation": "她能画出漂亮的画。"
+        }
+      ]
+    },
+    {
+      "word": "sing",
+      "phoneticUs": "/sɪŋ/",
+      "phoneticUk": "/sɪŋ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "唱歌"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He can sing many English songs.",
+          "translation": "他能唱很多英文歌曲。"
+        }
+      ]
+    },
+    {
+      "word": "dance",
+      "phoneticUs": "/dæns/",
+      "phoneticUk": "/dɑːns/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "跳舞"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She loves to dance.",
+          "translation": "她喜欢跳舞。"
+        }
+      ]
+    },
+    {
+      "word": "swim",
+      "phoneticUs": "/swɪm/",
+      "phoneticUk": "/swɪm/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "游泳"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can you swim?",
+          "translation": "你会游泳吗？"
+        }
+      ]
+    },
+    {
+      "word": "run",
+      "phoneticUs": "/rʌn/",
+      "phoneticUk": "/rʌn/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "跑"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I run in the park every morning.",
+          "translation": "我每天早上在公园跑步。"
+        }
+      ]
+    },
+    {
+      "word": "jump",
+      "phoneticUs": "/dʒʌmp/",
+      "phoneticUk": "/dʒʌmp/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "跳"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The frog can jump very high.",
+          "translation": "这只青蛙能跳很高。"
+        }
+      ]
+    },
+    {
+      "word": "ride",
+      "phoneticUs": "/raɪd/",
+      "phoneticUk": "/raɪd/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "骑"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can ride a bike.",
+          "translation": "我会骑自行车。"
+        }
+      ]
+    },
+    {
+      "word": "play",
+      "phoneticUs": "/pleɪ/",
+      "phoneticUk": "/pleɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "玩；演奏"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We play football on Saturdays.",
+          "translation": "我们每周六踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "climb",
+      "phoneticUs": "/klaɪm/",
+      "phoneticUk": "/klaɪm/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "爬；攀登"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He can climb trees easily.",
+          "translation": "他能轻松地爬树。"
+        }
+      ]
+    },
+    {
+      "word": "fly",
+      "phoneticUs": "/flaɪ/",
+      "phoneticUk": "/flaɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "飞"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Birds can fly in the sky.",
+          "translation": "鸟儿能在天空中飞翔。"
+        }
+      ]
+    },
+    {
+      "word": "do homework",
+      "phoneticUs": "/duː ˈhoʊmwɜːrk/",
+      "phoneticUk": "/duː ˈhəʊmwɜːk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "做作业"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I do my homework after dinner.",
+          "translation": "我在晚饭后做作业。"
+        }
+      ]
+    }
+  ]
+}

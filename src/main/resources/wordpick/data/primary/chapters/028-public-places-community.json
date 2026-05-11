@@ -1,0 +1,260 @@
+{
+  "name": "（二十八）公共场所与社区",
+  "words": [
+    {
+      "word": "park",
+      "phoneticUs": "/pɑːrk/",
+      "phoneticUk": "/pɑːk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "公园"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We play in the park on weekends.",
+          "translation": "我们周末在公园里玩。"
+        }
+      ]
+    },
+    {
+      "word": "zoo",
+      "phoneticUs": "/zuː/",
+      "phoneticUk": "/zuː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "动物园"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I saw pandas at the zoo.",
+          "translation": "我在动物园看到了大熊猫。"
+        }
+      ]
+    },
+    {
+      "word": "cinema",
+      "phoneticUs": "/ˈsɪnəmə/",
+      "phoneticUk": "/ˈsɪnəmə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电影院"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Let us go to the cinema tonight.",
+          "translation": "今晚我们去电影院吧。"
+        }
+      ]
+    },
+    {
+      "word": "museum",
+      "phoneticUs": "/mjuːˈziːəm/",
+      "phoneticUk": "/mjuːˈziːəm/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "博物馆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We visited the science museum.",
+          "translation": "我们参观了科学博物馆。"
+        }
+      ]
+    },
+    {
+      "word": "bookstore",
+      "phoneticUs": "/ˈbʊkstɔːr/",
+      "phoneticUk": "/ˈbʊkstɔː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书店"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I bought a new book at the bookstore.",
+          "translation": "我在书店买了一本新书。"
+        }
+      ]
+    },
+    {
+      "word": "supermarket",
+      "phoneticUs": "/ˈsuːpərˌmɑːrkɪt/",
+      "phoneticUk": "/ˈsuːpəˌmɑːkɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "超市"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mum buys food at the supermarket.",
+          "translation": "妈妈在超市买食物。"
+        }
+      ]
+    },
+    {
+      "word": "restaurant",
+      "phoneticUs": "/ˈrestrɒnt/",
+      "phoneticUk": "/ˈrestrɒnt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "餐厅；饭馆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We had dinner at a restaurant.",
+          "translation": "我们在餐厅吃了晚饭。"
+        }
+      ]
+    },
+    {
+      "word": "bank",
+      "phoneticUs": "/bæŋk/",
+      "phoneticUk": "/bæŋk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "银行"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Dad goes to the bank to save money.",
+          "translation": "爸爸去银行存钱。"
+        }
+      ]
+    },
+    {
+      "word": "post office",
+      "phoneticUs": "/poʊst ˈɒfɪs/",
+      "phoneticUk": "/pəʊst ˈɒfɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "邮局"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I sent a letter from the post office.",
+          "translation": "我从邮局寄了一封信。"
+        }
+      ]
+    },
+    {
+      "word": "hotel",
+      "phoneticUs": "/hoʊˈtel/",
+      "phoneticUk": "/həʊˈtel/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "酒店；宾馆"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We stayed at a nice hotel.",
+          "translation": "我们住在一家很好的酒店。"
+        }
+      ]
+    },
+    {
+      "word": "airport",
+      "phoneticUs": "/ˈerpɔːrt/",
+      "phoneticUk": "/ˈeəpɔːt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "机场"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My uncle picked us up at the airport.",
+          "translation": "我叔叔在机场接了我们。"
+        }
+      ]
+    },
+    {
+      "word": "market",
+      "phoneticUs": "/ˈmɑːrkɪt/",
+      "phoneticUk": "/ˈmɑːkɪt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "市场；集市"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We buy fresh vegetables at the market.",
+          "translation": "我们在市场买新鲜蔬菜。"
+        }
+      ]
+    },
+    {
+      "word": "square",
+      "phoneticUs": "/skwer/",
+      "phoneticUk": "/skweə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "广场"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "People dance in the square in the evening.",
+          "translation": "晚上人们在广场跳舞。"
+        }
+      ]
+    },
+    {
+      "word": "police station",
+      "phoneticUs": "/pəˈliːs ˈsteɪʃn/",
+      "phoneticUk": "/pəˈliːs ˈsteɪʃn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "警察局"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The police station is near our school.",
+          "translation": "警察局在我们学校附近。"
+        }
+      ]
+    },
+    {
+      "word": "shopping mall",
+      "phoneticUs": "/ˈʃɒpɪŋ mɔːl/",
+      "phoneticUk": "/ˈʃɒpɪŋ mɔːl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "购物中心"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is a big shopping mall in our city.",
+          "translation": "我们城市有一个大型购物中心。"
+        }
+      ]
+    }
+  ]
+}

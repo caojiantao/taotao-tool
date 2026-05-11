@@ -1,0 +1,345 @@
+{
+  "name": "（三十一）基础动词",
+  "words": [
+    {
+      "word": "like",
+      "phoneticUs": "/laɪk/",
+      "phoneticUk": "/laɪk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "喜欢；像"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like playing football.",
+          "translation": "我喜欢踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "want",
+      "phoneticUs": "/wɒnt/",
+      "phoneticUk": "/wɒnt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "想要；希望"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I want a new bike.",
+          "translation": "我想要一辆新自行车。"
+        }
+      ]
+    },
+    {
+      "word": "love",
+      "phoneticUs": "/lʌv/",
+      "phoneticUk": "/lʌv/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "爱；热爱"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I love my family.",
+          "translation": "我爱我的家人。"
+        }
+      ]
+    },
+    {
+      "word": "eat",
+      "phoneticUs": "/iːt/",
+      "phoneticUk": "/iːt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "吃；进食"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We eat three meals a day.",
+          "translation": "我们每天吃三顿饭。"
+        }
+      ]
+    },
+    {
+      "word": "drink",
+      "phoneticUs": "/drɪŋk/",
+      "phoneticUk": "/drɪŋk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "喝；饮用"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Drink more water every day.",
+          "translation": "每天多喝水。"
+        }
+      ]
+    },
+    {
+      "word": "wear",
+      "phoneticUs": "/wer/",
+      "phoneticUk": "/weə/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "穿；戴"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wears a red dress today.",
+          "translation": "她今天穿一条红色连衣裙。"
+        }
+      ]
+    },
+    {
+      "word": "come",
+      "phoneticUs": "/kʌm/",
+      "phoneticUk": "/kʌm/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "来；过来"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Come here, please.",
+          "translation": "请过来。"
+        }
+      ]
+    },
+    {
+      "word": "see",
+      "phoneticUs": "/siː/",
+      "phoneticUk": "/siː/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "看见；明白"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can see a bird in the tree.",
+          "translation": "我能看见树上有一只鸟。"
+        }
+      ]
+    },
+    {
+      "word": "look",
+      "phoneticUs": "/lʊk/",
+      "phoneticUk": "/lʊk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "看；瞧"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Look at the blackboard.",
+          "translation": "看黑板。"
+        }
+      ]
+    },
+    {
+      "word": "say",
+      "phoneticUs": "/seɪ/",
+      "phoneticUk": "/seɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "说；讲"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "What did she say?",
+          "translation": "她说了什么？"
+        }
+      ]
+    },
+    {
+      "word": "tell",
+      "phoneticUs": "/tel/",
+      "phoneticUk": "/tel/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "告诉；讲述"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Tell me your name.",
+          "translation": "告诉我你的名字。"
+        }
+      ]
+    },
+    {
+      "word": "think",
+      "phoneticUs": "/θɪŋk/",
+      "phoneticUk": "/θɪŋk/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "想；认为"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I think she is right.",
+          "translation": "我认为她是对的。"
+        }
+      ]
+    },
+    {
+      "word": "try",
+      "phoneticUs": "/traɪ/",
+      "phoneticUk": "/traɪ/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "尝试；努力"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Try your best!",
+          "translation": "尽力尝试！"
+        }
+      ]
+    },
+    {
+      "word": "use",
+      "phoneticUs": "/juːz/",
+      "phoneticUk": "/juːz/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "使用；利用"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can I use your pen?",
+          "translation": "我可以用你的钢笔吗？"
+        }
+      ]
+    },
+    {
+      "word": "visit",
+      "phoneticUs": "/ˈvɪzɪt/",
+      "phoneticUk": "/ˈvɪzɪt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "参观；拜访"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We visit the museum every year.",
+          "translation": "我们每年都参观博物馆。"
+        }
+      ]
+    },
+    {
+      "word": "live",
+      "phoneticUs": "/lɪv/",
+      "phoneticUk": "/lɪv/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "居住；生活"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I live near the school.",
+          "translation": "我住在学校附近。"
+        }
+      ]
+    },
+    {
+      "word": "open",
+      "phoneticUs": "/ˈoʊpən/",
+      "phoneticUk": "/ˈəʊpən/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "打开；开放"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Open the window, please.",
+          "translation": "请打开窗户。"
+        }
+      ]
+    },
+    {
+      "word": "close",
+      "phoneticUs": "/kloʊz/",
+      "phoneticUk": "/kləʊz/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "关闭；关上"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please close the door.",
+          "translation": "请关上门。"
+        }
+      ]
+    },
+    {
+      "word": "sit",
+      "phoneticUs": "/sɪt/",
+      "phoneticUk": "/sɪt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "坐；坐下"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sit down and listen carefully.",
+          "translation": "坐下来，认真听。"
+        }
+      ]
+    },
+    {
+      "word": "start",
+      "phoneticUs": "/stɑːrt/",
+      "phoneticUk": "/stɑːt/",
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "开始；出发"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Class starts at eight.",
+          "translation": "课八点开始。"
+        }
+      ]
+    }
+  ]
+}

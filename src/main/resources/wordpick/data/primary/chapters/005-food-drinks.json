@@ -1,0 +1,328 @@
+{
+  "name": "（五）食物与饮料",
+  "words": [
+    {
+      "word": "cake",
+      "phoneticUs": "/keɪk/",
+      "phoneticUk": "/keɪk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蛋糕"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like birthday cake.",
+          "translation": "我喜欢生日蛋糕。"
+        }
+      ]
+    },
+    {
+      "word": "bread",
+      "phoneticUs": "/brɛd/",
+      "phoneticUk": "/brɛd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "面包"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I eat bread for breakfast.",
+          "translation": "我早餐吃面包。"
+        }
+      ]
+    },
+    {
+      "word": "hot dog",
+      "phoneticUs": "/ˈhɑt dɔɡ/",
+      "phoneticUk": "/ˈhɒt dɒɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "热狗"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "He wants a hot dog.",
+          "translation": "他想要一个热狗。"
+        }
+      ]
+    },
+    {
+      "word": "hamburger",
+      "phoneticUs": "/ˈhæmbɜrɡər/",
+      "phoneticUk": "/ˈhæmbɜːɡə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "汉堡包"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Can I have a hamburger, please?",
+          "translation": "请给我一个汉堡包好吗？"
+        }
+      ]
+    },
+    {
+      "word": "chicken",
+      "phoneticUs": "/ˈtʃɪkɪn/",
+      "phoneticUk": "/ˈtʃɪkɪn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸡肉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like chicken and rice.",
+          "translation": "我喜欢鸡肉配米饭。"
+        }
+      ]
+    },
+    {
+      "word": "French fries",
+      "phoneticUs": "/frɛntʃ fraɪz/",
+      "phoneticUk": "/frɛntʃ fraɪz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "炸薯条"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "French fries are my favourite.",
+          "translation": "炸薯条是我的最爱。"
+        }
+      ]
+    },
+    {
+      "word": "Coke",
+      "phoneticUs": "/koʊk/",
+      "phoneticUk": "/kəʊk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "可乐"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I drink Coke at the party.",
+          "translation": "我在派对上喝可乐。"
+        }
+      ]
+    },
+    {
+      "word": "juice",
+      "phoneticUs": "/dʒuːs/",
+      "phoneticUk": "/dʒuːs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "果汁"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Would you like some juice?",
+          "translation": "你想喝一些果汁吗？"
+        }
+      ]
+    },
+    {
+      "word": "milk",
+      "phoneticUs": "/mɪlk/",
+      "phoneticUk": "/mɪlk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牛奶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I drink milk every morning.",
+          "translation": "我每天早上喝牛奶。"
+        }
+      ]
+    },
+    {
+      "word": "water",
+      "phoneticUs": "/ˈwɔtər/",
+      "phoneticUk": "/ˈwɔːtə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "水"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Please give me a glass of water.",
+          "translation": "请给我一杯水。"
+        }
+      ]
+    },
+    {
+      "word": "tea",
+      "phoneticUs": "/tiː/",
+      "phoneticUk": "/tiː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "茶"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My mum drinks tea every day.",
+          "translation": "我妈妈每天喝茶。"
+        }
+      ]
+    },
+    {
+      "word": "coffee",
+      "phoneticUs": "/ˈkɔfi/",
+      "phoneticUk": "/ˈkɒfi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "咖啡"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Dad has a cup of coffee.",
+          "translation": "爸爸喝一杯咖啡。"
+        }
+      ]
+    },
+    {
+      "word": "rice",
+      "phoneticUs": "/raɪs/",
+      "phoneticUk": "/raɪs/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "米饭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I eat rice for lunch.",
+          "translation": "我午餐吃米饭。"
+        }
+      ]
+    },
+    {
+      "word": "soup",
+      "phoneticUs": "/suːp/",
+      "phoneticUk": "/suːp/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "汤"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The soup is hot.",
+          "translation": "汤很烫。"
+        }
+      ]
+    },
+    {
+      "word": "noodles",
+      "phoneticUs": "/ˈnuːdəlz/",
+      "phoneticUk": "/ˈnuːdəlz/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "面条"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I love noodles.",
+          "translation": "我很喜欢面条。"
+        }
+      ]
+    },
+    {
+      "word": "egg",
+      "phoneticUs": "/ɛɡ/",
+      "phoneticUk": "/ɛɡ/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸡蛋"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There is an egg in my bowl.",
+          "translation": "我碗里有一个鸡蛋。"
+        }
+      ]
+    },
+    {
+      "word": "tofu",
+      "phoneticUs": "/ˈtoʊfuː/",
+      "phoneticUk": "/ˈtəʊfuː/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "豆腐"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Tofu is soft and healthy.",
+          "translation": "豆腐软软的，很健康。"
+        }
+      ]
+    },
+    {
+      "word": "pork",
+      "phoneticUs": "/pɔrk/",
+      "phoneticUk": "/pɔːk/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猪肉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We eat pork dumplings.",
+          "translation": "我们吃猪肉饺子。"
+        }
+      ]
+    },
+    {
+      "word": "beef",
+      "phoneticUs": "/biːf/",
+      "phoneticUk": "/biːf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牛肉"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Beef noodles are delicious.",
+          "translation": "牛肉面很好吃。"
+        }
+      ]
+    }
+  ]
+}

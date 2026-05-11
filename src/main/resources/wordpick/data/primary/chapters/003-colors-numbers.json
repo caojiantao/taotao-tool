@@ -1,0 +1,379 @@
+{
+  "name": "（三）颜色与数字",
+  "words": [
+    {
+      "word": "red",
+      "phoneticUs": "/rɛd/",
+      "phoneticUk": "/rɛd/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "红色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The apple is red.",
+          "translation": "苹果是红色的。"
+        }
+      ]
+    },
+    {
+      "word": "yellow",
+      "phoneticUs": "/ˈjɛloʊ/",
+      "phoneticUk": "/ˈjɛləʊ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "黄色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sun is yellow.",
+          "translation": "太阳是黄色的。"
+        }
+      ]
+    },
+    {
+      "word": "green",
+      "phoneticUs": "/ɡriːn/",
+      "phoneticUk": "/ɡriːn/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "绿色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The grass is green.",
+          "translation": "草是绿色的。"
+        }
+      ]
+    },
+    {
+      "word": "blue",
+      "phoneticUs": "/bluː/",
+      "phoneticUk": "/bluː/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "蓝色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The sky is blue.",
+          "translation": "天空是蓝色的。"
+        }
+      ]
+    },
+    {
+      "word": "purple",
+      "phoneticUs": "/ˈpɜrpəl/",
+      "phoneticUk": "/ˈpɜːpəl/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "紫色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Her bag is purple.",
+          "translation": "她的包是紫色的。"
+        }
+      ]
+    },
+    {
+      "word": "white",
+      "phoneticUs": "/waɪt/",
+      "phoneticUk": "/waɪt/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "白色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Snow is white.",
+          "translation": "雪是白色的。"
+        }
+      ]
+    },
+    {
+      "word": "black",
+      "phoneticUs": "/blæk/",
+      "phoneticUk": "/blæk/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "黑色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My cat is black.",
+          "translation": "我的猫是黑色的。"
+        }
+      ]
+    },
+    {
+      "word": "orange",
+      "phoneticUs": "/ˈɔrɪndʒ/",
+      "phoneticUk": "/ˈɒrɪndʒ/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "橙色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I like orange juice.",
+          "translation": "我喜欢橙汁。"
+        }
+      ]
+    },
+    {
+      "word": "pink",
+      "phoneticUs": "/pɪŋk/",
+      "phoneticUk": "/pɪŋk/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "粉红色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She wears a pink dress.",
+          "translation": "她穿一件粉红色的裙子。"
+        }
+      ]
+    },
+    {
+      "word": "brown",
+      "phoneticUs": "/braʊn/",
+      "phoneticUk": "/braʊn/",
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "棕色的"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The bear is brown.",
+          "translation": "那只熊是棕色的。"
+        }
+      ]
+    },
+    {
+      "word": "one",
+      "phoneticUs": "/wʌn/",
+      "phoneticUk": "/wʌn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "一"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I have one book.",
+          "translation": "我有一本书。"
+        }
+      ]
+    },
+    {
+      "word": "two",
+      "phoneticUs": "/tuː/",
+      "phoneticUk": "/tuː/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "二"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are two cats.",
+          "translation": "有两只猫。"
+        }
+      ]
+    },
+    {
+      "word": "three",
+      "phoneticUs": "/θriː/",
+      "phoneticUk": "/θriː/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "三"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can see three birds.",
+          "translation": "我能看见三只鸟。"
+        }
+      ]
+    },
+    {
+      "word": "four",
+      "phoneticUs": "/fɔr/",
+      "phoneticUk": "/fɔː/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "四"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She has four pencils.",
+          "translation": "她有四支铅笔。"
+        }
+      ]
+    },
+    {
+      "word": "five",
+      "phoneticUs": "/faɪv/",
+      "phoneticUk": "/faɪv/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "五"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "We have five fingers on one hand.",
+          "translation": "我们一只手有五根手指。"
+        }
+      ]
+    },
+    {
+      "word": "six",
+      "phoneticUs": "/sɪks/",
+      "phoneticUk": "/sɪks/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "六"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are six eggs in the box.",
+          "translation": "盒子里有六个鸡蛋。"
+        }
+      ]
+    },
+    {
+      "word": "seven",
+      "phoneticUs": "/ˈsɛvən/",
+      "phoneticUk": "/ˈsɛvən/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "七"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Seven days make a week.",
+          "translation": "七天是一周。"
+        }
+      ]
+    },
+    {
+      "word": "eight",
+      "phoneticUs": "/eɪt/",
+      "phoneticUk": "/eɪt/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "八"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I am eight years old.",
+          "translation": "我八岁了。"
+        }
+      ]
+    },
+    {
+      "word": "nine",
+      "phoneticUs": "/naɪn/",
+      "phoneticUk": "/naɪn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "九"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are nine apples on the table.",
+          "translation": "桌子上有九个苹果。"
+        }
+      ]
+    },
+    {
+      "word": "ten",
+      "phoneticUs": "/tɛn/",
+      "phoneticUk": "/tɛn/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "I can count to ten.",
+          "translation": "我能数到十。"
+        }
+      ]
+    },
+    {
+      "word": "eleven",
+      "phoneticUs": "/ɪˈlɛvən/",
+      "phoneticUk": "/ɪˈlɛvən/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十一"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "There are eleven students in the room.",
+          "translation": "房间里有十一个学生。"
+        }
+      ]
+    },
+    {
+      "word": "twelve",
+      "phoneticUs": "/twɛlv/",
+      "phoneticUk": "/twɛlv/",
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十二"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "December is the twelfth month.",
+          "translation": "十二月是第十二个月。"
+        }
+      ]
+    }
+  ]
+}

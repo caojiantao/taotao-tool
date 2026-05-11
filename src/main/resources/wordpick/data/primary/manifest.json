@@ -1,0 +1,159 @@
+{
+  "category": {
+    "name": "小学"
+  },
+  "chapters": [
+    {
+      "name": "（一）学习文具与教室",
+      "chapterFile": "chapters/001-stationery-classroom.json"
+    },
+    {
+      "name": "（二）身体部位",
+      "chapterFile": "chapters/002-body.json"
+    },
+    {
+      "name": "（三）颜色与数字",
+      "chapterFile": "chapters/003-colors-numbers.json"
+    },
+    {
+      "name": "（四）动物（宠物与野生）",
+      "chapterFile": "chapters/004-animals-pets-wild.json"
+    },
+    {
+      "name": "（五）食物与饮料",
+      "chapterFile": "chapters/005-food-drinks.json"
+    },
+    {
+      "name": "（六）水果与蔬菜",
+      "chapterFile": "chapters/006-fruits-vegetables.json"
+    },
+    {
+      "name": "（七）家庭成员",
+      "chapterFile": "chapters/007-family-members.json"
+    },
+    {
+      "name": "（八）家与家具",
+      "chapterFile": "chapters/008-home-furniture.json"
+    },
+    {
+      "name": "（九）方位与位置",
+      "chapterFile": "chapters/009-positions.json"
+    },
+    {
+      "name": "（十）学校场所",
+      "chapterFile": "chapters/010-school-places.json"
+    },
+    {
+      "name": "（十一）时间与作息",
+      "chapterFile": "chapters/011-time-routines.json"
+    },
+    {
+      "name": "（十二）天气与季节",
+      "chapterFile": "chapters/012-weather-seasons.json"
+    },
+    {
+      "name": "（十三）服装",
+      "chapterFile": "chapters/013-clothes.json"
+    },
+    {
+      "name": "（十四）购物与价格",
+      "chapterFile": "chapters/014-shopping-prices.json"
+    },
+    {
+      "name": "（十五）描述外貌与性格",
+      "chapterFile": "chapters/015-appearance-personality.json"
+    },
+    {
+      "name": "（十六）能力与家务",
+      "chapterFile": "chapters/016-abilities-chores.json"
+    },
+    {
+      "name": "（十七）自然景物",
+      "chapterFile": "chapters/017-nature.json"
+    },
+    {
+      "name": "（十八）月份、星期与节假日",
+      "chapterFile": "chapters/018-months-weekdays-holidays.json"
+    },
+    {
+      "name": "（十九）问路、交通与方向",
+      "chapterFile": "chapters/019-directions-transport.json"
+    },
+    {
+      "name": "（二十）兴趣爱好与职业",
+      "chapterFile": "chapters/020-hobbies-jobs.json"
+    },
+    {
+      "name": "（二十一）学科与课程",
+      "chapterFile": "chapters/021-subjects-courses.json"
+    },
+    {
+      "name": "（二十二）运动与体育",
+      "chapterFile": "chapters/022-sports.json"
+    },
+    {
+      "name": "（二十三）情绪与感受",
+      "chapterFile": "chapters/023-feelings.json"
+    },
+    {
+      "name": "（二十四）国家与语言",
+      "chapterFile": "chapters/024-countries-languages.json"
+    },
+    {
+      "name": "（二十五）健康与疾病",
+      "chapterFile": "chapters/025-health-illness.json"
+    },
+    {
+      "name": "（二十六）问候与日常用语",
+      "chapterFile": "chapters/026-greetings-daily-expressions.json"
+    },
+    {
+      "name": "（二十七）数字扩展（十三至一百）",
+      "chapterFile": "chapters/027-numbers-extended.json"
+    },
+    {
+      "name": "（二十八）公共场所与社区",
+      "chapterFile": "chapters/028-public-places-community.json"
+    },
+    {
+      "name": "（二十九）人物与称谓",
+      "chapterFile": "chapters/029-people-titles.json"
+    },
+    {
+      "name": "（三十）常用形容词与副词",
+      "chapterFile": "chapters/030-adjectives-adverbs.json"
+    },
+    {
+      "name": "（三十一）基础动词",
+      "chapterFile": "chapters/031-basic-verbs.json"
+    },
+    {
+      "name": "（三十二）疑问词",
+      "chapterFile": "chapters/032-question-words.json"
+    },
+    {
+      "name": "（三十三）高频核心动词",
+      "chapterFile": "chapters/033-core-verbs.json"
+    },
+    {
+      "name": "（三十四）进阶形容词",
+      "chapterFile": "chapters/034-advanced-adjectives.json"
+    },
+    {
+      "name": "（三十五）时间与频率词",
+      "chapterFile": "chapters/035-time-frequency.json"
+    },
+    {
+      "name": "（三十六）日用品",
+      "chapterFile": "chapters/036-daily-items.json"
+    },
+    {
+      "name": "（三十七）零食与小吃",
+      "chapterFile": "chapters/037-snacks.json"
+    },
+    {
+      "name": "（三十八）昆虫与其他动物",
+      "chapterFile": "chapters/038-insects-other-animals.json"
+    }
+  ]
+}

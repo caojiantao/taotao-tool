@@ -1,0 +1,277 @@
+{
+  "name": "（七）家庭成员",
+  "words": [
+    {
+      "word": "father",
+      "phoneticUs": "/ˈfɑðər/",
+      "phoneticUk": "/ˈfɑːðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "父亲"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My father works in a school.",
+          "translation": "我的父亲在一所学校工作。"
+        }
+      ]
+    },
+    {
+      "word": "mother",
+      "phoneticUs": "/ˈmʌðər/",
+      "phoneticUk": "/ˈmʌðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "母亲"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My mother cooks lunch for me.",
+          "translation": "我的母亲为我做午饭。"
+        }
+      ]
+    },
+    {
+      "word": "brother",
+      "phoneticUs": "/ˈbrʌðər/",
+      "phoneticUk": "/ˈbrʌðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "兄弟"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My brother likes playing football.",
+          "translation": "我的哥哥喜欢踢足球。"
+        }
+      ]
+    },
+    {
+      "word": "sister",
+      "phoneticUs": "/ˈsɪstər/",
+      "phoneticUk": "/ˈsɪstə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "姐妹"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My sister and I share a room.",
+          "translation": "我和姐姐共用一个房间。"
+        }
+      ]
+    },
+    {
+      "word": "grandfather",
+      "phoneticUs": "/ˈɡrændˌfɑðər/",
+      "phoneticUk": "/ˈɡrændˌfɑːðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "祖父"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My grandfather tells me stories.",
+          "translation": "我的爷爷给我讲故事。"
+        }
+      ]
+    },
+    {
+      "word": "grandmother",
+      "phoneticUs": "/ˈɡrændˌmʌðər/",
+      "phoneticUk": "/ˈɡrændˌmʌðə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "祖母"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My grandmother makes delicious dumplings.",
+          "translation": "我的奶奶做的饺子很好吃。"
+        }
+      ]
+    },
+    {
+      "word": "uncle",
+      "phoneticUs": "/ˈʌŋkəl/",
+      "phoneticUk": "/ˈʌŋkəl/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "叔叔；舅舅"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My uncle lives in Beijing.",
+          "translation": "我的叔叔住在北京。"
+        }
+      ]
+    },
+    {
+      "word": "aunt",
+      "phoneticUs": "/ænt/",
+      "phoneticUk": "/ɑːnt/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "阿姨；姑姑"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My aunt has a cat.",
+          "translation": "我的阿姨有一只猫。"
+        }
+      ]
+    },
+    {
+      "word": "cousin",
+      "phoneticUs": "/ˈkʌzən/",
+      "phoneticUk": "/ˈkʌzən/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "堂（表）兄弟姐妹"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My cousin is the same age as me.",
+          "translation": "我的表弟和我同岁。"
+        }
+      ]
+    },
+    {
+      "word": "family",
+      "phoneticUs": "/ˈfæməli/",
+      "phoneticUk": "/ˈfæməli/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "家庭"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My family has four people.",
+          "translation": "我的家庭有四口人。"
+        }
+      ]
+    },
+    {
+      "word": "baby",
+      "phoneticUs": "/ˈbeɪbi/",
+      "phoneticUk": "/ˈbeɪbi/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "婴儿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "The baby is sleeping.",
+          "translation": "婴儿正在睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "parents",
+      "phoneticUs": "/ˈpɛrənts/",
+      "phoneticUk": "/ˈpeərənts/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "父母"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "My parents love me very much.",
+          "translation": "我的父母非常爱我。"
+        }
+      ]
+    },
+    {
+      "word": "son",
+      "phoneticUs": "/sʌn/",
+      "phoneticUk": "/sʌn/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "儿子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "They have a son and a daughter.",
+          "translation": "他们有一个儿子和一个女儿。"
+        }
+      ]
+    },
+    {
+      "word": "daughter",
+      "phoneticUs": "/ˈdɔtər/",
+      "phoneticUk": "/ˈdɔːtə/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "女儿"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "She is a good daughter.",
+          "translation": "她是一个好女儿。"
+        }
+      ]
+    },
+    {
+      "word": "husband",
+      "phoneticUs": "/ˈhʌzbənd/",
+      "phoneticUk": "/ˈhʌzbənd/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "丈夫"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Her husband is a doctor.",
+          "translation": "她的丈夫是一名医生。"
+        }
+      ]
+    },
+    {
+      "word": "wife",
+      "phoneticUs": "/waɪf/",
+      "phoneticUk": "/waɪf/",
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "妻子"
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "His wife is a teacher.",
+          "translation": "他的妻子是一名教师。"
+        }
+      ]
+    }
+  ]
+}
